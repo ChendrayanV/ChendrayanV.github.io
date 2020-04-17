@@ -21,8 +21,8 @@
         "accountablePerson" : "",
         "copyrightHolder" : "",
         "copyrightYear" : "2020",
-        "datePublished": "2020-04-16 00:00:00 \x2b0000 UTC",
-        "dateModified" : "2020-04-16 00:00:00 \x2b0000 UTC",
+        "datePublished": "2020-04-17 00:00:00 \x2b0000 UTC",
+        "dateModified" : "2020-04-17 00:00:00 \x2b0000 UTC",
         "url" : "\/",
         "wordCount" : "0",
         "keywords" : [ "Blog" ]
@@ -69,7 +69,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/" />
-<meta property="og:updated_time" content="2020-04-16T00:00:00+00:00" />
+<meta property="og:updated_time" content="2020-04-17T00:00:00+00:00" />
 
         <meta property="og:image" content="//images/logo.png">
         <meta property="og:image:type" content="image/png">
@@ -264,6 +264,45 @@
                 
                         <article class="mini-post">
                             <header>
+                                <h3><a href="/blog/deploying-azure-function-app-external-git/">DEPLOYING AZURE FUNCTION APP - EXTERNAL GIT</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2020-04-17'>
+                                    April 17, 2020</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="/blog/deploying-azure-function-app-external-git/" class="image featured">
+            <img src="/img/2020/04/External-Git-Configuration.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
                                 <h3><a href="/blog/azure-resource-graph-query-kql-joins/">Azure Resource Graph Query - KQL Joins</a></h3>
                                 
                                 <time class="published" datetime=
@@ -317,7 +356,7 @@
   <header>
     <div class="title">
         
-            <h2><a href="/blog/azure-resource-graph-query-kql-joins/">Azure Resource Graph Query - KQL Joins</a></h2>
+            <h2><a href="/blog/deploying-azure-function-app-external-git/">DEPLOYING AZURE FUNCTION APP - EXTERNAL GIT</a></h2>
         
         
     </div>
@@ -325,11 +364,11 @@
         
 
         <time class="published"
-            datetime='2020-04-16'>
-            April 16, 2020</time>
+            datetime='2020-04-17'>
+            April 17, 2020</time>
         <span class="author">Chendrayan Venkatesan</span>
         
-            <p>2 minute read</p>
+            <p>1 minute read</p>
         
         
     </div>
@@ -361,66 +400,37 @@
         
         
 
-        <a href="/blog/azure-resource-graph-query-kql-joins/" class="image featured">
-            <img src="/img/2020/04/KQL01.jpg" alt="">
+        <a href="/blog/deploying-azure-function-app-external-git/" class="image featured">
+            <img src="/img/2020/04/External-Git-Configuration.jpg" alt="">
         </a>
     
 
 
   <div id="content">
-    <h2 id="introduction">Introduction</h2>
-<p>A friend asked, <strong>How to pull resource groups tags, including resource information?</strong> Yes, it is the most common ask, and there are many ways to accomplish it! Time is precious, considering that let us skip the legacy methods like using the Az module, REST API, or SDK&rsquo;s to query the Azure resources in the <em>definitive loops</em>. You are accountable for 200 + subscription and send a report of Azure resources in some schedules. The report should help the target audience to know the owner&rsquo;s email (tag value) and Azure resource information in the resource groups.</p>
-<blockquote>
-<p>The below query retrieves the information and it is faster!</p>
-</blockquote>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PowerShell" data-lang="PowerShell">$Query = @<span style="color:#e6db74">&#34;
-</span><span style="color:#e6db74">Resources
-</span><span style="color:#e6db74">    | project id, subscriptionId, resourceGroup, name, type, location
-</span><span style="color:#e6db74">    | join kind=inner(
-</span><span style="color:#e6db74">    ResourceContainers
-</span><span style="color:#e6db74">        | where type =~ &#39;microsoft.resources/subscriptions/resourcegroups&#39;
-</span><span style="color:#e6db74">        | project id, subscriptionId, resourceGroup, owner = tags.Owner , location , name , type) 
-</span><span style="color:#e6db74">        on subscriptionId , resourceGroup
-</span><span style="color:#e6db74">        | project-away subscriptionId1, resourceGroup1 , name1 , type1 ,location1
-</span><span style="color:#e6db74">&#34;</span>@
-</code></pre></div><h2 id="how-to-use-it-in-powershell">How to use it in PowerShell?</h2>
-<p>Not a difficult task, import the module Az.ResourceGraph and use the below script.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PowerShell" data-lang="PowerShell">$Query = @<span style="color:#e6db74">&#34;
-</span><span style="color:#e6db74">Resources
-</span><span style="color:#e6db74">    | project id, subscriptionId, resourceGroup, name, type, location
-</span><span style="color:#e6db74">    | join kind=inner(
-</span><span style="color:#e6db74">    ResourceContainers
-</span><span style="color:#e6db74">        | where type =~ &#39;microsoft.resources/subscriptions/resourcegroups&#39;
-</span><span style="color:#e6db74">        | project id, subscriptionId, resourceGroup, owner = tags.Owner , location , name , type) 
-</span><span style="color:#e6db74">        on subscriptionId , resourceGroup
-</span><span style="color:#e6db74">        | project-away subscriptionId1, resourceGroup1 , name1 , type1 ,location1
-</span><span style="color:#e6db74">&#34;</span>@
-$Results = Search-AzGraph -Query $Query -First 5000
-</code></pre></div><p>Yes, you are correct! The script above will fetch the first 5000 records! Remaining? I came across a super cool <a href="https://www.codeisahighway.com/how-azure-resource-graph-is-gonna-change-the-way-you-search-and-script/">blog</a> of <a href="https://twitter.com/s_lapointe">Stephane Lapointe</a> and did a minor modification.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PowerShell" data-lang="PowerShell">$Query = @<span style="color:#e6db74">&#34;
-</span><span style="color:#e6db74">Resources
-</span><span style="color:#e6db74">    | project id, subscriptionId, resourceGroup, name, type, location
-</span><span style="color:#e6db74">    | join kind=inner(
-</span><span style="color:#e6db74">    ResourceContainers
-</span><span style="color:#e6db74">        | where type =~ &#39;microsoft.resources/subscriptions/resourcegroups&#39;
-</span><span style="color:#e6db74">        | project id, subscriptionId, resourceGroup, owner = tags.Owner , location , name , type) 
-</span><span style="color:#e6db74">        on subscriptionId , resourceGroup
-</span><span style="color:#e6db74">        | project-away id1, subscriptionId1, resourceGroup1 , name1 , type1 ,location1
-</span><span style="color:#e6db74">&#34;</span>@
-$pageSize = 5000
-$iteration = 0
-$searchParams = @{
-    Query = $($Query)
-    First = $pageSize
-}
-<span style="color:#66d9ef">[System.Collections.ArrayList]</span>$results = @()
-<span style="color:#66d9ef">do</span> {
-    $iteration += 1
-    $pageResults = Search-AzGraph @searchParams -Verbose
-    $searchParams.Skip += $pageResults.Count
-    $results.AddRange($pageResults)
-} <span style="color:#66d9ef">while</span> ($pageResults.Count <span style="color:#f92672">-eq</span> $pageSize)
-</code></pre></div>
+    <h1 id="introduction">Introduction</h1>
+<p>I bet most of you don’t need this! Having said that, if your organization has Azure DevOps (Formerly VSTS) in directory A and Azure on directory B. Then, deploying Azure Function App using external git may help you.</p>
+<h2 id="why-not-zip-deploy">Why not Zip deploy?</h2>
+<p>Yes, that’s the optimal way of doing it! In my case, the roller coaster ride for simple requirements is quite common. Consider, Azure Functions source code is available with vendors, and it’s an end to end solution to be deployed at your workplace in a shorter time, and building a pipeline may take a few hours.</p>
+<h2 id="solution--a-quick-win">Solution – A Quick Win!</h2>
+<p>Yes, external git is a quick win for you to save time. It’s effortless! Get the Personal Access Token (PAT) from the vendor’s source control (Git). You may get something 52 characters gibberish text, and that’s the token.</p>
+<ol>
+<li>Open the Azure function app and then platform feature.</li>
+<li>Select all settings and choose the deployment center.</li>
+<li>Choose the external git – Click Continue – Select KUDU (App service build service).</li>
+</ol>
+<p>The configuration window appears, as shown below.</p>
+<p><img src="/img/2020/04/External-Git-Configuration.png" alt="External-Git-Configuration"></p>
+<ol>
+<li>Repository<br>
+a.	http://PAT:PAT@REPOURL</li>
+<li>Branch<br>
+a.	Type in the desired git branch.</li>
+<li>User Name<br>
+a.	PAT</li>
+<li>Password<br>
+a.	PAT</li>
+</ol>
+
   </div>
 
   <footer>
@@ -465,6 +475,9 @@ $searchParams = @{
 
 <ul class="actions pagination">
     
+        <li><a href="/blog/azure-resource-graph-query-kql-joins/"
+                class="button big previous">Azure Resource Graph Query - KQL Joins</a></li>
+    
 
     
 </ul>
@@ -482,7 +495,7 @@ $searchParams = @{
 
 
 <li>
-  <a href="//twitter.com/share?url=%2fblog%2fazure-resource-graph-query-kql-joins%2f&amp;text=Azure%20Resource%20Graph%20Query%20-%20KQL%20Joins&amp;via=chendrayanv" target="_blank" class="share-btn twitter">
+  <a href="//twitter.com/share?url=%2fblog%2fdeploying-azure-function-app-external-git%2f&amp;text=DEPLOYING%20AZURE%20FUNCTION%20APP%20-%20EXTERNAL%20GIT&amp;via=chendrayanv" target="_blank" class="share-btn twitter">
     <i class="fa fa-twitter"></i>
     <p>Twitter</p>
     </a>
@@ -496,7 +509,7 @@ $searchParams = @{
 
 
 <li>
-  <a href="//www.facebook.com/sharer/sharer.php?u=%2fblog%2fazure-resource-graph-query-kql-joins%2f" target="_blank" class="share-btn facebook">
+  <a href="//www.facebook.com/sharer/sharer.php?u=%2fblog%2fdeploying-azure-function-app-external-git%2f" target="_blank" class="share-btn facebook">
     <i class="fa fa-facebook"></i>
     <p>Facebook</p>
     </a>
@@ -509,7 +522,7 @@ $searchParams = @{
 
 
 <li>
-  <a href="//www.linkedin.com/shareArticle?url=%2fblog%2fazure-resource-graph-query-kql-joins%2f&amp;title=Azure%20Resource%20Graph%20Query%20-%20KQL%20Joins" target="_blank" class="share-btn linkedin">
+  <a href="//www.linkedin.com/shareArticle?url=%2fblog%2fdeploying-azure-function-app-external-git%2f&amp;title=DEPLOYING%20AZURE%20FUNCTION%20APP%20-%20EXTERNAL%20GIT" target="_blank" class="share-btn linkedin">
       <i class="fa fa-linkedin"></i>
       <p>LinkedIn</p>
     </a>
@@ -525,7 +538,7 @@ $searchParams = @{
 
 
 <li>
-  <a href="mailto:?subject=Check out this post by Chendrayan%20Venkatesan&amp;body=%2fblog%2fazure-resource-graph-query-kql-joins%2f" target="_blank" class="share-btn email">
+  <a href="mailto:?subject=Check out this post by Chendrayan%20Venkatesan&amp;body=%2fblog%2fdeploying-azure-function-app-external-git%2f" target="_blank" class="share-btn email">
     <i class="fa fa-envelope"></i>
     <p>Email</p>
   </a>
@@ -674,6 +687,47 @@ $searchParams = @{
           <article class="mini-post">
             <header>
               <h3>
+                <a href="/blog/deploying-azure-function-app-external-git/">DEPLOYING AZURE FUNCTION APP - EXTERNAL GIT</a>
+              </h3>
+              
+              <time class="published" datetime='2020-04-17'>
+                April 17, 2020
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="/blog/deploying-azure-function-app-external-git/" class="image featured">
+            <img src="/img/2020/04/External-Git-Configuration.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
                 <a href="/blog/azure-resource-graph-query-kql-joins/">Azure Resource Graph Query - KQL Joins</a>
               </h3>
               
@@ -739,7 +793,7 @@ $searchParams = @{
             <header>
               
                 <a href="/categories/azure/">azure</a>
-                <span style="float:right;">1</span>
+                <span style="float:right;">2</span>
               
             </header>
           </article>
