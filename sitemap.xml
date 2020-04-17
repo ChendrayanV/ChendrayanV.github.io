@@ -3,12 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/categories/azure-functions/</loc>
+    <loc>/categories/azure/</loc>
     <lastmod>2020-04-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/itemized/item1/</loc>
+    <lastmod>2020-04-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/azure-resource-graph-query-kql-joins/</loc>
     <lastmod>2020-04-16T00:00:00+00:00</lastmod>
   </url>
   
@@ -23,17 +28,12 @@
   </url>
   
   <url>
-    <loc>/about/</loc>
-    <lastmod>2020-04-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blog/creating-a-new-theme/</loc>
-    <lastmod>2020-04-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/</loc>
+    <lastmod>2020-04-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/about/</loc>
     <lastmod>2020-04-16T00:00:00+00:00</lastmod>
   </url>
   
@@ -43,12 +43,17 @@
   </url>
   
   <url>
-    <loc>/tags/</loc>
+    <loc>/tags/kql/</loc>
     <lastmod>2020-04-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/tutorial/</loc>
+    <loc>/tags/powershell/</loc>
+    <lastmod>2020-04-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
     <lastmod>2020-04-16T00:00:00+00:00</lastmod>
   </url>
   

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Hugo Future Imperfect</title>
+    <title>Tags on Chendrayan Venkatesan</title>
     <link>/tags/</link>
-    <description>Recent content in Tags on Hugo Future Imperfect</description>
+    <description>Recent content in Tags on Chendrayan Venkatesan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 16 Apr 2020 00:00:00 +0000</lastBuildDate>
@@ -12,11 +12,20 @@
     
     
     <item>
-      <title>tutorial</title>
-      <link>/tags/tutorial/</link>
+      <title>KQL</title>
+      <link>/tags/kql/</link>
       <pubDate>Thu, 16 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/tutorial/</guid>
+      <guid>/tags/kql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PowerShell</title>
+      <link>/tags/powershell/</link>
+      <pubDate>Thu, 16 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/powershell/</guid>
       <description></description>
     </item>
     

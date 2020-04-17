@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Hugo Future Imperfect</title>
+    <title>Categories on Chendrayan Venkatesan</title>
     <link>/categories/</link>
-    <description>Recent content in Categories on Hugo Future Imperfect</description>
+    <description>Recent content in Categories on Chendrayan Venkatesan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 16 Apr 2020 00:00:00 +0000</lastBuildDate>
@@ -12,11 +12,11 @@
     
     
     <item>
-      <title>Azure Functions</title>
-      <link>/categories/azure-functions/</link>
+      <title>Azure</title>
+      <link>/categories/azure/</link>
       <pubDate>Thu, 16 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>/categories/azure-functions/</guid>
+      <guid>/categories/azure/</guid>
       <description></description>
     </item>
     
