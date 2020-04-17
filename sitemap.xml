@@ -8,6 +8,16 @@
   </url>
   
   <url>
+    <loc>/tags/azure-devops/</loc>
+    <lastmod>2020-04-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/azure-functions/</loc>
+    <lastmod>2020-04-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/blog/</loc>
     <lastmod>2020-04-17T00:00:00+00:00</lastmod>
   </url>
@@ -28,12 +38,12 @@
   </url>
   
   <url>
-    <loc>/tags/kql/</loc>
+    <loc>/tags/deployment/</loc>
     <lastmod>2020-04-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/powershell/</loc>
+    <loc>/tags/external-git/</loc>
     <lastmod>2020-04-17T00:00:00+00:00</lastmod>
   </url>
   
@@ -59,6 +69,16 @@
   
   <url>
     <loc>/itemized/</loc>
+    <lastmod>2020-04-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/kql/</loc>
+    <lastmod>2020-04-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/powershell/</loc>
     <lastmod>2020-04-16T00:00:00+00:00</lastmod>
   </url>
   
