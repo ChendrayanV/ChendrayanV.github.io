@@ -18,7 +18,7 @@
       
       <guid>/blog/deploying-azure-function-app-external-git/</guid>
       <description>Introduction I bet most of you don’t need this! Having said that, if your organization has Azure DevOps (Formerly VSTS) in directory A and Azure on directory B. Then, deploying Azure Function App using external git may help you.
-Why not Zip deploy? Yes, that’s the optimal way of doing it! In my case, the roller coaster ride for simple requirements is quite common. Consider, Azure Functions source code is available with vendors, and it’s an end to end solution to be deployed at your workplace in a shorter time, and building a pipeline may take a few hours.</description>
+Why not Zip deploy? Yes, that’s the optimal way to do! In my case, the roller coaster ride for simple requirements is quite common. Consider, Azure Functions source code is available with vendors, and it’s an end to end solution to be deployed at your workplace in a shorter time, and building a pipeline may take a few hours or process may delay the deployment.</description>
     </item>
     
     <item>
