@@ -21,8 +21,8 @@
         "accountablePerson" : "",
         "copyrightHolder" : "",
         "copyrightYear" : "2020",
-        "datePublished": "2020-04-18 00:00:00 \x2b0000 UTC",
-        "dateModified" : "2020-04-18 00:00:00 \x2b0000 UTC",
+        "datePublished": "2020-04-25 00:00:00 \x2b0000 UTC",
+        "dateModified" : "2020-04-25 00:00:00 \x2b0000 UTC",
         "url" : "\/",
         "wordCount" : "0",
         "keywords" : [ "Blog" ]
@@ -69,7 +69,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/" />
-<meta property="og:updated_time" content="2020-04-18T00:00:00+00:00" />
+<meta property="og:updated_time" content="2020-04-25T00:00:00+00:00" />
 
         <meta property="og:image" content="//images/logo.png">
         <meta property="og:image:type" content="image/png">
@@ -264,6 +264,45 @@
                 
                         <article class="mini-post">
                             <header>
+                                <h3><a href="/blog/create-service-connection-with-certificate-using-rest-api/">Azure DevOps Service Connection with Certificate using REST API</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2020-04-25'>
+                                    April 25, 2020</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="/blog/create-service-connection-with-certificate-using-rest-api/" class="image featured">
+            <img src="/img/2020/04/Happy-Laugh.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
                                 <h3><a href="/blog/how-azure-devops-rest-api-helped-me-during-outage-of-the-vpn/">How Azure DevOps REST API helped me during outage of the VPN?</a></h3>
                                 
                                 <time class="published" datetime=
@@ -395,18 +434,16 @@
   <header>
     <div class="title">
         
-            <h2><a href="/blog/how-azure-devops-rest-api-helped-me-during-outage-of-the-vpn/">How Azure DevOps REST API helped me during outage of the VPN?</a></h2>
+            <h2><a href="/blog/create-service-connection-with-certificate-using-rest-api/">Azure DevOps Service Connection with Certificate using REST API</a></h2>
         
-        
-            <p>Just move on!</p>
         
     </div>
     <div class="meta">
         
 
         <time class="published"
-            datetime='2020-04-18'>
-            April 18, 2020</time>
+            datetime='2020-04-25'>
+            April 25, 2020</time>
         <span class="author">Chendrayan Venkatesan</span>
         
             <p>2 minute read</p>
@@ -441,78 +478,47 @@
         
         
 
-        <a href="/blog/how-azure-devops-rest-api-helped-me-during-outage-of-the-vpn/" class="image featured">
-            <img src="/img/2020/04/Azure-DevOps01.jpg" alt="">
+        <a href="/blog/create-service-connection-with-certificate-using-rest-api/" class="image featured">
+            <img src="/img/2020/04/Happy-Laugh.jpg" alt="">
         </a>
     
 
 
   <div id="content">
     <h1 id="introduction">Introduction</h1>
-<p>There is always an alternative is the apt statement to start this blog post! Yes, I got trouble in VPN and lost connection to most of our internal portal, and one among that is Azure DevOps (Formerly VSTS), where the code resides. Positively, no hindrances in accessing Outlook and Teams over mobile. All I need is to continue the work on code, work items and send status report.</p>
-<blockquote>
-<p>REST API is the savior! Yes, connect with the one who can help you to get PAT with appropriate permission, and we are good to proceed!</p>
-</blockquote>
-<h2 id="break-the-dependency">Break the dependency</h2>
-<ol>
-<li>No, need to wait for others to send a note about the PBI descriptions.</li>
-<li>Clone the code without a VPN. (If you Azure DevOps is configured that way)</li>
-</ol>
-<h2 id="authorize-using-pat">Authorize using PAT</h2>
-<p>I advise using  <code> Microsoft.PowerShell.SecretsManagement</code> module to keep your credentials safe. It comes handy to save multiple passwords and ease to use. I have saved the PAT in <code>BuiltInLocalVault</code> and using as shown below</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PowerShell" data-lang="PowerShell">Import-Module Microsoft.PowerShell.SecretsManagement -Verbose 
-$Token = Get-Secret -Name PAT -Vault BuiltInLocalVault -AsPlainText
-$Authentication = <span style="color:#66d9ef">[System.Text.Encoding]</span>::ASCII.GetBytes(<span style="color:#e6db74">&#34;:$Token&#34;</span>)
-$Authentication = <span style="color:#66d9ef">[System.Convert]</span>::ToBase64String($Authentication)
-$Headers = @{Authorization = (<span style="color:#e6db74">&#34;Basic {0}&#34;</span> <span style="color:#f92672">-f</span> $Authentication)}
-</code></pre></div><h2 id="lets-play">Let&rsquo;s Play</h2>
-<p>Using <code>$Headers</code> is used for authentication, we are ready to play with Azure DevOps. I have listed out the tasks I performed for my needs, but the concepts remain the same. Refer to Microsoft <a href="https://docs.microsoft.com/en-us/rest/api/azure/devops/?view=azure-devops-rest-5.1">docs</a>, and build the solution for your need.</p>
-<blockquote>
-<p>Don&rsquo;t forget to toggle the API version!</p>
-</blockquote>
-<h3 id="list-all-the-projects">List all the projects</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PowerShell" data-lang="PowerShell">$Teams = (Invoke-RestMethod -Uri <span style="color:#e6db74">&#34;https://xxxx-xx-xxxx.visualstudio.com/_apis/projects?api-version=5.1-preview.3&#34;</span> -Headers $Headers).value
-$Teams | Select-Object name , visibility , lastUpdateTime
-</code></pre></div><h3 id="list-all-the-repositories">List all the repositories</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PowerShell" data-lang="PowerShell">$Teams | . {
-    <span style="color:#66d9ef">process</span> {
-        $Repositories = (Invoke-RestMethod -Uri <span style="color:#e6db74">&#34;https://xxxx-xx-xxxx.visualstudio.com/</span>$($_.name)<span style="color:#e6db74">/_apis/git/repositories?api-version=5.1&#34;</span> -Headers $($Headers)).value
-        $Repositories | Select-Object name , @{N = <span style="color:#e6db74">&#39;Repo-Name&#39;</span>; E = {$_.project.name}} 
+<p>I have no access to my organization DevOps, but that didn’t stop me from working. This morning I was on a call with a business owner who asked me to show the steps to create service connections with the certificate.   Yes, I have to use the OPEN SSL tool to convert the PFX to PEM, and it was a bit difficult for me to walk him through the steps remotely. So, I got the PAT and certificate from the user and started my experiment in the REST API. After a few struggles, I managed to set up the service connection. Here is the PowerShell script.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PowerShell" data-lang="PowerShell">$Certificate = <span style="color:#e6db74">@&#34;
+</span><span style="color:#e6db74">{YOUR CERTIFICATE}
+</span><span style="color:#e6db74">&#34;@</span>
+$PAT = <span style="color:#e6db74">&#34;PAT TOKEN&#34;</span>
+$PATGetBytes = <span style="color:#66d9ef">[System.Text.Encoding]</span>::ASCII.GetBytes(<span style="color:#e6db74">&#34;:$PAT&#34;</span>)
+$Authentication = <span style="color:#66d9ef">[System.Convert]</span>::ToBase64String($PATGetBytes)
+$Headers = @{Authorization = (<span style="color:#e6db74">&#34;Basic {0}&#34;</span> <span style="color:#f92672">-f</span> $Authentication) }
+$Uri = <span style="color:#e6db74">&#34;https://dev.azure.com/about-powershell/iShell/_apis/serviceendpoint/endpoints?api-version=5.1-preview.2&#34;</span>
+$Body = <span style="color:#66d9ef">[pscustomobject]</span>@{
+    administratorsGroup = <span style="color:#e6db74">&#34;null&#34;</span>
+    data = <span style="color:#66d9ef">[pscustomobject]</span>@{
+        subscriptionId = <span style="color:#e6db74">&#39;&#39;</span>
+        subscriptionName = <span style="color:#e6db74">&#39;&#39;</span>
+        CreationMode = <span style="color:#e6db74">&#39;Manual&#39;</span>
+        scopeLevel = <span style="color:#e6db74">&#39;Subscription&#39;</span>
     }
-}
-</code></pre></div><h3 id="list-all-work-items-in-your-name-wiql">List all work items in your name (WIQL)</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PowerShell" data-lang="PowerShell">$Query = <span style="color:#66d9ef">[pscustomobject]</span>@{
-    query = <span style="color:#e6db74">&#39;SELECT * From WorkItems Where [System.AssignedTo] = &#34;ChenV&#34;&#39;</span>
+    authorization = <span style="color:#66d9ef">[pscustomobject]</span>@{
+            scheme = <span style="color:#e6db74">&#39;ServicePrincipal&#39;</span>
+            parameters = <span style="color:#66d9ef">[pscustomobject]</span>@{
+            authenticationType = <span style="color:#e6db74">&#39;spnCertificate&#39;</span>
+            servicePrincipalCertificate = $certificate
+            serviceprincipalid = <span style="color:#e6db74">&#39;&#39;</span>
+            tenantid = <span style="color:#e6db74">&#39;&#39;</span>
+        }
+    }
+    name = <span style="color:#e6db74">&#39;DEVEPLOPMENT&#39;</span>
+    type = <span style="color:#e6db74">&#39;azurerm&#39;</span>
+    url = <span style="color:#e6db74">&#39;https://management.azure.com/&#39;</span>
 } | ConvertTo-Json -Depth 10
+Invoke-RestMethod -Uri $Uri -Method Post -Body $Body -Headers $Headers -ContentType <span style="color:#e6db74">&#39;application/json&#39;</span>
+</code></pre></div><p>Upon successful execution of the script, you can see the result on the service connection page. The point is, no information about subscription, scope, and tenant information is visible. The update of the service connection is possible via REST API in this case, and no UI is supported.</p>
 
-$Results = Invoke-RestMethod -Uri <span style="color:#e6db74">&#34;https://xxxx-xx-xxxx.visualstudio.com/{PROJECTA}/_apis/wit/wiql?api-version=5.1&#34;</span> `
-                             -Method Post `
-                             -Body $Query  `
-                             -Headers $Headers `
-                             -ContentType <span style="color:#e6db74">&#39;application/json&#39;</span>
-$Results.workItems | Measure-Object
-</code></pre></div><h3 id="clone-the-repository">Clone the repository</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PowerShell" data-lang="PowerShell">PS C:\Projects&gt; git clone https<span style="color:#960050;background-color:#1e0010">:</span>//PAT<span style="color:#960050;background-color:#1e0010">:</span>PAT@REPOURL
-</code></pre></div><h3 id="read-the-work-items-comment">Read the work items comment</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PowerShell" data-lang="PowerShell">$Results = Invoke-RestMethod -Uri <span style="color:#e6db74">&#34;https://xxxx-xx-xxxx.visualstudio.com/{PROJECTA}/_apis/wit/workItems/91772/comments?api-version=5.1-preview.3&#34;</span> `
-                             -Method Get `
-                             -Headers $Headers
-$Results
-</code></pre></div><h3 id="add-comment-in-work-items">Add comment in work items</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PowerShell" data-lang="PowerShell">$body = @(<span style="color:#66d9ef">[pscustomobject]</span>@{
-    text = <span style="color:#e6db74">&#39;YOUR COMMENT&#39;</span>
-}) | ConvertTo-Json
-$Results = Invoke-RestMethod -Uri <span style="color:#e6db74">&#34;https://xxxx-xx-xxx.visualstudio.com/PROJECTA/_apis/wit/workItems/115556/comments?api-version=5.1-preview.3&#34;</span> `
-                             -Method Post `
-                             -Headers $Headers `
-                             -Body $body `
-                             -ContentType <span style="color:#e6db74">&#39;application/json&#39;</span>
-$Results
-</code></pre></div><blockquote>
-<p>It&rsquo;s worth to try PowerShell module available in the gallery</p>
-</blockquote>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PowerShell" data-lang="PowerShell">PS C:\&gt; Find-Module -Name <span style="color:#e6db74">&#39;*VSTS&#39;</span>
-</code></pre></div>
   </div>
 
   <footer>
@@ -539,10 +545,16 @@ $Results
                 <i class="fa fa-tags"></i>
                 
                 
-                <li><a class="article-category-link" href="/tags/wiql">WIQL</a></li>
+                <li><a class="article-category-link" href="/tags/azure-devops">Azure DevOps</a></li>
                 
                 
                 <li><a class="article-category-link" href="/tags/powershell">PowerShell</a></li>
+                
+                
+                <li><a class="article-category-link" href="/tags/rest-api">REST API</a></li>
+                
+                
+                <li><a class="article-category-link" href="/tags/service-connection">Service Connection</a></li>
                 
             
         
@@ -557,8 +569,8 @@ $Results
 
 <ul class="actions pagination">
     
-        <li><a href="/blog/deploying-azure-function-app-external-git/"
-                class="button big previous">DEPLOYING AZURE FUNCTION APP - EXTERNAL GIT</a></li>
+        <li><a href="/blog/how-azure-devops-rest-api-helped-me-during-outage-of-the-vpn/"
+                class="button big previous">How Azure DevOps REST API helped me during outage of the VPN?</a></li>
     
 
     
@@ -577,7 +589,7 @@ $Results
 
 
 <li>
-  <a href="//twitter.com/share?url=%2fblog%2fhow-azure-devops-rest-api-helped-me-during-outage-of-the-vpn%2f&amp;text=How%20Azure%20DevOps%20REST%20API%20helped%20me%20during%20outage%20of%20the%20VPN%3f&amp;via=chendrayanv" target="_blank" class="share-btn twitter">
+  <a href="//twitter.com/share?url=%2fblog%2fcreate-service-connection-with-certificate-using-rest-api%2f&amp;text=Azure%20DevOps%20Service%20Connection%20with%20Certificate%20using%20REST%20API&amp;via=chendrayanv" target="_blank" class="share-btn twitter">
     <i class="fa fa-twitter"></i>
     <p>Twitter</p>
     </a>
@@ -591,7 +603,7 @@ $Results
 
 
 <li>
-  <a href="//www.facebook.com/sharer/sharer.php?u=%2fblog%2fhow-azure-devops-rest-api-helped-me-during-outage-of-the-vpn%2f" target="_blank" class="share-btn facebook">
+  <a href="//www.facebook.com/sharer/sharer.php?u=%2fblog%2fcreate-service-connection-with-certificate-using-rest-api%2f" target="_blank" class="share-btn facebook">
     <i class="fa fa-facebook"></i>
     <p>Facebook</p>
     </a>
@@ -604,7 +616,7 @@ $Results
 
 
 <li>
-  <a href="//www.linkedin.com/shareArticle?url=%2fblog%2fhow-azure-devops-rest-api-helped-me-during-outage-of-the-vpn%2f&amp;title=How%20Azure%20DevOps%20REST%20API%20helped%20me%20during%20outage%20of%20the%20VPN%3f" target="_blank" class="share-btn linkedin">
+  <a href="//www.linkedin.com/shareArticle?url=%2fblog%2fcreate-service-connection-with-certificate-using-rest-api%2f&amp;title=Azure%20DevOps%20Service%20Connection%20with%20Certificate%20using%20REST%20API" target="_blank" class="share-btn linkedin">
       <i class="fa fa-linkedin"></i>
       <p>LinkedIn</p>
     </a>
@@ -620,7 +632,7 @@ $Results
 
 
 <li>
-  <a href="mailto:?subject=Check out this post by Chendrayan%20Venkatesan&amp;body=%2fblog%2fhow-azure-devops-rest-api-helped-me-during-outage-of-the-vpn%2f" target="_blank" class="share-btn email">
+  <a href="mailto:?subject=Check out this post by Chendrayan%20Venkatesan&amp;body=%2fblog%2fcreate-service-connection-with-certificate-using-rest-api%2f" target="_blank" class="share-btn email">
     <i class="fa fa-envelope"></i>
     <p>Email</p>
   </a>
@@ -765,6 +777,47 @@ $Results
           
         
 
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/blog/create-service-connection-with-certificate-using-rest-api/">Azure DevOps Service Connection with Certificate using REST API</a>
+              </h3>
+              
+              <time class="published" datetime='2020-04-25'>
+                April 25, 2020
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="/blog/create-service-connection-with-certificate-using-rest-api/" class="image featured">
+            <img src="/img/2020/04/Happy-Laugh.jpg" alt="">
+        </a>
+    
+
+
+          </article>
         
           <article class="mini-post">
             <header>
@@ -927,7 +980,7 @@ $Results
             <header>
               
                 <a href="/categories/azure-devops/">azure-devops</a>
-                <span style="float:right;">1</span>
+                <span style="float:right;">2</span>
               
             </header>
           </article>

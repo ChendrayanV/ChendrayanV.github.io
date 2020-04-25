@@ -6,10 +6,19 @@
     <description>Recent content in Blog on Chendrayan Venkatesan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 18 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 25 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Azure DevOps Service Connection with Certificate using REST API</title>
+      <link>/blog/create-service-connection-with-certificate-using-rest-api/</link>
+      <pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/create-service-connection-with-certificate-using-rest-api/</guid>
+      <description>Introduction I have no access to my organization DevOps, but that didn’t stop me from working. This morning I was on a call with a business owner who asked me to show the steps to create service connections with the certificate. Yes, I have to use the OPEN SSL tool to convert the PFX to PEM, and it was a bit difficult for me to walk him through the steps remotely.</description>
+    </item>
     
     <item>
       <title>How Azure DevOps REST API helped me during outage of the VPN?</title>
