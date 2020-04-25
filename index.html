@@ -294,7 +294,7 @@
         
 
         <a href="/blog/create-service-connection-with-certificate-using-rest-api/" class="image featured">
-            <img src="/img/2020/04/Happy-Laugh.jpg" alt="">
+            <img src="/date/Happy-Laugh.jpg" alt="">
         </a>
     
 
@@ -401,9 +401,6 @@
 
 
   
-  
-    
-  
 
 
         
@@ -411,7 +408,7 @@
         
 
         <a href="/blog/azure-resource-graph-query-kql-joins/" class="image featured">
-            <img src="/img/2020/04/KQL01.jpg" alt="">
+            <img src="/date2020/04/KQL01.jpg" alt="">
         </a>
     
 
@@ -436,6 +433,8 @@
         
             <h2><a href="/blog/create-service-connection-with-certificate-using-rest-api/">Azure DevOps Service Connection with Certificate using REST API</a></h2>
         
+        
+            <p>Az DevOps | PowerShell | REST API</p>
         
     </div>
     <div class="meta">
@@ -487,6 +486,9 @@
   <div id="content">
     <h1 id="introduction">Introduction</h1>
 <p>I have no access to my organization DevOps, but that didn’t stop me from working. This morning I was on a call with a business owner who asked me to show the steps to create service connections with the certificate.   Yes, I have to use the OPEN SSL tool to convert the PFX to PEM, and it was a bit difficult for me to walk him through the steps remotely. So, I got the PAT and certificate from the user and started my experiment in the REST API. After a few struggles, I managed to set up the service connection. Here is the PowerShell script.</p>
+<blockquote>
+<p>Replace the value for certificate, PAT, subscriptionid &amp; name , service principal and tenant id.</p>
+</blockquote>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PowerShell" data-lang="PowerShell">$Certificate = <span style="color:#e6db74">@&#34;
 </span><span style="color:#e6db74">{YOUR CERTIFICATE}
 </span><span style="color:#e6db74">&#34;@</span>
