@@ -21,8 +21,8 @@
         "accountablePerson" : "",
         "copyrightHolder" : "",
         "copyrightYear" : "2020",
-        "datePublished": "2020-04-25 00:00:00 \x2b0000 UTC",
-        "dateModified" : "2020-04-25 00:00:00 \x2b0000 UTC",
+        "datePublished": "2020-05-01 00:00:00 \x2b0000 UTC",
+        "dateModified" : "2020-05-01 00:00:00 \x2b0000 UTC",
         "url" : "\/",
         "wordCount" : "0",
         "keywords" : [ "Blog" ]
@@ -69,7 +69,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/" />
-<meta property="og:updated_time" content="2020-04-25T00:00:00+00:00" />
+<meta property="og:updated_time" content="2020-05-01T00:00:00+00:00" />
 
         <meta property="og:image" content="//images/logo.png">
         <meta property="og:image:type" content="image/png">
@@ -264,6 +264,45 @@
                 
                         <article class="mini-post">
                             <header>
+                                <h3><a href="/blog/retrieve-unattached-azure-vm-disks/">List un-attached Azure VM disks</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2020-05-01'>
+                                    May 1, 2020</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="/blog/retrieve-unattached-azure-vm-disks/" class="image featured">
+            <img src="/img/2020/05/unattached-disks.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
                                 <h3><a href="/blog/create-service-connection-with-certificate-using-rest-api/">Create Azure DevOps Service Connection with Certificate using REST API</a></h3>
                                 
                                 <time class="published" datetime=
@@ -418,45 +457,6 @@
 
                         </article>
                 
-                        <article class="mini-post">
-                            <header>
-                                <h3><a href="/blog/retrieve-unattached-azure-vm-disks/">List un-attached Azure VM disks</a></h3>
-                                
-                                <time class="published" datetime=
-                                    '2020-01-05'>
-                                    January 5, 2020</time>
-                            </header>
-                            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-  
-    
-  
-
-
-        
-        
-        
-
-        <a href="/blog/retrieve-unattached-azure-vm-disks/" class="image featured">
-            <img src="/img/2020/01/unattached-disks.jpg" alt="">
-        </a>
-    
-
-
-                        </article>
-                
 
                 
                     <a href=
@@ -479,21 +479,21 @@
   <header>
     <div class="title">
         
-            <h2><a href="/blog/create-service-connection-with-certificate-using-rest-api/">Create Azure DevOps Service Connection with Certificate using REST API</a></h2>
+            <h2><a href="/blog/retrieve-unattached-azure-vm-disks/">List un-attached Azure VM disks</a></h2>
         
         
-            <p>Az DevOps | PowerShell | REST API</p>
+            <p>Cost Saving...</p>
         
     </div>
     <div class="meta">
         
 
         <time class="published"
-            datetime='2020-04-25'>
-            April 25, 2020</time>
+            datetime='2020-05-01'>
+            May 1, 2020</time>
         <span class="author">Chendrayan Venkatesan</span>
         
-            <p>2 minute read</p>
+            <p>1 minute read</p>
         
         
     </div>
@@ -525,49 +525,55 @@
         
         
 
-        <a href="/blog/create-service-connection-with-certificate-using-rest-api/" class="image featured">
-            <img src="/img/2020/04/Happy-Laugh.jpg" alt="">
+        <a href="/blog/retrieve-unattached-azure-vm-disks/" class="image featured">
+            <img src="/img/2020/05/unattached-disks.jpg" alt="">
         </a>
     
 
 
   <div id="content">
     <h1 id="introduction">Introduction</h1>
-<p>I have no access to my organization DevOps due to unfortunate technical issues, but that didn’t stop me from working. This morning I was on a call with a business owner who asked me to show the steps to create service connections with the certificate.   Yes, I have to use the OPEN SSL tool to convert the PFX to PEM, and it was a bit difficult for me to walk him through the steps remotely. So, I got the PAT and certificate from the user and started my experiment in the REST API. After a few struggles, I managed to set up the service connection. Here is the PowerShell script.</p>
+<p>As part of the cost saving project task, I developed a PowerShell script to retrieve UNATTACHED disks. I used JOIN operator in this code to get a few tag information from the respective resource group.</p>
 <blockquote>
-<p>Replace the value for certificate, PAT, subscriptionid &amp; name , service principal and tenant id.</p>
+<p>Replace value for the {TAGNAME}.</p>
 </blockquote>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PowerShell" data-lang="PowerShell">$Certificate = <span style="color:#e6db74">@&#34;
-</span><span style="color:#e6db74">{YOUR CERTIFICATE}
-</span><span style="color:#e6db74">&#34;@</span>
-$PAT = <span style="color:#e6db74">&#34;PAT TOKEN&#34;</span>
-$PATGetBytes = <span style="color:#66d9ef">[System.Text.Encoding]</span>::ASCII.GetBytes(<span style="color:#e6db74">&#34;:$PAT&#34;</span>)
-$Authentication = <span style="color:#66d9ef">[System.Convert]</span>::ToBase64String($PATGetBytes)
-$Headers = @{Authorization = (<span style="color:#e6db74">&#34;Basic {0}&#34;</span> <span style="color:#f92672">-f</span> $Authentication) }
-$Uri = <span style="color:#e6db74">&#34;https://dev.azure.com/about-powershell/iShell/_apis/serviceendpoint/endpoints?api-version=5.1-preview.2&#34;</span>
-$Body = <span style="color:#66d9ef">[pscustomobject]</span>@{
-    administratorsGroup = <span style="color:#e6db74">&#34;null&#34;</span>
-    data = <span style="color:#66d9ef">[pscustomobject]</span>@{
-        subscriptionId = <span style="color:#e6db74">&#39;&#39;</span>
-        subscriptionName = <span style="color:#e6db74">&#39;&#39;</span>
-        CreationMode = <span style="color:#e6db74">&#39;Manual&#39;</span>
-        scopeLevel = <span style="color:#e6db74">&#39;Subscription&#39;</span>
-    }
-    authorization = <span style="color:#66d9ef">[pscustomobject]</span>@{
-            scheme = <span style="color:#e6db74">&#39;ServicePrincipal&#39;</span>
-            parameters = <span style="color:#66d9ef">[pscustomobject]</span>@{
-            authenticationType = <span style="color:#e6db74">&#39;spnCertificate&#39;</span>
-            servicePrincipalCertificate = $certificate
-            serviceprincipalid = <span style="color:#e6db74">&#39;&#39;</span>
-            tenantid = <span style="color:#e6db74">&#39;&#39;</span>
-        }
-    }
-    name = <span style="color:#e6db74">&#39;DEVEPLOPMENT&#39;</span>
-    type = <span style="color:#e6db74">&#39;azurerm&#39;</span>
-    url = <span style="color:#e6db74">&#39;https://management.azure.com/&#39;</span>
-} | ConvertTo-Json -Depth 10
-Invoke-RestMethod -Uri $Uri -Method Post -Body $Body -Headers $Headers -ContentType <span style="color:#e6db74">&#39;application/json&#39;</span>
-</code></pre></div><p>Upon successful execution of the script, you can see the result on the service connection page. The point is, no information about subscription, scope, and tenant information is visible. The update of the service connection is possible via REST API in this case, and no UI is supported.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PowerShell" data-lang="PowerShell">$Query = <span style="color:#e6db74">&#34;Resources
+</span><span style="color:#e6db74">            | where type =~ &#39;Microsoft.Compute/disks&#39;
+</span><span style="color:#e6db74">            | where properties.diskState =~ &#39;Unattached&#39;
+</span><span style="color:#e6db74">            | project id, name, subscriptionId, resourceGroup, diskInGB = properties.diskSizeGB, diskState = properties.diskState, timeCreated = properties.timeCreated
+</span><span style="color:#e6db74">            | join kind=inner(
+</span><span style="color:#e6db74">            ResourceContainers
+</span><span style="color:#e6db74">                | where type =~ &#39;microsoft.resources/subscriptions/resourcegroups&#39;
+</span><span style="color:#e6db74">                | project id, name, subscriptionId, resourceGroup, owner = tags.{TAGNAME}, Administrator = tags.{TAGNAME}, MonitoringAlertContact = tags.{TAGNAME})
+</span><span style="color:#e6db74">            on subscriptionId, resourceGroup
+</span><span style="color:#e6db74">            | project-away id1, name1, subscriptionId1, resourceGroup1&#34;</span>
+$pageSize = 5000
+$iteration = 0
+$searchParams = @{
+    Query = $($Query)
+    First = $pageSize
+}
+<span style="color:#66d9ef">[System.Collections.ArrayList]</span>$results = @()
+<span style="color:#66d9ef">do</span> {
+    $iteration += 1
+    $pageResults = Search-AzGraph @searchParams -Verbose
+    $searchParams.Skip += $pageResults.Count
+    $results.AddRange($pageResults)
+} <span style="color:#66d9ef">while</span> ($pageResults.Count <span style="color:#f92672">-eq</span> $pageSize)
+</code></pre></div><h2 id="multi-purpose-queries">Multi-purpose queries</h2>
+<blockquote>
+<p>Not in current year!</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PowerShell" data-lang="PowerShell">($results | ? {$_.timeCreated <span style="color:#f92672">-lt</span> (Get-Date).AddYears(-1)}) | Select name , timeCreated , diskinGB
+</code></pre></div><blockquote>
+<p>Less than a month older</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PowerShell" data-lang="PowerShell">($results | ? {$_.timeCreated <span style="color:#f92672">-lt</span> (Get-Date).AddMonths(-1)}) | Select name , timeCreated 
+</code></pre></div><blockquote>
+<p>Where disk size is 32 GB</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PowerShell" data-lang="PowerShell">($results | ? {$_.diskInGB <span style="color:#f92672">-eq</span> 32})
+</code></pre></div><p>List un-attached Azure VM disks</p>
 
   </div>
 
@@ -581,7 +587,7 @@ Invoke-RestMethod -Uri $Uri -Method Post -Body $Body -Headers $Headers -ContentT
                 <i class="fa fa-folder"></i>
                 
                 
-                <li><a class="article-category-link" href="/categories/azure-devops">Azure DevOps</a></li>
+                <li><a class="article-category-link" href="/categories/azure">Azure</a></li>
                 
             
         
@@ -595,16 +601,10 @@ Invoke-RestMethod -Uri $Uri -Method Post -Body $Body -Headers $Headers -ContentT
                 <i class="fa fa-tags"></i>
                 
                 
-                <li><a class="article-category-link" href="/tags/azure-devops">Azure DevOps</a></li>
+                <li><a class="article-category-link" href="/tags/kql">KQL</a></li>
                 
                 
                 <li><a class="article-category-link" href="/tags/powershell">PowerShell</a></li>
-                
-                
-                <li><a class="article-category-link" href="/tags/rest-api">REST API</a></li>
-                
-                
-                <li><a class="article-category-link" href="/tags/service-connection">Service Connection</a></li>
                 
             
         
@@ -619,8 +619,8 @@ Invoke-RestMethod -Uri $Uri -Method Post -Body $Body -Headers $Headers -ContentT
 
 <ul class="actions pagination">
     
-        <li><a href="/blog/how-azure-devops-rest-api-helped-me-during-outage-of-the-vpn/"
-                class="button big previous">How Azure DevOps REST API helped me during outage of the VPN?</a></li>
+        <li><a href="/blog/create-service-connection-with-certificate-using-rest-api/"
+                class="button big previous">Create Azure DevOps Service Connection with Certificate using REST API</a></li>
     
 
     
@@ -639,7 +639,7 @@ Invoke-RestMethod -Uri $Uri -Method Post -Body $Body -Headers $Headers -ContentT
 
 
 <li>
-  <a href="//twitter.com/share?url=%2fblog%2fcreate-service-connection-with-certificate-using-rest-api%2f&amp;text=Create%20Azure%20DevOps%20Service%20Connection%20with%20Certificate%20using%20REST%20API&amp;via=chendrayanv" target="_blank" class="share-btn twitter">
+  <a href="//twitter.com/share?url=%2fblog%2fretrieve-unattached-azure-vm-disks%2f&amp;text=List%20un-attached%20Azure%20VM%20disks&amp;via=chendrayanv" target="_blank" class="share-btn twitter">
     <i class="fa fa-twitter"></i>
     <p>Twitter</p>
     </a>
@@ -653,7 +653,7 @@ Invoke-RestMethod -Uri $Uri -Method Post -Body $Body -Headers $Headers -ContentT
 
 
 <li>
-  <a href="//www.facebook.com/sharer/sharer.php?u=%2fblog%2fcreate-service-connection-with-certificate-using-rest-api%2f" target="_blank" class="share-btn facebook">
+  <a href="//www.facebook.com/sharer/sharer.php?u=%2fblog%2fretrieve-unattached-azure-vm-disks%2f" target="_blank" class="share-btn facebook">
     <i class="fa fa-facebook"></i>
     <p>Facebook</p>
     </a>
@@ -666,7 +666,7 @@ Invoke-RestMethod -Uri $Uri -Method Post -Body $Body -Headers $Headers -ContentT
 
 
 <li>
-  <a href="//www.linkedin.com/shareArticle?url=%2fblog%2fcreate-service-connection-with-certificate-using-rest-api%2f&amp;title=Create%20Azure%20DevOps%20Service%20Connection%20with%20Certificate%20using%20REST%20API" target="_blank" class="share-btn linkedin">
+  <a href="//www.linkedin.com/shareArticle?url=%2fblog%2fretrieve-unattached-azure-vm-disks%2f&amp;title=List%20un-attached%20Azure%20VM%20disks" target="_blank" class="share-btn linkedin">
       <i class="fa fa-linkedin"></i>
       <p>LinkedIn</p>
     </a>
@@ -682,7 +682,7 @@ Invoke-RestMethod -Uri $Uri -Method Post -Body $Body -Headers $Headers -ContentT
 
 
 <li>
-  <a href="mailto:?subject=Check out this post by Chendrayan%20Venkatesan&amp;body=%2fblog%2fcreate-service-connection-with-certificate-using-rest-api%2f" target="_blank" class="share-btn email">
+  <a href="mailto:?subject=Check out this post by Chendrayan%20Venkatesan&amp;body=%2fblog%2fretrieve-unattached-azure-vm-disks%2f" target="_blank" class="share-btn email">
     <i class="fa fa-envelope"></i>
     <p>Email</p>
   </a>
@@ -831,6 +831,47 @@ Invoke-RestMethod -Uri $Uri -Method Post -Body $Body -Headers $Headers -ContentT
           <article class="mini-post">
             <header>
               <h3>
+                <a href="/blog/retrieve-unattached-azure-vm-disks/">List un-attached Azure VM disks</a>
+              </h3>
+              
+              <time class="published" datetime='2020-05-01'>
+                May 1, 2020
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="/blog/retrieve-unattached-azure-vm-disks/" class="image featured">
+            <img src="/img/2020/05/unattached-disks.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
                 <a href="/blog/create-service-connection-with-certificate-using-rest-api/">Create Azure DevOps Service Connection with Certificate using REST API</a>
               </h3>
               
@@ -975,6 +1016,9 @@ Invoke-RestMethod -Uri $Uri -Method Post -Body $Body -Headers $Headers -ContentT
 
 
   
+  
+    
+  
 
 
         
@@ -982,48 +1026,7 @@ Invoke-RestMethod -Uri $Uri -Method Post -Body $Body -Headers $Headers -ContentT
         
 
         <a href="/blog/azure-resource-graph-query-kql-joins/" class="image featured">
-            <img src="/img//KQL01.jpg" alt="">
-        </a>
-    
-
-
-          </article>
-        
-          <article class="mini-post">
-            <header>
-              <h3>
-                <a href="/blog/retrieve-unattached-azure-vm-disks/">List un-attached Azure VM disks</a>
-              </h3>
-              
-              <time class="published" datetime='2020-01-05'>
-                January 5, 2020
-              </time>
-            </header>
-            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-  
-    
-  
-
-
-        
-        
-        
-
-        <a href="/blog/retrieve-unattached-azure-vm-disks/" class="image featured">
-            <img src="/img/2020/012020/01/unattached-disks.jpg" alt="">
+            <img src="/img/2020/04/KQL01.jpg" alt="">
         </a>
     
 
