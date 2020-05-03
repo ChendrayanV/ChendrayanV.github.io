@@ -58,5 +58,16 @@ Why not Zip deploy? Yes, that’s the optimal way to do! In my case, the roller 
       <description>Introduction A friend asked, How to pull resource groups tags, including resource information? Yes, it is the most common ask, and there are many ways to accomplish it! Time is precious, considering that let us skip the legacy methods like using the Az module, REST API, or SDK&amp;rsquo;s to query the Azure resources in the definitive loops. You are accountable for 200 + subscription and send a report of Azure resources in some schedules.</description>
     </item>
     
+    <item>
+      <title>List un-attached Azure VM disks</title>
+      <link>/blog/retrieve-unattached-azure-vm-disks/</link>
+      <pubDate>Sun, 05 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/retrieve-unattached-azure-vm-disks/</guid>
+      <description>Introduction As part of the cost saving project task, I developed a PowerShell script to retrieve UNATTACHED disks. I used JOIN operator in this code to get a few tag information from the respective resource group.
+ Replace value for the {TAGNAME}.
+ $Query = &amp;#34;Resources | where type =~ &amp;#39;Microsoft.Compute/disks&amp;#39; | where properties.diskState =~ &amp;#39;Unattached&amp;#39; | project id, name, subscriptionId, resourceGroup, diskInGB = properties.diskSizeGB, diskState = properties.diskState, timeCreated = properties.</description>
+    </item>
+    
   </channel>
 </rss>
