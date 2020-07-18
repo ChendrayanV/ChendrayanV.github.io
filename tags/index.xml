@@ -21,15 +21,6 @@
     </item>
     
     <item>
-      <title>KQL</title>
-      <link>/tags/kql/</link>
-      <pubDate>Sat, 18 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/kql/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>PowerShell</title>
       <link>/tags/powershell/</link>
       <pubDate>Sat, 18 Jul 2020 00:00:00 +0000</pubDate>
@@ -39,11 +30,11 @@
     </item>
     
     <item>
-      <title>PSWriteWord</title>
-      <link>/tags/pswriteword/</link>
+      <title>Send DOCX</title>
+      <link>/tags/send-docx/</link>
       <pubDate>Sat, 18 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/pswriteword/</guid>
+      <guid>/tags/send-docx/</guid>
       <description></description>
     </item>
     
@@ -80,6 +71,15 @@
       <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/azure-resource-graph/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>KQL</title>
+      <link>/tags/kql/</link>
+      <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/kql/</guid>
       <description></description>
     </item>
     

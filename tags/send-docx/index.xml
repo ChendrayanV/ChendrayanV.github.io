@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Send DOCX on Chendrayan Venkatesan</title>
+    <link>/tags/send-docx/</link>
+    <description>Recent content in Send DOCX on Chendrayan Venkatesan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 18 Jul 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/send-docx/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AZURE-DEVOPS-GENERATE-DOCX-SEND-EMAIL-WITH-NO-MARKETPLACE-EXTENSIONS</title>
+      <link>/blog/azure-devops-generate-docx-send-email-with-no-marketplace-extensions.md/</link>
+      <pubDate>Sat, 18 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/azure-devops-generate-docx-send-email-with-no-marketplace-extensions.md/</guid>
+      <description>Introduction I was developing an as-built script for Azure infrastructure, which should produce a docx file output with charts and tables (especially for inventory). So, I thought of using Open XML, which I used, a few years ago for SharePoint document library reporting. I searched GitHub and found a great PowerShell module PSWriteWord, and docs are super cool. Yes, this blog post is to show you the simple steps to generate a word document through the Azure DevOps pipeline.</description>
+    </item>
+    
+  </channel>
+</rss>

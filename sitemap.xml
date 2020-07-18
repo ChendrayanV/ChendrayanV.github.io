@@ -13,7 +13,7 @@
   </url>
   
   <url>
-    <loc>/blog/azure-devops-send-powershell-output-as-docx-through-email-with-no-marketplace-extensions/</loc>
+    <loc>/blog/azure-devops-generate-docx-send-email-with-no-marketplace-extensions.md/</loc>
     <lastmod>2020-07-18T00:00:00+00:00</lastmod>
   </url>
   
@@ -33,17 +33,12 @@
   </url>
   
   <url>
-    <loc>/tags/kql/</loc>
-    <lastmod>2020-07-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tags/powershell/</loc>
     <lastmod>2020-07-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/pswriteword/</loc>
+    <loc>/tags/send-docx/</loc>
     <lastmod>2020-07-18T00:00:00+00:00</lastmod>
   </url>
   
@@ -74,6 +69,11 @@
   
   <url>
     <loc>/tags/azure-resource-graph/</loc>
+    <lastmod>2020-05-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/kql/</loc>
     <lastmod>2020-05-01T00:00:00+00:00</lastmod>
   </url>
   
