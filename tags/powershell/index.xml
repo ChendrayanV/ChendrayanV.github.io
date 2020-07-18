@@ -42,6 +42,15 @@
     </item>
     
     <item>
+      <title>How Azure DevOps REST API helped me during outage of the VPN?</title>
+      <link>/blog/idemo/</link>
+      <pubDate>Sat, 18 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/idemo/</guid>
+      <description>Introduction For demo</description>
+    </item>
+    
+    <item>
       <title>Azure Resource Graph Query - KQL Joins</title>
       <link>/blog/azure-resource-graph-query-kql-joins/</link>
       <pubDate>Thu, 16 Apr 2020 00:00:00 +0000</pubDate>

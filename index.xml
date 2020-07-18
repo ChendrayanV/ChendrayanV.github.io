@@ -6,19 +6,10 @@
     <description>Recent content on Chendrayan Venkatesan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 18 Jul 2020 21:39:22 +0530</lastBuildDate>
+    <lastBuildDate>Sun, 28 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Idemo</title>
-      <link>/blog/idemo/</link>
-      <pubDate>Sat, 18 Jul 2020 21:39:22 +0530</pubDate>
-      
-      <guid>/blog/idemo/</guid>
-      <description>Introduction For demo</description>
-    </item>
     
     <item>
       <title>MY FIRST EXPERIENCE WITH THE AZURE DURABLE FUNCTIONS</title>
@@ -57,6 +48,15 @@
       <guid>/blog/how-azure-devops-rest-api-helped-me-during-outage-of-the-vpn/</guid>
       <description>Introduction There is always an alternative is the apt statement to start this blog post! Yes, I got trouble in VPN and lost connection to most of our internal portal, and one among that is Azure DevOps (Formerly VSTS), where the code resides. Positively, no hindrances in accessing Outlook and Teams over mobile. All I need is to continue the work on code, work items and send status report.
  REST API is the savior!</description>
+    </item>
+    
+    <item>
+      <title>How Azure DevOps REST API helped me during outage of the VPN?</title>
+      <link>/blog/idemo/</link>
+      <pubDate>Sat, 18 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/idemo/</guid>
+      <description>Introduction For demo</description>
     </item>
     
     <item>
