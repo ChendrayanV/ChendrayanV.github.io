@@ -6,10 +6,19 @@
     <description>Recent content in Blog on Chendrayan Venkatesan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 28 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 18 Jul 2020 21:39:22 +0530</lastBuildDate>
     
 	<atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Idemo</title>
+      <link>/blog/idemo/</link>
+      <pubDate>Sat, 18 Jul 2020 21:39:22 +0530</pubDate>
+      
+      <guid>/blog/idemo/</guid>
+      <description>Introduction For demo</description>
+    </item>
     
     <item>
       <title>MY FIRST EXPERIENCE WITH THE AZURE DURABLE FUNCTIONS</title>
