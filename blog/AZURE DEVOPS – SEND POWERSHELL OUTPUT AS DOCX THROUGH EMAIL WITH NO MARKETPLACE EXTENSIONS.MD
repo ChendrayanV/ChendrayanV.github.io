@@ -1,9 +1,9 @@
 +++
 author = "Chendrayan Venkatesan"
-categories = ["Azure DevOps"]
+categories = ["Azure"]
 tags = ["KQL" , "PowerShell", "Azure DevOps", "PSWriteWord"]
 date = "2020-07-18"
-description = "Fun time with Az DevOps"
+description = "Fun with Az DevOps"
 featured = "MSWORD.jpg"
 featuredalt = "MSWORD"
 featuredpath = "date"
