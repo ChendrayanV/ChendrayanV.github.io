@@ -21,14 +21,5 @@
  REST API is the savior!</description>
     </item>
     
-    <item>
-      <title>idemo</title>
-      <link>/blog/idemo/</link>
-      <pubDate>Sat, 18 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/blog/idemo/</guid>
-      <description>Introduction For demo</description>
-    </item>
-    
   </channel>
 </rss>
