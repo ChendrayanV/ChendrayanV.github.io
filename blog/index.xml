@@ -6,67 +6,57 @@
     <description>Recent content in Blog on Chendrayan Venkatesan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 28 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 28 Sep 2014 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>MY FIRST EXPERIENCE WITH THE AZURE DURABLE FUNCTIONS</title>
-      <link>/blog/my-first-experience-with-the-azure-durable-functions/</link>
-      <pubDate>Sun, 28 Jun 2020 00:00:00 +0000</pubDate>
+      <title>Creating a New Theme</title>
+      <link>/blog/creating-a-new-theme/</link>
+      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
       
-      <guid>/blog/my-first-experience-with-the-azure-durable-functions/</guid>
-      <description>Introduction Of late, I got a requirement to start the Azure runbooks programmatically (start a runbook through another runbook), and as a PowerShell fan, I said, “Start-AzAutomationAccountRunBook” is one best way to achieve it. An hour later, I got a call to build a script that waits until the job completes and gets the output. Here is a quick way “-Wait” parameter. Solved the issue? Yes! Now, it’s time for us to deliver a REST API endpoint, which is required to invoke in an Azure Pipeline for the business process.</description>
+      <guid>/blog/creating-a-new-theme/</guid>
+      <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
+We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
     </item>
     
     <item>
-      <title>Retrieve unattached Azure VM disks using PowerShell &amp; Azure Resource Graph</title>
-      <link>/blog/retrieve-unattached-azure-vm-disks/</link>
-      <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
+      <title>(Hu)go Template Primer</title>
+      <link>/blog/goisforlovers/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>/blog/retrieve-unattached-azure-vm-disks/</guid>
-      <description>Introduction As part of the cost saving project task, I developed a PowerShell script to retrieve UNATTACHED disks. I used JOIN operator in this code to get a few tag information from the respective resource group.
- Replace value for the {TAGNAME}.
- $Query = &amp;#34;Resources | where type =~ &amp;#39;Microsoft.Compute/disks&amp;#39; | where properties.diskState =~ &amp;#39;Unattached&amp;#39; | project id, name, subscriptionId, resourceGroup, diskInGB = properties.diskSizeGB, diskState = properties.diskState, timeCreated = properties.</description>
+      <guid>/blog/goisforlovers/</guid>
+      <description>Hugo uses the excellent go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in go templates.
+This document is a brief primer on using go templates.</description>
     </item>
     
     <item>
-      <title>Create Azure DevOps Service Connection with Certificate using REST API</title>
-      <link>/blog/create-service-connection-with-certificate-using-rest-api/</link>
-      <pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate>
+      <title>Getting Started with Hugo</title>
+      <link>/blog/hugoisforlovers/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>/blog/create-service-connection-with-certificate-using-rest-api/</guid>
-      <description>Introduction I have no access to my organization DevOps due to unfortunate technical issues, but that didn’t stop me from working. This morning I was on a call with a business owner who asked me to show the steps to create service connections with the certificate. Yes, I have to use the OPEN SSL tool to convert the PFX to PEM, and it was a bit difficult for me to walk him through the steps remotely.</description>
+      <guid>/blog/hugoisforlovers/</guid>
+      <description>&lt;h2 id=&#34;step-1-install-hugo&#34;&gt;Step 1. Install Hugo&lt;/h2&gt;
+&lt;p&gt;Go to &lt;a href=&#34;https://github.com/spf13/hugo/releases&#34;&gt;hugo releases&lt;/a&gt; and download the
+appropriate version for your os and architecture.&lt;/p&gt;
+&lt;p&gt;Save it somewhere specific as we will be using it in the next step.&lt;/p&gt;
+&lt;p&gt;More complete instructions are available at &lt;a href=&#34;/overview/installing/&#34;&gt;installing hugo&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>How Azure DevOps REST API helped me during outage of the VPN?</title>
-      <link>/blog/how-azure-devops-rest-api-helped-me-during-outage-of-the-vpn/</link>
-      <pubDate>Sat, 18 Apr 2020 00:00:00 +0000</pubDate>
+      <title>Migrate to Hugo from Jekyll</title>
+      <link>/blog/migrate-from-jekyll/</link>
+      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
       
-      <guid>/blog/how-azure-devops-rest-api-helped-me-during-outage-of-the-vpn/</guid>
-      <description>Introduction There is always an alternative is the apt statement to start this blog post! Yes, I got trouble in VPN and lost connection to most of our internal portal, and one among that is Azure DevOps (Formerly VSTS), where the code resides. Positively, no hindrances in accessing Outlook and Teams over mobile. All I need is to continue the work on code, work items and send status report.
- REST API is the savior!</description>
-    </item>
-    
-    <item>
-      <title>DEPLOYING AZURE FUNCTION APP - EXTERNAL GIT</title>
-      <link>/blog/deploying-azure-function-app-external-git/</link>
-      <pubDate>Fri, 17 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/blog/deploying-azure-function-app-external-git/</guid>
-      <description>Introduction I bet most of you don’t need this! Having said that, if your organization has Azure DevOps (Formerly VSTS) in directory A and Azure on directory B. Then, deploying Azure Function App using external git may help you.
-Why not Zip deploy? Yes, that’s the optimal way to do! In my case, the roller coaster ride for simple requirements is quite common. Consider, Azure Functions source code is available with vendors, and it’s an end to end solution to be deployed at your workplace in a shorter time, and building a pipeline may take a few hours or process may delay the deployment.</description>
-    </item>
-    
-    <item>
-      <title>Azure Resource Graph Query - KQL Joins</title>
-      <link>/blog/azure-resource-graph-query-kql-joins/</link>
-      <pubDate>Thu, 16 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/blog/azure-resource-graph-query-kql-joins/</guid>
-      <description>Introduction A friend asked, How to pull resource groups tags, including resource information? Yes, it is the most common ask, and there are many ways to accomplish it! Time is precious, considering that let us skip the legacy methods like using the Az module, REST API, or SDK&amp;rsquo;s to query the Azure resources in the definitive loops. You are accountable for 200 + subscription and send a report of Azure resources in some schedules.</description>
+      <guid>/blog/migrate-from-jekyll/</guid>
+      <description>&lt;h2 id=&#34;move-static-content-to-static&#34;&gt;Move static content to &lt;code&gt;static&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;Jekyll has a rule that any directory not starting with &lt;code&gt;_&lt;/code&gt; will be copied as-is to the &lt;code&gt;_site&lt;/code&gt; output. Hugo keeps all static content under &lt;code&gt;static&lt;/code&gt;. You should therefore move it all there.
+With Jekyll, something that looked like&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;▾ &amp;lt;root&amp;gt;/
+    ▾ images/
+        logo.png
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
   </channel>
