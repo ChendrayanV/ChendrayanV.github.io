@@ -6,19 +6,10 @@
     <description>Recent content in Azure DevOps on Chendrayan Venkatesan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 19 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 25 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/azure-devops/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Azure Devops Pipeline To Send Files Through Email With No Marketplace Extension</title>
-      <link>/blog/azure-devops-pipeline-to-send-files-through-email-with-no-marketplace-extension/</link>
-      <pubDate>Sun, 19 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/blog/azure-devops-pipeline-to-send-files-through-email-with-no-marketplace-extension/</guid>
-      <description>Introduction This is a dummy blog post</description>
-    </item>
     
     <item>
       <title>Create Azure DevOps Service Connection with Certificate using REST API</title>
