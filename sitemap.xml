@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/tags/azure/</loc>
+    <lastmod>2020-06-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/categories/azure/</loc>
     <lastmod>2020-06-28T00:00:00+00:00</lastmod>
   </url>
@@ -123,6 +128,11 @@
   </url>
   
   <url>
+    <loc>/blog/azure-devops-pipeline-to-send-files-through-email-with-no-marketplace-extension/</loc>
+    <lastmod>2020-04-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/itemized/item1/</loc>
     <lastmod>2020-04-16T00:00:00+00:00</lastmod>
   </url>
@@ -139,6 +149,11 @@
   
   <url>
     <loc>/itemized/</loc>
+    <lastmod>2020-04-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/pswriteword/</loc>
     <lastmod>2020-04-16T00:00:00+00:00</lastmod>
   </url>
   

@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>Azure</title>
+      <link>/tags/azure/</link>
+      <pubDate>Sun, 28 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/azure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Azure Function</title>
       <link>/tags/azure-function/</link>
       <pubDate>Sun, 28 Jun 2020 00:00:00 +0000</pubDate>
@@ -125,6 +134,15 @@
       <pubDate>Fri, 17 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/external-git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PSWriteWord</title>
+      <link>/tags/pswriteword/</link>
+      <pubDate>Thu, 16 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/pswriteword/</guid>
       <description></description>
     </item>
     

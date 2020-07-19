@@ -61,6 +61,15 @@ Why not Zip deploy? Yes, that’s the optimal way to do! In my case, the roller 
     </item>
     
     <item>
+      <title>AZURE DEVOPS PIPELINE to SEND FILES THROUGH EMAIL WITH NO MARKETPLACE EXTENSION</title>
+      <link>/blog/azure-devops-pipeline-to-send-files-through-email-with-no-marketplace-extension/</link>
+      <pubDate>Thu, 16 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/azure-devops-pipeline-to-send-files-through-email-with-no-marketplace-extension/</guid>
+      <description>Introduction For Demo!</description>
+    </item>
+    
+    <item>
       <title>Azure Resource Graph Query - KQL Joins</title>
       <link>/blog/azure-resource-graph-query-kql-joins/</link>
       <pubDate>Thu, 16 Apr 2020 00:00:00 +0000</pubDate>
