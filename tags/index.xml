@@ -83,5 +83,68 @@
       <description></description>
     </item>
     
+    <item>
+      <title>Azure DevOps</title>
+      <link>/tags/azure-devops/</link>
+      <pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/azure-devops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>REST API</title>
+      <link>/tags/rest-api/</link>
+      <pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/rest-api/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Service Connection</title>
+      <link>/tags/service-connection/</link>
+      <pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/service-connection/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>WIQL</title>
+      <link>/tags/wiql/</link>
+      <pubDate>Sat, 18 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/wiql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Azure Functions</title>
+      <link>/tags/azure-functions/</link>
+      <pubDate>Fri, 17 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/azure-functions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Deployment</title>
+      <link>/tags/deployment/</link>
+      <pubDate>Fri, 17 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/deployment/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>External Git</title>
+      <link>/tags/external-git/</link>
+      <pubDate>Fri, 17 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/external-git/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

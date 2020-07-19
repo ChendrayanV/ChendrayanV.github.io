@@ -83,6 +83,61 @@
   </url>
   
   <url>
+    <loc>/tags/azure-devops/</loc>
+    <lastmod>2020-04-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/azure-devops/</loc>
+    <lastmod>2020-04-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/create-service-connection-with-certificate-using-rest-api/</loc>
+    <lastmod>2020-04-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/rest-api/</loc>
+    <lastmod>2020-04-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/service-connection/</loc>
+    <lastmod>2020-04-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/how-azure-devops-rest-api-helped-me-during-outage-of-the-vpn/</loc>
+    <lastmod>2020-04-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/wiql/</loc>
+    <lastmod>2020-04-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/azure-functions/</loc>
+    <lastmod>2020-04-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/deploying-azure-function-app-external-git/</loc>
+    <lastmod>2020-04-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/deployment/</loc>
+    <lastmod>2020-04-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/external-git/</loc>
+    <lastmod>2020-04-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/itemized/item1/</loc>
     <lastmod>2017-06-22T00:00:00+00:00</lastmod>
   </url>

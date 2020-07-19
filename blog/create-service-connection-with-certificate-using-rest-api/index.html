@@ -1,0 +1,1169 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <script type="application/ld+json">
+    {
+        "@context" : "http://schema.org",
+        "@type" : "BlogPosting",
+        "mainEntityOfPage": {
+             "@type": "WebPage",
+             "@id": "\/"
+        },
+        "articleSection" : "blog",
+        "name" : "Create Azure DevOps Service Connection with Certificate using REST API",
+        "headline" : "Create Azure DevOps Service Connection with Certificate using REST API",
+        "description" : "Az DevOps | PowerShell | REST API",
+        "inLanguage" : "en",
+        "author" : "",
+        "creator" : "",
+        "publisher": "",
+        "accountablePerson" : "",
+        "copyrightHolder" : "",
+        "copyrightYear" : "2020",
+        "datePublished": "2020-04-25 00:00:00 \u002b0000 UTC",
+        "dateModified" : "2020-04-25 00:00:00 \u002b0000 UTC",
+        "url" : "\/blog\/create-service-connection-with-certificate-using-rest-api\/",
+        "wordCount" : "272",
+        "keywords" : [ "Azure DevOps","PowerShell","REST API","Service Connection","Blog" ]
+    }
+    </script>
+        
+            
+                <title>Create Azure DevOps Service Connection with Certificate using REST API</title>
+            
+        
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="generator" content="Hugo 0.74.2" />
+        
+  
+    
+  
+
+  
+
+  <link rel="apple-touch-icon-precomposed" href='/favicon/apple-touch-icon-precomposed.png'>
+  <link rel="icon" href='/favicon/favicon.png'>
+  
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-TileImage" content='/favicon/mstile.png'>
+  <meta name="application-name" content="Chendrayan Venkatesan">
+  <meta name="msapplication-tooltip" content="">
+  <meta name="msapplication-config" content='/favicon/ieconfig.xml'>
+
+
+
+        
+            <meta name="author" content="Chendrayan Venkatesan">
+        
+        
+            <meta name="description" content="Az DevOps | PowerShell | REST API">
+        
+
+        <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Create Azure DevOps Service Connection with Certificate using REST API"/>
+<meta name="twitter:description" content="Az DevOps | PowerShell | REST API"/>
+<meta name="twitter:site" content="@chendrayanv"/>
+
+        <meta property="og:title" content="Create Azure DevOps Service Connection with Certificate using REST API" />
+<meta property="og:description" content="Az DevOps | PowerShell | REST API" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/blog/create-service-connection-with-certificate-using-rest-api/" />
+<meta property="article:published_time" content="2020-04-25T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-04-25T00:00:00+00:00" />
+
+        <meta property="og:image" content="//images/logo.png">
+        <meta property="og:image:type" content="image/png">
+        <meta property="og:image:width" content="512">
+        <meta property="og:image:height" content="512">
+        <meta itemprop="name" content="Create Azure DevOps Service Connection with Certificate using REST API">
+<meta itemprop="description" content="Az DevOps | PowerShell | REST API">
+<meta itemprop="datePublished" content="2020-04-25T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-04-25T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="272">
+
+
+
+<meta itemprop="keywords" content="Azure DevOps,PowerShell,REST API,Service Connection," />
+        
+
+        
+            
+        
+
+        
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css">
+            <link rel="stylesheet" href="/css/main.css">
+            <link rel="stylesheet" href="/css/add-on.css">
+            <link rel="stylesheet" href="/css/academicons.min.css">
+        
+
+        
+            
+                
+            
+        
+
+
+  
+    
+    <link href='//cdn.bootcss.com/highlight.js/9.11.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+  
+
+
+      
+    </head>
+    <body>
+
+      
+      <div id="wrapper">
+
+    
+    
+<header id="header">
+    
+      <h1><a href="/">blog</a></h1>
+    
+
+    <nav class="links">
+        <ul>
+            
+                <li>
+                    <a href="/">
+                            <i class="fa fa-home">&nbsp;</i>Home
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/about/">
+                            <i class="fa fa-id-card-o">&nbsp;</i>About
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/blog/">
+                            <i class="fa fa-newspaper-o">&nbsp;</i>Blog
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/categories/">
+                            <i class="fa fa-sitemap">&nbsp;</i>Categories
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="http://chen.about-powershell.com">
+                            <i class="fa fa-wordpress">&nbsp;</i>Wordpress
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/contact/">
+                            <i class="fa fa-envelope-o">&nbsp;</i>Contact
+                    </a>
+                </li>
+            
+        </ul>
+    </nav>
+    <nav class="main">
+        <ul>
+            
+            <li id="share-nav" class="share-menu" style="display:none;">
+                <a class="fa-share-alt" href="#share-menu">Share</a>
+            </li>
+            
+            <li class="search">
+                <a class="fa-search" href="#search">Search</a>
+                <form id="search" method="get" action="//google.com/search">
+                    <input type="text" name="q" placeholder="Search" />
+                    <input type="hidden" name="as_sitesearch" value="/">
+                </form>
+            </li>
+            <li class="menu">
+                <a class="fa-bars" href="#menu">Menu</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+<section id="menu">
+
+    
+        <section>
+            <form class="search" method="get" action="//google.com/search">
+                <input type="text" name="q" placeholder="Search" />
+                <input type="hidden" name="as_sitesearch" value="/">
+            </form>
+        </section>
+
+    
+        <section>
+            <ul class="links">
+                
+                    <li>
+                        <a href="/">
+                            <h3>
+                                <i class="fa fa-home">&nbsp;</i>Home
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/about/">
+                            <h3>
+                                <i class="fa fa-id-card-o">&nbsp;</i>About
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/blog/">
+                            <h3>
+                                <i class="fa fa-newspaper-o">&nbsp;</i>Blog
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/categories/">
+                            <h3>
+                                <i class="fa fa-sitemap">&nbsp;</i>Categories
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="http://chen.about-powershell.com">
+                            <h3>
+                                <i class="fa fa-wordpress">&nbsp;</i>Wordpress
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/contact/">
+                            <h3>
+                                <i class="fa fa-envelope-o">&nbsp;</i>Contact
+                            </h3>
+                        </a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        <section class="recent-posts">
+            <div class="mini-posts">
+                <header>
+                    <h3>Recent Posts</h3>
+                </header>
+                
+
+                
+                    
+                
+
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/blog/azure-devops-pipeline-to-send-files-through-email-with-no-marketplace-extension/">Azure Devops Pipeline To Send Files Through Email With No Marketplace Extension</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2020-07-19'>
+                                    July 19, 2020</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="/blog/azure-devops-pipeline-to-send-files-through-email-with-no-marketplace-extension/" class="image featured">
+            <img src="/img/2020/07/Charts.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/blog/my-first-experience-with-the-azure-durable-functions/">MY FIRST EXPERIENCE WITH THE AZURE DURABLE FUNCTIONS</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2020-06-28'>
+                                    June 28, 2020</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="/blog/my-first-experience-with-the-azure-durable-functions/" class="image featured">
+            <img src="/img/2020/06/Sand-Clock.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/blog/retrieve-unattached-azure-vm-disks-using-powershell-azure-resource-graph/">Retrieve unattached Azure VM disks using PowerShell &amp; Azure Resource Graph</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2020-05-01'>
+                                    May 1, 2020</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="/blog/retrieve-unattached-azure-vm-disks-using-powershell-azure-resource-graph/" class="image featured">
+            <img src="/img/2020/05/unattached-disks.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/blog/create-service-connection-with-certificate-using-rest-api/">Create Azure DevOps Service Connection with Certificate using REST API</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2020-04-25'>
+                                    April 25, 2020</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="/blog/create-service-connection-with-certificate-using-rest-api/" class="image featured">
+            <img src="/img/2020/04/Happy-Laugh.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/blog/how-azure-devops-rest-api-helped-me-during-outage-of-the-vpn/">How Azure DevOps REST API helped me during outage of the VPN?</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2020-04-18'>
+                                    April 18, 2020</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="/blog/how-azure-devops-rest-api-helped-me-during-outage-of-the-vpn/" class="image featured">
+            <img src="/img/2020/04/Azure-DevOps01.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+
+                
+                    <a href=
+                        
+                            /blog/
+                        
+                        class="button">View more posts</a>
+                
+            </div>
+        </section>
+
+    
+        
+</section>
+
+    <section id="share-menu">
+    <section id="social-share-nav">
+        <ul class="links">
+            <header>
+                <h3>Share this post <i class="fa fa-smile-o"></i></h3>
+            </header>
+            
+
+
+
+<li>
+  <a href="//twitter.com/share?url=%2fblog%2fcreate-service-connection-with-certificate-using-rest-api%2f&amp;text=Create%20Azure%20DevOps%20Service%20Connection%20with%20Certificate%20using%20REST%20API&amp;via=chendrayanv" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
+
+
+
+
+
+
+
+
+<li>
+  <a href="//www.facebook.com/sharer/sharer.php?u=%2fblog%2fcreate-service-connection-with-certificate-using-rest-api%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+  <a href="//www.linkedin.com/shareArticle?url=%2fblog%2fcreate-service-connection-with-certificate-using-rest-api%2f&amp;title=Create%20Azure%20DevOps%20Service%20Connection%20with%20Certificate%20using%20REST%20API" target="_blank" class="share-btn linkedin">
+      <i class="fa fa-linkedin"></i>
+      <p>LinkedIn</p>
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="mailto:?subject=Check out this post by Chendrayan%20Venkatesan&amp;body=%2fblog%2fcreate-service-connection-with-certificate-using-rest-api%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+  </a>
+</li>
+
+
+        </ul>
+    </section>
+</section>
+
+    
+    <div id="main">
+        
+        
+        <article class="post">
+  <header>
+    <div class="title">
+        
+            <h1><a href="/blog/create-service-connection-with-certificate-using-rest-api/">Create Azure DevOps Service Connection with Certificate using REST API</a></h1>
+            
+        
+        
+            <p>Az DevOps | PowerShell | REST API</p>
+        
+    </div>
+    <div class="meta">
+        
+
+        <time class="published"
+            datetime='2020-04-25'>
+            April 25, 2020</time>
+        <span class="author">Chendrayan Venkatesan</span>
+        
+            <p>2 minute read</p>
+        
+        
+    </div>
+</header>
+
+
+  
+
+  
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="/blog/create-service-connection-with-certificate-using-rest-api/" class="image featured">
+            <img src="/img/2020/04/Happy-Laugh.jpg" alt="">
+        </a>
+    
+
+
+  <div id="content">
+    <h1 id="introduction">Introduction</h1>
+<p>I have no access to my organization DevOps due to unfortunate technical issues, but that didn’t stop me from working. This morning I was on a call with a business owner who asked me to show the steps to create service connections with the certificate.   Yes, I have to use the OPEN SSL tool to convert the PFX to PEM, and it was a bit difficult for me to walk him through the steps remotely. So, I got the PAT and certificate from the user and started my experiment in the REST API. After a few struggles, I managed to set up the service connection. Here is the PowerShell script.</p>
+<blockquote>
+<p>Replace the value for certificate, PAT, subscriptionid &amp; name , service principal and tenant id.</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PowerShell" data-lang="PowerShell">$Certificate = <span style="color:#e6db74">@&#34;
+</span><span style="color:#e6db74">{YOUR CERTIFICATE}
+</span><span style="color:#e6db74">&#34;@</span>
+$PAT = <span style="color:#e6db74">&#34;PAT TOKEN&#34;</span>
+$PATGetBytes = <span style="color:#66d9ef">[System.Text.Encoding]</span>::ASCII.GetBytes(<span style="color:#e6db74">&#34;:$PAT&#34;</span>)
+$Authentication = <span style="color:#66d9ef">[System.Convert]</span>::ToBase64String($PATGetBytes)
+$Headers = @{Authorization = (<span style="color:#e6db74">&#34;Basic {0}&#34;</span> <span style="color:#f92672">-f</span> $Authentication) }
+$Uri = <span style="color:#e6db74">&#34;https://dev.azure.com/about-powershell/iShell/_apis/serviceendpoint/endpoints?api-version=5.1-preview.2&#34;</span>
+$Body = <span style="color:#66d9ef">[pscustomobject]</span>@{
+    administratorsGroup = <span style="color:#e6db74">&#34;null&#34;</span>
+    data = <span style="color:#66d9ef">[pscustomobject]</span>@{
+        subscriptionId = <span style="color:#e6db74">&#39;&#39;</span>
+        subscriptionName = <span style="color:#e6db74">&#39;&#39;</span>
+        CreationMode = <span style="color:#e6db74">&#39;Manual&#39;</span>
+        scopeLevel = <span style="color:#e6db74">&#39;Subscription&#39;</span>
+    }
+    authorization = <span style="color:#66d9ef">[pscustomobject]</span>@{
+            scheme = <span style="color:#e6db74">&#39;ServicePrincipal&#39;</span>
+            parameters = <span style="color:#66d9ef">[pscustomobject]</span>@{
+            authenticationType = <span style="color:#e6db74">&#39;spnCertificate&#39;</span>
+            servicePrincipalCertificate = $certificate
+            serviceprincipalid = <span style="color:#e6db74">&#39;&#39;</span>
+            tenantid = <span style="color:#e6db74">&#39;&#39;</span>
+        }
+    }
+    name = <span style="color:#e6db74">&#39;DEVEPLOPMENT&#39;</span>
+    type = <span style="color:#e6db74">&#39;azurerm&#39;</span>
+    url = <span style="color:#e6db74">&#39;https://management.azure.com/&#39;</span>
+} | ConvertTo-Json -Depth 10
+Invoke-RestMethod -Uri $Uri -Method Post -Body $Body -Headers $Headers -ContentType <span style="color:#e6db74">&#39;application/json&#39;</span>
+</code></pre></div><p>Upon successful execution of the script, you can see the result on the service connection page. The point is, no information about subscription, scope, and tenant information is visible. The update of the service connection is possible via REST API in this case, and no UI is supported.</p>
+
+  </div>
+
+  <footer>
+    <ul class="stats">
+  <li class="categories">
+    <ul>
+        
+            
+            
+                <i class="fa fa-folder"></i>
+                
+                
+                <li><a class="article-category-link" href="/categories/azure-devops">Azure DevOps</a></li>
+                
+            
+        
+    </ul>
+  </li>
+  <li class="tags">
+    <ul>
+        
+            
+            
+                <i class="fa fa-tags"></i>
+                
+                
+                <li><a class="article-category-link" href="/tags/azure-devops">Azure DevOps</a></li>
+                
+                
+                <li><a class="article-category-link" href="/tags/powershell">PowerShell</a></li>
+                
+                
+                <li><a class="article-category-link" href="/tags/rest-api">REST API</a></li>
+                
+                
+                <li><a class="article-category-link" href="/tags/service-connection">Service Connection</a></li>
+                
+            
+        
+    </ul>
+  </li>
+</ul>
+
+  </footer>
+
+</article>
+
+
+<ul class="actions pagination">
+    
+        <li><a href="/blog/how-azure-devops-rest-api-helped-me-during-outage-of-the-vpn/"
+                class="button big previous">How Azure DevOps REST API helped me during outage of the VPN?</a></li>
+    
+
+    
+        <li><a href="/blog/retrieve-unattached-azure-vm-disks-using-powershell-azure-resource-graph/"
+                class="button big next">Retrieve unattached Azure VM disks using PowerShell &amp; Azure Resource Graph</a></li>
+    
+</ul>
+
+
+    </div>
+    
+<section id="sidebar">
+
+  
+  <section id="intro">
+    
+    
+      
+        <a href='/'><img src="/img/main/ChenV.jpg" class="intro-circle" width="" alt="Hugo Future Imperfect" /></a>
+      
+    
+    
+      <header>
+        <h2>Chendrayan Venkatesan</h2>
+        <p>Views are of my own!</p>
+      </header>
+    
+    
+      <ul class="icons">
+        
+          
+    <li><a href="/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
+
+
+        
+        
+  <li><a href="//github.com/chendrayanv" target="_blank" title="GitHub" class="fa fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="//linkedin.com/in/chendrayanv" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
+
+
+
+
+
+
+
+  <li><a href="//xing.com/profile/Chendrayan_Venkatesan" target="_blank" title="Xing" class="fa fa-xing"></a></li>
+
+
+
+
+
+  <li><a href="//facebook.com/chendrayanv" target="_blank" title="Facebook" class="fa fa-facebook"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="//twitter.com/chendrayanv" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="mailto:chendrayan.exchange@hotmail.com" title="Email" class="fa fa-envelope"></a></li>
+
+
+      </ul>
+    
+  </section>
+
+  
+  <section class="recent-posts">
+    <div class="mini-posts">
+      <header>
+        <h3>Recent Posts</h3>
+      </header>
+      <div class="posts-container">
+        
+
+        
+          
+        
+
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/blog/azure-devops-pipeline-to-send-files-through-email-with-no-marketplace-extension/">Azure Devops Pipeline To Send Files Through Email With No Marketplace Extension</a>
+              </h3>
+              
+              <time class="published" datetime='2020-07-19'>
+                July 19, 2020
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="/blog/azure-devops-pipeline-to-send-files-through-email-with-no-marketplace-extension/" class="image featured">
+            <img src="/img/2020/07/Charts.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/blog/my-first-experience-with-the-azure-durable-functions/">MY FIRST EXPERIENCE WITH THE AZURE DURABLE FUNCTIONS</a>
+              </h3>
+              
+              <time class="published" datetime='2020-06-28'>
+                June 28, 2020
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="/blog/my-first-experience-with-the-azure-durable-functions/" class="image featured">
+            <img src="/img/2020/06/Sand-Clock.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/blog/retrieve-unattached-azure-vm-disks-using-powershell-azure-resource-graph/">Retrieve unattached Azure VM disks using PowerShell &amp; Azure Resource Graph</a>
+              </h3>
+              
+              <time class="published" datetime='2020-05-01'>
+                May 1, 2020
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="/blog/retrieve-unattached-azure-vm-disks-using-powershell-azure-resource-graph/" class="image featured">
+            <img src="/img/2020/05/unattached-disks.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/blog/create-service-connection-with-certificate-using-rest-api/">Create Azure DevOps Service Connection with Certificate using REST API</a>
+              </h3>
+              
+              <time class="published" datetime='2020-04-25'>
+                April 25, 2020
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="/blog/create-service-connection-with-certificate-using-rest-api/" class="image featured">
+            <img src="/img/2020/04/Happy-Laugh.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/blog/how-azure-devops-rest-api-helped-me-during-outage-of-the-vpn/">How Azure DevOps REST API helped me during outage of the VPN?</a>
+              </h3>
+              
+              <time class="published" datetime='2020-04-18'>
+                April 18, 2020
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="/blog/how-azure-devops-rest-api-helped-me-during-outage-of-the-vpn/" class="image featured">
+            <img src="/img/2020/04/Azure-DevOps01.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+      </div>
+
+      
+        <a href=
+          
+            /blog/
+          
+        class="button">View more posts</a>
+      
+    </div>
+  </section>
+
+  
+  
+  
+  
+  
+    <section id="categories">
+      <header>
+        <h3>
+          <a href="/categories/">Categories</a>
+        </h3>
+      </header>
+        
+          
+        
+
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/azure/">azure</a>
+                <span style="float:right;">4</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/azure-devops/">azure-devops</a>
+                <span style="float:right;">2</span>
+              
+            </header>
+          </article>
+        </p>
+        
+    </section>
+  
+  
+
+  
+  
+
+  
+  <section id="footer">
+    
+    <p class="copyright">
+      
+        &copy; 2020
+        
+          Chendrayan Venkatesan
+        
+      .
+      Powered by <a href="//gohugo.io" target="_blank">Hugo</a>
+    </p>
+  </section>
+</section>
+
+    </div>
+    <a id="back-to-top" href="#" class="fa fa-arrow-up fa-border fa-2x"></a>
+    
+
+    
+      
+    
+
+    
+      
+      
+      
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/highlight.min.js"></script>
+        
+        
+        
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/r.min.js"></script>
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/yaml.min.js"></script>
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/css.min.js"></script>
+        <script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+      
+    
+    
+    
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
+      <script src="/js/util.js"></script>
+      <script src="/js/main.js"></script>
+      <script src="/js/backToTop.js"></script>
+    
+
+    
+      
+        
+      
+    
+
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+      <script src="//yihui.name/js/math-code.js"></script>
+<script async
+src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+  </body>
+</html>
+
