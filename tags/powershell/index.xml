@@ -20,5 +20,16 @@
       <description>Introduction I was developing a PowerShell script to send Azure inventory through email, which generates a Word output with charts and tables. So, I thought of using Open XML, I used for SharePoint document library reporting (A few years ago), I searched GitHub and found a great PowerShell module PSWriteWord, and docs are super cool. Yes, this blog post is to show you the simple steps to generate a word document through Azure DevOps pipeline.</description>
     </item>
     
+    <item>
+      <title>Retrieve unattached Azure VM disks using PowerShell &amp; Azure Resource Graph</title>
+      <link>/blog/retrieve-unattached-azure-vm-disks-using-powershell-azure-resource-graph/</link>
+      <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/retrieve-unattached-azure-vm-disks-using-powershell-azure-resource-graph/</guid>
+      <description>Introduction As part of the cost saving project task, I developed a PowerShell script to retrieve UNATTACHED disks. I used JOIN operator in this code to get a few tag information from the respective resource group.
+ Replace value for the {TAGNAME}.
+ $Query = &amp;#34;Resources | where type =~ &amp;#39;Microsoft.Compute/disks&amp;#39; | where properties.diskState =~ &amp;#39;Unattached&amp;#39; | project id, name, subscriptionId, resourceGroup, diskInGB = properties.diskSizeGB, diskState = properties.diskState, timeCreated = properties.</description>
+    </item>
+    
   </channel>
 </rss>
