@@ -50,5 +50,14 @@ Why not Zip deploy? Yes, that’s the optimal way to do! In my case, the roller 
       <description>Introduction A friend asked, How to pull resource groups tags, including resource information? Yes, it is the most common ask, and there are many ways to accomplish it! Time is precious, considering that let us skip the legacy methods like using the Az module, REST API, or SDK&amp;rsquo;s to query the Azure resources in the definitive loops. You are accountable for 200 + subscription and send a report of Azure resources in some schedules.</description>
     </item>
     
+    <item>
+      <title>Demo Blog Post</title>
+      <link>/blog/demo-blog-post/</link>
+      <pubDate>Thu, 16 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/demo-blog-post/</guid>
+      <description>Introduction Demo blog post!</description>
+    </item>
+    
   </channel>
 </rss>
