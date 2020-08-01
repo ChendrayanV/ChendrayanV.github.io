@@ -6,10 +6,19 @@
     <description>Recent content in Azure Functions on Chendrayan Venkatesan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 17 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 01 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/azure-functions/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Loggin Service Now Requests using Event Grid Trigger</title>
+      <link>/blog/logging-service-now-requests-using-event-grid-trigger/</link>
+      <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/logging-service-now-requests-using-event-grid-trigger/</guid>
+      <description>Introduction A colleague of mine asked a solution for raising a service request in SNOW (Service Now) for each NSG rule creation and deletion. I requested to develop a service now catalog and allow the system to work with NSG. That means, from SNOW to Azure connectivity through REST API. However, the ask is the other way around. If a user creates/deletes the NSG rule in the portal, log a REQ with the minimum information</description>
+    </item>
     
     <item>
       <title>DEPLOYING AZURE FUNCTION APP - EXTERNAL GIT</title>
