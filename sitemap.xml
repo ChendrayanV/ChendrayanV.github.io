@@ -3,6 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/blog/</loc>
+    <lastmod>2020-12-12T15:31:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2020-12-12T15:31:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/hello-world/</loc>
+    <lastmod>2020-12-12T15:31:04+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>/tags/arm/</loc>
     <lastmod>2020-12-12T00:00:00+00:00</lastmod>
   </url>
@@ -33,17 +48,7 @@
   </url>
   
   <url>
-    <loc>/blog/</loc>
-    <lastmod>2020-12-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/categories/</loc>
-    <lastmod>2020-12-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/</loc>
     <lastmod>2020-12-12T00:00:00+00:00</lastmod>
   </url>
   
