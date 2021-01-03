@@ -18,8 +18,7 @@
       
       <guid>/blog/get-started-with-project-bicep/</guid>
       <description>References Refer to the below links to know more about the project bicep
- GitHub  Repository Docs Examples Tutorials Specifications    Introduction As a first step, we need to install the bicep tools on our local computer. If you need to deploy the solution using Az DevOps, follow the steps given in the &amp;ldquo;Deploy Bicep Solution using Azure DevOps&amp;rdquo; section.
-Install Bicep $installPath = &amp;#34;$env:USERPROFILE\.bicep&amp;#34; $installDir = New-Item -ItemType Directory -Path $installPath -Force $installDir.</description>
+ GitHub  Repository Docs Examples Tutorials Specifications   YouTube  Intro to Azure&amp;rsquo;s Project Bicep with Brendan Burns and team Project Bicep Demo at Ignite 2020 by Mark Russinovich Project Bicep and ARM Templates November 2020 Update    Introduction As a first step, we need to install the bicep tools on our local computer.</description>
     </item>
     
   </channel>
