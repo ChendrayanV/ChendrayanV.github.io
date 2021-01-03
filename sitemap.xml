@@ -3,207 +3,207 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/tags/azdevops/</loc>
+    <loc>//localhost:1313/tags/azdevops/</loc>
     <lastmod>2021-01-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/azure/</loc>
+    <loc>//localhost:1313/tags/azure/</loc>
     <lastmod>2021-01-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/azure/</loc>
+    <loc>//localhost:1313/categories/azure/</loc>
     <lastmod>2021-01-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/blog/</loc>
+    <loc>//localhost:1313/blog/</loc>
     <lastmod>2021-01-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/</loc>
+    <loc>//localhost:1313/categories/</loc>
     <lastmod>2021-01-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/</loc>
+    <loc>//localhost:1313/</loc>
     <lastmod>2021-01-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/blog/get-started-with-project-bicep/</loc>
+    <loc>//localhost:1313/blog/get-started-with-project-bicep/</loc>
     <lastmod>2021-01-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/project-bicep/</loc>
+    <loc>//localhost:1313/tags/project-bicep/</loc>
     <lastmod>2021-01-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/project-bicep/</loc>
+    <loc>//localhost:1313/categories/project-bicep/</loc>
     <lastmod>2021-01-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/</loc>
+    <loc>//localhost:1313/tags/</loc>
     <lastmod>2021-01-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/azure-functions/</loc>
+    <loc>//localhost:1313/tags/azure-functions/</loc>
     <lastmod>2020-08-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/event-grid-trigger/</loc>
+    <loc>//localhost:1313/tags/event-grid-trigger/</loc>
     <lastmod>2020-08-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/blog/logging-service-now-requests-using-event-grid-trigger/</loc>
+    <loc>//localhost:1313/blog/logging-service-now-requests-using-event-grid-trigger/</loc>
     <lastmod>2020-08-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/powershell/</loc>
+    <loc>//localhost:1313/tags/powershell/</loc>
     <lastmod>2020-08-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/servicenow/</loc>
+    <loc>//localhost:1313/tags/servicenow/</loc>
     <lastmod>2020-08-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/blog/azure-devops-pipeline-to-send-files-through-email-with-no-marketplace-extension/</loc>
+    <loc>//localhost:1313/blog/azure-devops-pipeline-to-send-files-through-email-with-no-marketplace-extension/</loc>
     <lastmod>2020-07-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/pswriteword/</loc>
+    <loc>//localhost:1313/tags/pswriteword/</loc>
     <lastmod>2020-07-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/azure-function/</loc>
+    <loc>//localhost:1313/tags/azure-function/</loc>
     <lastmod>2020-06-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/c#/</loc>
+    <loc>//localhost:1313/tags/c#/</loc>
     <lastmod>2020-06-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/durable/</loc>
+    <loc>//localhost:1313/tags/durable/</loc>
     <lastmod>2020-06-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/blog/my-first-experience-with-the-azure-durable-functions/</loc>
+    <loc>//localhost:1313/blog/my-first-experience-with-the-azure-durable-functions/</loc>
     <lastmod>2020-06-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/azure-resource-graph/</loc>
+    <loc>//localhost:1313/tags/azure-resource-graph/</loc>
     <lastmod>2020-05-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/kql/</loc>
+    <loc>//localhost:1313/tags/kql/</loc>
     <lastmod>2020-05-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/blog/retrieve-unattached-azure-vm-disks-using-powershell-azure-resource-graph/</loc>
+    <loc>//localhost:1313/blog/retrieve-unattached-azure-vm-disks-using-powershell-azure-resource-graph/</loc>
     <lastmod>2020-05-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/azure-devops/</loc>
+    <loc>//localhost:1313/tags/azure-devops/</loc>
     <lastmod>2020-04-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/azure-devops/</loc>
+    <loc>//localhost:1313/categories/azure-devops/</loc>
     <lastmod>2020-04-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/blog/create-service-connection-with-certificate-using-rest-api/</loc>
+    <loc>//localhost:1313/blog/create-service-connection-with-certificate-using-rest-api/</loc>
     <lastmod>2020-04-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/rest-api/</loc>
+    <loc>//localhost:1313/tags/rest-api/</loc>
     <lastmod>2020-04-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/service-connection/</loc>
+    <loc>//localhost:1313/tags/service-connection/</loc>
     <lastmod>2020-04-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/blog/how-azure-devops-rest-api-helped-me-during-outage-of-the-vpn/</loc>
+    <loc>//localhost:1313/blog/how-azure-devops-rest-api-helped-me-during-outage-of-the-vpn/</loc>
     <lastmod>2020-04-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/wiql/</loc>
+    <loc>//localhost:1313/tags/wiql/</loc>
     <lastmod>2020-04-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/blog/deploying-azure-function-app-external-git/</loc>
+    <loc>//localhost:1313/blog/deploying-azure-function-app-external-git/</loc>
     <lastmod>2020-04-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/deployment/</loc>
+    <loc>//localhost:1313/tags/deployment/</loc>
     <lastmod>2020-04-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/external-git/</loc>
+    <loc>//localhost:1313/tags/external-git/</loc>
     <lastmod>2020-04-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/about/</loc>
+    <loc>//localhost:1313/about/</loc>
     <lastmod>2020-04-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/itemized/item1/</loc>
+    <loc>//localhost:1313/itemized/item1/</loc>
     <lastmod>2017-06-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/itemized/item2/</loc>
+    <loc>//localhost:1313/itemized/item2/</loc>
     <lastmod>2017-06-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/itemized/item3/</loc>
+    <loc>//localhost:1313/itemized/item3/</loc>
     <lastmod>2017-06-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/itemized/item4/</loc>
+    <loc>//localhost:1313/itemized/item4/</loc>
     <lastmod>2017-06-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/itemized/</loc>
+    <loc>//localhost:1313/itemized/</loc>
     <lastmod>2017-06-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/contact/</loc>
+    <loc>//localhost:1313/contact/</loc>
   </url>
   
 </urlset>

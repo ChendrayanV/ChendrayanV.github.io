@@ -2,183 +2,183 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Chendrayan Venkatesan</title>
-    <link>/tags/</link>
+    <link>//localhost:1313/tags/</link>
     <description>Recent content in Tags on Chendrayan Venkatesan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 03 Jan 2021 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>AzDevOps</title>
-      <link>/tags/azdevops/</link>
+      <link>//localhost:1313/tags/azdevops/</link>
       <pubDate>Sun, 03 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>/tags/azdevops/</guid>
+      <guid>//localhost:1313/tags/azdevops/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Azure</title>
-      <link>/tags/azure/</link>
+      <link>//localhost:1313/tags/azure/</link>
       <pubDate>Sun, 03 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>/tags/azure/</guid>
+      <guid>//localhost:1313/tags/azure/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Project Bicep</title>
-      <link>/tags/project-bicep/</link>
+      <link>//localhost:1313/tags/project-bicep/</link>
       <pubDate>Sun, 03 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>/tags/project-bicep/</guid>
+      <guid>//localhost:1313/tags/project-bicep/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Azure Functions</title>
-      <link>/tags/azure-functions/</link>
+      <link>//localhost:1313/tags/azure-functions/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/azure-functions/</guid>
+      <guid>//localhost:1313/tags/azure-functions/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Event Grid Trigger</title>
-      <link>/tags/event-grid-trigger/</link>
+      <link>//localhost:1313/tags/event-grid-trigger/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/event-grid-trigger/</guid>
+      <guid>//localhost:1313/tags/event-grid-trigger/</guid>
       <description></description>
     </item>
     
     <item>
       <title>PowerShell</title>
-      <link>/tags/powershell/</link>
+      <link>//localhost:1313/tags/powershell/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/powershell/</guid>
+      <guid>//localhost:1313/tags/powershell/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ServiceNow</title>
-      <link>/tags/servicenow/</link>
+      <link>//localhost:1313/tags/servicenow/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/servicenow/</guid>
+      <guid>//localhost:1313/tags/servicenow/</guid>
       <description></description>
     </item>
     
     <item>
       <title>PSWriteWord</title>
-      <link>/tags/pswriteword/</link>
+      <link>//localhost:1313/tags/pswriteword/</link>
       <pubDate>Sun, 19 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/pswriteword/</guid>
+      <guid>//localhost:1313/tags/pswriteword/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Azure Function</title>
-      <link>/tags/azure-function/</link>
+      <link>//localhost:1313/tags/azure-function/</link>
       <pubDate>Sun, 28 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/azure-function/</guid>
+      <guid>//localhost:1313/tags/azure-function/</guid>
       <description></description>
     </item>
     
     <item>
       <title>C#</title>
-      <link>/tags/c#/</link>
+      <link>//localhost:1313/tags/c#/</link>
       <pubDate>Sun, 28 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/c#/</guid>
+      <guid>//localhost:1313/tags/c#/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Durable</title>
-      <link>/tags/durable/</link>
+      <link>//localhost:1313/tags/durable/</link>
       <pubDate>Sun, 28 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/durable/</guid>
+      <guid>//localhost:1313/tags/durable/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Azure Resource Graph</title>
-      <link>/tags/azure-resource-graph/</link>
+      <link>//localhost:1313/tags/azure-resource-graph/</link>
       <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/azure-resource-graph/</guid>
+      <guid>//localhost:1313/tags/azure-resource-graph/</guid>
       <description></description>
     </item>
     
     <item>
       <title>KQL</title>
-      <link>/tags/kql/</link>
+      <link>//localhost:1313/tags/kql/</link>
       <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/kql/</guid>
+      <guid>//localhost:1313/tags/kql/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Azure DevOps</title>
-      <link>/tags/azure-devops/</link>
+      <link>//localhost:1313/tags/azure-devops/</link>
       <pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/azure-devops/</guid>
+      <guid>//localhost:1313/tags/azure-devops/</guid>
       <description></description>
     </item>
     
     <item>
       <title>REST API</title>
-      <link>/tags/rest-api/</link>
+      <link>//localhost:1313/tags/rest-api/</link>
       <pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/rest-api/</guid>
+      <guid>//localhost:1313/tags/rest-api/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Service Connection</title>
-      <link>/tags/service-connection/</link>
+      <link>//localhost:1313/tags/service-connection/</link>
       <pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/service-connection/</guid>
+      <guid>//localhost:1313/tags/service-connection/</guid>
       <description></description>
     </item>
     
     <item>
       <title>WIQL</title>
-      <link>/tags/wiql/</link>
+      <link>//localhost:1313/tags/wiql/</link>
       <pubDate>Sat, 18 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/wiql/</guid>
+      <guid>//localhost:1313/tags/wiql/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Deployment</title>
-      <link>/tags/deployment/</link>
+      <link>//localhost:1313/tags/deployment/</link>
       <pubDate>Fri, 17 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/deployment/</guid>
+      <guid>//localhost:1313/tags/deployment/</guid>
       <description></description>
     </item>
     
     <item>
       <title>External Git</title>
-      <link>/tags/external-git/</link>
+      <link>//localhost:1313/tags/external-git/</link>
       <pubDate>Fri, 17 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/external-git/</guid>
+      <guid>//localhost:1313/tags/external-git/</guid>
       <description></description>
     </item>
     

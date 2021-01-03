@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Azure Functions on Chendrayan Venkatesan</title>
-    <link>/tags/azure-functions/</link>
+    <link>//localhost:1313/tags/azure-functions/</link>
     <description>Recent content in Azure Functions on Chendrayan Venkatesan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 01 Aug 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/azure-functions/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//localhost:1313/tags/azure-functions/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Logging Service Now Requests using Event Grid Trigger</title>
-      <link>/blog/logging-service-now-requests-using-event-grid-trigger/</link>
+      <link>//localhost:1313/blog/logging-service-now-requests-using-event-grid-trigger/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>/blog/logging-service-now-requests-using-event-grid-trigger/</guid>
+      <guid>//localhost:1313/blog/logging-service-now-requests-using-event-grid-trigger/</guid>
       <description>Introduction A colleague of mine asked a solution for raising a service request in SNOW (Service Now) for each NSG rule creation and deletion. I requested to develop a service now catalog and allow the system to work with NSG. That means, from SNOW to Azure connectivity through REST API. However, the ask is the other way around. If a user creates/deletes the NSG rule in the portal, log a REQ with the minimum information</description>
     </item>
     
     <item>
       <title>DEPLOYING AZURE FUNCTION APP - EXTERNAL GIT</title>
-      <link>/blog/deploying-azure-function-app-external-git/</link>
+      <link>//localhost:1313/blog/deploying-azure-function-app-external-git/</link>
       <pubDate>Fri, 17 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>/blog/deploying-azure-function-app-external-git/</guid>
+      <guid>//localhost:1313/blog/deploying-azure-function-app-external-git/</guid>
       <description>Introduction I bet most of you don’t need this! Having said that, if your organization has Azure DevOps (Formerly VSTS) in directory A and Azure on directory B. Then, deploying Azure Function App using external git may help you.
 Why not Zip deploy? Yes, that’s the optimal way to do! In my case, the roller coaster ride for simple requirements is quite common. Consider, Azure Functions source code is available with vendors, and it’s an end to end solution to be deployed at your workplace in a shorter time, and building a pipeline may take a few hours or process may delay the deployment.</description>
     </item>
