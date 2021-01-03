@@ -6,71 +6,35 @@
     <description>Recent content in Tags on Chendrayan Venkatesan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 12 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 03 Jan 2021 16:01:50 +0530</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>ARM</title>
-      <link>/tags/arm/</link>
-      <pubDate>Sat, 12 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/arm/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>AzDevOps</title>
       <link>/tags/azdevops/</link>
-      <pubDate>Sat, 12 Dec 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 03 Jan 2021 16:01:50 +0530</pubDate>
       
       <guid>/tags/azdevops/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>AzDo</title>
-      <link>/tags/azdo/</link>
-      <pubDate>Sat, 12 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/azdo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Azure</title>
       <link>/tags/azure/</link>
-      <pubDate>Sat, 12 Dec 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 03 Jan 2021 16:01:50 +0530</pubDate>
       
       <guid>/tags/azure/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Azure DevOps</title>
-      <link>/tags/azure-devops/</link>
-      <pubDate>Sat, 12 Dec 2020 00:00:00 +0000</pubDate>
+      <title>Project Bicep</title>
+      <link>/tags/project-bicep/</link>
+      <pubDate>Sun, 03 Jan 2021 16:01:50 +0530</pubDate>
       
-      <guid>/tags/azure-devops/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>PowerShell</title>
-      <link>/tags/powershell/</link>
-      <pubDate>Sat, 12 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/powershell/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Terraform</title>
-      <link>/tags/terraform/</link>
-      <pubDate>Sat, 12 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/terraform/</guid>
+      <guid>/tags/project-bicep/</guid>
       <description></description>
     </item>
     
@@ -89,6 +53,15 @@
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/event-grid-trigger/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PowerShell</title>
+      <link>/tags/powershell/</link>
+      <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/powershell/</guid>
       <description></description>
     </item>
     
@@ -152,6 +125,15 @@
       <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/kql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Azure DevOps</title>
+      <link>/tags/azure-devops/</link>
+      <pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/azure-devops/</guid>
       <description></description>
     </item>
     

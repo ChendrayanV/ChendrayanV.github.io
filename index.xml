@@ -6,18 +6,20 @@
     <description>Recent content on Chendrayan Venkatesan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 12 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 03 Jan 2021 16:01:50 +0530</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Deploying Windows Virtual Desktop using IaC</title>
-      <link>/blog/deploying-windows-virtual-desktop-using-iac/</link>
-      <pubDate>Sat, 12 Dec 2020 00:00:00 +0000</pubDate>
+      <title>Get Started with Project Bicep</title>
+      <link>/blog/get-started-with-project-bicep/</link>
+      <pubDate>Sun, 03 Jan 2021 16:01:50 +0530</pubDate>
       
-      <guid>/blog/deploying-windows-virtual-desktop-using-iac/</guid>
-      <description>Introduction IaC - Infrastructure as Code</description>
+      <guid>/blog/get-started-with-project-bicep/</guid>
+      <description>References Refer to the below links to know more about the project bicep
+ GitHub  Repository Docs Examples Tutorials Specifications    Introduction As a first step, we need to install the bicep tools on our local computer. If you need to deploy the solution using Az DevOps, follow the steps given in the &amp;ldquo;Deploy Bicep Solution using Azure DevOps&amp;rdquo; section.
+Install Bicep $installPath = &amp;#34;$env:USERPROFILE\.bicep&amp;#34; $installDir = New-Item -ItemType Directory -Path $installPath -Force $installDir.</description>
     </item>
     
     <item>

@@ -6,19 +6,10 @@
     <description>Recent content in Azure DevOps on Chendrayan Venkatesan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 12 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 25 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/azure-devops/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Deploying Windows Virtual Desktop using IaC</title>
-      <link>/blog/deploying-windows-virtual-desktop-using-iac/</link>
-      <pubDate>Sat, 12 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/blog/deploying-windows-virtual-desktop-using-iac/</guid>
-      <description>Introduction IaC - Infrastructure as Code</description>
-    </item>
     
     <item>
       <title>Create Azure DevOps Service Connection with Certificate using REST API</title>

@@ -6,7 +6,7 @@
     <description>Recent content in Categories on Chendrayan Venkatesan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 12 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 03 Jan 2021 16:01:50 +0530</lastBuildDate>
     
 	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,18 @@
     <item>
       <title>Azure</title>
       <link>/categories/azure/</link>
-      <pubDate>Sat, 12 Dec 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 03 Jan 2021 16:01:50 +0530</pubDate>
       
       <guid>/categories/azure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Project Bicep</title>
+      <link>/categories/project-bicep/</link>
+      <pubDate>Sun, 03 Jan 2021 16:01:50 +0530</pubDate>
+      
+      <guid>/categories/project-bicep/</guid>
       <description></description>
     </item>
     
