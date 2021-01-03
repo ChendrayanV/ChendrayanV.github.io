@@ -2,210 +2,210 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Chendrayan Venkatesan</title>
-    <link>//localhost:1313/tags/</link>
+    <link>/tags/</link>
     <description>Recent content in Tags on Chendrayan Venkatesan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 03 Jan 2021 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="//localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>AzDevOps</title>
-      <link>//localhost:1313/tags/azdevops/</link>
+      <link>/tags/azdevops/</link>
       <pubDate>Sun, 03 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/tags/azdevops/</guid>
+      <guid>/tags/azdevops/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Azure</title>
-      <link>//localhost:1313/tags/azure/</link>
+      <link>/tags/azure/</link>
       <pubDate>Sun, 03 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/tags/azure/</guid>
+      <guid>/tags/azure/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Project Bicep</title>
-      <link>//localhost:1313/tags/project-bicep/</link>
+      <link>/tags/project-bicep/</link>
       <pubDate>Sun, 03 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/tags/project-bicep/</guid>
+      <guid>/tags/project-bicep/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ARM</title>
-      <link>//localhost:1313/tags/arm/</link>
+      <link>/tags/arm/</link>
       <pubDate>Sat, 12 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/tags/arm/</guid>
+      <guid>/tags/arm/</guid>
       <description></description>
     </item>
     
     <item>
       <title>AzDo</title>
-      <link>//localhost:1313/tags/azdo/</link>
+      <link>/tags/azdo/</link>
       <pubDate>Sat, 12 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/tags/azdo/</guid>
+      <guid>/tags/azdo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Azure DevOps</title>
-      <link>//localhost:1313/tags/azure-devops/</link>
+      <link>/tags/azure-devops/</link>
       <pubDate>Sat, 12 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/tags/azure-devops/</guid>
+      <guid>/tags/azure-devops/</guid>
       <description></description>
     </item>
     
     <item>
       <title>PowerShell</title>
-      <link>//localhost:1313/tags/powershell/</link>
+      <link>/tags/powershell/</link>
       <pubDate>Sat, 12 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/tags/powershell/</guid>
+      <guid>/tags/powershell/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Terraform</title>
-      <link>//localhost:1313/tags/terraform/</link>
+      <link>/tags/terraform/</link>
       <pubDate>Sat, 12 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/tags/terraform/</guid>
+      <guid>/tags/terraform/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Azure Functions</title>
-      <link>//localhost:1313/tags/azure-functions/</link>
+      <link>/tags/azure-functions/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/tags/azure-functions/</guid>
+      <guid>/tags/azure-functions/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Event Grid Trigger</title>
-      <link>//localhost:1313/tags/event-grid-trigger/</link>
+      <link>/tags/event-grid-trigger/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/tags/event-grid-trigger/</guid>
+      <guid>/tags/event-grid-trigger/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ServiceNow</title>
-      <link>//localhost:1313/tags/servicenow/</link>
+      <link>/tags/servicenow/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/tags/servicenow/</guid>
+      <guid>/tags/servicenow/</guid>
       <description></description>
     </item>
     
     <item>
       <title>PSWriteWord</title>
-      <link>//localhost:1313/tags/pswriteword/</link>
+      <link>/tags/pswriteword/</link>
       <pubDate>Sun, 19 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/tags/pswriteword/</guid>
+      <guid>/tags/pswriteword/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Azure Function</title>
-      <link>//localhost:1313/tags/azure-function/</link>
+      <link>/tags/azure-function/</link>
       <pubDate>Sun, 28 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/tags/azure-function/</guid>
+      <guid>/tags/azure-function/</guid>
       <description></description>
     </item>
     
     <item>
       <title>C#</title>
-      <link>//localhost:1313/tags/c#/</link>
+      <link>/tags/c#/</link>
       <pubDate>Sun, 28 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/tags/c#/</guid>
+      <guid>/tags/c#/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Durable</title>
-      <link>//localhost:1313/tags/durable/</link>
+      <link>/tags/durable/</link>
       <pubDate>Sun, 28 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/tags/durable/</guid>
+      <guid>/tags/durable/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Azure Resource Graph</title>
-      <link>//localhost:1313/tags/azure-resource-graph/</link>
+      <link>/tags/azure-resource-graph/</link>
       <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/tags/azure-resource-graph/</guid>
+      <guid>/tags/azure-resource-graph/</guid>
       <description></description>
     </item>
     
     <item>
       <title>KQL</title>
-      <link>//localhost:1313/tags/kql/</link>
+      <link>/tags/kql/</link>
       <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/tags/kql/</guid>
+      <guid>/tags/kql/</guid>
       <description></description>
     </item>
     
     <item>
       <title>REST API</title>
-      <link>//localhost:1313/tags/rest-api/</link>
+      <link>/tags/rest-api/</link>
       <pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/tags/rest-api/</guid>
+      <guid>/tags/rest-api/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Service Connection</title>
-      <link>//localhost:1313/tags/service-connection/</link>
+      <link>/tags/service-connection/</link>
       <pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/tags/service-connection/</guid>
+      <guid>/tags/service-connection/</guid>
       <description></description>
     </item>
     
     <item>
       <title>WIQL</title>
-      <link>//localhost:1313/tags/wiql/</link>
+      <link>/tags/wiql/</link>
       <pubDate>Sat, 18 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/tags/wiql/</guid>
+      <guid>/tags/wiql/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Deployment</title>
-      <link>//localhost:1313/tags/deployment/</link>
+      <link>/tags/deployment/</link>
       <pubDate>Fri, 17 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/tags/deployment/</guid>
+      <guid>/tags/deployment/</guid>
       <description></description>
     </item>
     
     <item>
       <title>External Git</title>
-      <link>//localhost:1313/tags/external-git/</link>
+      <link>/tags/external-git/</link>
       <pubDate>Fri, 17 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/tags/external-git/</guid>
+      <guid>/tags/external-git/</guid>
       <description></description>
     </item>
     
