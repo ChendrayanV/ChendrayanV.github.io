@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Chendrayan Venkatesan</title>
-    <link>https://about-powershell.com/about/</link>
+    <link>/about/</link>
     <description>Recent content on Chendrayan Venkatesan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 16 Apr 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://about-powershell.com/about/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/about/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ARM on Chendrayan Venkatesan</title>
-    <link>https://about-powershell.com/tags/arm/</link>
+    <link>/tags/arm/</link>
     <description>Recent content in ARM on Chendrayan Venkatesan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 12 Dec 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://about-powershell.com/tags/arm/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/arm/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Deploying Windows Virtual Desktop using IaC</title>
-      <link>https://about-powershell.com/blog/deploying-windows-virtual-desktop-using-iac/</link>
+      <link>/blog/deploying-windows-virtual-desktop-using-iac/</link>
       <pubDate>Sat, 12 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://about-powershell.com/blog/deploying-windows-virtual-desktop-using-iac/</guid>
+      <guid>/blog/deploying-windows-virtual-desktop-using-iac/</guid>
       <description>Introduction IaC - Infrastructure as Code</description>
     </item>
     
