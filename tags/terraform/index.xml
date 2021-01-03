@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Terraform on Chendrayan Venkatesan</title>
-    <link>/tags/terraform/</link>
+    <link>https://about-powershell.com/tags/terraform/</link>
     <description>Recent content in Terraform on Chendrayan Venkatesan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 12 Dec 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/terraform/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://about-powershell.com/tags/terraform/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Deploying Windows Virtual Desktop using IaC</title>
-      <link>/blog/deploying-windows-virtual-desktop-using-iac/</link>
+      <link>https://about-powershell.com/blog/deploying-windows-virtual-desktop-using-iac/</link>
       <pubDate>Sat, 12 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>/blog/deploying-windows-virtual-desktop-using-iac/</guid>
+      <guid>https://about-powershell.com/blog/deploying-windows-virtual-desktop-using-iac/</guid>
       <description>Introduction IaC - Infrastructure as Code</description>
     </item>
     

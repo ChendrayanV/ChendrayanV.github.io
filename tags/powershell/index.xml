@@ -2,48 +2,48 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>PowerShell on Chendrayan Venkatesan</title>
-    <link>/tags/powershell/</link>
+    <link>https://about-powershell.com/tags/powershell/</link>
     <description>Recent content in PowerShell on Chendrayan Venkatesan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 12 Dec 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/powershell/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://about-powershell.com/tags/powershell/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Deploying Windows Virtual Desktop using IaC</title>
-      <link>/blog/deploying-windows-virtual-desktop-using-iac/</link>
+      <link>https://about-powershell.com/blog/deploying-windows-virtual-desktop-using-iac/</link>
       <pubDate>Sat, 12 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>/blog/deploying-windows-virtual-desktop-using-iac/</guid>
+      <guid>https://about-powershell.com/blog/deploying-windows-virtual-desktop-using-iac/</guid>
       <description>Introduction IaC - Infrastructure as Code</description>
     </item>
     
     <item>
       <title>Logging Service Now Requests using Event Grid Trigger</title>
-      <link>/blog/logging-service-now-requests-using-event-grid-trigger/</link>
+      <link>https://about-powershell.com/blog/logging-service-now-requests-using-event-grid-trigger/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>/blog/logging-service-now-requests-using-event-grid-trigger/</guid>
+      <guid>https://about-powershell.com/blog/logging-service-now-requests-using-event-grid-trigger/</guid>
       <description>Introduction A colleague of mine asked a solution for raising a service request in SNOW (Service Now) for each NSG rule creation and deletion. I requested to develop a service now catalog and allow the system to work with NSG. That means, from SNOW to Azure connectivity through REST API. However, the ask is the other way around. If a user creates/deletes the NSG rule in the portal, log a REQ with the minimum information</description>
     </item>
     
     <item>
       <title>Azure Devops Pipeline To Send Files Through Email With No Marketplace Extension</title>
-      <link>/blog/azure-devops-pipeline-to-send-files-through-email-with-no-marketplace-extension/</link>
+      <link>https://about-powershell.com/blog/azure-devops-pipeline-to-send-files-through-email-with-no-marketplace-extension/</link>
       <pubDate>Sun, 19 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>/blog/azure-devops-pipeline-to-send-files-through-email-with-no-marketplace-extension/</guid>
+      <guid>https://about-powershell.com/blog/azure-devops-pipeline-to-send-files-through-email-with-no-marketplace-extension/</guid>
       <description>Introduction I was developing a PowerShell script to send Azure inventory through email, which generates a Word output with charts and tables. So, I thought of using Open XML, I used for SharePoint document library reporting (A few years ago), I searched GitHub and found a great PowerShell module PSWriteWord, and docs are super cool. Yes, this blog post is to show you the simple steps to generate a word document through Azure DevOps pipeline.</description>
     </item>
     
     <item>
       <title>Retrieve unattached Azure VM disks using PowerShell &amp; Azure Resource Graph</title>
-      <link>/blog/retrieve-unattached-azure-vm-disks-using-powershell-azure-resource-graph/</link>
+      <link>https://about-powershell.com/blog/retrieve-unattached-azure-vm-disks-using-powershell-azure-resource-graph/</link>
       <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>/blog/retrieve-unattached-azure-vm-disks-using-powershell-azure-resource-graph/</guid>
+      <guid>https://about-powershell.com/blog/retrieve-unattached-azure-vm-disks-using-powershell-azure-resource-graph/</guid>
       <description>Introduction As part of the cost saving project task, I developed a PowerShell script to retrieve UNATTACHED disks. I used JOIN operator in this code to get a few tag information from the respective resource group.
  Replace value for the {TAGNAME}.
  $Query = &amp;#34;Resources | where type =~ &amp;#39;Microsoft.Compute/disks&amp;#39; | where properties.diskState =~ &amp;#39;Unattached&amp;#39; | project id, name, subscriptionId, resourceGroup, diskInGB = properties.diskSizeGB, diskState = properties.diskState, timeCreated = properties.</description>
@@ -51,19 +51,19 @@
     
     <item>
       <title>Create Azure DevOps Service Connection with Certificate using REST API</title>
-      <link>/blog/create-service-connection-with-certificate-using-rest-api/</link>
+      <link>https://about-powershell.com/blog/create-service-connection-with-certificate-using-rest-api/</link>
       <pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>/blog/create-service-connection-with-certificate-using-rest-api/</guid>
+      <guid>https://about-powershell.com/blog/create-service-connection-with-certificate-using-rest-api/</guid>
       <description>Introduction I have no access to my organization DevOps due to unfortunate technical issues, but that didn’t stop me from working. This morning I was on a call with a business owner who asked me to show the steps to create service connections with the certificate. Yes, I have to use the OPEN SSL tool to convert the PFX to PEM, and it was a bit difficult for me to walk him through the steps remotely.</description>
     </item>
     
     <item>
       <title>How Azure DevOps REST API helped me during outage of the VPN?</title>
-      <link>/blog/how-azure-devops-rest-api-helped-me-during-outage-of-the-vpn/</link>
+      <link>https://about-powershell.com/blog/how-azure-devops-rest-api-helped-me-during-outage-of-the-vpn/</link>
       <pubDate>Sat, 18 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>/blog/how-azure-devops-rest-api-helped-me-during-outage-of-the-vpn/</guid>
+      <guid>https://about-powershell.com/blog/how-azure-devops-rest-api-helped-me-during-outage-of-the-vpn/</guid>
       <description>Introduction There is always an alternative is the apt statement to start this blog post! Yes, I got trouble in VPN and lost connection to most of our internal portal, and one among that is Azure DevOps (Formerly VSTS), where the code resides. Positively, no hindrances in accessing Outlook and Teams over mobile. All I need is to continue the work on code, work items and send status report.
  REST API is the savior!</description>
     </item>
