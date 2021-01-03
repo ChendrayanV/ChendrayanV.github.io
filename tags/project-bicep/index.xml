@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Project Bicep on Chendrayan Venkatesan</title>
-    <link>//localhost:1313/tags/project-bicep/</link>
+    <link>/tags/project-bicep/</link>
     <description>Recent content in Project Bicep on Chendrayan Venkatesan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 03 Jan 2021 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="//localhost:1313/tags/project-bicep/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/project-bicep/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Get Started with Project Bicep</title>
-      <link>//localhost:1313/blog/get-started-with-project-bicep/</link>
+      <link>/blog/get-started-with-project-bicep/</link>
       <pubDate>Sun, 03 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/blog/get-started-with-project-bicep/</guid>
+      <guid>/blog/get-started-with-project-bicep/</guid>
       <description>References Refer to the below links to know more about the project bicep
  GitHub  Repository Docs Examples Tutorials Specifications    Introduction As a first step, we need to install the bicep tools on our local computer. If you need to deploy the solution using Az DevOps, follow the steps given in the &amp;ldquo;Deploy Bicep Solution using Azure DevOps&amp;rdquo; section.
 Install Bicep $installPath = &amp;#34;$env:USERPROFILE\.bicep&amp;#34; $installDir = New-Item -ItemType Directory -Path $installPath -Force $installDir.</description>

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>PSWriteWord on Chendrayan Venkatesan</title>
-    <link>//localhost:1313/tags/pswriteword/</link>
+    <link>/tags/pswriteword/</link>
     <description>Recent content in PSWriteWord on Chendrayan Venkatesan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 19 Jul 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="//localhost:1313/tags/pswriteword/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/pswriteword/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Azure Devops Pipeline To Send Files Through Email With No Marketplace Extension</title>
-      <link>//localhost:1313/blog/azure-devops-pipeline-to-send-files-through-email-with-no-marketplace-extension/</link>
+      <link>/blog/azure-devops-pipeline-to-send-files-through-email-with-no-marketplace-extension/</link>
       <pubDate>Sun, 19 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/blog/azure-devops-pipeline-to-send-files-through-email-with-no-marketplace-extension/</guid>
+      <guid>/blog/azure-devops-pipeline-to-send-files-through-email-with-no-marketplace-extension/</guid>
       <description>Introduction I was developing a PowerShell script to send Azure inventory through email, which generates a Word output with charts and tables. So, I thought of using Open XML, I used for SharePoint document library reporting (A few years ago), I searched GitHub and found a great PowerShell module PSWriteWord, and docs are super cool. Yes, this blog post is to show you the simple steps to generate a word document through Azure DevOps pipeline.</description>
     </item>
     
