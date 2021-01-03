@@ -36,7 +36,7 @@
 
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="generator" content="Hugo 0.80.0" />
+        <meta name="generator" content="Hugo 0.74.2" />
         
   
     
@@ -80,14 +80,13 @@
         <meta property="og:image:height" content="512">
         <meta itemprop="name" content="Get Started with Project Bicep">
 <meta itemprop="description" content="Project Bicep">
-<meta itemprop="datePublished" content="2021-01-03T16:01:50+05:30" />
-<meta itemprop="dateModified" content="2021-01-03T16:24:08+05:30" />
+<meta itemprop="datePublished" content="2021-01-03T16:01:50&#43;05:30" />
+<meta itemprop="dateModified" content="2021-01-03T16:24:08&#43;05:30" />
 <meta itemprop="wordCount" content="469">
 
 
 
 <meta itemprop="keywords" content="Azure,AzDevOps,Project Bicep," />
-
         
 
         
@@ -334,9 +333,6 @@
 
 
   
-  
-    
-  
 
 
         
@@ -344,7 +340,7 @@
         
 
         <a href="/blog/logging-service-now-requests-using-event-grid-trigger/" class="image featured">
-            <img src="/img/2020/08/Wheels.jpg" alt="">
+            <img src="/img//Wheels.jpg" alt="">
         </a>
     
 
@@ -373,9 +369,6 @@
 
 
   
-  
-    
-  
 
 
         
@@ -383,7 +376,7 @@
         
 
         <a href="/blog/azure-devops-pipeline-to-send-files-through-email-with-no-marketplace-extension/" class="image featured">
-            <img src="/img/2020/07/Charts.jpg" alt="">
+            <img src="/img//Charts.jpg" alt="">
         </a>
     
 
@@ -698,50 +691,50 @@ output storage_account_id string = storage_account.outputs.storage_account_id
 <p>📦scripts<br>
 ┗ 📜BICEP.PS1</p>
 <h3 id="storage_accountyml">(storage_account.yml)</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#f92672">trigger</span>:
-  <span style="color:#f92672">branches</span>:
-    <span style="color:#f92672">include</span>:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#66d9ef">trigger</span>:
+  <span style="color:#66d9ef">branches</span>:
+    <span style="color:#66d9ef">include</span>:
       - <span style="color:#e6db74">&#39;main&#39;</span>
 
-<span style="color:#f92672">pool</span>:
-  <span style="color:#f92672">vmImage</span>: <span style="color:#e6db74">&#39;windows-latest&#39;</span>
+<span style="color:#66d9ef">pool</span>:
+  <span style="color:#66d9ef">vmImage</span>: <span style="color:#e6db74">&#39;windows-latest&#39;</span>
 
-<span style="color:#f92672">stages</span>:
-  - <span style="color:#f92672">stage</span>: <span style="color:#e6db74">&#39;BUILD&#39;</span>
-    <span style="color:#f92672">jobs</span>:
-      - <span style="color:#f92672">job</span>: 
-        <span style="color:#f92672">steps</span>:
-          - <span style="color:#f92672">task</span>: <span style="color:#ae81ff">PowerShell@2</span>
-            <span style="color:#f92672">inputs</span>:
-              <span style="color:#f92672">targetType</span>: <span style="color:#ae81ff">filePath</span>
-              <span style="color:#f92672">filePath</span>: <span style="color:#e6db74">&#39;\scripts\BICEP.PS1&#39;</span>
-          - <span style="color:#f92672">task</span>: <span style="color:#ae81ff">CopyFiles@2</span>
-            <span style="color:#f92672">inputs</span>:
-              <span style="color:#f92672">SourceFolder</span>: <span style="color:#e6db74">&#39;.\SRC\&#39;
+<span style="color:#66d9ef">stages</span>:
+  - <span style="color:#66d9ef">stage</span>: <span style="color:#e6db74">&#39;BUILD&#39;</span>
+    <span style="color:#66d9ef">jobs</span>:
+      - <span style="color:#66d9ef">job</span>: 
+        <span style="color:#66d9ef">steps</span>:
+          - <span style="color:#66d9ef">task</span>: PowerShell@<span style="color:#ae81ff">2</span>
+            <span style="color:#66d9ef">inputs</span>:
+              <span style="color:#66d9ef">targetType</span>: filePath
+              <span style="color:#66d9ef">filePath</span>: <span style="color:#e6db74">&#39;\scripts\BICEP.PS1&#39;</span>
+          - <span style="color:#66d9ef">task</span>: CopyFiles@<span style="color:#ae81ff">2</span>
+            <span style="color:#66d9ef">inputs</span>:
+              <span style="color:#66d9ef">SourceFolder</span>: <span style="color:#e6db74">&#39;.\SRC\&#39;
 </span><span style="color:#e6db74">              Contents: &#39;</span><span style="color:#75715e">*.json&#39;</span>
-              <span style="color:#f92672">TargetFolder</span>: <span style="color:#ae81ff">$(Build.ArtifactStagingDirectory)</span>
-          - <span style="color:#f92672">task</span>: <span style="color:#ae81ff">PublishBuildArtifacts@1</span>
-            <span style="color:#f92672">inputs</span>:
-              <span style="color:#f92672">PathtoPublish</span>: <span style="color:#ae81ff">$(Build.ArtifactStagingDirectory)</span>
-              <span style="color:#f92672">ArtifactName</span>: <span style="color:#e6db74">&#39;BICEP&#39;</span>
-  - <span style="color:#f92672">stage</span>: <span style="color:#e6db74">&#39;RELEASE&#39;</span>
-    <span style="color:#f92672">jobs</span>:
-      - <span style="color:#f92672">job</span>: 
-        <span style="color:#f92672">steps</span>:
-          - <span style="color:#f92672">task</span>: <span style="color:#ae81ff">DownloadBuildArtifacts@0</span>
-            <span style="color:#f92672">inputs</span>:
-              <span style="color:#f92672">buildType</span>: <span style="color:#ae81ff">current</span>
-              <span style="color:#f92672">downloadType</span>: <span style="color:#ae81ff">single</span>
-              <span style="color:#f92672">artifactName</span>: <span style="color:#ae81ff">BICEP</span>
-              <span style="color:#f92672">downloadPath</span>: <span style="color:#ae81ff">$(System.ArtifactsDirectory)</span>
-          - <span style="color:#f92672">task</span>: <span style="color:#ae81ff">AzureResourceManagerTemplateDeployment@3</span>
-            <span style="color:#f92672">inputs</span>:
-              <span style="color:#f92672">azureResourceManagerConnection</span>: <span style="color:#e6db74">&#39;{SERVICE CONNECTION NAME}&#39;</span>
-              <span style="color:#f92672">deploymentScope</span>: <span style="color:#ae81ff">Subscription</span>
-              <span style="color:#f92672">csmFile</span>: <span style="color:#e6db74">&#39;$(System.ArtifactsDirectory)\src\MAIN.json&#39;</span>
-              <span style="color:#f92672">location</span>: <span style="color:#e6db74">&#39;eastus2&#39;</span>
-              <span style="color:#f92672">deploymentName</span>: <span style="color:#e6db74">&#39;AZURE.WVD&#39;</span>
-              <span style="color:#f92672">subscriptionId</span>: <span style="color:#e6db74">&#39;{SUBSCRIPTION ID}&#39;</span>
+              <span style="color:#66d9ef">TargetFolder</span>: $(Build.ArtifactStagingDirectory)
+          - <span style="color:#66d9ef">task</span>: PublishBuildArtifacts@<span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">inputs</span>:
+              <span style="color:#66d9ef">PathtoPublish</span>: $(Build.ArtifactStagingDirectory)
+              <span style="color:#66d9ef">ArtifactName</span>: <span style="color:#e6db74">&#39;BICEP&#39;</span>
+  - <span style="color:#66d9ef">stage</span>: <span style="color:#e6db74">&#39;RELEASE&#39;</span>
+    <span style="color:#66d9ef">jobs</span>:
+      - <span style="color:#66d9ef">job</span>: 
+        <span style="color:#66d9ef">steps</span>:
+          - <span style="color:#66d9ef">task</span>: DownloadBuildArtifacts@<span style="color:#ae81ff">0</span>
+            <span style="color:#66d9ef">inputs</span>:
+              <span style="color:#66d9ef">buildType</span>: current
+              <span style="color:#66d9ef">downloadType</span>: single
+              <span style="color:#66d9ef">artifactName</span>: BICEP
+              <span style="color:#66d9ef">downloadPath</span>: $(System.ArtifactsDirectory)
+          - <span style="color:#66d9ef">task</span>: AzureResourceManagerTemplateDeployment@<span style="color:#ae81ff">3</span>
+            <span style="color:#66d9ef">inputs</span>:
+              <span style="color:#66d9ef">azureResourceManagerConnection</span>: <span style="color:#e6db74">&#39;{SERVICE CONNECTION NAME}&#39;</span>
+              <span style="color:#66d9ef">deploymentScope</span>: Subscription
+              <span style="color:#66d9ef">csmFile</span>: <span style="color:#e6db74">&#39;$(System.ArtifactsDirectory)\src\MAIN.json&#39;</span>
+              <span style="color:#66d9ef">location</span>: <span style="color:#e6db74">&#39;eastus2&#39;</span>
+              <span style="color:#66d9ef">deploymentName</span>: <span style="color:#e6db74">&#39;AZURE.WVD&#39;</span>
+              <span style="color:#66d9ef">subscriptionId</span>: <span style="color:#e6db74">&#39;{SUBSCRIPTION ID}&#39;</span>
 </code></pre></div>
   </div>
 
@@ -1010,7 +1003,7 @@ output storage_account_id string = storage_account.outputs.storage_account_id
         
 
         <a href="/blog/logging-service-now-requests-using-event-grid-trigger/" class="image featured">
-            <img src="/img/2020/08/Wheels.jpg" alt="">
+            <img src="/img/2020/082020/08/Wheels.jpg" alt="">
         </a>
     
 
@@ -1051,7 +1044,7 @@ output storage_account_id string = storage_account.outputs.storage_account_id
         
 
         <a href="/blog/azure-devops-pipeline-to-send-files-through-email-with-no-marketplace-extension/" class="image featured">
-            <img src="/img/2020/07/Charts.jpg" alt="">
+            <img src="/img/2020/072020/07/Charts.jpg" alt="">
         </a>
     
 
