@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>KQL on Chendrayan Venkatesan</title>
-    <link>/tags/kql/</link>
+    <link>//localhost:1313/tags/kql/</link>
     <description>Recent content in KQL on Chendrayan Venkatesan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 01 May 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/kql/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//localhost:1313/tags/kql/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Retrieve unattached Azure VM disks using PowerShell &amp; Azure Resource Graph</title>
-      <link>/blog/retrieve-unattached-azure-vm-disks-using-powershell-azure-resource-graph/</link>
+      <link>//localhost:1313/blog/retrieve-unattached-azure-vm-disks-using-powershell-azure-resource-graph/</link>
       <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>/blog/retrieve-unattached-azure-vm-disks-using-powershell-azure-resource-graph/</guid>
+      <guid>//localhost:1313/blog/retrieve-unattached-azure-vm-disks-using-powershell-azure-resource-graph/</guid>
       <description>Introduction As part of the cost saving project task, I developed a PowerShell script to retrieve UNATTACHED disks. I used JOIN operator in this code to get a few tag information from the respective resource group.
  Replace value for the {TAGNAME}.
  $Query = &amp;#34;Resources | where type =~ &amp;#39;Microsoft.Compute/disks&amp;#39; | where properties.diskState =~ &amp;#39;Unattached&amp;#39; | project id, name, subscriptionId, resourceGroup, diskInGB = properties.diskSizeGB, diskState = properties.diskState, timeCreated = properties.</description>

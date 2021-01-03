@@ -2,67 +2,67 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Azure on Chendrayan Venkatesan</title>
-    <link>/categories/azure/</link>
+    <link>//localhost:1313/categories/azure/</link>
     <description>Recent content in Azure on Chendrayan Venkatesan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 03 Jan 2021 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/categories/azure/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//localhost:1313/categories/azure/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Get Started with Project Bicep</title>
-      <link>/blog/get-started-with-project-bicep/</link>
+      <link>//localhost:1313/blog/get-started-with-project-bicep/</link>
       <pubDate>Sun, 03 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>/blog/get-started-with-project-bicep/</guid>
+      <guid>//localhost:1313/blog/get-started-with-project-bicep/</guid>
       <description>References Refer to the below links to know more about the project bicep
  GitHub  Repository Docs Examples Tutorials Specifications   YouTube  Intro to Azure&amp;rsquo;s Project Bicep with Brendan Burns and team Project Bicep Demo at Ignite 2020 by Mark Russinovich Project Bicep and ARM Templates November 2020 Update    Introduction As a first step, we need to install the bicep tools on our local computer.</description>
     </item>
     
     <item>
       <title>Deploying Windows Virtual Desktop using IaC</title>
-      <link>/blog/deploying-windows-virtual-desktop-using-iac/</link>
+      <link>//localhost:1313/blog/deploying-windows-virtual-desktop-using-iac/</link>
       <pubDate>Sat, 12 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>/blog/deploying-windows-virtual-desktop-using-iac/</guid>
+      <guid>//localhost:1313/blog/deploying-windows-virtual-desktop-using-iac/</guid>
       <description>Introduction IaC - Infrastructure as Code</description>
     </item>
     
     <item>
       <title>Logging Service Now Requests using Event Grid Trigger</title>
-      <link>/blog/logging-service-now-requests-using-event-grid-trigger/</link>
+      <link>//localhost:1313/blog/logging-service-now-requests-using-event-grid-trigger/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>/blog/logging-service-now-requests-using-event-grid-trigger/</guid>
+      <guid>//localhost:1313/blog/logging-service-now-requests-using-event-grid-trigger/</guid>
       <description>Introduction A colleague of mine asked a solution for raising a service request in SNOW (Service Now) for each NSG rule creation and deletion. I requested to develop a service now catalog and allow the system to work with NSG. That means, from SNOW to Azure connectivity through REST API. However, the ask is the other way around. If a user creates/deletes the NSG rule in the portal, log a REQ with the minimum information</description>
     </item>
     
     <item>
       <title>Azure Devops Pipeline To Send Files Through Email With No Marketplace Extension</title>
-      <link>/blog/azure-devops-pipeline-to-send-files-through-email-with-no-marketplace-extension/</link>
+      <link>//localhost:1313/blog/azure-devops-pipeline-to-send-files-through-email-with-no-marketplace-extension/</link>
       <pubDate>Sun, 19 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>/blog/azure-devops-pipeline-to-send-files-through-email-with-no-marketplace-extension/</guid>
+      <guid>//localhost:1313/blog/azure-devops-pipeline-to-send-files-through-email-with-no-marketplace-extension/</guid>
       <description>Introduction I was developing a PowerShell script to send Azure inventory through email, which generates a Word output with charts and tables. So, I thought of using Open XML, I used for SharePoint document library reporting (A few years ago), I searched GitHub and found a great PowerShell module PSWriteWord, and docs are super cool. Yes, this blog post is to show you the simple steps to generate a word document through Azure DevOps pipeline.</description>
     </item>
     
     <item>
       <title>MY FIRST EXPERIENCE WITH THE AZURE DURABLE FUNCTIONS</title>
-      <link>/blog/my-first-experience-with-the-azure-durable-functions/</link>
+      <link>//localhost:1313/blog/my-first-experience-with-the-azure-durable-functions/</link>
       <pubDate>Sun, 28 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>/blog/my-first-experience-with-the-azure-durable-functions/</guid>
+      <guid>//localhost:1313/blog/my-first-experience-with-the-azure-durable-functions/</guid>
       <description>Introduction Of late, I got a requirement to start the Azure runbooks programmatically (start a runbook through another runbook), and as a PowerShell fan, I said, “Start-AzAutomationAccountRunBook” is one best way to achieve it. An hour later, I got a call to build a script that waits until the job completes and gets the output. Here is a quick way “-Wait” parameter. Solved the issue? Yes! Now, it’s time for us to deliver a REST API endpoint, which is required to invoke in an Azure Pipeline for the business process.</description>
     </item>
     
     <item>
       <title>Retrieve unattached Azure VM disks using PowerShell &amp; Azure Resource Graph</title>
-      <link>/blog/retrieve-unattached-azure-vm-disks-using-powershell-azure-resource-graph/</link>
+      <link>//localhost:1313/blog/retrieve-unattached-azure-vm-disks-using-powershell-azure-resource-graph/</link>
       <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>/blog/retrieve-unattached-azure-vm-disks-using-powershell-azure-resource-graph/</guid>
+      <guid>//localhost:1313/blog/retrieve-unattached-azure-vm-disks-using-powershell-azure-resource-graph/</guid>
       <description>Introduction As part of the cost saving project task, I developed a PowerShell script to retrieve UNATTACHED disks. I used JOIN operator in this code to get a few tag information from the respective resource group.
  Replace value for the {TAGNAME}.
  $Query = &amp;#34;Resources | where type =~ &amp;#39;Microsoft.Compute/disks&amp;#39; | where properties.diskState =~ &amp;#39;Unattached&amp;#39; | project id, name, subscriptionId, resourceGroup, diskInGB = properties.diskSizeGB, diskState = properties.diskState, timeCreated = properties.</description>
@@ -70,10 +70,10 @@
     
     <item>
       <title>DEPLOYING AZURE FUNCTION APP - EXTERNAL GIT</title>
-      <link>/blog/deploying-azure-function-app-external-git/</link>
+      <link>//localhost:1313/blog/deploying-azure-function-app-external-git/</link>
       <pubDate>Fri, 17 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>/blog/deploying-azure-function-app-external-git/</guid>
+      <guid>//localhost:1313/blog/deploying-azure-function-app-external-git/</guid>
       <description>Introduction I bet most of you don’t need this! Having said that, if your organization has Azure DevOps (Formerly VSTS) in directory A and Azure on directory B. Then, deploying Azure Function App using external git may help you.
 Why not Zip deploy? Yes, that’s the optimal way to do! In my case, the roller coaster ride for simple requirements is quite common. Consider, Azure Functions source code is available with vendors, and it’s an end to end solution to be deployed at your workplace in a shorter time, and building a pipeline may take a few hours or process may delay the deployment.</description>
     </item>

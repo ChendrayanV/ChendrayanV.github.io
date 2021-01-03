@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Azure on Chendrayan Venkatesan</title>
-    <link>/tags/azure/</link>
+    <link>//localhost:1313/tags/azure/</link>
     <description>Recent content in Azure on Chendrayan Venkatesan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 03 Jan 2021 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/azure/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//localhost:1313/tags/azure/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Get Started with Project Bicep</title>
-      <link>/blog/get-started-with-project-bicep/</link>
+      <link>//localhost:1313/blog/get-started-with-project-bicep/</link>
       <pubDate>Sun, 03 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>/blog/get-started-with-project-bicep/</guid>
+      <guid>//localhost:1313/blog/get-started-with-project-bicep/</guid>
       <description>References Refer to the below links to know more about the project bicep
  GitHub  Repository Docs Examples Tutorials Specifications   YouTube  Intro to Azure&amp;rsquo;s Project Bicep with Brendan Burns and team Project Bicep Demo at Ignite 2020 by Mark Russinovich Project Bicep and ARM Templates November 2020 Update    Introduction As a first step, we need to install the bicep tools on our local computer.</description>
     </item>
     
     <item>
       <title>Deploying Windows Virtual Desktop using IaC</title>
-      <link>/blog/deploying-windows-virtual-desktop-using-iac/</link>
+      <link>//localhost:1313/blog/deploying-windows-virtual-desktop-using-iac/</link>
       <pubDate>Sat, 12 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>/blog/deploying-windows-virtual-desktop-using-iac/</guid>
+      <guid>//localhost:1313/blog/deploying-windows-virtual-desktop-using-iac/</guid>
       <description>Introduction IaC - Infrastructure as Code</description>
     </item>
     
