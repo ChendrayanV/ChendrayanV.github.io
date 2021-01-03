@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Service Connection on Chendrayan Venkatesan</title>
-    <link>/tags/service-connection/</link>
+    <link>http://chendrayanv.github.io/tags/service-connection/</link>
     <description>Recent content in Service Connection on Chendrayan Venkatesan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 25 Apr 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/service-connection/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://chendrayanv.github.io/tags/service-connection/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Create Azure DevOps Service Connection with Certificate using REST API</title>
-      <link>/blog/create-service-connection-with-certificate-using-rest-api/</link>
+      <link>http://chendrayanv.github.io/blog/create-service-connection-with-certificate-using-rest-api/</link>
       <pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>/blog/create-service-connection-with-certificate-using-rest-api/</guid>
+      <guid>http://chendrayanv.github.io/blog/create-service-connection-with-certificate-using-rest-api/</guid>
       <description>Introduction I have no access to my organization DevOps due to unfortunate technical issues, but that didn’t stop me from working. This morning I was on a call with a business owner who asked me to show the steps to create service connections with the certificate. Yes, I have to use the OPEN SSL tool to convert the PFX to PEM, and it was a bit difficult for me to walk him through the steps remotely.</description>
     </item>
     
