@@ -398,7 +398,7 @@
         
 
         <a href="/blog/azure-devops-pipeline-to-send-files-through-email-with-no-marketplace-extension/" class="image featured">
-            <img src="/img/2020/07/" alt="">
+            <img src="/img/2020/072020/07/" alt="">
         </a>
     
 
@@ -437,7 +437,7 @@
         
 
         <a href="/blog/my-first-experience-with-the-azure-durable-functions/" class="image featured">
-            <img src="/img/2020/06/Sand-Clock.jpg" alt="">
+            <img src="/img/2020/062020/06/Sand-Clock.jpg" alt="">
         </a>
     
 
@@ -610,7 +610,7 @@
     <h1 id="introduction">Introduction</h1>
 <p>I was asked to build a PowerShell script to retrieve Azure virtual machines with no Just In Time (JIT) access enabled. Yes, it’s for the security auditing team. I searched in PowerShell Gallery, TechNet Gallery, and other sources and didn’t find one. So, I developed a script that may help you!</p>
 <h2 id="solution">Solution</h2>
-<p>First, I thought of retrieving virtual machines and query against the JIT Access Policy REST API endpoint. But it&rsquo;s not required! Using Security Center API is super fast and easy.</p>
+<p>First, I thought of retrieving virtual machines and query against the JIT Access Policy REST API endpoint. But it&rsquo;s not required! Using Azure Advisor recommendation API is super fast and easy.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#75715e"># Connect-AzAccount -UseDeviceAuthentication</span>
 $azureRmProfile = <span style="color:#66d9ef">[Microsoft.Azure.Commands.Common.Authentication.Abstractions.AzureRmProfileProvider]</span>::Instance.Profile
 $currentAzureContext = Get-AzContext
