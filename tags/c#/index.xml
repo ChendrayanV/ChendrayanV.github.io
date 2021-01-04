@@ -1,22 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>C# on Chendrayan Venkatesan</title>
-    <link>http://chendrayanv.github.io/tags/c#/</link>
-    <description>Recent content in C# on Chendrayan Venkatesan</description>
+    <title>C# on Hugo Future Imperfect</title>
+    <link>/tags/c#/</link>
+    <description>Recent content in C# on Hugo Future Imperfect</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 28 Jun 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://chendrayanv.github.io/tags/c#/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 28 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="/tags/c#/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>MY FIRST EXPERIENCE WITH THE AZURE DURABLE FUNCTIONS</title>
-      <link>http://chendrayanv.github.io/blog/my-first-experience-with-the-azure-durable-functions/</link>
+      <link>/blog/my-first-experience-with-the-azure-durable-functions/</link>
       <pubDate>Sun, 28 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://chendrayanv.github.io/blog/my-first-experience-with-the-azure-durable-functions/</guid>
+      <guid>/blog/my-first-experience-with-the-azure-durable-functions/</guid>
       <description>Introduction Of late, I got a requirement to start the Azure runbooks programmatically (start a runbook through another runbook), and as a PowerShell fan, I said, “Start-AzAutomationAccountRunBook” is one best way to achieve it. An hour later, I got a call to build a script that waits until the job completes and gets the output. Here is a quick way “-Wait” parameter. Solved the issue? Yes! Now, it’s time for us to deliver a REST API endpoint, which is required to invoke in an Azure Pipeline for the business process.</description>
     </item>
     

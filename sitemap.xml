@@ -3,227 +3,187 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://chendrayanv.github.io/tags/azdevops/</loc>
-    <lastmod>2021-01-03T00:00:00+00:00</lastmod>
+    <loc>/categories/azure/</loc>
+    <lastmod>2021-01-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://chendrayanv.github.io/tags/azure/</loc>
-    <lastmod>2021-01-03T00:00:00+00:00</lastmod>
+    <loc>/blog/</loc>
+    <lastmod>2021-01-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://chendrayanv.github.io/categories/azure/</loc>
-    <lastmod>2021-01-03T00:00:00+00:00</lastmod>
+    <loc>/categories/</loc>
+    <lastmod>2021-01-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://chendrayanv.github.io/blog/</loc>
-    <lastmod>2021-01-03T00:00:00+00:00</lastmod>
+    <loc>/blog/get-started-with-project-bicep/</loc>
+    <lastmod>2021-01-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://chendrayanv.github.io/categories/</loc>
-    <lastmod>2021-01-03T00:00:00+00:00</lastmod>
+    <loc>/</loc>
+    <lastmod>2021-01-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://chendrayanv.github.io/</loc>
-    <lastmod>2021-01-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://chendrayanv.github.io/blog/get-started-with-project-bicep/</loc>
-    <lastmod>2021-01-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://chendrayanv.github.io/tags/project-bicep/</loc>
-    <lastmod>2021-01-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://chendrayanv.github.io/categories/project-bicep/</loc>
-    <lastmod>2021-01-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://chendrayanv.github.io/tags/</loc>
-    <lastmod>2021-01-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://chendrayanv.github.io/tags/arm/</loc>
-    <lastmod>2020-12-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://chendrayanv.github.io/tags/azdo/</loc>
-    <lastmod>2020-12-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://chendrayanv.github.io/tags/azure-devops/</loc>
-    <lastmod>2020-12-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://chendrayanv.github.io/blog/deploying-windows-virtual-desktop-using-iac/</loc>
-    <lastmod>2020-12-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://chendrayanv.github.io/tags/powershell/</loc>
-    <lastmod>2020-12-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://chendrayanv.github.io/tags/terraform/</loc>
-    <lastmod>2020-12-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://chendrayanv.github.io/tags/azure-functions/</loc>
+    <loc>/tags/azure-functions/</loc>
     <lastmod>2020-08-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://chendrayanv.github.io/tags/event-grid-trigger/</loc>
+    <loc>/tags/event-grid-trigger/</loc>
     <lastmod>2020-08-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://chendrayanv.github.io/blog/logging-service-now-requests-using-event-grid-trigger/</loc>
+    <loc>/blog/logging-service-now-requests-using-event-grid-trigger/</loc>
     <lastmod>2020-08-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://chendrayanv.github.io/tags/servicenow/</loc>
+    <loc>/tags/powershell/</loc>
     <lastmod>2020-08-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://chendrayanv.github.io/blog/azure-devops-pipeline-to-send-files-through-email-with-no-marketplace-extension/</loc>
+    <loc>/tags/servicenow/</loc>
+    <lastmod>2020-08-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-08-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/azure-devops/</loc>
     <lastmod>2020-07-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://chendrayanv.github.io/tags/pswriteword/</loc>
+    <loc>/blog/azure-devops-pipeline-to-send-files-through-email-with-no-marketplace-extension/</loc>
     <lastmod>2020-07-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://chendrayanv.github.io/tags/azure-function/</loc>
+    <loc>/categories/pswriteword/</loc>
+    <lastmod>2020-07-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/azure-function/</loc>
     <lastmod>2020-06-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://chendrayanv.github.io/tags/c#/</loc>
+    <loc>/tags/c#/</loc>
     <lastmod>2020-06-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://chendrayanv.github.io/tags/durable/</loc>
+    <loc>/tags/durable/</loc>
     <lastmod>2020-06-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://chendrayanv.github.io/blog/my-first-experience-with-the-azure-durable-functions/</loc>
+    <loc>/blog/my-first-experience-with-the-azure-durable-functions/</loc>
     <lastmod>2020-06-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://chendrayanv.github.io/tags/azure-resource-graph/</loc>
+    <loc>/tags/azure-resource-graph/</loc>
     <lastmod>2020-05-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://chendrayanv.github.io/tags/kql/</loc>
+    <loc>/tags/kql/</loc>
     <lastmod>2020-05-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://chendrayanv.github.io/blog/retrieve-unattached-azure-vm-disks-using-powershell-azure-resource-graph/</loc>
+    <loc>/blog/retrieve-unattached-azure-vm-disks-using-powershell-azure-resource-graph/</loc>
     <lastmod>2020-05-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://chendrayanv.github.io/categories/azure-devops/</loc>
+    <loc>/tags/azure-devops/</loc>
     <lastmod>2020-04-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://chendrayanv.github.io/blog/create-service-connection-with-certificate-using-rest-api/</loc>
+    <loc>/blog/create-service-connection-with-certificate-using-rest-api/</loc>
     <lastmod>2020-04-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://chendrayanv.github.io/tags/rest-api/</loc>
+    <loc>/tags/rest-api/</loc>
     <lastmod>2020-04-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://chendrayanv.github.io/tags/service-connection/</loc>
+    <loc>/tags/service-connection/</loc>
     <lastmod>2020-04-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://chendrayanv.github.io/blog/how-azure-devops-rest-api-helped-me-during-outage-of-the-vpn/</loc>
+    <loc>/blog/how-azure-devops-rest-api-helped-me-during-outage-of-the-vpn/</loc>
     <lastmod>2020-04-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://chendrayanv.github.io/tags/wiql/</loc>
+    <loc>/tags/wiql/</loc>
     <lastmod>2020-04-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://chendrayanv.github.io/blog/deploying-azure-function-app-external-git/</loc>
+    <loc>/blog/deploying-azure-function-app-external-git/</loc>
     <lastmod>2020-04-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://chendrayanv.github.io/tags/deployment/</loc>
+    <loc>/tags/deployment/</loc>
     <lastmod>2020-04-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://chendrayanv.github.io/tags/external-git/</loc>
+    <loc>/tags/external-git/</loc>
     <lastmod>2020-04-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://chendrayanv.github.io/about/</loc>
-    <lastmod>2020-04-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://chendrayanv.github.io/itemized/item1/</loc>
+    <loc>/itemized/item1/</loc>
     <lastmod>2017-06-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://chendrayanv.github.io/itemized/item2/</loc>
+    <loc>/itemized/item2/</loc>
     <lastmod>2017-06-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://chendrayanv.github.io/itemized/item3/</loc>
+    <loc>/itemized/item3/</loc>
     <lastmod>2017-06-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://chendrayanv.github.io/itemized/item4/</loc>
+    <loc>/itemized/item4/</loc>
     <lastmod>2017-06-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://chendrayanv.github.io/itemized/</loc>
+    <loc>/itemized/</loc>
     <lastmod>2017-06-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://chendrayanv.github.io/contact/</loc>
+    <loc>/about/</loc>
+    <lastmod>2014-04-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/contact/</loc>
   </url>
   
 </urlset>

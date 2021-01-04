@@ -1,211 +1,144 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Chendrayan Venkatesan</title>
-    <link>http://chendrayanv.github.io/tags/</link>
-    <description>Recent content in Tags on Chendrayan Venkatesan</description>
+    <title>Tags on Hugo Future Imperfect</title>
+    <link>/tags/</link>
+    <description>Recent content in Tags on Hugo Future Imperfect</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 03 Jan 2021 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://chendrayanv.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>AzDevOps</title>
-      <link>http://chendrayanv.github.io/tags/azdevops/</link>
-      <pubDate>Sun, 03 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>http://chendrayanv.github.io/tags/azdevops/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Azure</title>
-      <link>http://chendrayanv.github.io/tags/azure/</link>
-      <pubDate>Sun, 03 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>http://chendrayanv.github.io/tags/azure/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Project Bicep</title>
-      <link>http://chendrayanv.github.io/tags/project-bicep/</link>
-      <pubDate>Sun, 03 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>http://chendrayanv.github.io/tags/project-bicep/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ARM</title>
-      <link>http://chendrayanv.github.io/tags/arm/</link>
-      <pubDate>Sat, 12 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://chendrayanv.github.io/tags/arm/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>AzDo</title>
-      <link>http://chendrayanv.github.io/tags/azdo/</link>
-      <pubDate>Sat, 12 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://chendrayanv.github.io/tags/azdo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Azure DevOps</title>
-      <link>http://chendrayanv.github.io/tags/azure-devops/</link>
-      <pubDate>Sat, 12 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://chendrayanv.github.io/tags/azure-devops/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>PowerShell</title>
-      <link>http://chendrayanv.github.io/tags/powershell/</link>
-      <pubDate>Sat, 12 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://chendrayanv.github.io/tags/powershell/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Terraform</title>
-      <link>http://chendrayanv.github.io/tags/terraform/</link>
-      <pubDate>Sat, 12 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://chendrayanv.github.io/tags/terraform/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Sat, 01 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Azure Functions</title>
-      <link>http://chendrayanv.github.io/tags/azure-functions/</link>
+      <link>/tags/azure-functions/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://chendrayanv.github.io/tags/azure-functions/</guid>
+      <guid>/tags/azure-functions/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Event Grid Trigger</title>
-      <link>http://chendrayanv.github.io/tags/event-grid-trigger/</link>
+      <link>/tags/event-grid-trigger/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://chendrayanv.github.io/tags/event-grid-trigger/</guid>
+      <guid>/tags/event-grid-trigger/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PowerShell</title>
+      <link>/tags/powershell/</link>
+      <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/powershell/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ServiceNow</title>
-      <link>http://chendrayanv.github.io/tags/servicenow/</link>
+      <link>/tags/servicenow/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://chendrayanv.github.io/tags/servicenow/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>PSWriteWord</title>
-      <link>http://chendrayanv.github.io/tags/pswriteword/</link>
-      <pubDate>Sun, 19 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://chendrayanv.github.io/tags/pswriteword/</guid>
+      <guid>/tags/servicenow/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Azure Function</title>
-      <link>http://chendrayanv.github.io/tags/azure-function/</link>
+      <link>/tags/azure-function/</link>
       <pubDate>Sun, 28 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://chendrayanv.github.io/tags/azure-function/</guid>
+      <guid>/tags/azure-function/</guid>
       <description></description>
     </item>
     
     <item>
       <title>C#</title>
-      <link>http://chendrayanv.github.io/tags/c#/</link>
+      <link>/tags/c#/</link>
       <pubDate>Sun, 28 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://chendrayanv.github.io/tags/c#/</guid>
+      <guid>/tags/c#/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Durable</title>
-      <link>http://chendrayanv.github.io/tags/durable/</link>
+      <link>/tags/durable/</link>
       <pubDate>Sun, 28 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://chendrayanv.github.io/tags/durable/</guid>
+      <guid>/tags/durable/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Azure Resource Graph</title>
-      <link>http://chendrayanv.github.io/tags/azure-resource-graph/</link>
+      <link>/tags/azure-resource-graph/</link>
       <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://chendrayanv.github.io/tags/azure-resource-graph/</guid>
+      <guid>/tags/azure-resource-graph/</guid>
       <description></description>
     </item>
     
     <item>
       <title>KQL</title>
-      <link>http://chendrayanv.github.io/tags/kql/</link>
+      <link>/tags/kql/</link>
       <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://chendrayanv.github.io/tags/kql/</guid>
+      <guid>/tags/kql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Azure DevOps</title>
+      <link>/tags/azure-devops/</link>
+      <pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/azure-devops/</guid>
       <description></description>
     </item>
     
     <item>
       <title>REST API</title>
-      <link>http://chendrayanv.github.io/tags/rest-api/</link>
+      <link>/tags/rest-api/</link>
       <pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://chendrayanv.github.io/tags/rest-api/</guid>
+      <guid>/tags/rest-api/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Service Connection</title>
-      <link>http://chendrayanv.github.io/tags/service-connection/</link>
+      <link>/tags/service-connection/</link>
       <pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://chendrayanv.github.io/tags/service-connection/</guid>
+      <guid>/tags/service-connection/</guid>
       <description></description>
     </item>
     
     <item>
       <title>WIQL</title>
-      <link>http://chendrayanv.github.io/tags/wiql/</link>
+      <link>/tags/wiql/</link>
       <pubDate>Sat, 18 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://chendrayanv.github.io/tags/wiql/</guid>
+      <guid>/tags/wiql/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Deployment</title>
-      <link>http://chendrayanv.github.io/tags/deployment/</link>
+      <link>/tags/deployment/</link>
       <pubDate>Fri, 17 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://chendrayanv.github.io/tags/deployment/</guid>
+      <guid>/tags/deployment/</guid>
       <description></description>
     </item>
     
     <item>
       <title>External Git</title>
-      <link>http://chendrayanv.github.io/tags/external-git/</link>
+      <link>/tags/external-git/</link>
       <pubDate>Fri, 17 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://chendrayanv.github.io/tags/external-git/</guid>
+      <guid>/tags/external-git/</guid>
       <description></description>
     </item>
     
