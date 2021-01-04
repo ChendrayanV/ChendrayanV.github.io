@@ -12,18 +12,6 @@
     
     
     <item>
-      <title>Get started with project bicep</title>
-      <link>/blog/get-started-with-project-bicep/</link>
-      <pubDate>Mon, 04 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/blog/get-started-with-project-bicep/</guid>
-      <description>References Refer to the below links to know more about the project bicep
-  GitHub
- Repository Docs Examples Tutorials Specifications    YouTube
- Intro to Azure&amp;rsquo;s Project Bicep with Brendan Burns and team Project Bicep Demo at Ignite 2020 by Mark Russinovich Project Bicep and ARM Templates November 2020 Update    Introduction As a first step, we need to install the bicep tools on our local computer.</description>
-    </item>
-    
-    <item>
       <title>Retreive list of Azure VM which aren&#39;t proteted with just-in-time network access control</title>
       <link>/blog/list-of-azure-vm-which-has-no-jit-enabled/</link>
       <pubDate>Mon, 04 Jan 2021 00:00:00 +0000</pubDate>
@@ -31,6 +19,18 @@
       <guid>/blog/list-of-azure-vm-which-has-no-jit-enabled/</guid>
       <description>Introduction Recently I was asked to build a PowerShell script for retrieving Azure virtual machines which has no Just In Time (JIT) access enabled. Yes, it’s for security auditing team. I searched in PowerShell Gallery, TechNet Gallery and other sources and didn’t find one. So, obvious is to develop one and share to community.
 Solution First, I thought of retreiving virtual machines and query against JIT Access Policy REST API endpoint.</description>
+    </item>
+    
+    <item>
+      <title>Get started with project bicep</title>
+      <link>/blog/get-started-with-project-bicep/</link>
+      <pubDate>Sun, 03 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/get-started-with-project-bicep/</guid>
+      <description>References Refer to the below links to know more about the project bicep
+  GitHub
+ Repository Docs Examples Tutorials Specifications    YouTube
+ Intro to Azure&amp;rsquo;s Project Bicep with Brendan Burns and team Project Bicep Demo at Ignite 2020 by Mark Russinovich Project Bicep and ARM Templates November 2020 Update    Introduction As a first step, we need to install the bicep tools on our local computer.</description>
     </item>
     
     <item>
