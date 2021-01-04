@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PowerShell on Hugo Future Imperfect</title>
+    <link>/categories/powershell/</link>
+    <description>Recent content in PowerShell on Hugo Future Imperfect</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 04 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="/categories/powershell/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Retreive list of Azure VM which aren&#39;t proteted with just-in-time network access control</title>
+      <link>/blog/list-of-azure-vm-which-has-no-jit-enabled/</link>
+      <pubDate>Mon, 04 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/list-of-azure-vm-which-has-no-jit-enabled/</guid>
+      <description>Introduction Recently I was asked to build a PowerShell script for retrieving Azure virtual machines which has no Just In Time (JIT) access enabled. Yes, it’s for security auditing team. I searched in PowerShell Gallery, TechNet Gallery and other sources and didn’t find one. So, obvious is to develop one and share to community.
+Solution First, I thought of retreiving virtual machines and query against JIT Access Policy REST API endpoint.</description>
+    </item>
+    
+  </channel>
+</rss>

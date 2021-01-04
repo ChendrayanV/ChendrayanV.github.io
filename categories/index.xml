@@ -17,6 +17,24 @@
     </item>
     
     <item>
+      <title>JIT</title>
+      <link>/categories/jit/</link>
+      <pubDate>Mon, 04 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/jit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PowerShell</title>
+      <link>/categories/powershell/</link>
+      <pubDate>Mon, 04 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/powershell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Azure DevOps</title>
       <link>/categories/azure-devops/</link>
       <pubDate>Sun, 19 Jul 2020 00:00:00 +0000</pubDate>
