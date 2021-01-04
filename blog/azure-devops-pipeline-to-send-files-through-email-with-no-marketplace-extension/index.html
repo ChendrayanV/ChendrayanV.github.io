@@ -36,7 +36,7 @@
 
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="generator" content="Hugo 0.79.0" />
+        <meta name="generator" content="Hugo 0.74.2" />
         
 
 
@@ -67,14 +67,13 @@
         <meta property="og:image:height" content="512">
         <meta itemprop="name" content="azure devops pipeline to send files through email with no marketplace extension">
 <meta itemprop="description" content="Introduction I was developing a PowerShell script to send Azure inventory through email, which generates a Word output with charts and tables. So, I thought of using Open XML, I used for SharePoint document library reporting (A few years ago), I searched GitHub and found a great PowerShell module PSWriteWord, and docs are super cool. Yes, this blog post is to show you the simple steps to generate a word document through Azure DevOps pipeline.">
-<meta itemprop="datePublished" content="2020-07-19T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2020-07-19T00:00:00+00:00" />
+<meta itemprop="datePublished" content="2020-07-19T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-07-19T00:00:00&#43;00:00" />
 <meta itemprop="wordCount" content="427">
 
 
 
 <meta itemprop="keywords" content="" />
-
         
 
         
@@ -321,6 +320,9 @@
 
 
   
+  
+    
+  
 
 
         
@@ -328,7 +330,7 @@
         
 
         <a href="/blog/list-of-azure-vm-which-has-no-jit-enabled/" class="image featured">
-            <img src="/img/2021/01/" alt="">
+            <img src="/img/2021/01/security.jpg" alt="">
         </a>
     
 
@@ -357,6 +359,9 @@
 
 
   
+  
+    
+  
 
 
         
@@ -364,7 +369,7 @@
         
 
         <a href="/blog/logging-service-now-requests-using-event-grid-trigger/" class="image featured">
-            <img src="/img//Wheels.jpg" alt="">
+            <img src="/img/2020/08/Wheels.jpg" alt="">
         </a>
     
 
@@ -762,55 +767,55 @@ Save-WordDocument -WordDocument $WordDocument -FilePath <span style="color:#e6db
 </code></pre></div><blockquote>
 <p>Az Pipeline</p>
 </blockquote>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#f92672">trigger</span>:
-  <span style="color:#f92672">branches</span>:
-    <span style="color:#f92672">include</span>:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#66d9ef">trigger</span>:
+  <span style="color:#66d9ef">branches</span>:
+    <span style="color:#66d9ef">include</span>:
       - <span style="color:#e6db74">&#39;dev&#39;</span>
 
 <span style="color:#75715e"># Windows Image</span>
-<span style="color:#f92672">pool</span>:
-  <span style="color:#f92672">vmImage</span>: <span style="color:#e6db74">&#39;windows-latest&#39;</span>
+<span style="color:#66d9ef">pool</span>:
+  <span style="color:#66d9ef">vmImage</span>: <span style="color:#e6db74">&#39;windows-latest&#39;</span>
 
-<span style="color:#f92672">variables</span>:
-  - <span style="color:#f92672">group</span>: <span style="color:#e6db74">&#39;Reporting-Credentials&#39;</span>
-  - <span style="color:#f92672">name</span>: <span style="color:#e6db74">&#39;Reporting-Credentials&#39;</span>
+<span style="color:#66d9ef">variables</span>:
+  - <span style="color:#66d9ef">group</span>: <span style="color:#e6db74">&#39;Reporting-Credentials&#39;</span>
+  - <span style="color:#66d9ef">name</span>: <span style="color:#e6db74">&#39;Reporting-Credentials&#39;</span>
   
-<span style="color:#f92672">stages</span>:
-  - <span style="color:#f92672">stage</span>: <span style="color:#ae81ff">Build</span>
-    <span style="color:#f92672">jobs</span>:
-      - <span style="color:#f92672">job</span>: 
-        <span style="color:#f92672">steps</span>:
-          - <span style="color:#f92672">task</span>: <span style="color:#ae81ff">AzurePowerShell@5</span>
-            <span style="color:#f92672">inputs</span>:
-              <span style="color:#f92672">azurePowerShellVersion</span>: <span style="color:#ae81ff">LatestVersion</span>
-              <span style="color:#f92672">azureSubscription</span>: <span style="color:#e6db74">&#39;Reporting&#39;</span>
-              <span style="color:#f92672">ScriptType</span>: <span style="color:#ae81ff">FilePath</span>
-              <span style="color:#f92672">ScriptPath</span>: <span style="color:#e6db74">&#39;TruGreen\azureInventory.ps1&#39;</span>
-          - <span style="color:#f92672">task</span>: <span style="color:#ae81ff">CopyFiles@2</span>
-            <span style="color:#f92672">inputs</span>:
-              <span style="color:#f92672">Contents</span>: <span style="color:#e6db74">&#39;Azure Infrastructure Report.docx&#39;</span>
-              <span style="color:#f92672">TargetFolder</span>: <span style="color:#ae81ff">$(Build.ArtifactStagingDirectory)</span>
-          - <span style="color:#f92672">task</span>: <span style="color:#ae81ff">PublishBuildArtifacts@1</span>
-            <span style="color:#f92672">inputs</span>:
-              <span style="color:#f92672">ArtifactName</span>: <span style="color:#e6db74">&#39;azureInventory&#39;</span>
-              <span style="color:#f92672">PathtoPublish</span>: <span style="color:#ae81ff">$(Build.ArtifactStagingDirectory)</span>
-              <span style="color:#f92672">publishLocation</span>: <span style="color:#ae81ff">Container</span>
+<span style="color:#66d9ef">stages</span>:
+  - <span style="color:#66d9ef">stage</span>: Build
+    <span style="color:#66d9ef">jobs</span>:
+      - <span style="color:#66d9ef">job</span>: 
+        <span style="color:#66d9ef">steps</span>:
+          - <span style="color:#66d9ef">task</span>: AzurePowerShell@<span style="color:#ae81ff">5</span>
+            <span style="color:#66d9ef">inputs</span>:
+              <span style="color:#66d9ef">azurePowerShellVersion</span>: LatestVersion
+              <span style="color:#66d9ef">azureSubscription</span>: <span style="color:#e6db74">&#39;Reporting&#39;</span>
+              <span style="color:#66d9ef">ScriptType</span>: FilePath
+              <span style="color:#66d9ef">ScriptPath</span>: <span style="color:#e6db74">&#39;TruGreen\azureInventory.ps1&#39;</span>
+          - <span style="color:#66d9ef">task</span>: CopyFiles@<span style="color:#ae81ff">2</span>
+            <span style="color:#66d9ef">inputs</span>:
+              <span style="color:#66d9ef">Contents</span>: <span style="color:#e6db74">&#39;Azure Infrastructure Report.docx&#39;</span>
+              <span style="color:#66d9ef">TargetFolder</span>: $(Build.ArtifactStagingDirectory)
+          - <span style="color:#66d9ef">task</span>: PublishBuildArtifacts@<span style="color:#ae81ff">1</span>
+            <span style="color:#66d9ef">inputs</span>:
+              <span style="color:#66d9ef">ArtifactName</span>: <span style="color:#e6db74">&#39;azureInventory&#39;</span>
+              <span style="color:#66d9ef">PathtoPublish</span>: $(Build.ArtifactStagingDirectory)
+              <span style="color:#66d9ef">publishLocation</span>: Container
 
-  - <span style="color:#f92672">stage</span>: <span style="color:#ae81ff">Release</span>
-    <span style="color:#f92672">jobs</span>:
-      - <span style="color:#f92672">job</span>: 
-        <span style="color:#f92672">steps</span>:
-          - <span style="color:#f92672">task</span>: <span style="color:#ae81ff">DownloadBuildArtifacts@0</span>
-            <span style="color:#f92672">inputs</span>:
-              <span style="color:#f92672">buildType</span>: <span style="color:#ae81ff">current</span>
-              <span style="color:#f92672">downloadType</span>: <span style="color:#ae81ff">single</span>
-              <span style="color:#f92672">artifactName</span>: <span style="color:#e6db74">&#39;azureInventory&#39;</span>
-              <span style="color:#f92672">downloadPath</span>: <span style="color:#ae81ff">$(System.ArtifactsDirectory)</span>
-          - <span style="color:#f92672">task</span>: <span style="color:#ae81ff">PowerShell@2</span>
-            <span style="color:#f92672">inputs</span>:
-              <span style="color:#f92672">targetType</span>: <span style="color:#ae81ff">filePath</span>
-              <span style="color:#f92672">filePath</span>: <span style="color:#e6db74">&#39;TruGreen\sendEmail.ps1&#39;</span>
-              <span style="color:#f92672">arguments</span>: <span style="color:#e6db74">&#39;-Attachments &#34;$(System.ArtifactsDirectory)\azureInventory\Azure Infrastructure Report.docx&#34; -MailID &#34;$(MailID)&#34; -MailPassword &#34;$(MailPassword)&#34;&#39;</span>
+  - <span style="color:#66d9ef">stage</span>: Release
+    <span style="color:#66d9ef">jobs</span>:
+      - <span style="color:#66d9ef">job</span>: 
+        <span style="color:#66d9ef">steps</span>:
+          - <span style="color:#66d9ef">task</span>: DownloadBuildArtifacts@<span style="color:#ae81ff">0</span>
+            <span style="color:#66d9ef">inputs</span>:
+              <span style="color:#66d9ef">buildType</span>: current
+              <span style="color:#66d9ef">downloadType</span>: single
+              <span style="color:#66d9ef">artifactName</span>: <span style="color:#e6db74">&#39;azureInventory&#39;</span>
+              <span style="color:#66d9ef">downloadPath</span>: $(System.ArtifactsDirectory)
+          - <span style="color:#66d9ef">task</span>: PowerShell@<span style="color:#ae81ff">2</span>
+            <span style="color:#66d9ef">inputs</span>:
+              <span style="color:#66d9ef">targetType</span>: filePath
+              <span style="color:#66d9ef">filePath</span>: <span style="color:#e6db74">&#39;TruGreen\sendEmail.ps1&#39;</span>
+              <span style="color:#66d9ef">arguments</span>: <span style="color:#e6db74">&#39;-Attachments &#34;$(System.ArtifactsDirectory)\azureInventory\Azure Infrastructure Report.docx&#34; -MailID &#34;$(MailID)&#34; -MailPassword &#34;$(MailPassword)&#34;&#39;</span>
 </code></pre></div>
   </div>
 
@@ -1048,6 +1053,9 @@ Save-WordDocument -WordDocument $WordDocument -FilePath <span style="color:#e6db
 
 
   
+  
+    
+  
 
 
         
@@ -1055,7 +1063,7 @@ Save-WordDocument -WordDocument $WordDocument -FilePath <span style="color:#e6db
         
 
         <a href="/blog/get-started-with-project-bicep/" class="image featured">
-            <img src="/img//bicep-header.jpg" alt="">
+            <img src="/img/2021/01/bicep-header.jpg" alt="">
         </a>
     
 
@@ -1096,7 +1104,7 @@ Save-WordDocument -WordDocument $WordDocument -FilePath <span style="color:#e6db
         
 
         <a href="/blog/list-of-azure-vm-which-has-no-jit-enabled/" class="image featured">
-            <img src="/img/2021/01/" alt="">
+            <img src="/img/2021/01/security.jpg" alt="">
         </a>
     
 
@@ -1137,7 +1145,7 @@ Save-WordDocument -WordDocument $WordDocument -FilePath <span style="color:#e6db
         
 
         <a href="/blog/logging-service-now-requests-using-event-grid-trigger/" class="image featured">
-            <img src="/img/2020/082020/08/Wheels.jpg" alt="">
+            <img src="/img/2020/08/Wheels.jpg" alt="">
         </a>
     
 
@@ -1178,7 +1186,7 @@ Save-WordDocument -WordDocument $WordDocument -FilePath <span style="color:#e6db
         
 
         <a href="/blog/azure-devops-pipeline-to-send-files-through-email-with-no-marketplace-extension/" class="image featured">
-            <img src="/img/2020/072020/07/" alt="">
+            <img src="/img/2020/07/" alt="">
         </a>
     
 
@@ -1219,7 +1227,7 @@ Save-WordDocument -WordDocument $WordDocument -FilePath <span style="color:#e6db
         
 
         <a href="/blog/my-first-experience-with-the-azure-durable-functions/" class="image featured">
-            <img src="/img/2020/062020/06/Sand-Clock.jpg" alt="">
+            <img src="/img/2020/06/Sand-Clock.jpg" alt="">
         </a>
     
 
