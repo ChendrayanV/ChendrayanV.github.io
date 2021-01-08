@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>PowerShell on Hugo Future Imperfect</title>
+    <title>PowerShell on iAutomate</title>
     <link>/categories/powershell/</link>
-    <description>Recent content in PowerShell on Hugo Future Imperfect</description>
+    <description>Recent content in PowerShell on iAutomate</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 04 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="/categories/powershell/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Jan 2021 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/powershell/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>Retrieve a list of Azure VM which aren&#39;t protected with just-in-time network access control</title>
       <link>/blog/list-of-azure-vm-which-has-no-jit-enabled/</link>

@@ -1,27 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Hugo Future Imperfect</title>
+    <title>Categories on iAutomate</title>
     <link>/categories/</link>
-    <description>Recent content in Categories on Hugo Future Imperfect</description>
+    <description>Recent content in Categories on iAutomate</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-<<<<<<< HEAD
     <lastBuildDate>Thu, 07 Jan 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
-=======
-    <lastBuildDate>Thu, 07 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>ARM</title>
-      <link>/categories/arm/</link>
-      <pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/arm/</guid>
-      <description></description>
-    </item>
->>>>>>> bf8628730b5ac4928c7a1cce20b5b40622bc2699
     
     <item>
       <title>ARM</title>
