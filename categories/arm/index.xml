@@ -6,11 +6,15 @@
     <description>Recent content in ARM on Hugo Future Imperfect</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+<<<<<<< HEAD
     <lastBuildDate>Thu, 07 Jan 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/arm/index.xml" rel="self" type="application/rss+xml" />
     
     
+=======
+    <lastBuildDate>Thu, 07 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="/categories/arm/index.xml" rel="self" type="application/rss+xml" />
+>>>>>>> bf8628730b5ac4928c7a1cce20b5b40622bc2699
     <item>
       <title>Deploy Azure Function App using Project Bicep</title>
       <link>/blog/deploy-azure-function-app-using-project-bicep/</link>
@@ -24,4 +28,8 @@
     </item>
     
   </channel>
+<<<<<<< HEAD
 </rss>
+=======
+</rss>
+>>>>>>> bf8628730b5ac4928c7a1cce20b5b40622bc2699
