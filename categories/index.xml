@@ -6,17 +6,44 @@
     <description>Recent content in Categories on Hugo Future Imperfect</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 04 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 07 Jan 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>ARM</title>
+      <link>/categories/arm/</link>
+      <pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/arm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Azure</title>
       <link>/categories/azure/</link>
-      <pubDate>Mon, 04 Jan 2021 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>/categories/azure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Azure Functions</title>
+      <link>/categories/azure-functions/</link>
+      <pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/azure-functions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Project Bicep</title>
+      <link>/categories/project-bicep/</link>
+      <pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/project-bicep/</guid>
       <description></description>
     </item>
     

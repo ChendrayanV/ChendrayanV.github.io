@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ARM on Hugo Future Imperfect</title>
+    <link>/categories/arm/</link>
+    <description>Recent content in ARM on Hugo Future Imperfect</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 07 Jan 2021 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/arm/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Deploy Azure Function App using Project Bicep</title>
+      <link>/blog/deploy-azure-function-app-using-project-bicep/</link>
+      <pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/deploy-azure-function-app-using-project-bicep/</guid>
+      <description>References Refer to the below links to know more about the project bicep
+  GitHub
+ Repository Docs Examples Tutorials Specifications    YouTube
+ Intro to Azure&amp;rsquo;s Project Bicep with Brendan Burns and team Project Bicep Demo at Ignite 2020 by Mark Russinovich Project Bicep and ARM Templates November 2020 Update    Introduction Project Bicep is growing well, and I am using it at my workplace to build proof of concepts environments.</description>
+    </item>
+    
+  </channel>
+</rss>
