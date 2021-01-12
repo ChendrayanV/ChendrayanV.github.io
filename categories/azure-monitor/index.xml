@@ -8,11 +8,11 @@
     <language>en-us</language>
     <lastBuildDate>Mon, 11 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="/categories/azure-monitor/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Using Azure Monitor Workbook at the workplace</title>
-      <link>/blog/using-azure-monitor-workbook-at-the-workplace/</link>
+      <title>Using Azure Monitor Workbook at the workplace - Part 1</title>
+      <link>/blog/using-azure-monitor-workbook-at-the-workplace-part-1/</link>
       <pubDate>Mon, 11 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>/blog/using-azure-monitor-workbook-at-the-workplace/</guid>
+      <guid>/blog/using-azure-monitor-workbook-at-the-workplace-part-1/</guid>
       <description>Introduction Azure Monitor Workbook is one of my favorite services in Azure Cloud. Why? I use to share scripts/queries with the operations team for reportings. During audits, I get more development works. So, I thought of using the Azure Monitor workbooks to serve the purpose. Indeed, the queries I built is tailor-made for my environment. However, through this blog post, I can share the nuances and some ready to use solutions.</description>
     </item>
     
