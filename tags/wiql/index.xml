@@ -6,11 +6,7 @@
     <description>Recent content in WIQL on iAutomate</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 18 Apr 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/wiql/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 18 Apr 2020 00:00:00 +0000</lastBuildDate><atom:link href="/tags/wiql/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How Azure DevOps REST API helped me during outage of the VPN?</title>
       <link>/blog/how-azure-devops-rest-api-helped-me-during-outage-of-the-vpn/</link>
