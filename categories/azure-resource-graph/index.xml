@@ -14,7 +14,7 @@
       
       <guid>/blog/collection-of-azure-resource-graph-query/</guid>
       <description>Introduction This blog post is to share the Azure Resource Graph query I developed at my workplace. I have used this with PowerShell and Azure Monitor.
-Azure Virtual Machines PowerState $Query = &amp;#34;Resources | where type =~ &amp;#39;microsoft.compute/virtualMachines&amp;#39; | project id, VMName = tostring(name), Location = tostring(location), ResourceGroup = tostring(resourceGroup), SubscriptionId = tostring(subscriptionId), OSType = tostring(properties.storageProfile.osDisk.osType), PowerState = iff( tostring( split( properties.extended.instanceView.powerState.code, &amp;#39;/&amp;#39; )[1] ) != &amp;#39;&amp;#39;, tostring(split(properties.extended.instanceView.powerState.code, &amp;#39;/&amp;#39;)[1]), &amp;#39;transitioning&amp;#39; )&amp;#34; $PageSize = 1000 $Iteration = 0 $SearchParams = @{ Query = $($Query) First = $PageSize } [System.</description>
+Azure Virtual Machines PowerState Report $Query = &amp;#34;Resources | where type =~ &amp;#39;microsoft.compute/virtualMachines&amp;#39; | project id, VMName = tostring(name), Location = tostring(location), ResourceGroup = tostring(resourceGroup), SubscriptionId = tostring(subscriptionId), OSType = tostring(properties.storageProfile.osDisk.osType), PowerState = iff( tostring( split( properties.extended.instanceView.powerState.code, &amp;#39;/&amp;#39; )[1] ) != &amp;#39;&amp;#39;, tostring(split(properties.extended.instanceView.powerState.code, &amp;#39;/&amp;#39;)[1]), &amp;#39;transitioning&amp;#39; )&amp;#34; $PageSize = 1000 $Iteration = 0 $SearchParams = @{ Query = $($Query) First = $PageSize } [System.</description>
     </item>
     
   </channel>

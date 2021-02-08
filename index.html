@@ -295,7 +295,7 @@ if (!doNotTrack) {
         
 
         <a href="/blog/collection-of-azure-resource-graph-query/" class="image featured">
-            <img src="/img/2021/02/Happy-Laugh.jpg" alt="">
+            <img src="/img/2021/02/ARG-PS-Collection.jpg" alt="">
         </a>
     
 
@@ -363,6 +363,9 @@ if (!doNotTrack) {
 
 
   
+  
+    
+  
 
 
         
@@ -370,7 +373,7 @@ if (!doNotTrack) {
         
 
         <a href="/blog/deploy-azure-function-app-using-project-bicep/" class="image featured">
-            <img src="/img//az-function-app.jpg" alt="">
+            <img src="/img/2021/01/az-function-app.jpg" alt="">
         </a>
     
 
@@ -409,7 +412,7 @@ if (!doNotTrack) {
         
 
         <a href="/blog/list-of-azure-vm-which-has-no-jit-enabled/" class="image featured">
-            <img src="/img//security.jpg" alt="">
+            <img src="/img/2021/01/security.jpg" alt="">
         </a>
     
 
@@ -491,7 +494,7 @@ if (!doNotTrack) {
             February 7, 2021</time>
         <span class="author">Chendrayan Venkatesan</span>
         
-            <p>1 minute read</p>
+            <p>2 minute read</p>
         
         
     </div>
@@ -612,7 +615,7 @@ if (!doNotTrack) {
         
 
         <a href="/blog/collection-of-azure-resource-graph-query/" class="image featured">
-            <img src="/img/2021/02/Happy-Laugh.jpg" alt="">
+            <img src="/img/2021/02/ARG-PS-Collection.jpg" alt="">
         </a>
     
 
@@ -620,7 +623,7 @@ if (!doNotTrack) {
   <div id="content">
     <h1 id="introduction">Introduction</h1>
 <p>This blog post is to share the Azure Resource Graph query I developed at my workplace. I have used this with PowerShell and Azure Monitor.</p>
-<h2 id="azure-virtual-machines-powerstate">Azure Virtual Machines PowerState</h2>
+<h2 id="azure-virtual-machines-powerstate-report">Azure Virtual Machines PowerState Report</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">$Query = <span style="color:#e6db74">&#34;Resources
 </span><span style="color:#e6db74">| where type =~ &#39;microsoft.compute/virtualMachines&#39;
 </span><span style="color:#e6db74">| project id, VMName = tostring(name), Location = tostring(location), 
@@ -648,9 +651,44 @@ $SearchParams = @{
     $Results.AddRange($pageResults)
 } <span style="color:#66d9ef">while</span> ($PageResults.Count <span style="color:#f92672">-eq</span> $PageSize)
 $Results
-</code></pre></div><script type="application/javascript" src="https://gist.github.com/ChendrayanV/9c2d8fae6c6f56820a61e24421f70fca.js"></script>
-
-
+</code></pre></div><h3 id="azure-virtual-machines-summarized-reports">Azure Virtual Machines (Summarized Reports)</h3>
+<h3 id="count-by-location">Count By Location</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Search-AzGraph -Query <span style="color:#e6db74">&#34;where type =~ &#39;Microsoft.Compute/virtualMachines&#39; | summarize count() by location&#34;</span>
+</code></pre></div><h3 id="count-by-os-type">Count By OS Type</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Search-AzGraph -Query <span style="color:#e6db74">&#34;where type =~ &#39;Microsoft.Compute/virtualMachines&#39; | project id, osType= tostring(properties.storageProfile.osDisk.osType) |summarize count() by osType&#34;</span>
+</code></pre></div><h3 id="count-by-resource-group">Count By Resource Group</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Search-AzGraph -Query <span style="color:#e6db74">&#34;where type =~ &#39;Microsoft.Compute/virtualMachines&#39; | summarize count() by resourceGroup&#34;</span>
+</code></pre></div><h3 id="count-by-power-state">Count By Power State</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Search-AzGraph -Query <span style="color:#e6db74">&#34;where type =~ &#39;Microsoft.Compute/virtualMachines&#39; 
+</span><span style="color:#e6db74">| project id, powerState = tostring(split(properties.extended.instanceView.powerState.code, &#39;/&#39;)[1]) 
+</span><span style="color:#e6db74">| summarize count() by powerState&#34;</span>
+</code></pre></div><h2 id="azure-virtual-machines-backup-report">Azure Virtual Machines Backup Report</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">$Query = <span style="color:#e6db74">&#34;RecoveryServicesResources
+</span><span style="color:#e6db74">| where type =~ &#39;microsoft.recoveryservices/vaults/backupfabrics/protectioncontainers/protecteditems&#39;
+</span><span style="color:#e6db74">| where properties.backupManagementType =~ &#39;AzureIaasVM&#39;
+</span><span style="color:#e6db74">| project id, SubscriptionId = subscriptionId, VMName = tostring(properties.friendlyName), 
+</span><span style="color:#e6db74">    LastRecoveryPoint = tostring(properties.lastRecoveryPoint), 
+</span><span style="color:#e6db74">    PolicyName = tostring(properties.policyName), 
+</span><span style="color:#e6db74">    ProtectionStatus = tostring(properties.protectionStatus), 
+</span><span style="color:#e6db74">    CurrentProtectionState = tostring(properties.currentProtectionState),
+</span><span style="color:#e6db74">    BackupId = tostring(properties.id),
+</span><span style="color:#e6db74">    IsBackedUp = isnotempty(id),
+</span><span style="color:#e6db74">    recoveryServiceVault = split(id, &#39;/&#39;)[8]&#34;</span>
+$PageSize = 1000
+$Iteration = 0
+$SearchParams = @{
+    Query = $($Query)
+    First = $PageSize
+}
+<span style="color:#66d9ef">[System.Collections.ArrayList]</span>$RecoveryServicesResources = @()
+<span style="color:#66d9ef">do</span> {
+    $Iteration += 1
+    $PageResults = Search-AzGraph @SearchParams -Verbose
+    $SearchParams.Skip += $PageResults.Count
+    $RecoveryServicesResources.AddRange($PageResults)
+} <span style="color:#66d9ef">while</span> ($PageResults.Count <span style="color:#f92672">-eq</span> $PageSize)
+$RecoveryServicesResources
+</code></pre></div>
   </div>
 
   <footer>
@@ -994,7 +1032,7 @@ $Results
         
 
         <a href="/blog/collection-of-azure-resource-graph-query/" class="image featured">
-            <img src="/img//Happy-Laugh.jpg" alt="">
+            <img src="/img/2021/02/ARG-PS-Collection.jpg" alt="">
         </a>
     
 
@@ -1025,9 +1063,6 @@ $Results
 
 
   
-  
-    
-  
 
 
         
@@ -1035,7 +1070,7 @@ $Results
         
 
         <a href="/blog/using-azure-monitor-workbook-at-the-workplace-part-1/" class="image featured">
-            <img src="/img/2021/012021/01/azure-workbook.jpg" alt="">
+            <img src="/img//azure-workbook.jpg" alt="">
         </a>
     
 
@@ -1065,9 +1100,6 @@ $Results
 
 
 
-  
-  
-    
   
 
 
@@ -1148,9 +1180,6 @@ $Results
 
 
   
-  
-    
-  
 
 
         
@@ -1158,7 +1187,7 @@ $Results
         
 
         <a href="/blog/get-started-with-project-bicep/" class="image featured">
-            <img src="/img/2021/01/bicep-header.jpg" alt="">
+            <img src="/date2021/01/bicep-header.jpg" alt="">
         </a>
     
 
