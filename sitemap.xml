@@ -3,6 +3,56 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/categories/azure-automation-account/</loc>
+    <lastmod>2021-02-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/azure-runbook-report/</loc>
+    <lastmod>2021-02-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/</loc>
+    <lastmod>2021-02-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+    <lastmod>2021-02-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2021-02-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/powershell/</loc>
+    <lastmod>2021-02-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/resource-graph/</loc>
+    <lastmod>2021-02-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/rest-api/</loc>
+    <lastmod>2021-02-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/retrieve-azure-runbook-job-report-using-rest-api-with-powershell/</loc>
+    <lastmod>2021-02-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2021-02-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/tags/azure-resource-graph/</loc>
     <lastmod>2021-02-07T00:00:00+00:00</lastmod>
   </url>
@@ -13,32 +63,7 @@
   </url>
   
   <url>
-    <loc>/blog/</loc>
-    <lastmod>2021-02-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/</loc>
-    <lastmod>2021-02-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/blog/collection-of-azure-resource-graph-query/</loc>
-    <lastmod>2021-02-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/</loc>
-    <lastmod>2021-02-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/powershell/</loc>
-    <lastmod>2021-02-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
     <lastmod>2021-02-07T00:00:00+00:00</lastmod>
   </url>
   
@@ -184,11 +209,6 @@
   
   <url>
     <loc>/blog/create-service-connection-with-certificate-using-rest-api/</loc>
-    <lastmod>2020-04-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/rest-api/</loc>
     <lastmod>2020-04-25T00:00:00+00:00</lastmod>
   </url>
   
