@@ -605,9 +605,6 @@ if (!doNotTrack) {
 
 
   
-  
-    
-  
 
 
         
@@ -636,7 +633,7 @@ Get-AzAutomationJob @Params
 </code></pre></div><p>In my case, the code needs to loop through 200 + subscriptions. Yes, that’s the reason I used REST API with PowerShell. By this approach, the code is befitting in the Azure Function app.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#75715e">#region - Query</span>
 $Query = <span style="color:#e6db74">&#34;Resources 
-</span><span style="color:#e6db74">| where type =~ &#39;Microsoft.Automation/automationaccounts/runbooks&#39; and location =~ &#39;northeurope&#39; and name =~ &#39;Start-PaaSComplianceCheck-Autofix&#39;
+</span><span style="color:#e6db74">| where type =~ &#39;Microsoft.Automation/automationaccounts/runbooks&#39; and location =~ &#39;northeurope&#39; and name =~ &#39;{YOUR RUNBOOK NAME}&#39;
 </span><span style="color:#e6db74">| project id, name , resourceGroup, subscriptionId, automationAccountName = tostring(split(id,&#39;/&#39;)[8])&#34;</span>
 $PageSize = 1000
 $Iteration = 0
@@ -682,9 +679,9 @@ $Collections = $Results | Select-Object @{Name = <span style="color:#e6db74">&#3
 
         body -content {
             hr 
-            h4 -Content <span style="color:#e6db74">&#34;MAHSBC Monitoring Alert&#34;</span>
+            h4 -Content <span style="color:#e6db74">&#34;SOME TEXT&#34;</span>
             h5 -Content $(Get-Date)
-            h5 -Content <span style="color:#e6db74">&#34;MAHSBC - Start-PaaSComplianceCheck-Autofix-Report&#34;</span>
+            h5 -Content <span style="color:#e6db74">&#34;MEANINGFUL HEADERS&#34;</span>
             hr
             table -content {
                 th -content <span style="color:#e6db74">&#39;SubscriptionId&#39;</span>
@@ -1215,7 +1212,7 @@ $Collections = $Results | Select-Object @{Name = <span style="color:#e6db74">&#3
         
 
         <a href="/blog/deploy-azure-function-app-using-project-bicep/" class="image featured">
-            <img src="/img/2021/01/az-function-app.jpg" alt="">
+            <img src="/img/2021/012021/01/az-function-app.jpg" alt="">
         </a>
     
 
@@ -1246,9 +1243,6 @@ $Collections = $Results | Select-Object @{Name = <span style="color:#e6db74">&#3
 
 
   
-  
-    
-  
 
 
         
@@ -1256,7 +1250,7 @@ $Collections = $Results | Select-Object @{Name = <span style="color:#e6db74">&#3
         
 
         <a href="/blog/list-of-azure-vm-which-has-no-jit-enabled/" class="image featured">
-            <img src="/img/2021/01/security.jpg" alt="">
+            <img src="/img//security.jpg" alt="">
         </a>
     
 
