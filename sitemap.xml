@@ -1,269 +1,164 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>/categories/azure-automation-account/</loc>
-    <lastmod>2021-02-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-02-22T11:18:37+05:30</lastmod>
+  </url><url>
     <loc>/categories/azure-runbook-report/</loc>
-    <lastmod>2021-02-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-02-22T11:18:37+05:30</lastmod>
+  </url><url>
     <loc>/blog/</loc>
-    <lastmod>2021-02-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-02-22T11:18:37+05:30</lastmod>
+  </url><url>
     <loc>/categories/</loc>
-    <lastmod>2021-02-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-02-22T11:18:37+05:30</lastmod>
+  </url><url>
     <loc>/</loc>
-    <lastmod>2021-02-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-02-22T11:18:37+05:30</lastmod>
+  </url><url>
     <loc>/tags/powershell/</loc>
-    <lastmod>2021-02-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-02-22T11:18:37+05:30</lastmod>
+  </url><url>
     <loc>/tags/resource-graph/</loc>
-    <lastmod>2021-02-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-02-22T11:18:37+05:30</lastmod>
+  </url><url>
     <loc>/tags/rest-api/</loc>
-    <lastmod>2021-02-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-02-22T11:18:37+05:30</lastmod>
+  </url><url>
     <loc>/blog/retrieve-azure-runbook-job-report-using-rest-api-with-powershell/</loc>
-    <lastmod>2021-02-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-02-22T11:18:37+05:30</lastmod>
+  </url><url>
     <loc>/tags/</loc>
-    <lastmod>2021-02-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-02-22T11:18:37+05:30</lastmod>
+  </url><url>
     <loc>/tags/azure-resource-graph/</loc>
-    <lastmod>2021-02-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-02-08T09:07:55+05:30</lastmod>
+  </url><url>
     <loc>/categories/azure-resource-graph/</loc>
-    <lastmod>2021-02-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-02-08T09:07:55+05:30</lastmod>
+  </url><url>
     <loc>/blog/collection-of-azure-resource-graph-query/</loc>
-    <lastmod>2021-02-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-02-08T09:07:55+05:30</lastmod>
+  </url><url>
     <loc>/categories/azure/</loc>
-    <lastmod>2021-01-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-01-12T17:51:13+05:30</lastmod>
+  </url><url>
     <loc>/categories/azure-devops/</loc>
-    <lastmod>2021-01-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-01-12T17:51:13+05:30</lastmod>
+  </url><url>
     <loc>/categories/azure-monitor/</loc>
-    <lastmod>2021-01-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-01-12T17:51:13+05:30</lastmod>
+  </url><url>
     <loc>/categories/azure-workbook/</loc>
-    <lastmod>2021-01-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-01-12T17:51:13+05:30</lastmod>
+  </url><url>
     <loc>/blog/using-azure-monitor-workbook-at-the-workplace-part-1/</loc>
-    <lastmod>2021-01-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-01-12T17:51:13+05:30</lastmod>
+  </url><url>
     <loc>/itemized/item1/</loc>
-    <lastmod>2021-01-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-01-09T10:20:12+05:30</lastmod>
+  </url><url>
     <loc>/itemized/</loc>
-    <lastmod>2021-01-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-01-09T10:20:12+05:30</lastmod>
+  </url><url>
     <loc>/categories/arm/</loc>
-    <lastmod>2021-01-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-01-08T08:54:54+05:30</lastmod>
+  </url><url>
     <loc>/categories/azure-functions/</loc>
-    <lastmod>2021-01-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-01-08T08:54:54+05:30</lastmod>
+  </url><url>
     <loc>/blog/deploy-azure-function-app-using-project-bicep/</loc>
-    <lastmod>2021-01-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-01-08T08:54:54+05:30</lastmod>
+  </url><url>
     <loc>/categories/project-bicep/</loc>
-    <lastmod>2021-01-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-01-08T08:54:54+05:30</lastmod>
+  </url><url>
     <loc>/categories/jit/</loc>
-    <lastmod>2021-01-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-01-04T20:32:11+05:30</lastmod>
+  </url><url>
     <loc>/categories/powershell/</loc>
-    <lastmod>2021-01-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-01-04T20:32:11+05:30</lastmod>
+  </url><url>
     <loc>/blog/list-of-azure-vm-which-has-no-jit-enabled/</loc>
-    <lastmod>2021-01-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-01-04T20:32:11+05:30</lastmod>
+  </url><url>
     <loc>/blog/get-started-with-project-bicep/</loc>
-    <lastmod>2021-01-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-01-04T20:15:08+05:30</lastmod>
+  </url><url>
     <loc>/tags/azure-functions/</loc>
-    <lastmod>2020-08-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-01-04T20:12:23+05:30</lastmod>
+  </url><url>
     <loc>/tags/event-grid-trigger/</loc>
-    <lastmod>2020-08-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-01-04T20:12:23+05:30</lastmod>
+  </url><url>
     <loc>/blog/logging-service-now-requests-using-event-grid-trigger/</loc>
-    <lastmod>2020-08-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-01-04T20:12:23+05:30</lastmod>
+  </url><url>
     <loc>/tags/servicenow/</loc>
-    <lastmod>2020-08-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-01-04T20:12:23+05:30</lastmod>
+  </url><url>
     <loc>/blog/azure-devops-pipeline-to-send-files-through-email-with-no-marketplace-extension/</loc>
-    <lastmod>2020-07-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-01-04T20:12:23+05:30</lastmod>
+  </url><url>
     <loc>/categories/pswriteword/</loc>
-    <lastmod>2020-07-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-01-04T20:12:23+05:30</lastmod>
+  </url><url>
     <loc>/tags/azure-function/</loc>
-    <lastmod>2020-06-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-01-04T20:12:23+05:30</lastmod>
+  </url><url>
     <loc>/tags/c#/</loc>
-    <lastmod>2020-06-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-01-04T20:12:23+05:30</lastmod>
+  </url><url>
     <loc>/tags/durable/</loc>
-    <lastmod>2020-06-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-01-04T20:12:23+05:30</lastmod>
+  </url><url>
     <loc>/blog/my-first-experience-with-the-azure-durable-functions/</loc>
-    <lastmod>2020-06-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-01-04T20:12:23+05:30</lastmod>
+  </url><url>
     <loc>/tags/kql/</loc>
-    <lastmod>2020-05-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-01-04T20:12:23+05:30</lastmod>
+  </url><url>
     <loc>/blog/retrieve-unattached-azure-vm-disks-using-powershell-azure-resource-graph/</loc>
-    <lastmod>2020-05-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-01-04T20:12:23+05:30</lastmod>
+  </url><url>
     <loc>/tags/azure-devops/</loc>
-    <lastmod>2020-04-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-01-04T20:12:23+05:30</lastmod>
+  </url><url>
     <loc>/blog/create-service-connection-with-certificate-using-rest-api/</loc>
-    <lastmod>2020-04-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-01-04T20:12:23+05:30</lastmod>
+  </url><url>
     <loc>/tags/service-connection/</loc>
-    <lastmod>2020-04-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-01-04T20:12:23+05:30</lastmod>
+  </url><url>
     <loc>/blog/how-azure-devops-rest-api-helped-me-during-outage-of-the-vpn/</loc>
-    <lastmod>2020-04-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-01-04T20:12:23+05:30</lastmod>
+  </url><url>
     <loc>/tags/wiql/</loc>
-    <lastmod>2020-04-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-01-04T20:12:23+05:30</lastmod>
+  </url><url>
     <loc>/blog/deploying-azure-function-app-external-git/</loc>
-    <lastmod>2020-04-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-01-04T20:12:23+05:30</lastmod>
+  </url><url>
     <loc>/tags/deployment/</loc>
-    <lastmod>2020-04-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-01-04T20:12:23+05:30</lastmod>
+  </url><url>
     <loc>/tags/external-git/</loc>
-    <lastmod>2020-04-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-01-04T20:12:23+05:30</lastmod>
+  </url><url>
     <loc>/itemized/item2/</loc>
-    <lastmod>2017-06-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-01-04T20:12:23+05:30</lastmod>
+  </url><url>
     <loc>/itemized/item3/</loc>
-    <lastmod>2017-06-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-01-04T20:12:23+05:30</lastmod>
+  </url><url>
     <loc>/itemized/item4/</loc>
-    <lastmod>2017-06-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-01-04T20:12:23+05:30</lastmod>
+  </url><url>
     <loc>/about/</loc>
-    <lastmod>2014-04-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-01-09T10:02:54+05:30</lastmod>
+  </url><url>
     <loc>/contact/</loc>
+    <lastmod>2021-01-04T20:12:23+05:30</lastmod>
   </url>
-  
 </urlset>
