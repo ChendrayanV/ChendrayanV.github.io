@@ -6,7 +6,17 @@
     <description>Recent content in Azure Monitor on iAutomate</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="/categories/azure-monitor/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 18 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="/categories/azure-monitor/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>/blog/using-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell/</link>
+      <pubDate>Thu, 18 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/using-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell/</guid>
+      <description>Of late, I was in need to use a PFX in the Azure DevOps pipeline. Well, it’s not super complex, and having said that, it’s not relatively easy. What do we learn in this blog post? A simple PowerShell script to use a PFX certificate in the Azure DevOps PowerShell script task. Let me try to explain the steps as most effortless as possible.
+ Note: All the parameters CLIENTID, TENANTID , CERTIFICATECREDENTIAL and SECUREFILE are a release variables.</description>
+    </item>
+    
     <item>
       <title>Using Azure Monitor Workbook at the workplace - Part 1</title>
       <link>/blog/using-azure-monitor-workbook-at-the-workplace-part-1/</link>
