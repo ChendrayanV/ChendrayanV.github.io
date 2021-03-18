@@ -614,7 +614,7 @@ if (!doNotTrack) {
         
 
         <a href="/blog/using-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell/" class="image featured">
-            <img src="/img/2021/03/access_token_pfx_cert.jpg" alt="">
+            <img src="/img/2021/032021/03/access_token_pfx_cert.jpg" alt="">
         </a>
     
 
@@ -631,7 +631,12 @@ if (!doNotTrack) {
 3. Microsoft.IdentityModel.Tokens.6.9.0
 </code></pre>
 <p>You can choose to install from the Nuget directly or store in the local folder and use it in your code. In my case, I stored it in the assemblies folder. Here is the project scaffolding.</p>
-<p><img src="img%5C2021%5C03%5CScaffolding.PNG" alt="alt"></p>
+<figure>
+    <img src="/img/2021/03/Scaffolding.PNG"/> <figcaption>
+            <h4>Scaffolding</h4>
+        </figcaption>
+</figure>
+
 <h3 id="step-2">Step 2</h3>
 <p>The below snippet is to load the assemblies in the current execution context.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#66d9ef">[System.Reflection.Assembly]</span>::LoadFrom((Get-ChildItem .\ASSEMBLIES\Microsoft.IdentityModel.JsonWebTokens.6.9.0\lib\net45\Microsoft.IdentityModel.JsonWebTokens.dll).fullname)

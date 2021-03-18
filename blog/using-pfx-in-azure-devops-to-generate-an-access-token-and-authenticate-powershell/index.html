@@ -24,7 +24,7 @@
         "datePublished": "2021-03-18 00:00:00 \u002b0000 UTC",
         "dateModified" : "2021-03-18 00:00:00 \u002b0000 UTC",
         "url" : "\/blog\/using-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell\/",
-        "wordCount" : "326",
+        "wordCount" : "327",
         "keywords" : [ "Blog" ]
     }
     </script>
@@ -57,7 +57,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/blog/using-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell/" /><meta property="article:section" content="blog" />
 <meta property="article:published_time" content="2021-03-18T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-03-18T12:52:13&#43;05:30" />
+<meta property="article:modified_time" content="2021-03-18T15:16:57&#43;05:30" />
 
 
         <meta property="og:image" content="//images/logo.png">
@@ -66,8 +66,8 @@
         <meta property="og:image:height" content="512">
         <meta itemprop="name" content="Using PFX in Azure DevOps to generate an access token and authenticate - PowerShell">
 <meta itemprop="description" content="Authenticate using Certificates through code!"><meta itemprop="datePublished" content="2021-03-18T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-03-18T12:52:13&#43;05:30" />
-<meta itemprop="wordCount" content="326">
+<meta itemprop="dateModified" content="2021-03-18T15:16:57&#43;05:30" />
+<meta itemprop="wordCount" content="327">
 <meta itemprop="keywords" content="" />
         
 
@@ -731,7 +731,12 @@ if (!doNotTrack) {
 3. Microsoft.IdentityModel.Tokens.6.9.0
 </code></pre>
 <p>You can choose to install from the Nuget directly or store in the local folder and use it in your code. In my case, I stored it in the assemblies folder. Here is the project scaffolding.</p>
-<p><img src="img%5C2021%5C03%5CScaffolding.PNG" alt="alt"></p>
+<figure>
+    <img src="/img/2021/03/Scaffolding.PNG"/> <figcaption>
+            <h4>Scaffolding</h4>
+        </figcaption>
+</figure>
+
 <h3 id="step-2">Step 2</h3>
 <p>The below snippet is to load the assemblies in the current execution context.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#66d9ef">[System.Reflection.Assembly]</span>::LoadFrom((Get-ChildItem .\ASSEMBLIES\Microsoft.IdentityModel.JsonWebTokens.6.9.0\lib\net45\Microsoft.IdentityModel.JsonWebTokens.dll).fullname)
@@ -1135,9 +1140,6 @@ $Result = Invoke-RestMethod -Uri https<span style="color:#960050;background-colo
 
 
   
-  
-    
-  
 
 
         
@@ -1145,7 +1147,7 @@ $Result = Invoke-RestMethod -Uri https<span style="color:#960050;background-colo
         
 
         <a href="/blog/using-azure-monitor-workbook-at-the-workplace-part-1/" class="image featured">
-            <img src="/img/2021/01/azure-workbook.jpg" alt="">
+            <img src="/img//azure-workbook.jpg" alt="">
         </a>
     
 
