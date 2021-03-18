@@ -26,20 +26,20 @@
     </item>
     
     <item>
-      <title>Azure Monitor</title>
-      <link>/categories/azure-monitor/</link>
+      <title>Client Assertion</title>
+      <link>/categories/client-assertion/</link>
       <pubDate>Thu, 18 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>/categories/azure-monitor/</guid>
+      <guid>/categories/client-assertion/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Azure Workbook</title>
-      <link>/categories/azure-workbook/</link>
+      <title>PowerShell</title>
+      <link>/categories/powershell/</link>
       <pubDate>Thu, 18 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>/categories/azure-workbook/</guid>
+      <guid>/categories/powershell/</guid>
       <description></description>
     </item>
     
@@ -67,6 +67,24 @@
       <pubDate>Sun, 07 Feb 2021 00:00:00 +0000</pubDate>
       
       <guid>/categories/azure-resource-graph/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Azure Monitor</title>
+      <link>/categories/azure-monitor/</link>
+      <pubDate>Mon, 11 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/azure-monitor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Azure Workbook</title>
+      <link>/categories/azure-workbook/</link>
+      <pubDate>Mon, 11 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/azure-workbook/</guid>
       <description></description>
     </item>
     
@@ -103,15 +121,6 @@
       <pubDate>Mon, 04 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>/categories/jit/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>PowerShell</title>
-      <link>/categories/powershell/</link>
-      <pubDate>Mon, 04 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/powershell/</guid>
       <description></description>
     </item>
     

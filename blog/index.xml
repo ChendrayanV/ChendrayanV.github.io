@@ -8,7 +8,7 @@
     <language>en-us</language>
     <lastBuildDate>Thu, 18 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title></title>
+      <title>Using PFX in Azure DevOps to generate an access token and authenticate - PowerShell</title>
       <link>/blog/using-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell/</link>
       <pubDate>Thu, 18 Mar 2021 00:00:00 +0000</pubDate>
       
