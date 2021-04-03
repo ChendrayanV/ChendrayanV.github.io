@@ -6,7 +6,25 @@
     <description>Recent content in Tags on iAutomate</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 16 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 03 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Azure Functions</title>
+      <link>/tags/azure-functions/</link>
+      <pubDate>Sat, 03 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/azure-functions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Event Grid Trigger</title>
+      <link>/tags/event-grid-trigger/</link>
+      <pubDate>Sat, 03 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/event-grid-trigger/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>PowerShell</title>
       <link>/tags/powershell/</link>
@@ -40,24 +58,6 @@
       <pubDate>Sun, 07 Feb 2021 00:00:00 +0000</pubDate>
       
       <guid>/tags/azure-resource-graph/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Azure Functions</title>
-      <link>/tags/azure-functions/</link>
-      <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/azure-functions/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Event Grid Trigger</title>
-      <link>/tags/event-grid-trigger/</link>
-      <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/event-grid-trigger/</guid>
       <description></description>
     </item>
     

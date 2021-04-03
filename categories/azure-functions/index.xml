@@ -6,7 +6,17 @@
     <description>Recent content in Azure Functions on iAutomate</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 07 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="/categories/azure-functions/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 03 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="/categories/azure-functions/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Azure Functions – Real-world example using Event Grid Trigger with PowerShell</title>
+      <link>/blog/azure-functions-real-world-example-using-event-grid-trigger-with-powershell/</link>
+      <pubDate>Sat, 03 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/azure-functions-real-world-example-using-event-grid-trigger-with-powershell/</guid>
+      <description>Introduction Of late, I got an exciting task. Yes, it’s not challenging but requires a pinch of concentration. The requirement is to copy files from the source storage account to multiple destinations (storage accounts). Why? Infrastructure is designed and developed to sync few JSON files from master (management) subscriptions to all other subscriptions. Yes, it is not easy to follow the theory. The picture below depicts the functionality
+  Functional flow   I hope no confusion!</description>
+    </item>
+    
     <item>
       <title>Deploy Azure Function App using Project Bicep</title>
       <link>/blog/deploy-azure-function-app-using-project-bicep/</link>
