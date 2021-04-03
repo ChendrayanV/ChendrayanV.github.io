@@ -708,9 +708,9 @@ Connect-AzAccount -Tenant $TenantID -Credential $Credential -ServicePrincipal
 <span style="color:#75715e">#region</span>
 $Query = <span style="color:#e6db74">&#34;Resources 
 </span><span style="color:#e6db74">| where type =~ &#39;Microsoft.Storage/storageAccounts&#39; and name matches regex &#39;.*NAMINGCONVENTION&#39;
-</span><span style="color:#e6db74">| project id, name, location, subscriptionId, resourceGroup, cloudEnvironment = case (
-</span><span style="color:#e6db74">    tostring(name) contains &#39;pr&#39;, &#39;VNET&#39;,
-</span><span style="color:#e6db74">    &#39;External&#39;
+</span><span style="color:#e6db74">| project id, name, location, subscriptionId, resourceGroup, environment = case (
+</span><span style="color:#e6db74">    tostring(name) contains &#39;prod&#39;, &#39;PROD&#39;,
+</span><span style="color:#e6db74">    &#39;NON-PROD&#39;
 </span><span style="color:#e6db74">)&#34;</span>
 $PageSize = 1000
 $Iteration = 0
@@ -740,9 +740,9 @@ $SearchParams = @{
         Expand-Archive ./AzCopy.zip ./AzCopy -Force -Verbose
         Get-ChildItem ./AzCopy/*/azcopy.exe | Copy-Item -Destination <span style="color:#e6db74">&#34;./AzCopy.exe&#34;</span> -Verbose
         ./AzCopy.exe copy <span style="color:#e6db74">&#39;https://storageaccountname.blob.core.windows.net/policies/Blob-Name/Policies.json&#39;</span> <span style="color:#e6db74">&#39;.\Policies.json&#39;</span>
-        $Exemption = (Get-Content <span style="color:#e6db74">&#34;.\Sync-MGMTPolicyToApplication\exemption.json&#34;</span> | ConvertFrom-Json)
-        <span style="color:#75715e"># $Items = $StorageAccounts | Where-Object { ($_.subscriptionId -notin @($Exemption)) -and ( { $_.cloudEnvironment -eq &#39;VNET&#39; }) } </span>
-        $Items = $StorageAccounts | Where-Object { ($($_.cloudEnvironment <span style="color:#f92672">-eq</span> <span style="color:#e6db74">&#39;VNET&#39;</span>)) <span style="color:#f92672">-and</span> $($_.subscriptionId -notin $($Exemption)) } 
+        $Exemption = (Get-Content <span style="color:#e6db74">&#34;.\Function-Name\exemption.json&#34;</span> | ConvertFrom-Json)
+        <span style="color:#75715e"># $Items = $StorageAccounts | Where-Object { ($_.subscriptionId -notin @($Exemption)) -and ( { $_.environment -eq &#39;PROD&#39; }) } </span>
+        $Items = $StorageAccounts | Where-Object { ($($_.environment <span style="color:#f92672">-eq</span> <span style="color:#e6db74">&#39;PROD&#39;</span>)) <span style="color:#f92672">-and</span> $($_.subscriptionId -notin $($Exemption)) } 
         <span style="color:#66d9ef">foreach</span> ($Item <span style="color:#66d9ef">in</span> $Items) {
             <span style="color:#66d9ef">try</span> {
                 Set-AzContext -Subscription $($Item.subscriptionId)
@@ -767,9 +767,9 @@ $SearchParams = @{
         Expand-Archive ./AzCopy.zip ./AzCopy -Force -Verbose
         Get-ChildItem ./AzCopy/*/azcopy.exe | Copy-Item -Destination <span style="color:#e6db74">&#34;./AzCopy.exe&#34;</span> -Verbose
         ./AzCopy.exe copy <span style="color:#e6db74">&#39;https://storageaccountname.blob.core.windows.net/policies/Blob-Name-01/Policies.json&#39;</span> <span style="color:#e6db74">&#39;.\Policies.json&#39;</span>
-        $Exemption = (Get-Content <span style="color:#e6db74">&#34;.\Sync-MGMTPolicyToApplication\exemption.json&#34;</span> | ConvertFrom-Json)
-        <span style="color:#75715e"># $Items = $StorageAccounts | Where-Object { ($_.subscriptionId -notin @($Exemption)) -and ( { $_.cloudEnvironment -eq &#39;External&#39; }) } </span>
-        $Items = $StorageAccounts | Where-Object { ($($_.cloudEnvironment <span style="color:#f92672">-eq</span> <span style="color:#e6db74">&#39;External&#39;</span>)) <span style="color:#f92672">-and</span> $($_.subscriptionId -notin $($Exemption)) } 
+        $Exemption = (Get-Content <span style="color:#e6db74">&#34;.\Function-Name\exemption.json&#34;</span> | ConvertFrom-Json)
+        <span style="color:#75715e"># $Items = $StorageAccounts | Where-Object { ($_.subscriptionId -notin @($Exemption)) -and ( { $_.environment -eq &#39;NON-PROD&#39; }) } </span>
+        $Items = $StorageAccounts | Where-Object { ($($_.environment <span style="color:#f92672">-eq</span> <span style="color:#e6db74">&#39;NON-PROD&#39;</span>)) <span style="color:#f92672">-and</span> $($_.subscriptionId -notin $($Exemption)) } 
         <span style="color:#66d9ef">foreach</span> ($Item <span style="color:#66d9ef">in</span> $Items) {
             <span style="color:#66d9ef">try</span> {
                 Set-AzContext -Subscription $($Item.subscriptionId)
@@ -789,7 +789,7 @@ $SearchParams = @{
 }
 <span style="color:#75715e">#endregion</span>
 </code></pre></div><h2 id="summary">Summary</h2>
-<p>Whenever the file policies.json is changed in PROD or NON-PROD, the application subscription gets changed with a backup. Yes, it&rsquo;s possible to download the AzCopy executable and use it in Function. So, for a demo, I used both Az cmdlet and AzCopy CLI.</p>
+<p>Whenever the file policies.json is changed in PROD or NON-PROD, the application subscription gets changed with a backup. Yes, it&rsquo;s possible to download the AzCopy executable and use it in Function. So, for a demo, I used both Az cmdlet and AzCopy CLI. Why Exemtion.JSON? To skip few subscriptions, which requires an exemption from the standard governance policies.</p>
 
   </div>
 
