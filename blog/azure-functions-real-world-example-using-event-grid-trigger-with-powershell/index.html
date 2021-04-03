@@ -24,7 +24,7 @@
         "datePublished": "2021-04-03 00:00:00 \u002b0000 UTC",
         "dateModified" : "2021-04-03 00:00:00 \u002b0000 UTC",
         "url" : "\/blog\/azure-functions-real-world-example-using-event-grid-trigger-with-powershell\/",
-        "wordCount" : "774",
+        "wordCount" : "800",
         "keywords" : [ "Azure Functions","Event Grid Trigger","Blog" ]
     }
     </script>
@@ -57,7 +57,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/blog/azure-functions-real-world-example-using-event-grid-trigger-with-powershell/" /><meta property="article:section" content="blog" />
 <meta property="article:published_time" content="2021-04-03T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-04-03T17:02:34&#43;05:30" />
+<meta property="article:modified_time" content="2021-04-03T17:21:19&#43;05:30" />
 
 
         <meta property="og:image" content="//images/logo.png">
@@ -66,8 +66,8 @@
         <meta property="og:image:height" content="512">
         <meta itemprop="name" content="Azure Functions – Real-world example using Event Grid Trigger with PowerShell">
 <meta itemprop="description" content="Azure Functions | PowerShell"><meta itemprop="datePublished" content="2021-04-03T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-04-03T17:02:34&#43;05:30" />
-<meta itemprop="wordCount" content="774">
+<meta itemprop="dateModified" content="2021-04-03T17:21:19&#43;05:30" />
+<meta itemprop="wordCount" content="800">
 <meta itemprop="keywords" content="Azure Functions,Event Grid Trigger," />
         
 
@@ -727,7 +727,7 @@ if (!doNotTrack) {
         </figcaption>
 </figure>
 
-<p>I hope no confusion! In short, the ask is to copy the POLICY.JSON file to individual subscriptions (NP – Non-Prod and P - Prod), respectively.</p>
+<p>I hope it&rsquo;s not confusing! In short, the ask is to copy the POLICY.JSON file to individual subscriptions (NP – Non-Prod and P - Prod), respectively.</p>
 <h1 id="solution">Solution</h1>
 <p>Indeed, you can try alternative solutions. In this blog post, I cover the solution I built using the event grid trigger. Yes, I need to keep my solution neat and straightforward. The main reason is flexibility, and knowing the workplace culture, I didn’t opt for another solution.</p>
 <p>Note: The focus is to demo the event grid trigger. Do not ask why not management groups for inheriting policies? Or alternate solutions.</p>
@@ -889,7 +889,7 @@ $SearchParams = @{
 }
 <span style="color:#75715e">#endregion</span>
 </code></pre></div><h2 id="summary">Summary</h2>
-<p>Whenever the file policies.json is changed in PROD or NON-PROD, the application subscription gets changed with a backup.</p>
+<p>Whenever the file policies.json is changed in PROD or NON-PROD, the application subscription gets changed with a backup. Yes, it&rsquo;s possible to download the AzCopy executable and use it in Function. So, for a demo, I used both Az cmdlet and AzCopy CLI.</p>
 
   </div>
 
