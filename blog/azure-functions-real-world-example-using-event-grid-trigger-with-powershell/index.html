@@ -24,7 +24,7 @@
         "datePublished": "2021-04-03 00:00:00 \u002b0000 UTC",
         "dateModified" : "2021-04-03 00:00:00 \u002b0000 UTC",
         "url" : "\/blog\/azure-functions-real-world-example-using-event-grid-trigger-with-powershell\/",
-        "wordCount" : "815",
+        "wordCount" : "821",
         "keywords" : [ "Azure Functions","Event Grid Trigger","Blog" ]
     }
     </script>
@@ -57,7 +57,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/blog/azure-functions-real-world-example-using-event-grid-trigger-with-powershell/" /><meta property="article:section" content="blog" />
 <meta property="article:published_time" content="2021-04-03T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-04-03T17:27:32&#43;05:30" />
+<meta property="article:modified_time" content="2021-04-04T09:50:01&#43;05:30" />
 
 
         <meta property="og:image" content="//images/logo.png">
@@ -66,8 +66,8 @@
         <meta property="og:image:height" content="512">
         <meta itemprop="name" content="Azure Functions – Real-world example using Event Grid Trigger with PowerShell">
 <meta itemprop="description" content="Azure Functions | PowerShell"><meta itemprop="datePublished" content="2021-04-03T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-04-03T17:27:32&#43;05:30" />
-<meta itemprop="wordCount" content="815">
+<meta itemprop="dateModified" content="2021-04-04T09:50:01&#43;05:30" />
+<meta itemprop="wordCount" content="821">
 <meta itemprop="keywords" content="Azure Functions,Event Grid Trigger," />
         
 
@@ -713,7 +713,7 @@ if (!doNotTrack) {
         
 
         <a href="/blog/azure-functions-real-world-example-using-event-grid-trigger-with-powershell/" class="image featured">
-            <img src="/img/2021/04/Blog-Az-Event-Grid.jpg" alt="">
+            <img src="/img//Blog-Az-Event-Grid.jpg" alt="">
         </a>
     
 
@@ -754,6 +754,8 @@ $ResourceGroup = <span style="color:#e6db74">&#34;&#34;</span>
 $ResourceId = <span style="color:#e6db74">&#34;&#34;</span>
 $SubjectBeginsWith = <span style="color:#e6db74">&#34;&#34;</span>
 $SubjectEndsWith = <span style="color:#e6db74">&#34;&#34;</span>
+$FunctionApp = <span style="color:#e6db74">&#34;&#34;</span>
+$Function = <span style="color:#e6db74">&#34;&#34;</span>
 $Body = <span style="color:#66d9ef">[pscustomobject]</span>@{
     name       = <span style="color:#e6db74">&#34;ForDemo&#34;</span>
     properties = <span style="color:#66d9ef">[pscustomobject]</span>@{
@@ -761,7 +763,7 @@ $Body = <span style="color:#66d9ef">[pscustomobject]</span>@{
         destination         = <span style="color:#66d9ef">[pscustomobject]</span>@{
             endpointType                    = <span style="color:#e6db74">&#34;AzureFunction&#34;</span>
             properties                      = <span style="color:#66d9ef">[pscustomobject]</span>@{
-                resourceId                    = <span style="color:#e6db74">&#34;/subscriptions/</span>$($SubscriptionId)<span style="color:#e6db74">/resourceGroups/</span>$($ResourceGroup)<span style="color:#e6db74">/providers/Microsoft.Web/sites/SchedulerForENBC-UAT/functions/Sync-MGMTResourceTypesToApplication&#34;</span>
+                resourceId                    = <span style="color:#e6db74">&#34;/subscriptions/</span>$($SubscriptionId)<span style="color:#e6db74">/resourceGroups/</span>$($ResourceGroup)<span style="color:#e6db74">/providers/Microsoft.Web/sites/</span>$($FunctionName)<span style="color:#e6db74">/functions/</span>$($Function)<span style="color:#e6db74">&#34;</span>
                 maxEventsPerBatch             = 1
                 preferredBatchSizeInKilobytes = 64
             }

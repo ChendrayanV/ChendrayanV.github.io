@@ -654,6 +654,8 @@ $ResourceGroup = <span style="color:#e6db74">&#34;&#34;</span>
 $ResourceId = <span style="color:#e6db74">&#34;&#34;</span>
 $SubjectBeginsWith = <span style="color:#e6db74">&#34;&#34;</span>
 $SubjectEndsWith = <span style="color:#e6db74">&#34;&#34;</span>
+$FunctionApp = <span style="color:#e6db74">&#34;&#34;</span>
+$Function = <span style="color:#e6db74">&#34;&#34;</span>
 $Body = <span style="color:#66d9ef">[pscustomobject]</span>@{
     name       = <span style="color:#e6db74">&#34;ForDemo&#34;</span>
     properties = <span style="color:#66d9ef">[pscustomobject]</span>@{
@@ -661,7 +663,7 @@ $Body = <span style="color:#66d9ef">[pscustomobject]</span>@{
         destination         = <span style="color:#66d9ef">[pscustomobject]</span>@{
             endpointType                    = <span style="color:#e6db74">&#34;AzureFunction&#34;</span>
             properties                      = <span style="color:#66d9ef">[pscustomobject]</span>@{
-                resourceId                    = <span style="color:#e6db74">&#34;/subscriptions/</span>$($SubscriptionId)<span style="color:#e6db74">/resourceGroups/</span>$($ResourceGroup)<span style="color:#e6db74">/providers/Microsoft.Web/sites/SchedulerForENBC-UAT/functions/Sync-MGMTResourceTypesToApplication&#34;</span>
+                resourceId                    = <span style="color:#e6db74">&#34;/subscriptions/</span>$($SubscriptionId)<span style="color:#e6db74">/resourceGroups/</span>$($ResourceGroup)<span style="color:#e6db74">/providers/Microsoft.Web/sites/</span>$($FunctionName)<span style="color:#e6db74">/functions/</span>$($Function)<span style="color:#e6db74">&#34;</span>
                 maxEventsPerBatch             = 1
                 preferredBatchSizeInKilobytes = 64
             }
@@ -1260,7 +1262,7 @@ $SearchParams = @{
         
 
         <a href="/blog/collection-of-azure-resource-graph-query/" class="image featured">
-            <img src="/img/2021/02/ARG-PS-Collection.jpg" alt="">
+            <img src="/img/2021/022021/02/ARG-PS-Collection.jpg" alt="">
         </a>
     
 
