@@ -2,29 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/tags/azure-functions/</loc>
-    <lastmod>2021-04-04T09:50:01+05:30</lastmod>
+    <loc>/blog/azure-event-grid-trigger-output-binding-to-table-storage-using-powershell/</loc>
+    <lastmod>2021-04-08T10:59:04+05:30</lastmod>
   </url><url>
-    <loc>/categories/azure-functions/</loc>
-    <lastmod>2021-04-04T09:50:01+05:30</lastmod>
-  </url><url>
-    <loc>/blog/azure-functions-real-world-example-using-event-grid-trigger-with-powershell/</loc>
-    <lastmod>2021-04-04T09:50:01+05:30</lastmod>
+    <loc>/categories/azure-function/</loc>
+    <lastmod>2021-04-08T10:59:04+05:30</lastmod>
   </url><url>
     <loc>/blog/</loc>
-    <lastmod>2021-04-04T09:50:01+05:30</lastmod>
+    <lastmod>2021-04-08T10:59:04+05:30</lastmod>
   </url><url>
     <loc>/categories/</loc>
-    <lastmod>2021-04-04T09:50:01+05:30</lastmod>
+    <lastmod>2021-04-08T10:59:04+05:30</lastmod>
   </url><url>
-    <loc>/tags/event-grid-trigger/</loc>
-    <lastmod>2021-04-04T09:50:01+05:30</lastmod>
+    <loc>/categories/event-grid-trigger/</loc>
+    <lastmod>2021-04-08T10:59:04+05:30</lastmod>
   </url><url>
     <loc>/</loc>
-    <lastmod>2021-04-04T09:50:01+05:30</lastmod>
+    <lastmod>2021-04-08T10:59:04+05:30</lastmod>
+  </url><url>
+    <loc>/categories/powershell/</loc>
+    <lastmod>2021-04-08T10:59:04+05:30</lastmod>
+  </url><url>
+    <loc>/tags/azure-functions/</loc>
+    <lastmod>2021-04-08T10:59:04+05:30</lastmod>
+  </url><url>
+    <loc>/categories/azure-functions/</loc>
+    <lastmod>2021-04-08T10:59:04+05:30</lastmod>
+  </url><url>
+    <loc>/blog/azure-functions-real-world-example-using-event-grid-trigger-with-powershell/</loc>
+    <lastmod>2021-04-08T10:59:04+05:30</lastmod>
+  </url><url>
+    <loc>/tags/event-grid-trigger/</loc>
+    <lastmod>2021-04-08T10:59:04+05:30</lastmod>
   </url><url>
     <loc>/tags/</loc>
-    <lastmod>2021-04-04T09:50:01+05:30</lastmod>
+    <lastmod>2021-04-08T10:59:04+05:30</lastmod>
   </url><url>
     <loc>/categories/azure/</loc>
     <lastmod>2021-03-18T15:16:57+05:30</lastmod>
@@ -33,9 +45,6 @@
     <lastmod>2021-03-18T15:16:57+05:30</lastmod>
   </url><url>
     <loc>/categories/client-assertion/</loc>
-    <lastmod>2021-03-18T15:16:57+05:30</lastmod>
-  </url><url>
-    <loc>/categories/powershell/</loc>
     <lastmod>2021-03-18T15:16:57+05:30</lastmod>
   </url><url>
     <loc>/blog/using-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell/</loc>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Azure Function on iAutomate</title>
+    <link>/categories/azure-function/</link>
+    <description>Recent content in Azure Function on iAutomate</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 08 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="/categories/azure-function/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Azure Event Grid Trigger Output Binding to Table Storage using PowerShell</title>
+      <link>/blog/azure-event-grid-trigger-output-binding-to-table-storage-using-powershell/</link>
+      <pubDate>Thu, 08 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/azure-event-grid-trigger-output-binding-to-table-storage-using-powershell/</guid>
+      <description>Introduction Is it possible to write data to the storage table when the Azure Event Grid trigger is invoked? Yes, it is possible. A colleague requested to log the output of the Azure Functions transactions to the Azure table storage, and my call is to store only the required data. Indeed, cost and readability is the primary concern. With no further ado, let me walk you through the requirement.
+Challenge A colleague tried to implement and reached out to me with a challenge.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -6,7 +6,34 @@
     <description>Recent content in Categories on iAutomate</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 03 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 08 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Azure Function</title>
+      <link>/categories/azure-function/</link>
+      <pubDate>Thu, 08 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/azure-function/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Event Grid Trigger</title>
+      <link>/categories/event-grid-trigger/</link>
+      <pubDate>Thu, 08 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/event-grid-trigger/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PowerShell</title>
+      <link>/categories/powershell/</link>
+      <pubDate>Thu, 08 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/powershell/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Azure Functions</title>
       <link>/categories/azure-functions/</link>
@@ -40,15 +67,6 @@
       <pubDate>Thu, 18 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>/categories/client-assertion/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>PowerShell</title>
-      <link>/categories/powershell/</link>
-      <pubDate>Thu, 18 Mar 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/powershell/</guid>
       <description></description>
     </item>
     
