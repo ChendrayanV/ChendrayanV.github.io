@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Function App on iAutomate</title>
+    <link>/tags/function-app/</link>
+    <description>Recent content in Function App on iAutomate</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 23 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/function-app/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Failed SNAT Connections Detected in Azure PowerShell Function</title>
+      <link>/blog/failed-snat-connections-detected-in-azure-powershell-function/</link>
+      <pubDate>Fri, 23 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/failed-snat-connections-detected-in-azure-powershell-function/</guid>
+      <description>Introduction I got stumbled with an issue, &amp;ldquo;Failed SNAT connections detected&amp;rdquo;. Luck favored! Yes, it&amp;rsquo;s a very minimal impact on the environment. However, I took remediation action as earliest as possible. The functions I have developed invokes Azure management API for a business reason. So, I ended up with the error due to the outbound connection. Microsoft recommends below
+ For C# applications, ensure that the HttpClient object is created once and reused again.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -6,7 +6,17 @@
     <description>Recent content in Azure DevOps on iAutomate</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 18 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="/categories/azure-devops/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 23 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="/categories/azure-devops/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Failed SNAT Connections Detected in Azure PowerShell Function</title>
+      <link>/blog/failed-snat-connections-detected-in-azure-powershell-function/</link>
+      <pubDate>Fri, 23 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/failed-snat-connections-detected-in-azure-powershell-function/</guid>
+      <description>Introduction I got stumbled with an issue, &amp;ldquo;Failed SNAT connections detected&amp;rdquo;. Luck favored! Yes, it&amp;rsquo;s a very minimal impact on the environment. However, I took remediation action as earliest as possible. The functions I have developed invokes Azure management API for a business reason. So, I ended up with the error due to the outbound connection. Microsoft recommends below
+ For C# applications, ensure that the HttpClient object is created once and reused again.</description>
+    </item>
+    
     <item>
       <title>Using PFX in Azure DevOps to generate an access token and authenticate - PowerShell</title>
       <link>/blog/using-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell/</link>
