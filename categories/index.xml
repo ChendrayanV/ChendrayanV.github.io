@@ -8,20 +8,29 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 23 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Azure DevOps</title>
-      <link>/categories/azure-devops/</link>
+      <title>Azure Function</title>
+      <link>/categories/azure-function/</link>
       <pubDate>Fri, 23 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>/categories/azure-devops/</guid>
+      <guid>/categories/azure-function/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Azure Function</title>
-      <link>/categories/azure-function/</link>
-      <pubDate>Thu, 08 Apr 2021 00:00:00 +0000</pubDate>
+      <title>PowerShell</title>
+      <link>/categories/powershell/</link>
+      <pubDate>Fri, 23 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>/categories/azure-function/</guid>
+      <guid>/categories/powershell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SNAT Port Exhausted</title>
+      <link>/categories/snat-port-exhausted/</link>
+      <pubDate>Fri, 23 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/snat-port-exhausted/</guid>
       <description></description>
     </item>
     
@@ -31,15 +40,6 @@
       <pubDate>Thu, 08 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>/categories/event-grid-trigger/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>PowerShell</title>
-      <link>/categories/powershell/</link>
-      <pubDate>Thu, 08 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/powershell/</guid>
       <description></description>
     </item>
     
@@ -58,6 +58,15 @@
       <pubDate>Thu, 18 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>/categories/azure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Azure DevOps</title>
+      <link>/categories/azure-devops/</link>
+      <pubDate>Thu, 18 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/azure-devops/</guid>
       <description></description>
     </item>
     

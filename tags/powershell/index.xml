@@ -6,17 +6,7 @@
     <description>Recent content in PowerShell on iAutomate</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 23 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/powershell/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Failed SNAT Connections Detected in Azure PowerShell Function</title>
-      <link>/blog/failed-snat-connections-detected-in-azure-powershell-function/</link>
-      <pubDate>Fri, 23 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/blog/failed-snat-connections-detected-in-azure-powershell-function/</guid>
-      <description>Introduction I got stumbled with an issue, &amp;ldquo;Failed SNAT connections detected&amp;rdquo;. Luck favored! Yes, it&amp;rsquo;s a very minimal impact on the environment. However, I took remediation action as earliest as possible. The functions I have developed invokes Azure management API for a business reason. So, I ended up with the error due to the outbound connection. Microsoft recommends below
- For C# applications, ensure that the HttpClient object is created once and reused again.</description>
-    </item>
-    
+    <lastBuildDate>Tue, 16 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/powershell/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Retrieve Azure Runbook Job Report using REST API with PowerShell</title>
       <link>/blog/retrieve-azure-runbook-job-report-using-rest-api-with-powershell/</link>
