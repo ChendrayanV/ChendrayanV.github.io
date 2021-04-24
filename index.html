@@ -361,9 +361,6 @@ if (!doNotTrack) {
 
 
   
-  
-    
-  
 
 
         
@@ -622,7 +619,7 @@ if (!doNotTrack) {
 <blockquote>
 <p>For C# applications, ensure that the HttpClient object is created once and reused again. For ADO.NET connections, make sure database connection pooling is used. Restart the web app to reset this limit. However, it is recommended to pursue a more long-term and stable fix by following connection pooling best practices.</p>
 </blockquote>
-<p>I have to replace Invoke-RestMethod and Invoke-WebRequest cmdlet from the code. Wait! What? Yes, the answer is here. Now, the solution is simple, as shown below. Using HTTP Client in PowerShell</p>
+<p>I have to replace Invoke-RestMethod and Invoke-WebRequest cmdlet from the code. Wait! What? Yes, the answer is <a href="https://github.com/PowerShell/PowerShell/issues/12764">here</a>. Now, the code using HTTPClient is as shown below. (PowerShell Core 6 or above)</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#75715e">#region - Virtual Machine List</span>
 <span style="color:#66d9ef">[System.Collections.ArrayList]</span>$VirtualMachineList = @()
 $Client = <span style="color:#66d9ef">[System.Net.Http.HttpClient]</span>::new()
@@ -715,6 +712,9 @@ $Uri = <span style="color:#e6db74">&#34;https://management.azure.com/subscriptio
                 
                 
                 <li><a class="article-category-link" href="/categories/powershell">PowerShell</a></li>
+                
+                
+                <li><a class="article-category-link" href="/categories/powershell-core">PowerShell Core</a></li>
                 
             
         
@@ -1383,6 +1383,17 @@ $Uri = <span style="color:#e6db74">&#34;https://management.azure.com/subscriptio
             <header>
               
                 <a href="/categories/jit/">jit</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/powershell-core/">powershell-core</a>
                 <span style="float:right;">1</span>
               
             </header>
