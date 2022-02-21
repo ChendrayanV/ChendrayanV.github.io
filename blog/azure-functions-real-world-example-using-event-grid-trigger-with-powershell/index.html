@@ -36,7 +36,7 @@
 
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="generator" content="Hugo 0.82.1" />
+        <meta name="generator" content="Hugo 0.92.2" />
         
 
 
@@ -56,8 +56,8 @@
 <meta property="og:description" content="Azure Functions | PowerShell" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/blog/azure-functions-real-world-example-using-event-grid-trigger-with-powershell/" /><meta property="article:section" content="blog" />
-<meta property="article:published_time" content="2021-04-03T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-04-08T10:59:04&#43;05:30" />
+<meta property="article:published_time" content="2021-04-03T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-04-03T00:00:00+00:00" />
 
 
         <meta property="og:image" content="//images/logo.png">
@@ -65,8 +65,8 @@
         <meta property="og:image:width" content="512">
         <meta property="og:image:height" content="512">
         <meta itemprop="name" content="Azure Functions – Real-world example using Event Grid Trigger with PowerShell">
-<meta itemprop="description" content="Azure Functions | PowerShell"><meta itemprop="datePublished" content="2021-04-03T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-04-08T10:59:04&#43;05:30" />
+<meta itemprop="description" content="Azure Functions | PowerShell"><meta itemprop="datePublished" content="2021-04-03T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-04-03T00:00:00+00:00" />
 <meta itemprop="wordCount" content="821">
 <meta itemprop="keywords" content="Azure Functions,Event Grid Trigger," />
         
@@ -268,6 +268,45 @@ if (!doNotTrack) {
                 
                         <article class="mini-post">
                             <header>
+                                <h3><a href="/blog/store-dynamic-data-in-an-azure-blob-storage-using-powershell-with-dapr/">Store Dynamic Data in an Azure Blob Storage using PowerShell with Dapr</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2022-02-21'>
+                                    February 21, 2022</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="/blog/store-dynamic-data-in-an-azure-blob-storage-using-powershell-with-dapr/" class="image featured">
+            <img src="/img/2022/02/" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
                                 <h3><a href="/blog/failed-snat-connections-detected-in-azure-powershell-function/">Failed SNAT Connections Detected in Azure PowerShell Function</a></h3>
                                 
                                 <time class="published" datetime=
@@ -416,45 +455,6 @@ if (!doNotTrack) {
 
         <a href="/blog/using-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell/" class="image featured">
             <img src="/img/2021/03/access_token_pfx_cert.jpg" alt="">
-        </a>
-    
-
-
-                        </article>
-                
-                        <article class="mini-post">
-                            <header>
-                                <h3><a href="/blog/retrieve-azure-runbook-job-report-using-rest-api-with-powershell/">Retrieve Azure Runbook Job Report using REST API with PowerShell</a></h3>
-                                
-                                <time class="published" datetime=
-                                    '2021-02-16'>
-                                    February 16, 2021</time>
-                            </header>
-                            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-  
-    
-  
-
-
-        
-        
-        
-
-        <a href="/blog/retrieve-azure-runbook-job-report-using-rest-api-with-powershell/" class="image featured">
-            <img src="/img/2021/02/Feb-16-Report.jpg" alt="">
         </a>
     
 
@@ -721,8 +721,7 @@ if (!doNotTrack) {
   <div id="content">
     <h1 id="introduction">Introduction</h1>
 <p>Of late, I got an exciting task. Yes, it’s not challenging but requires a pinch of concentration. The requirement is to copy files from the source storage account to multiple destinations (storage accounts). Why? Infrastructure is designed and developed to sync few JSON files from master (management) subscriptions to all other subscriptions. Yes, it is not easy to follow the theory. The picture below depicts the functionality</p>
-<figure>
-    <img src="/img/2021/04/Blog-Image.PNG"/> <figcaption>
+<figure><img src="/img/2021/04/Blog-Image.PNG"/><figcaption>
             <h4>Functional flow</h4>
         </figcaption>
 </figure>
@@ -740,7 +739,7 @@ if (!doNotTrack) {
 <blockquote>
 <p>Step 1 - Create Azure Event Grid Subscritpion</p>
 </blockquote>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#75715e">#region - Generate a bearer token</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#75715e">#region - Generate a bearer token</span>
 $AzureRmProfile = <span style="color:#66d9ef">[Microsoft.Azure.Commands.Common.Authentication.Abstractions.AzureRmProfileProvider]</span>::Instance.Profile
 $CurrentAzureContext = Get-AzContext
 $ProfileClient = New-Object Microsoft.Azure.Commands.ResourceManager.Common.RMProfileClient($azureRmProfile)
@@ -784,7 +783,7 @@ Invoke-RestMethod -Uri $Uri -Headers $Headers -Method Put -Body $body -ContentTy
 </code></pre></div><blockquote>
 <p>Step 2 - Event Grid (Function.Json)</p>
 </blockquote>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
   <span style="color:#f92672">&#34;bindings&#34;</span>: [
     {
       <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;eventGridTrigger&#34;</span>,
@@ -796,7 +795,7 @@ Invoke-RestMethod -Uri $Uri -Headers $Headers -Method Put -Body $body -ContentTy
 </code></pre></div><blockquote>
 <p>Step 3 - Event Grid Function (run.ps1)</p>
 </blockquote>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#66d9ef">param</span>($eventGridEvent, $TriggerMetadata)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#66d9ef">param</span>($eventGridEvent, $TriggerMetadata)
 $Result = $eventGridEvent | ConvertTo-Json | ConvertFrom-Json
 
 <span style="color:#75715e">#region - AUTHENTICATION </span>
@@ -1116,6 +1115,47 @@ $SearchParams = @{
           <article class="mini-post">
             <header>
               <h3>
+                <a href="/blog/store-dynamic-data-in-an-azure-blob-storage-using-powershell-with-dapr/">Store Dynamic Data in an Azure Blob Storage using PowerShell with Dapr</a>
+              </h3>
+              
+              <time class="published" datetime='2022-02-21'>
+                February 21, 2022
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="/blog/store-dynamic-data-in-an-azure-blob-storage-using-powershell-with-dapr/" class="image featured">
+            <img src="/img/2022/02/" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
                 <a href="/blog/failed-snat-connections-detected-in-azure-powershell-function/">Failed SNAT Connections Detected in Azure PowerShell Function</a>
               </h3>
               
@@ -1136,9 +1176,6 @@ $SearchParams = @{
 
 
 
-  
-  
-    
   
 
 
@@ -1277,47 +1314,6 @@ $SearchParams = @{
 
           </article>
         
-          <article class="mini-post">
-            <header>
-              <h3>
-                <a href="/blog/retrieve-azure-runbook-job-report-using-rest-api-with-powershell/">Retrieve Azure Runbook Job Report using REST API with PowerShell</a>
-              </h3>
-              
-              <time class="published" datetime='2021-02-16'>
-                February 16, 2021
-              </time>
-            </header>
-            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-  
-    
-  
-
-
-        
-        
-        
-
-        <a href="/blog/retrieve-azure-runbook-job-report-using-rest-api-with-powershell/" class="image featured">
-            <img src="/img/2021/02/Feb-16-Report.jpg" alt="">
-        </a>
-    
-
-
-          </article>
-        
       </div>
 
       
@@ -1373,7 +1369,7 @@ $SearchParams = @{
             <header>
               
                 <a href="/categories/powershell/">powershell</a>
-                <span style="float:right;">4</span>
+                <span style="float:right;">5</span>
               
             </header>
           </article>
@@ -1460,6 +1456,17 @@ $SearchParams = @{
           <article>
             <header>
               
+                <a href="/categories/azure-storage-blob/">azure-storage-blob</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
                 <a href="/categories/azure-workbook/">azure-workbook</a>
                 <span style="float:right;">1</span>
               
@@ -1482,6 +1489,17 @@ $SearchParams = @{
           <article>
             <header>
               
+                <a href="/categories/dapr/">dapr</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
                 <a href="/categories/event-grid-trigger/">event-grid-trigger</a>
                 <span style="float:right;">1</span>
               
@@ -1494,6 +1512,17 @@ $SearchParams = @{
             <header>
               
                 <a href="/categories/jit/">jit</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/output-binding/">output-binding</a>
                 <span style="float:right;">1</span>
               
             </header>
@@ -1669,7 +1698,7 @@ $SearchParams = @{
     
     <p class="copyright">
       
-        &copy; 2021
+        &copy; 2022
         
           iAutomate
         

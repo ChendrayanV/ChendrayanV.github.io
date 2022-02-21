@@ -36,7 +36,7 @@
 
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="generator" content="Hugo 0.82.1" />
+        <meta name="generator" content="Hugo 0.92.2" />
         
 
 
@@ -56,8 +56,8 @@
 <meta property="og:description" content="project bicep ... an arm dsl" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/blog/deploy-azure-function-app-using-project-bicep/" /><meta property="article:section" content="blog" />
-<meta property="article:published_time" content="2021-01-07T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-01-08T08:54:54&#43;05:30" />
+<meta property="article:published_time" content="2021-01-07T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-01-07T00:00:00+00:00" />
 
 
         <meta property="og:image" content="//images/logo.png">
@@ -65,8 +65,8 @@
         <meta property="og:image:width" content="512">
         <meta property="og:image:height" content="512">
         <meta itemprop="name" content="Deploy Azure Function App using Project Bicep">
-<meta itemprop="description" content="project bicep ... an arm dsl"><meta itemprop="datePublished" content="2021-01-07T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-01-08T08:54:54&#43;05:30" />
+<meta itemprop="description" content="project bicep ... an arm dsl"><meta itemprop="datePublished" content="2021-01-07T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-01-07T00:00:00+00:00" />
 <meta itemprop="wordCount" content="309">
 <meta itemprop="keywords" content="" />
         
@@ -268,6 +268,45 @@ if (!doNotTrack) {
                 
                         <article class="mini-post">
                             <header>
+                                <h3><a href="/blog/store-dynamic-data-in-an-azure-blob-storage-using-powershell-with-dapr/">Store Dynamic Data in an Azure Blob Storage using PowerShell with Dapr</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2022-02-21'>
+                                    February 21, 2022</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="/blog/store-dynamic-data-in-an-azure-blob-storage-using-powershell-with-dapr/" class="image featured">
+            <img src="/img/2022/02/" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
                                 <h3><a href="/blog/failed-snat-connections-detected-in-azure-powershell-function/">Failed SNAT Connections Detected in Azure PowerShell Function</a></h3>
                                 
                                 <time class="published" datetime=
@@ -416,45 +455,6 @@ if (!doNotTrack) {
 
         <a href="/blog/using-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell/" class="image featured">
             <img src="/img/2021/03/access_token_pfx_cert.jpg" alt="">
-        </a>
-    
-
-
-                        </article>
-                
-                        <article class="mini-post">
-                            <header>
-                                <h3><a href="/blog/retrieve-azure-runbook-job-report-using-rest-api-with-powershell/">Retrieve Azure Runbook Job Report using REST API with PowerShell</a></h3>
-                                
-                                <time class="published" datetime=
-                                    '2021-02-16'>
-                                    February 16, 2021</time>
-                            </header>
-                            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-  
-    
-  
-
-
-        
-        
-        
-
-        <a href="/blog/retrieve-azure-runbook-job-report-using-rest-api-with-powershell/" class="image featured">
-            <img src="/img/2021/02/Feb-16-Report.jpg" alt="">
         </a>
     
 
@@ -756,7 +756,7 @@ if (!doNotTrack) {
 <blockquote>
 <p>Note: <em>The first time I made a mistake – I ignored kind=’Function App'. So, it created a web app. Redeploying by adding kind ended up with the below error.</em></p>
 </blockquote>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Status Message<span style="color:#960050;background-color:#1e0010">:</span> Consumption pricing tier cannot be used <span style="color:#66d9ef">for</span> regular web apps. (Code<span style="color:#960050;background-color:#1e0010">:</span> Conflict)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Status Message<span style="color:#960050;background-color:#1e0010">:</span> Consumption pricing tier cannot be used <span style="color:#66d9ef">for</span> regular web apps. (Code<span style="color:#960050;background-color:#1e0010">:</span> Conflict)
  - Consumption pricing tier cannot be used <span style="color:#66d9ef">for</span> regular web apps. (Code<span style="color:#960050;background-color:#1e0010">:</span>)
  -  (Code<span style="color:#960050;background-color:#1e0010">:</span>Conflict)
  -  (Code<span style="color:#960050;background-color:#1e0010">:</span>)
@@ -764,7 +764,7 @@ if (!doNotTrack) {
 <p>Solution: <em>Clear the resource group and redeploy it!</em></p>
 </blockquote>
 <h2 id="bicep-code">Bicep Code</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">var location = resourceGroup().location
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">var location = resourceGroup().location
 var suffix = <span style="color:#e6db74">&#39;azeusfunctionappdev01&#39;</span>
 
 resource storage_account <span style="color:#e6db74">&#39;Microsoft.Storage/storageAccounts@2020-08-01-preview&#39;</span> = {
@@ -830,9 +830,9 @@ resource function_app <span style="color:#e6db74">&#39;Microsoft.Web/sites@2020-
   ]
 }
 </code></pre></div><h3 id="build-bicep">Build Bicep</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">PS C:\&gt; build bicep .\main.bicep
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">PS C:\&gt; build bicep .\main.bicep
 </code></pre></div><h3 id="deploy">Deploy</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">PS C:\&gt; New-AzResourceGroupDeployment -ResourceGroupName <span style="color:#e6db74">&#34;rg-azeusfunctionappdev01&#34;</span> -TemplateFile .\Main.json -Debug
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">PS C:\&gt; New-AzResourceGroupDeployment -ResourceGroupName <span style="color:#e6db74">&#34;rg-azeusfunctionappdev01&#34;</span> -TemplateFile .\Main.json -Debug
 </code></pre></div><h3 id="result">Result</h3>
 <p><img src="img/AzFuncApp.PNG" alt="AzFunctionApp"></p>
 
@@ -1056,6 +1056,47 @@ resource function_app <span style="color:#e6db74">&#39;Microsoft.Web/sites@2020-
           <article class="mini-post">
             <header>
               <h3>
+                <a href="/blog/store-dynamic-data-in-an-azure-blob-storage-using-powershell-with-dapr/">Store Dynamic Data in an Azure Blob Storage using PowerShell with Dapr</a>
+              </h3>
+              
+              <time class="published" datetime='2022-02-21'>
+                February 21, 2022
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="/blog/store-dynamic-data-in-an-azure-blob-storage-using-powershell-with-dapr/" class="image featured">
+            <img src="/img/2022/02/" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
                 <a href="/blog/failed-snat-connections-detected-in-azure-powershell-function/">Failed SNAT Connections Detected in Azure PowerShell Function</a>
               </h3>
               
@@ -1217,47 +1258,6 @@ resource function_app <span style="color:#e6db74">&#39;Microsoft.Web/sites@2020-
 
           </article>
         
-          <article class="mini-post">
-            <header>
-              <h3>
-                <a href="/blog/retrieve-azure-runbook-job-report-using-rest-api-with-powershell/">Retrieve Azure Runbook Job Report using REST API with PowerShell</a>
-              </h3>
-              
-              <time class="published" datetime='2021-02-16'>
-                February 16, 2021
-              </time>
-            </header>
-            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-  
-    
-  
-
-
-        
-        
-        
-
-        <a href="/blog/retrieve-azure-runbook-job-report-using-rest-api-with-powershell/" class="image featured">
-            <img src="/img/2021/02/Feb-16-Report.jpg" alt="">
-        </a>
-    
-
-
-          </article>
-        
       </div>
 
       
@@ -1313,7 +1313,7 @@ resource function_app <span style="color:#e6db74">&#39;Microsoft.Web/sites@2020-
             <header>
               
                 <a href="/categories/powershell/">powershell</a>
-                <span style="float:right;">4</span>
+                <span style="float:right;">5</span>
               
             </header>
           </article>
@@ -1400,6 +1400,17 @@ resource function_app <span style="color:#e6db74">&#39;Microsoft.Web/sites@2020-
           <article>
             <header>
               
+                <a href="/categories/azure-storage-blob/">azure-storage-blob</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
                 <a href="/categories/azure-workbook/">azure-workbook</a>
                 <span style="float:right;">1</span>
               
@@ -1422,6 +1433,17 @@ resource function_app <span style="color:#e6db74">&#39;Microsoft.Web/sites@2020-
           <article>
             <header>
               
+                <a href="/categories/dapr/">dapr</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
                 <a href="/categories/event-grid-trigger/">event-grid-trigger</a>
                 <span style="float:right;">1</span>
               
@@ -1434,6 +1456,17 @@ resource function_app <span style="color:#e6db74">&#39;Microsoft.Web/sites@2020-
             <header>
               
                 <a href="/categories/jit/">jit</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/output-binding/">output-binding</a>
                 <span style="float:right;">1</span>
               
             </header>
@@ -1609,7 +1642,7 @@ resource function_app <span style="color:#e6db74">&#39;Microsoft.Web/sites@2020-
     
     <p class="copyright">
       
-        &copy; 2021
+        &copy; 2022
         
           iAutomate
         

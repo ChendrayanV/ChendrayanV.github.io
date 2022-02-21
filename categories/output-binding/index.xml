@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Output Binding on iAutomate</title>
+    <link>/categories/output-binding/</link>
+    <description>Recent content in Output Binding on iAutomate</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 21 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="/categories/output-binding/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Store Dynamic Data in an Azure Blob Storage using PowerShell with Dapr</title>
+      <link>/blog/store-dynamic-data-in-an-azure-blob-storage-using-powershell-with-dapr/</link>
+      <pubDate>Mon, 21 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/store-dynamic-data-in-an-azure-blob-storage-using-powershell-with-dapr/</guid>
+      <description>Introduction The detailed documentation on the Azure Blob Storage binding component is super helpful. With that reference, let me walk you through the steps to store dynamic data to Azure blob storage without writing additional code (using blob API) to interact with the blob. Instead, we use the Dapr binding API.
+Binding Component Format apiVersion: dapr.io/v1alpha1 kind: Component metadata: name: &amp;lt;NAME&amp;gt; namespace: &amp;lt;NAMESPACE&amp;gt; spec: type: bindings.azure.blobstorage version: v1 metadata: - name: storageAccount value: myStorageAccountName - name: storageAccessKey value: *********** - name: container value: container1 - name: decodeBase64 value: &amp;lt;bool&amp;gt; - name: getBlobRetryCount value: &amp;lt;integer&amp;gt; - name: publicAccessLevel value: &amp;lt;publicAccessLevel&amp;gt; Build and run a web server Start-PodeServer { Add-PodeEndpoint -Address * -Port 3000 -Protocol Http Add-PodeRoute -Method Get -Path &amp;#39;/bloboutput&amp;#39; -ScriptBlock { $Bytes = [System.</description>
+    </item>
+    
+  </channel>
+</rss>

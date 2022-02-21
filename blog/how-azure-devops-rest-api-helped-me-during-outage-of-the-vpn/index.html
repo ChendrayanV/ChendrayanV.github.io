@@ -36,7 +36,7 @@
 
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="generator" content="Hugo 0.82.1" />
+        <meta name="generator" content="Hugo 0.92.2" />
         
 
 
@@ -56,8 +56,8 @@
 <meta property="og:description" content="Just move on!" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/blog/how-azure-devops-rest-api-helped-me-during-outage-of-the-vpn/" /><meta property="article:section" content="blog" />
-<meta property="article:published_time" content="2020-04-18T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-01-04T20:12:23&#43;05:30" />
+<meta property="article:published_time" content="2020-04-18T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-04-18T00:00:00+00:00" />
 
 
         <meta property="og:image" content="//images/logo.png">
@@ -65,8 +65,8 @@
         <meta property="og:image:width" content="512">
         <meta property="og:image:height" content="512">
         <meta itemprop="name" content="How Azure DevOps REST API helped me during outage of the VPN?">
-<meta itemprop="description" content="Just move on!"><meta itemprop="datePublished" content="2020-04-18T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-01-04T20:12:23&#43;05:30" />
+<meta itemprop="description" content="Just move on!"><meta itemprop="datePublished" content="2020-04-18T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-04-18T00:00:00+00:00" />
 <meta itemprop="wordCount" content="406">
 <meta itemprop="keywords" content="WIQL,PowerShell," />
         
@@ -268,6 +268,45 @@ if (!doNotTrack) {
                 
                         <article class="mini-post">
                             <header>
+                                <h3><a href="/blog/store-dynamic-data-in-an-azure-blob-storage-using-powershell-with-dapr/">Store Dynamic Data in an Azure Blob Storage using PowerShell with Dapr</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2022-02-21'>
+                                    February 21, 2022</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="/blog/store-dynamic-data-in-an-azure-blob-storage-using-powershell-with-dapr/" class="image featured">
+            <img src="/img/2022/02/" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
                                 <h3><a href="/blog/failed-snat-connections-detected-in-azure-powershell-function/">Failed SNAT Connections Detected in Azure PowerShell Function</a></h3>
                                 
                                 <time class="published" datetime=
@@ -416,45 +455,6 @@ if (!doNotTrack) {
 
         <a href="/blog/using-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell/" class="image featured">
             <img src="/img/2021/03/access_token_pfx_cert.jpg" alt="">
-        </a>
-    
-
-
-                        </article>
-                
-                        <article class="mini-post">
-                            <header>
-                                <h3><a href="/blog/retrieve-azure-runbook-job-report-using-rest-api-with-powershell/">Retrieve Azure Runbook Job Report using REST API with PowerShell</a></h3>
-                                
-                                <time class="published" datetime=
-                                    '2021-02-16'>
-                                    February 16, 2021</time>
-                            </header>
-                            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-  
-    
-  
-
-
-        
-        
-        
-
-        <a href="/blog/retrieve-azure-runbook-job-report-using-rest-api-with-powershell/" class="image featured">
-            <img src="/img/2021/02/Feb-16-Report.jpg" alt="">
         </a>
     
 
@@ -731,7 +731,7 @@ if (!doNotTrack) {
 </ol>
 <h2 id="authorize-using-pat">Authorize using PAT</h2>
 <p>I advise using  <code> Microsoft.PowerShell.SecretsManagement</code> module to keep your credentials safe. It comes handy to save multiple passwords and ease to use. I have saved the PAT in <code>BuiltInLocalVault</code> and using as shown below</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PowerShell" data-lang="PowerShell">Import-Module Microsoft.PowerShell.SecretsManagement -Verbose 
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PowerShell" data-lang="PowerShell">Import-Module Microsoft.PowerShell.SecretsManagement -Verbose 
 $Token = Get-Secret -Name PAT -Vault BuiltInLocalVault -AsPlainText
 $Authentication = <span style="color:#66d9ef">[System.Text.Encoding]</span>::ASCII.GetBytes(<span style="color:#e6db74">&#34;:$Token&#34;</span>)
 $Authentication = <span style="color:#66d9ef">[System.Convert]</span>::ToBase64String($Authentication)
@@ -742,17 +742,17 @@ $Headers = @{Authorization = (<span style="color:#e6db74">&#34;Basic {0}&#34;</s
 <p>Don&rsquo;t forget to toggle the API version!</p>
 </blockquote>
 <h3 id="list-all-the-projects">List all the projects</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PowerShell" data-lang="PowerShell">$Teams = (Invoke-RestMethod -Uri <span style="color:#e6db74">&#34;https://xxxx-xx-xxxx.visualstudio.com/_apis/projects?api-version=5.1-preview.3&#34;</span> -Headers $Headers).value
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PowerShell" data-lang="PowerShell">$Teams = (Invoke-RestMethod -Uri <span style="color:#e6db74">&#34;https://xxxx-xx-xxxx.visualstudio.com/_apis/projects?api-version=5.1-preview.3&#34;</span> -Headers $Headers).value
 $Teams | Select-Object name , visibility , lastUpdateTime
 </code></pre></div><h3 id="list-all-the-repositories">List all the repositories</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PowerShell" data-lang="PowerShell">$Teams | . {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PowerShell" data-lang="PowerShell">$Teams | . {
     <span style="color:#66d9ef">process</span> {
         $Repositories = (Invoke-RestMethod -Uri <span style="color:#e6db74">&#34;https://xxxx-xx-xxxx.visualstudio.com/</span>$($_.name)<span style="color:#e6db74">/_apis/git/repositories?api-version=5.1&#34;</span> -Headers $($Headers)).value
         $Repositories | Select-Object name , @{N = <span style="color:#e6db74">&#39;Repo-Name&#39;</span>; E = {$_.project.name}} 
     }
 }
 </code></pre></div><h3 id="list-all-work-items-in-your-name-wiql">List all work items in your name (WIQL)</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PowerShell" data-lang="PowerShell">$Query = <span style="color:#66d9ef">[pscustomobject]</span>@{
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PowerShell" data-lang="PowerShell">$Query = <span style="color:#66d9ef">[pscustomobject]</span>@{
     query = <span style="color:#e6db74">&#39;SELECT * From WorkItems Where [System.AssignedTo] = &#34;ChenV&#34;&#39;</span>
 } | ConvertTo-Json -Depth 10
 
@@ -763,14 +763,14 @@ $Results = Invoke-RestMethod -Uri <span style="color:#e6db74">&#34;https://xxxx-
                              -ContentType <span style="color:#e6db74">&#39;application/json&#39;</span>
 $Results.workItems | Measure-Object
 </code></pre></div><h3 id="clone-the-repository">Clone the repository</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PowerShell" data-lang="PowerShell">PS C:\Projects&gt; git clone https<span style="color:#960050;background-color:#1e0010">:</span>//PAT<span style="color:#960050;background-color:#1e0010">:</span>PAT@REPOURL
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PowerShell" data-lang="PowerShell">PS C:\Projects&gt; git clone https<span style="color:#960050;background-color:#1e0010">:</span>//PAT<span style="color:#960050;background-color:#1e0010">:</span>PAT@REPOURL
 </code></pre></div><h3 id="read-the-work-items-comment">Read the work items comment</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PowerShell" data-lang="PowerShell">$Results = Invoke-RestMethod -Uri <span style="color:#e6db74">&#34;https://xxxx-xx-xxxx.visualstudio.com/{PROJECTA}/_apis/wit/workItems/91772/comments?api-version=5.1-preview.3&#34;</span> `
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PowerShell" data-lang="PowerShell">$Results = Invoke-RestMethod -Uri <span style="color:#e6db74">&#34;https://xxxx-xx-xxxx.visualstudio.com/{PROJECTA}/_apis/wit/workItems/91772/comments?api-version=5.1-preview.3&#34;</span> `
                              -Method Get `
                              -Headers $Headers
 $Results
 </code></pre></div><h3 id="add-comment-in-work-items">Add comment in work items</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PowerShell" data-lang="PowerShell">$body = @(<span style="color:#66d9ef">[pscustomobject]</span>@{
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PowerShell" data-lang="PowerShell">$body = @(<span style="color:#66d9ef">[pscustomobject]</span>@{
     text = <span style="color:#e6db74">&#39;YOUR COMMENT&#39;</span>
 }) | ConvertTo-Json
 $Results = Invoke-RestMethod -Uri <span style="color:#e6db74">&#34;https://xxxx-xx-xxx.visualstudio.com/PROJECTA/_apis/wit/workItems/115556/comments?api-version=5.1-preview.3&#34;</span> `
@@ -782,7 +782,7 @@ $Results
 </code></pre></div><blockquote>
 <p>It&rsquo;s worth to try PowerShell module available in the gallery</p>
 </blockquote>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PowerShell" data-lang="PowerShell">PS C:\&gt; Find-Module -Name <span style="color:#e6db74">&#39;*VSTS&#39;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PowerShell" data-lang="PowerShell">PS C:\&gt; Find-Module -Name <span style="color:#e6db74">&#39;*VSTS&#39;</span>
 </code></pre></div>
   </div>
 
@@ -1007,6 +1007,47 @@ $Results
           <article class="mini-post">
             <header>
               <h3>
+                <a href="/blog/store-dynamic-data-in-an-azure-blob-storage-using-powershell-with-dapr/">Store Dynamic Data in an Azure Blob Storage using PowerShell with Dapr</a>
+              </h3>
+              
+              <time class="published" datetime='2022-02-21'>
+                February 21, 2022
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="/blog/store-dynamic-data-in-an-azure-blob-storage-using-powershell-with-dapr/" class="image featured">
+            <img src="/img/2022/02/" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
                 <a href="/blog/failed-snat-connections-detected-in-azure-powershell-function/">Failed SNAT Connections Detected in Azure PowerShell Function</a>
               </h3>
               
@@ -1161,48 +1202,7 @@ $Results
         
 
         <a href="/blog/using-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell/" class="image featured">
-            <img src="/img/2021/03/access_token_pfx_cert.jpg" alt="">
-        </a>
-    
-
-
-          </article>
-        
-          <article class="mini-post">
-            <header>
-              <h3>
-                <a href="/blog/retrieve-azure-runbook-job-report-using-rest-api-with-powershell/">Retrieve Azure Runbook Job Report using REST API with PowerShell</a>
-              </h3>
-              
-              <time class="published" datetime='2021-02-16'>
-                February 16, 2021
-              </time>
-            </header>
-            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-  
-    
-  
-
-
-        
-        
-        
-
-        <a href="/blog/retrieve-azure-runbook-job-report-using-rest-api-with-powershell/" class="image featured">
-            <img src="/img/2021/02/Feb-16-Report.jpg" alt="">
+            <img src="/date/access_token_pfx_cert.jpg" alt="">
         </a>
     
 
@@ -1264,7 +1264,7 @@ $Results
             <header>
               
                 <a href="/categories/powershell/">powershell</a>
-                <span style="float:right;">4</span>
+                <span style="float:right;">5</span>
               
             </header>
           </article>
@@ -1351,6 +1351,17 @@ $Results
           <article>
             <header>
               
+                <a href="/categories/azure-storage-blob/">azure-storage-blob</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
                 <a href="/categories/azure-workbook/">azure-workbook</a>
                 <span style="float:right;">1</span>
               
@@ -1373,6 +1384,17 @@ $Results
           <article>
             <header>
               
+                <a href="/categories/dapr/">dapr</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
                 <a href="/categories/event-grid-trigger/">event-grid-trigger</a>
                 <span style="float:right;">1</span>
               
@@ -1385,6 +1407,17 @@ $Results
             <header>
               
                 <a href="/categories/jit/">jit</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/output-binding/">output-binding</a>
                 <span style="float:right;">1</span>
               
             </header>
@@ -1560,7 +1593,7 @@ $Results
     
     <p class="copyright">
       
-        &copy; 2021
+        &copy; 2022
         
           iAutomate
         

@@ -36,7 +36,7 @@
 
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="generator" content="Hugo 0.82.1" />
+        <meta name="generator" content="Hugo 0.92.2" />
         
 
 
@@ -56,8 +56,8 @@
 <meta property="og:description" content="Authenticate using Certificates through code!" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/blog/using-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell/" /><meta property="article:section" content="blog" />
-<meta property="article:published_time" content="2021-03-18T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-03-18T15:16:57&#43;05:30" />
+<meta property="article:published_time" content="2021-03-18T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-03-18T00:00:00+00:00" />
 
 
         <meta property="og:image" content="//images/logo.png">
@@ -65,8 +65,8 @@
         <meta property="og:image:width" content="512">
         <meta property="og:image:height" content="512">
         <meta itemprop="name" content="Using PFX in Azure DevOps to generate an access token and authenticate - PowerShell">
-<meta itemprop="description" content="Authenticate using Certificates through code!"><meta itemprop="datePublished" content="2021-03-18T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-03-18T15:16:57&#43;05:30" />
+<meta itemprop="description" content="Authenticate using Certificates through code!"><meta itemprop="datePublished" content="2021-03-18T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-03-18T00:00:00+00:00" />
 <meta itemprop="wordCount" content="327">
 <meta itemprop="keywords" content="" />
         
@@ -268,6 +268,45 @@ if (!doNotTrack) {
                 
                         <article class="mini-post">
                             <header>
+                                <h3><a href="/blog/store-dynamic-data-in-an-azure-blob-storage-using-powershell-with-dapr/">Store Dynamic Data in an Azure Blob Storage using PowerShell with Dapr</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2022-02-21'>
+                                    February 21, 2022</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="/blog/store-dynamic-data-in-an-azure-blob-storage-using-powershell-with-dapr/" class="image featured">
+            <img src="/img/2022/02/" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
                                 <h3><a href="/blog/failed-snat-connections-detected-in-azure-powershell-function/">Failed SNAT Connections Detected in Azure PowerShell Function</a></h3>
                                 
                                 <time class="published" datetime=
@@ -416,45 +455,6 @@ if (!doNotTrack) {
 
         <a href="/blog/using-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell/" class="image featured">
             <img src="/img/2021/03/access_token_pfx_cert.jpg" alt="">
-        </a>
-    
-
-
-                        </article>
-                
-                        <article class="mini-post">
-                            <header>
-                                <h3><a href="/blog/retrieve-azure-runbook-job-report-using-rest-api-with-powershell/">Retrieve Azure Runbook Job Report using REST API with PowerShell</a></h3>
-                                
-                                <time class="published" datetime=
-                                    '2021-02-16'>
-                                    February 16, 2021</time>
-                            </header>
-                            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-  
-    
-  
-
-
-        
-        
-        
-
-        <a href="/blog/retrieve-azure-runbook-job-report-using-rest-api-with-powershell/" class="image featured">
-            <img src="/img/2021/02/Feb-16-Report.jpg" alt="">
         </a>
     
 
@@ -730,26 +730,25 @@ if (!doNotTrack) {
 3. Microsoft.IdentityModel.Tokens.6.9.0
 </code></pre>
 <p>You can choose to install from the Nuget directly or store in the local folder and use it in your code. In my case, I stored it in the assemblies folder. Here is the project scaffolding.</p>
-<figure>
-    <img src="/img/2021/03/Scaffolding.PNG"/> <figcaption>
+<figure><img src="/img/2021/03/Scaffolding.PNG"/><figcaption>
             <h4>Scaffolding</h4>
         </figcaption>
 </figure>
 
 <h3 id="step-2">Step 2</h3>
 <p>The below snippet is to load the assemblies in the current execution context.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#66d9ef">[System.Reflection.Assembly]</span>::LoadFrom((Get-ChildItem .\ASSEMBLIES\Microsoft.IdentityModel.JsonWebTokens.6.9.0\lib\net45\Microsoft.IdentityModel.JsonWebTokens.dll).fullname)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#66d9ef">[System.Reflection.Assembly]</span>::LoadFrom((Get-ChildItem .\ASSEMBLIES\Microsoft.IdentityModel.JsonWebTokens.6.9.0\lib\net45\Microsoft.IdentityModel.JsonWebTokens.dll).fullname)
 <span style="color:#66d9ef">[System.Reflection.Assembly]</span>::LoadFrom((Get-ChildItem .\ASSEMBLIES\Microsoft.IdentityModel.Logging.6.9.0\lib\net45\Microsoft.IdentityModel.Logging.dll).fullname)
 <span style="color:#66d9ef">[System.Reflection.Assembly]</span>::LoadFrom((Get-ChildItem .\ASSEMBLIES\Microsoft.IdentityModel.Tokens.6.9.0\lib\net45\Microsoft.IdentityModel.Tokens.dll).fullname)
 </code></pre></div><h3 id="step-3">Step 3</h3>
 <p>Load the PFX file from the secure file.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">$SecureFile = $SECUREFILE
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">$SecureFile = $SECUREFILE
 $TempDirectory = $ENV:AGENT_TEMPDIRECTORY
 $PFXFilePath = Join-Path $TempDirectory $SecureFile
 $X509Certificate2 = <span style="color:#66d9ef">[System.Security.Cryptography.X509Certificates.X509Certificate2]</span>::new($PFXFilePath, <span style="color:#e6db74">&#34;</span>$($CERTIFICATECREDENTIAL)<span style="color:#e6db74">&#34;</span>)
 </code></pre></div><h3 id="step-4">Step 4</h3>
 <p>Client Assertion – This is a bit tricky, at least for me, because I spent hours understanding. Here is the <a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/msal-net-client-assertions">documentation</a> for your reference.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">$Aud = <span style="color:#e6db74">&#34;https://login.microsoftonline.com/</span>$($TENANTID)<span style="color:#e6db74">/oauth2/token&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">$Aud = <span style="color:#e6db74">&#34;https://login.microsoftonline.com/</span>$($TENANTID)<span style="color:#e6db74">/oauth2/token&#34;</span>
 $X509Certificate2 = <span style="color:#66d9ef">[System.Security.Cryptography.X509Certificates.X509Certificate2]</span>::new($PFXFilePath, <span style="color:#e6db74">&#34;</span>$($CERTIFICATECREDENTIAL)<span style="color:#e6db74">&#34;</span>)
 $Claims = <span style="color:#66d9ef">[System.Collections.Generic.Dictionary[string, object]]</span>::new()
 $Claims[<span style="color:#e6db74">&#39;aud&#39;</span>] = $Aud
@@ -764,7 +763,7 @@ $CreateToken = $Handler.CreateToken($SecurityTokenDescriptor)
 $Token = <span style="color:#66d9ef">[Microsoft.IdentityModel.JsonWebTokens.JsonWebToken]</span>::new($CreateToken)
 </code></pre></div><h3 id="step-5">Step 5</h3>
 <p>Retrieve bearer token</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">$Body = @{
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">$Body = @{
     <span style="color:#e6db74">&#34;resource&#34;</span>              = <span style="color:#e6db74">&#34;https://management.core.windows.net/&#34;</span>
     <span style="color:#e6db74">&#34;client_id&#34;</span>             = $ClientID
     <span style="color:#e6db74">&#34;tenant_id&#34;</span>             = $TenantID
@@ -998,6 +997,47 @@ $Result = Invoke-RestMethod -Uri https<span style="color:#960050;background-colo
           <article class="mini-post">
             <header>
               <h3>
+                <a href="/blog/store-dynamic-data-in-an-azure-blob-storage-using-powershell-with-dapr/">Store Dynamic Data in an Azure Blob Storage using PowerShell with Dapr</a>
+              </h3>
+              
+              <time class="published" datetime='2022-02-21'>
+                February 21, 2022
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="/blog/store-dynamic-data-in-an-azure-blob-storage-using-powershell-with-dapr/" class="image featured">
+            <img src="/img/2022/02/" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
                 <a href="/blog/failed-snat-connections-detected-in-azure-powershell-function/">Failed SNAT Connections Detected in Azure PowerShell Function</a>
               </h3>
               
@@ -1159,47 +1199,6 @@ $Result = Invoke-RestMethod -Uri https<span style="color:#960050;background-colo
 
           </article>
         
-          <article class="mini-post">
-            <header>
-              <h3>
-                <a href="/blog/retrieve-azure-runbook-job-report-using-rest-api-with-powershell/">Retrieve Azure Runbook Job Report using REST API with PowerShell</a>
-              </h3>
-              
-              <time class="published" datetime='2021-02-16'>
-                February 16, 2021
-              </time>
-            </header>
-            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-  
-    
-  
-
-
-        
-        
-        
-
-        <a href="/blog/retrieve-azure-runbook-job-report-using-rest-api-with-powershell/" class="image featured">
-            <img src="/img/2021/02/Feb-16-Report.jpg" alt="">
-        </a>
-    
-
-
-          </article>
-        
       </div>
 
       
@@ -1255,7 +1254,7 @@ $Result = Invoke-RestMethod -Uri https<span style="color:#960050;background-colo
             <header>
               
                 <a href="/categories/powershell/">powershell</a>
-                <span style="float:right;">4</span>
+                <span style="float:right;">5</span>
               
             </header>
           </article>
@@ -1342,6 +1341,17 @@ $Result = Invoke-RestMethod -Uri https<span style="color:#960050;background-colo
           <article>
             <header>
               
+                <a href="/categories/azure-storage-blob/">azure-storage-blob</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
                 <a href="/categories/azure-workbook/">azure-workbook</a>
                 <span style="float:right;">1</span>
               
@@ -1364,6 +1374,17 @@ $Result = Invoke-RestMethod -Uri https<span style="color:#960050;background-colo
           <article>
             <header>
               
+                <a href="/categories/dapr/">dapr</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
                 <a href="/categories/event-grid-trigger/">event-grid-trigger</a>
                 <span style="float:right;">1</span>
               
@@ -1376,6 +1397,17 @@ $Result = Invoke-RestMethod -Uri https<span style="color:#960050;background-colo
             <header>
               
                 <a href="/categories/jit/">jit</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/output-binding/">output-binding</a>
                 <span style="float:right;">1</span>
               
             </header>
@@ -1551,7 +1583,7 @@ $Result = Invoke-RestMethod -Uri https<span style="color:#960050;background-colo
     
     <p class="copyright">
       
-        &copy; 2021
+        &copy; 2022
         
           iAutomate
         

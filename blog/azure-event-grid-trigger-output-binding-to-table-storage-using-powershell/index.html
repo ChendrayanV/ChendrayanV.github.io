@@ -36,7 +36,7 @@
 
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="generator" content="Hugo 0.82.1" />
+        <meta name="generator" content="Hugo 0.92.2" />
         
 
 
@@ -60,8 +60,8 @@ Challenge A colleague tried to implement and reached out to me with a challenge.
 Challenge A colleague tried to implement and reached out to me with a challenge." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/blog/azure-event-grid-trigger-output-binding-to-table-storage-using-powershell/" /><meta property="article:section" content="blog" />
-<meta property="article:published_time" content="2021-04-08T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-04-10T14:59:57&#43;05:30" />
+<meta property="article:published_time" content="2021-04-08T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-04-08T00:00:00+00:00" />
 
 
         <meta property="og:image" content="//images/logo.png">
@@ -70,8 +70,8 @@ Challenge A colleague tried to implement and reached out to me with a challenge.
         <meta property="og:image:height" content="512">
         <meta itemprop="name" content="Azure Event Grid Trigger Output Binding to Table Storage using PowerShell">
 <meta itemprop="description" content="Introduction Is it possible to write data to the storage table when the Azure Event Grid trigger is invoked? Yes, it is possible. A colleague requested to log the output of the Azure Functions transactions to the Azure table storage, and my call is to store only the required data. Indeed, cost and readability is the primary concern. With no further ado, let me walk you through the requirement.
-Challenge A colleague tried to implement and reached out to me with a challenge."><meta itemprop="datePublished" content="2021-04-08T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-04-10T14:59:57&#43;05:30" />
+Challenge A colleague tried to implement and reached out to me with a challenge."><meta itemprop="datePublished" content="2021-04-08T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-04-08T00:00:00+00:00" />
 <meta itemprop="wordCount" content="237">
 <meta itemprop="keywords" content="" />
         
@@ -273,6 +273,45 @@ if (!doNotTrack) {
                 
                         <article class="mini-post">
                             <header>
+                                <h3><a href="/blog/store-dynamic-data-in-an-azure-blob-storage-using-powershell-with-dapr/">Store Dynamic Data in an Azure Blob Storage using PowerShell with Dapr</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2022-02-21'>
+                                    February 21, 2022</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="/blog/store-dynamic-data-in-an-azure-blob-storage-using-powershell-with-dapr/" class="image featured">
+            <img src="/img/2022/02/" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
                                 <h3><a href="/blog/failed-snat-connections-detected-in-azure-powershell-function/">Failed SNAT Connections Detected in Azure PowerShell Function</a></h3>
                                 
                                 <time class="published" datetime=
@@ -292,9 +331,6 @@ if (!doNotTrack) {
 
 
 
-  
-  
-    
   
 
 
@@ -421,45 +457,6 @@ if (!doNotTrack) {
 
         <a href="/blog/using-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell/" class="image featured">
             <img src="/img/2021/03/access_token_pfx_cert.jpg" alt="">
-        </a>
-    
-
-
-                        </article>
-                
-                        <article class="mini-post">
-                            <header>
-                                <h3><a href="/blog/retrieve-azure-runbook-job-report-using-rest-api-with-powershell/">Retrieve Azure Runbook Job Report using REST API with PowerShell</a></h3>
-                                
-                                <time class="published" datetime=
-                                    '2021-02-16'>
-                                    February 16, 2021</time>
-                            </header>
-                            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-  
-    
-  
-
-
-        
-        
-        
-
-        <a href="/blog/retrieve-azure-runbook-job-report-using-rest-api-with-powershell/" class="image featured">
-            <img src="/img/2021/02/Feb-16-Report.jpg" alt="">
         </a>
     
 
@@ -726,22 +723,19 @@ if (!doNotTrack) {
 <p>Is it possible to write data to the storage table when the Azure Event Grid trigger is invoked? Yes, it is possible. A colleague requested to log the output of the Azure Functions transactions to the Azure table storage, and my call is to store only the required data. Indeed, cost and readability is the primary concern. With no further ado, let me walk you through the requirement.</p>
 <h2 id="challenge">Challenge</h2>
 <p>A colleague tried to implement and reached out to me with a challenge. He claimed that it’s not possible to choose a different storage account to store the logs, and the evidence he shared is below</p>
-<figure>
-    <img src="/img/2021/04/Event-Grid-01.png"/> <figcaption>
+<figure><img src="/img/2021/04/Event-Grid-01.png"/><figcaption>
             <h4>Event-Grid-Image-01</h4>
         </figcaption>
 </figure>
 
 <p>Oh well, it’s not a challenge, but it’s a limitation. You have no choice to provide an alternate storage account. Is it true? Let us figure it out! Refer to this <a href="https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-storage-table-output?tabs=powershell">documentation</a>.</p>
-<figure>
-    <img src="/img/2021/04/Connection.png"/> <figcaption>
+<figure><img src="/img/2021/04/Connection.png"/><figcaption>
             <h4>Connection</h4>
         </figcaption>
 </figure>
 
 <p>First, create an entry in the application settings and name it AzureWebJobsSTG01 and check the function integration. I hope it’s clear now!</p>
-<figure>
-    <img src="/img/2021/04/Event-Grid-02.png"/> <figcaption>
+<figure><img src="/img/2021/04/Event-Grid-02.png"/><figcaption>
             <h4>Event-Grid-Image-02</h4>
         </figcaption>
 </figure>
@@ -750,7 +744,7 @@ if (!doNotTrack) {
 <blockquote>
 <p>Event Grid Trigger Code - Output binding</p>
 </blockquote>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
     <span style="color:#f92672">&#34;bindings&#34;</span>: [
         {
             <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;eventGridTrigger&#34;</span>,
@@ -769,7 +763,7 @@ if (!doNotTrack) {
 </code></pre></div><blockquote>
 <p>Event Grid Code - PowerShell Script</p>
 </blockquote>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#66d9ef">param</span>($eventGridEvent, $TriggerMetadata)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#66d9ef">param</span>($eventGridEvent, $TriggerMetadata)
 $Result = $eventGridEvent | ConvertTo-Json | ConvertFrom-Json
 Push-OutputBinding -Name outputTable -Value @{
     PartitionKey = <span style="color:#e6db74">&#39;Test&#39;</span>
@@ -782,8 +776,7 @@ Push-OutputBinding -Name outputTable -Value @{
 </code></pre></div><blockquote>
 <p>Output</p>
 </blockquote>
-<figure>
-    <img src="/img/2021/04/Yay.png"/> <figcaption>
+<figure><img src="/img/2021/04/Yay.png"/><figcaption>
             <h4>Yay</h4>
         </figcaption>
 </figure>
@@ -1006,6 +999,47 @@ Push-OutputBinding -Name outputTable -Value @{
           <article class="mini-post">
             <header>
               <h3>
+                <a href="/blog/store-dynamic-data-in-an-azure-blob-storage-using-powershell-with-dapr/">Store Dynamic Data in an Azure Blob Storage using PowerShell with Dapr</a>
+              </h3>
+              
+              <time class="published" datetime='2022-02-21'>
+                February 21, 2022
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="/blog/store-dynamic-data-in-an-azure-blob-storage-using-powershell-with-dapr/" class="image featured">
+            <img src="/img/2022/02/" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
                 <a href="/blog/failed-snat-connections-detected-in-azure-powershell-function/">Failed SNAT Connections Detected in Azure PowerShell Function</a>
               </h3>
               
@@ -1119,7 +1153,7 @@ Push-OutputBinding -Name outputTable -Value @{
         
 
         <a href="/blog/azure-functions-real-world-example-using-event-grid-trigger-with-powershell/" class="image featured">
-            <img src="/img/2021/04/Blog-Az-Event-Grid.jpg" alt="">
+            <img src="/img/2021/042021/04/Blog-Az-Event-Grid.jpg" alt="">
         </a>
     
 
@@ -1150,9 +1184,6 @@ Push-OutputBinding -Name outputTable -Value @{
 
 
   
-  
-    
-  
 
 
         
@@ -1160,48 +1191,7 @@ Push-OutputBinding -Name outputTable -Value @{
         
 
         <a href="/blog/using-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell/" class="image featured">
-            <img src="/img/2021/03/access_token_pfx_cert.jpg" alt="">
-        </a>
-    
-
-
-          </article>
-        
-          <article class="mini-post">
-            <header>
-              <h3>
-                <a href="/blog/retrieve-azure-runbook-job-report-using-rest-api-with-powershell/">Retrieve Azure Runbook Job Report using REST API with PowerShell</a>
-              </h3>
-              
-              <time class="published" datetime='2021-02-16'>
-                February 16, 2021
-              </time>
-            </header>
-            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-  
-    
-  
-
-
-        
-        
-        
-
-        <a href="/blog/retrieve-azure-runbook-job-report-using-rest-api-with-powershell/" class="image featured">
-            <img src="/img/2021/02/Feb-16-Report.jpg" alt="">
+            <img src="/img//access_token_pfx_cert.jpg" alt="">
         </a>
     
 
@@ -1263,7 +1253,7 @@ Push-OutputBinding -Name outputTable -Value @{
             <header>
               
                 <a href="/categories/powershell/">powershell</a>
-                <span style="float:right;">4</span>
+                <span style="float:right;">5</span>
               
             </header>
           </article>
@@ -1350,6 +1340,17 @@ Push-OutputBinding -Name outputTable -Value @{
           <article>
             <header>
               
+                <a href="/categories/azure-storage-blob/">azure-storage-blob</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
                 <a href="/categories/azure-workbook/">azure-workbook</a>
                 <span style="float:right;">1</span>
               
@@ -1372,6 +1373,17 @@ Push-OutputBinding -Name outputTable -Value @{
           <article>
             <header>
               
+                <a href="/categories/dapr/">dapr</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
                 <a href="/categories/event-grid-trigger/">event-grid-trigger</a>
                 <span style="float:right;">1</span>
               
@@ -1384,6 +1396,17 @@ Push-OutputBinding -Name outputTable -Value @{
             <header>
               
                 <a href="/categories/jit/">jit</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/output-binding/">output-binding</a>
                 <span style="float:right;">1</span>
               
             </header>
@@ -1559,7 +1582,7 @@ Push-OutputBinding -Name outputTable -Value @{
     
     <p class="copyright">
       
-        &copy; 2021
+        &copy; 2022
         
           iAutomate
         

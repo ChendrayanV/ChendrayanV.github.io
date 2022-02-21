@@ -36,7 +36,7 @@
 
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="generator" content="Hugo 0.82.1" />
+        <meta name="generator" content="Hugo 0.92.2" />
         
 
 
@@ -56,8 +56,8 @@
 <meta property="og:description" content="Azure Resource Graph | PowerShell" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/blog/collection-of-azure-resource-graph-query/" /><meta property="article:section" content="blog" />
-<meta property="article:published_time" content="2021-02-07T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-02-08T09:07:55&#43;05:30" />
+<meta property="article:published_time" content="2021-02-07T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-02-07T00:00:00+00:00" />
 
 
         <meta property="og:image" content="//images/logo.png">
@@ -65,8 +65,8 @@
         <meta property="og:image:width" content="512">
         <meta property="og:image:height" content="512">
         <meta itemprop="name" content="Collection of Azure Resource Graph Query">
-<meta itemprop="description" content="Azure Resource Graph | PowerShell"><meta itemprop="datePublished" content="2021-02-07T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-02-08T09:07:55&#43;05:30" />
+<meta itemprop="description" content="Azure Resource Graph | PowerShell"><meta itemprop="datePublished" content="2021-02-07T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-02-07T00:00:00+00:00" />
 <meta itemprop="wordCount" content="274">
 <meta itemprop="keywords" content="Azure Resource Graph,PowerShell," />
         
@@ -268,6 +268,45 @@ if (!doNotTrack) {
                 
                         <article class="mini-post">
                             <header>
+                                <h3><a href="/blog/store-dynamic-data-in-an-azure-blob-storage-using-powershell-with-dapr/">Store Dynamic Data in an Azure Blob Storage using PowerShell with Dapr</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2022-02-21'>
+                                    February 21, 2022</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="/blog/store-dynamic-data-in-an-azure-blob-storage-using-powershell-with-dapr/" class="image featured">
+            <img src="/img/2022/02/" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
                                 <h3><a href="/blog/failed-snat-connections-detected-in-azure-powershell-function/">Failed SNAT Connections Detected in Azure PowerShell Function</a></h3>
                                 
                                 <time class="published" datetime=
@@ -416,45 +455,6 @@ if (!doNotTrack) {
 
         <a href="/blog/using-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell/" class="image featured">
             <img src="/img/2021/03/access_token_pfx_cert.jpg" alt="">
-        </a>
-    
-
-
-                        </article>
-                
-                        <article class="mini-post">
-                            <header>
-                                <h3><a href="/blog/retrieve-azure-runbook-job-report-using-rest-api-with-powershell/">Retrieve Azure Runbook Job Report using REST API with PowerShell</a></h3>
-                                
-                                <time class="published" datetime=
-                                    '2021-02-16'>
-                                    February 16, 2021</time>
-                            </header>
-                            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-  
-    
-  
-
-
-        
-        
-        
-
-        <a href="/blog/retrieve-azure-runbook-job-report-using-rest-api-with-powershell/" class="image featured">
-            <img src="/img/2021/02/Feb-16-Report.jpg" alt="">
         </a>
     
 
@@ -722,7 +722,7 @@ if (!doNotTrack) {
     <h1 id="introduction">Introduction</h1>
 <p>This blog post is to share the Azure Resource Graph query I developed at my workplace. I have used this with PowerShell and Azure Monitor.</p>
 <h2 id="azure-virtual-machines-powerstate-report">Azure Virtual Machines PowerState Report</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">$Query = <span style="color:#e6db74">&#34;Resources
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">$Query = <span style="color:#e6db74">&#34;Resources
 </span><span style="color:#e6db74">| where type =~ &#39;microsoft.compute/virtualMachines&#39;
 </span><span style="color:#e6db74">| project id, VMName = tostring(name), Location = tostring(location), 
 </span><span style="color:#e6db74">    ResourceGroup = tostring(resourceGroup), 
@@ -751,17 +751,17 @@ $SearchParams = @{
 $Results
 </code></pre></div><h3 id="azure-virtual-machines-summarized-reports">Azure Virtual Machines (Summarized Reports)</h3>
 <h3 id="count-by-location">Count By Location</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Search-AzGraph -Query <span style="color:#e6db74">&#34;where type =~ &#39;Microsoft.Compute/virtualMachines&#39; | summarize count() by location&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Search-AzGraph -Query <span style="color:#e6db74">&#34;where type =~ &#39;Microsoft.Compute/virtualMachines&#39; | summarize count() by location&#34;</span>
 </code></pre></div><h3 id="count-by-os-type">Count By OS Type</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Search-AzGraph -Query <span style="color:#e6db74">&#34;where type =~ &#39;Microsoft.Compute/virtualMachines&#39; | project id, osType= tostring(properties.storageProfile.osDisk.osType) |summarize count() by osType&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Search-AzGraph -Query <span style="color:#e6db74">&#34;where type =~ &#39;Microsoft.Compute/virtualMachines&#39; | project id, osType= tostring(properties.storageProfile.osDisk.osType) |summarize count() by osType&#34;</span>
 </code></pre></div><h3 id="count-by-resource-group">Count By Resource Group</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Search-AzGraph -Query <span style="color:#e6db74">&#34;where type =~ &#39;Microsoft.Compute/virtualMachines&#39; | summarize count() by resourceGroup&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Search-AzGraph -Query <span style="color:#e6db74">&#34;where type =~ &#39;Microsoft.Compute/virtualMachines&#39; | summarize count() by resourceGroup&#34;</span>
 </code></pre></div><h3 id="count-by-power-state">Count By Power State</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Search-AzGraph -Query <span style="color:#e6db74">&#34;where type =~ &#39;Microsoft.Compute/virtualMachines&#39; 
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Search-AzGraph -Query <span style="color:#e6db74">&#34;where type =~ &#39;Microsoft.Compute/virtualMachines&#39; 
 </span><span style="color:#e6db74">| project id, powerState = tostring(split(properties.extended.instanceView.powerState.code, &#39;/&#39;)[1]) 
 </span><span style="color:#e6db74">| summarize count() by powerState&#34;</span>
 </code></pre></div><h2 id="azure-virtual-machines-backup-report">Azure Virtual Machines Backup Report</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">$Query = <span style="color:#e6db74">&#34;RecoveryServicesResources
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">$Query = <span style="color:#e6db74">&#34;RecoveryServicesResources
 </span><span style="color:#e6db74">| where type =~ &#39;microsoft.recoveryservices/vaults/backupfabrics/protectioncontainers/protecteditems&#39;
 </span><span style="color:#e6db74">| where properties.backupManagementType =~ &#39;AzureIaasVM&#39;
 </span><span style="color:#e6db74">| project id, SubscriptionId = subscriptionId, VMName = tostring(properties.friendlyName), 
@@ -1010,6 +1010,47 @@ $RecoveryServicesResources
           <article class="mini-post">
             <header>
               <h3>
+                <a href="/blog/store-dynamic-data-in-an-azure-blob-storage-using-powershell-with-dapr/">Store Dynamic Data in an Azure Blob Storage using PowerShell with Dapr</a>
+              </h3>
+              
+              <time class="published" datetime='2022-02-21'>
+                February 21, 2022
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="/blog/store-dynamic-data-in-an-azure-blob-storage-using-powershell-with-dapr/" class="image featured">
+            <img src="/img/2022/02/" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
                 <a href="/blog/failed-snat-connections-detected-in-azure-powershell-function/">Failed SNAT Connections Detected in Azure PowerShell Function</a>
               </h3>
               
@@ -1171,47 +1212,6 @@ $RecoveryServicesResources
 
           </article>
         
-          <article class="mini-post">
-            <header>
-              <h3>
-                <a href="/blog/retrieve-azure-runbook-job-report-using-rest-api-with-powershell/">Retrieve Azure Runbook Job Report using REST API with PowerShell</a>
-              </h3>
-              
-              <time class="published" datetime='2021-02-16'>
-                February 16, 2021
-              </time>
-            </header>
-            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-  
-    
-  
-
-
-        
-        
-        
-
-        <a href="/blog/retrieve-azure-runbook-job-report-using-rest-api-with-powershell/" class="image featured">
-            <img src="/img/2021/02/Feb-16-Report.jpg" alt="">
-        </a>
-    
-
-
-          </article>
-        
       </div>
 
       
@@ -1267,7 +1267,7 @@ $RecoveryServicesResources
             <header>
               
                 <a href="/categories/powershell/">powershell</a>
-                <span style="float:right;">4</span>
+                <span style="float:right;">5</span>
               
             </header>
           </article>
@@ -1354,6 +1354,17 @@ $RecoveryServicesResources
           <article>
             <header>
               
+                <a href="/categories/azure-storage-blob/">azure-storage-blob</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
                 <a href="/categories/azure-workbook/">azure-workbook</a>
                 <span style="float:right;">1</span>
               
@@ -1376,6 +1387,17 @@ $RecoveryServicesResources
           <article>
             <header>
               
+                <a href="/categories/dapr/">dapr</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
                 <a href="/categories/event-grid-trigger/">event-grid-trigger</a>
                 <span style="float:right;">1</span>
               
@@ -1388,6 +1410,17 @@ $RecoveryServicesResources
             <header>
               
                 <a href="/categories/jit/">jit</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/output-binding/">output-binding</a>
                 <span style="float:right;">1</span>
               
             </header>
@@ -1563,7 +1596,7 @@ $RecoveryServicesResources
     
     <p class="copyright">
       
-        &copy; 2021
+        &copy; 2022
         
           iAutomate
         
