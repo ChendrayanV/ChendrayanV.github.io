@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on iAutomate</title>
+    <link>/categories/</link>
+    <description>Recent content in Categories on iAutomate</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 23 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Azure Function</title>
+      <link>/categories/azure-function/</link>
+      <pubDate>Fri, 23 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/azure-function/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PowerShell</title>
+      <link>/categories/powershell/</link>
+      <pubDate>Fri, 23 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/powershell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PowerShell Core</title>
+      <link>/categories/powershell-core/</link>
+      <pubDate>Fri, 23 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/powershell-core/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SNAT Port Exhausted</title>
+      <link>/categories/snat-port-exhausted/</link>
+      <pubDate>Fri, 23 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/snat-port-exhausted/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Event Grid Trigger</title>
+      <link>/categories/event-grid-trigger/</link>
+      <pubDate>Thu, 08 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/event-grid-trigger/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Azure Functions</title>
+      <link>/categories/azure-functions/</link>
+      <pubDate>Sat, 03 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/azure-functions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Azure</title>
+      <link>/categories/azure/</link>
+      <pubDate>Thu, 18 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/azure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Azure DevOps</title>
+      <link>/categories/azure-devops/</link>
+      <pubDate>Thu, 18 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/azure-devops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Client Assertion</title>
+      <link>/categories/client-assertion/</link>
+      <pubDate>Thu, 18 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/client-assertion/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Azure Automation Account</title>
+      <link>/categories/azure-automation-account/</link>
+      <pubDate>Tue, 16 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/azure-automation-account/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Azure RunBook Report</title>
+      <link>/categories/azure-runbook-report/</link>
+      <pubDate>Tue, 16 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/azure-runbook-report/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Azure Resource Graph</title>
+      <link>/categories/azure-resource-graph/</link>
+      <pubDate>Sun, 07 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/azure-resource-graph/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Azure Monitor</title>
+      <link>/categories/azure-monitor/</link>
+      <pubDate>Mon, 11 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/azure-monitor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Azure Workbook</title>
+      <link>/categories/azure-workbook/</link>
+      <pubDate>Mon, 11 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/azure-workbook/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ARM</title>
+      <link>/categories/arm/</link>
+      <pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/arm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Project Bicep</title>
+      <link>/categories/project-bicep/</link>
+      <pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/project-bicep/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>JIT</title>
+      <link>/categories/jit/</link>
+      <pubDate>Mon, 04 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/jit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PSWriteWord</title>
+      <link>/categories/pswriteword/</link>
+      <pubDate>Sun, 19 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/pswriteword/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

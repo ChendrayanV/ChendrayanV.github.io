@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Azure Resource Graph on iAutomate</title>
+    <link>/tags/azure-resource-graph/</link>
+    <description>Recent content in Azure Resource Graph on iAutomate</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 07 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/azure-resource-graph/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Collection of Azure Resource Graph Query</title>
+      <link>/blog/collection-of-azure-resource-graph-query/</link>
+      <pubDate>Sun, 07 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/collection-of-azure-resource-graph-query/</guid>
+      <description>Introduction This blog post is to share the Azure Resource Graph query I developed at my workplace. I have used this with PowerShell and Azure Monitor.
+Azure Virtual Machines PowerState Report $Query = &amp;#34;Resources | where type =~ &amp;#39;microsoft.compute/virtualMachines&amp;#39; | project id, VMName = tostring(name), Location = tostring(location), ResourceGroup = tostring(resourceGroup), SubscriptionId = tostring(subscriptionId), OSType = tostring(properties.storageProfile.osDisk.osType), PowerState = iff( tostring( split( properties.extended.instanceView.powerState.code, &amp;#39;/&amp;#39; )[1] ) != &amp;#39;&amp;#39;, tostring(split(properties.extended.instanceView.powerState.code, &amp;#39;/&amp;#39;)[1]), &amp;#39;transitioning&amp;#39; )&amp;#34; $PageSize = 1000 $Iteration = 0 $SearchParams = @{ Query = $($Query) First = $PageSize } [System.</description>
+    </item>
+    
+    <item>
+      <title>Retrieve unattached Azure VM disks using PowerShell &amp; Azure Resource Graph</title>
+      <link>/blog/retrieve-unattached-azure-vm-disks-using-powershell-azure-resource-graph/</link>
+      <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/retrieve-unattached-azure-vm-disks-using-powershell-azure-resource-graph/</guid>
+      <description>Introduction As part of the cost saving project task, I developed a PowerShell script to retrieve UNATTACHED disks. I used JOIN operator in this code to get a few tag information from the respective resource group.
+ Replace value for the {TAGNAME}.
+ $Query = &amp;#34;Resources | where type =~ &amp;#39;Microsoft.Compute/disks&amp;#39; | where properties.diskState =~ &amp;#39;Unattached&amp;#39; | project id, name, subscriptionId, resourceGroup, diskInGB = properties.diskSizeGB, diskState = properties.diskState, timeCreated = properties.</description>
+    </item>
+    
+  </channel>
+</rss>

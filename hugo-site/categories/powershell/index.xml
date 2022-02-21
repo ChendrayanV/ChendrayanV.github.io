@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PowerShell on iAutomate</title>
+    <link>/categories/powershell/</link>
+    <description>Recent content in PowerShell on iAutomate</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 23 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="/categories/powershell/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Failed SNAT Connections Detected in Azure PowerShell Function</title>
+      <link>/blog/failed-snat-connections-detected-in-azure-powershell-function/</link>
+      <pubDate>Fri, 23 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/failed-snat-connections-detected-in-azure-powershell-function/</guid>
+      <description>Introduction I got stumbled with an issue, &amp;ldquo;Failed SNAT connections detected&amp;rdquo;. Luck favored! Yes, it&amp;rsquo;s a very minimal impact on the environment. However, I took remediation action as earliest as possible. The functions I have developed invokes Azure management API for a business reason. So, I ended up with the error due to the outbound connection. Microsoft recommends below
+ For C# applications, ensure that the HttpClient object is created once and reused again.</description>
+    </item>
+    
+    <item>
+      <title>Azure Event Grid Trigger Output Binding to Table Storage using PowerShell</title>
+      <link>/blog/azure-event-grid-trigger-output-binding-to-table-storage-using-powershell/</link>
+      <pubDate>Thu, 08 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/azure-event-grid-trigger-output-binding-to-table-storage-using-powershell/</guid>
+      <description>Introduction Is it possible to write data to the storage table when the Azure Event Grid trigger is invoked? Yes, it is possible. A colleague requested to log the output of the Azure Functions transactions to the Azure table storage, and my call is to store only the required data. Indeed, cost and readability is the primary concern. With no further ado, let me walk you through the requirement.
+Challenge A colleague tried to implement and reached out to me with a challenge.</description>
+    </item>
+    
+    <item>
+      <title>Using PFX in Azure DevOps to generate an access token and authenticate - PowerShell</title>
+      <link>/blog/using-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell/</link>
+      <pubDate>Thu, 18 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/using-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell/</guid>
+      <description>Of late, I was in need to use a PFX in the Azure DevOps pipeline. Well, it’s not super complex, and having said that, it’s not relatively easy. What do we learn in this blog post? A simple PowerShell script to use a PFX certificate in the Azure DevOps PowerShell script task. Let me try to explain the steps as most effortless as possible.
+ Note: All the parameters CLIENTID, TENANTID , CERTIFICATECREDENTIAL and SECUREFILE are a release variables.</description>
+    </item>
+    
+    <item>
+      <title>Retrieve a list of Azure VM which aren&#39;t protected with just-in-time network access control</title>
+      <link>/blog/list-of-azure-vm-which-has-no-jit-enabled/</link>
+      <pubDate>Mon, 04 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/list-of-azure-vm-which-has-no-jit-enabled/</guid>
+      <description>Introduction I was asked to build a PowerShell script to retrieve Azure virtual machines with no Just In Time (JIT) access enabled. Yes, it’s for the security auditing team. I searched in PowerShell Gallery, TechNet Gallery, and other sources and didn’t find one. So, I developed a script that may help you!
+Solution First, I thought of retrieving virtual machines and query against the JIT Access Policy REST API endpoint. But it&amp;rsquo;s not required!</description>
+    </item>
+    
+  </channel>
+</rss>

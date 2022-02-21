@@ -1,0 +1,1611 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <script type="application/ld+json">
+    {
+        "@context" : "http://schema.org",
+        "@type" : "BlogPosting",
+        "mainEntityOfPage": {
+             "@type": "WebPage",
+             "@id": "\/"
+        },
+        "articleSection" : "blog",
+        "name" : "Using PFX in Azure DevOps to generate an access token and authenticate - PowerShell",
+        "headline" : "Using PFX in Azure DevOps to generate an access token and authenticate - PowerShell",
+        "description" : "Authenticate using Certificates through code!",
+        "inLanguage" : "en",
+        "author" : "",
+        "creator" : "",
+        "publisher": "",
+        "accountablePerson" : "",
+        "copyrightHolder" : "",
+        "copyrightYear" : "2021",
+        "datePublished": "2021-03-18 00:00:00 \u002b0000 UTC",
+        "dateModified" : "2021-03-18 00:00:00 \u002b0000 UTC",
+        "url" : "\/blog\/using-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell\/",
+        "wordCount" : "327",
+        "keywords" : [ "Blog" ]
+    }
+    </script>
+        
+            
+                <title>Using PFX in Azure DevOps to generate an access token and authenticate - PowerShell</title>
+            
+        
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="generator" content="Hugo 0.92.2" />
+        
+
+
+        
+            <meta name="author" content="Chendrayan Venkatesan">
+        
+        
+            <meta name="description" content="Authenticate using Certificates through code!">
+        
+
+        <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Using PFX in Azure DevOps to generate an access token and authenticate - PowerShell"/>
+<meta name="twitter:description" content="Authenticate using Certificates through code!"/>
+<meta name="twitter:site" content="@chendrayanv"/>
+
+        <meta property="og:title" content="Using PFX in Azure DevOps to generate an access token and authenticate - PowerShell" />
+<meta property="og:description" content="Authenticate using Certificates through code!" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/blog/using-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2021-03-18T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-03-18T00:00:00+00:00" />
+
+
+        <meta property="og:image" content="//images/logo.png">
+        <meta property="og:image:type" content="image/png">
+        <meta property="og:image:width" content="512">
+        <meta property="og:image:height" content="512">
+        <meta itemprop="name" content="Using PFX in Azure DevOps to generate an access token and authenticate - PowerShell">
+<meta itemprop="description" content="Authenticate using Certificates through code!"><meta itemprop="datePublished" content="2021-03-18T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-03-18T00:00:00+00:00" />
+<meta itemprop="wordCount" content="327">
+<meta itemprop="keywords" content="" />
+        
+
+        
+            
+        
+
+        
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css">
+            <link rel="stylesheet" href="/css/main.css">
+            <link rel="stylesheet" href="/css/add-on.css">
+            <link rel="stylesheet" href="/css/academicons.min.css">
+        
+
+        
+            
+                
+            
+        
+
+
+  
+    
+    <link href='//cdn.bootcss.com/highlight.js/9.11.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+  
+
+
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-186894445-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+    </head>
+    <body>
+
+      
+      <div id="wrapper">
+
+    
+    
+<header id="header">
+    
+      <h1><a href="/">blog</a></h1>
+    
+
+    <nav class="links">
+        <ul>
+            
+                <li>
+                    <a href="/">
+                            <i class="fa fa-home">&nbsp;</i>Home
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/about/">
+                            <i class="fa fa-id-card-o">&nbsp;</i>About
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/blog/">
+                            <i class="fa fa-newspaper-o">&nbsp;</i>Blog
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/itemized/">
+                            <i class="fa fa-list">&nbsp;</i>Itemized
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/categories/">
+                            <i class="fa fa-sitemap">&nbsp;</i>Categories
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/contact/">
+                            <i class="fa fa-envelope-o">&nbsp;</i>Contact
+                    </a>
+                </li>
+            
+        </ul>
+    </nav>
+    <nav class="main">
+        <ul>
+            
+            <li id="share-nav" class="share-menu" style="display:none;">
+                <a class="fa-share-alt" href="#share-menu">Share</a>
+            </li>
+            
+            <li class="search">
+                <a class="fa-search" href="#search">Search</a>
+                <form id="search" method="get" action="//google.com/search">
+                    <input type="text" name="q" placeholder="Search" />
+                    <input type="hidden" name="as_sitesearch" value="/">
+                </form>
+            </li>
+            <li class="menu">
+                <a class="fa-bars" href="#menu">Menu</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+<section id="menu">
+
+    
+        <section>
+            <form class="search" method="get" action="//google.com/search">
+                <input type="text" name="q" placeholder="Search" />
+                <input type="hidden" name="as_sitesearch" value="/">
+            </form>
+        </section>
+
+    
+        <section>
+            <ul class="links">
+                
+                    <li>
+                        <a href="/">
+                            <h3>
+                                <i class="fa fa-home">&nbsp;</i>Home
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/about/">
+                            <h3>
+                                <i class="fa fa-id-card-o">&nbsp;</i>About
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/blog/">
+                            <h3>
+                                <i class="fa fa-newspaper-o">&nbsp;</i>Blog
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/itemized/">
+                            <h3>
+                                <i class="fa fa-list">&nbsp;</i>Itemized
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/categories/">
+                            <h3>
+                                <i class="fa fa-sitemap">&nbsp;</i>Categories
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/contact/">
+                            <h3>
+                                <i class="fa fa-envelope-o">&nbsp;</i>Contact
+                            </h3>
+                        </a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        <section class="recent-posts">
+            <div class="mini-posts">
+                <header>
+                    <h3>Recent Posts</h3>
+                </header>
+                
+
+                
+                    
+                
+
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/blog/store-dynamic-data-in-an-azure-blob-storage-using-powershell-with-dapr/">Store Dynamic Data in an Azure Blob Storage using PowerShell with Dapr</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2022-02-21'>
+                                    February 21, 2022</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="/blog/store-dynamic-data-in-an-azure-blob-storage-using-powershell-with-dapr/" class="image featured">
+            <img src="/img/2022/02/DAPR-OP-BINDING.png" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/blog/failed-snat-connections-detected-in-azure-powershell-function/">Failed SNAT Connections Detected in Azure PowerShell Function</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2021-04-23'>
+                                    April 23, 2021</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="/blog/failed-snat-connections-detected-in-azure-powershell-function/" class="image featured">
+            <img src="/img/2021/04/HTTPClient.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/blog/azure-event-grid-trigger-output-binding-to-table-storage-using-powershell/">Azure Event Grid Trigger Output Binding to Table Storage using PowerShell</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2021-04-08'>
+                                    April 8, 2021</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="/blog/azure-event-grid-trigger-output-binding-to-table-storage-using-powershell/" class="image featured">
+            <img src="/img/2021/04/Table-Storage.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/blog/azure-functions-real-world-example-using-event-grid-trigger-with-powershell/">Azure Functions – Real-world example using Event Grid Trigger with PowerShell</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2021-04-03'>
+                                    April 3, 2021</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="/blog/azure-functions-real-world-example-using-event-grid-trigger-with-powershell/" class="image featured">
+            <img src="/img/2021/04/Blog-Az-Event-Grid.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/blog/using-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell/">Using PFX in Azure DevOps to generate an access token and authenticate - PowerShell</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2021-03-18'>
+                                    March 18, 2021</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="/blog/using-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell/" class="image featured">
+            <img src="/img/2021/03/access_token_pfx_cert.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+
+                
+                    <a href=
+                        
+                            /blog/
+                        
+                        class="button">View more posts</a>
+                
+            </div>
+        </section>
+
+    
+        
+</section>
+
+    <section id="share-menu">
+    <section id="social-share-nav">
+        <ul class="links">
+            <header>
+                <h3>Share this post <i class="fa fa-smile-o"></i></h3>
+            </header>
+            
+
+
+
+<li>
+  <a href="//twitter.com/share?url=%2fblog%2fusing-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell%2f&amp;text=Using%20PFX%20in%20Azure%20DevOps%20to%20generate%20an%20access%20token%20and%20authenticate%20-%20PowerShell&amp;via=chendrayanv" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//plus.google.com/share?url=%2fblog%2fusing-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+  </a>
+</li>
+
+
+
+
+
+<li>
+  <a href="//www.facebook.com/sharer/sharer.php?u=%2fblog%2fusing-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//reddit.com/submit?url=%2fblog%2fusing-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell%2f&amp;title=Using%20PFX%20in%20Azure%20DevOps%20to%20generate%20an%20access%20token%20and%20authenticate%20-%20PowerShell" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.linkedin.com/shareArticle?url=%2fblog%2fusing-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell%2f&amp;title=Using%20PFX%20in%20Azure%20DevOps%20to%20generate%20an%20access%20token%20and%20authenticate%20-%20PowerShell" target="_blank" class="share-btn linkedin">
+      <i class="fa fa-linkedin"></i>
+      <p>LinkedIn</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.stumbleupon.com/submit?url=%2fblog%2fusing-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell%2f&amp;title=Using%20PFX%20in%20Azure%20DevOps%20to%20generate%20an%20access%20token%20and%20authenticate%20-%20PowerShell" target="_blank" class="share-btn stumbleupon">
+    <i class="fa fa-stumbleupon"></i>
+    <p>StumbleUpon</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.pinterest.com/pin/create/button/?url=%2fblog%2fusing-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell%2f&amp;description=Using%20PFX%20in%20Azure%20DevOps%20to%20generate%20an%20access%20token%20and%20authenticate%20-%20PowerShell" target="_blank" class="share-btn pinterest">
+    <i class="fa fa-pinterest-p"></i>
+    <p>Pinterest</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="mailto:?subject=Check out this post by Chendrayan%20Venkatesan&amp;body=%2fblog%2fusing-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+  </a>
+</li>
+
+
+        </ul>
+    </section>
+</section>
+
+    
+    <div id="main">
+        
+        
+        <article class="post">
+  <header>
+    <div class="title">
+        
+            <h1><a href="/blog/using-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell/">Using PFX in Azure DevOps to generate an access token and authenticate - PowerShell</a></h1>
+            
+        
+        
+            <p>Authenticate using Certificates through code!</p>
+        
+    </div>
+    <div class="meta">
+        
+
+        <time class="published"
+            datetime='2021-03-18'>
+            March 18, 2021</time>
+        <span class="author">Chendrayan Venkatesan</span>
+        
+            <p>2 minute read</p>
+        
+        
+    </div>
+</header>
+
+
+  
+    <section id="social-share">
+      <ul class="icons">
+        
+
+
+
+<li>
+  <a href="//twitter.com/share?url=%2fblog%2fusing-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell%2f&amp;text=Using%20PFX%20in%20Azure%20DevOps%20to%20generate%20an%20access%20token%20and%20authenticate%20-%20PowerShell&amp;via=chendrayanv" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//plus.google.com/share?url=%2fblog%2fusing-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+  </a>
+</li>
+
+
+
+
+
+<li>
+  <a href="//www.facebook.com/sharer/sharer.php?u=%2fblog%2fusing-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//reddit.com/submit?url=%2fblog%2fusing-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell%2f&amp;title=Using%20PFX%20in%20Azure%20DevOps%20to%20generate%20an%20access%20token%20and%20authenticate%20-%20PowerShell" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.linkedin.com/shareArticle?url=%2fblog%2fusing-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell%2f&amp;title=Using%20PFX%20in%20Azure%20DevOps%20to%20generate%20an%20access%20token%20and%20authenticate%20-%20PowerShell" target="_blank" class="share-btn linkedin">
+      <i class="fa fa-linkedin"></i>
+      <p>LinkedIn</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.stumbleupon.com/submit?url=%2fblog%2fusing-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell%2f&amp;title=Using%20PFX%20in%20Azure%20DevOps%20to%20generate%20an%20access%20token%20and%20authenticate%20-%20PowerShell" target="_blank" class="share-btn stumbleupon">
+    <i class="fa fa-stumbleupon"></i>
+    <p>StumbleUpon</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.pinterest.com/pin/create/button/?url=%2fblog%2fusing-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell%2f&amp;description=Using%20PFX%20in%20Azure%20DevOps%20to%20generate%20an%20access%20token%20and%20authenticate%20-%20PowerShell" target="_blank" class="share-btn pinterest">
+    <i class="fa fa-pinterest-p"></i>
+    <p>Pinterest</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="mailto:?subject=Check out this post by Chendrayan%20Venkatesan&amp;body=%2fblog%2fusing-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+  </a>
+</li>
+
+
+      </ul>
+    </section>
+  
+
+  
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="/blog/using-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell/" class="image featured">
+            <img src="/img/2021/03/access_token_pfx_cert.jpg" alt="">
+        </a>
+    
+
+
+  <div id="content">
+    <p>Of late, I was in need to use a PFX in the Azure DevOps pipeline. Well, it’s not super complex, and having said that, it’s not relatively easy. What do we learn in this blog post? A simple PowerShell script to use a PFX certificate in the Azure DevOps PowerShell script task. Let me try to explain the steps as most effortless as possible.</p>
+<blockquote>
+<p>Note: All the parameters <code>CLIENTID</code>, <code>TENANTID</code> , <code>CERTIFICATECREDENTIAL</code> and <code>SECUREFILE</code> are a release variables. So, you need to set it up-front.</p>
+</blockquote>
+<h3 id="step-1">STEP 1</h3>
+<p>Install the below packages in any desired location</p>
+<pre><code>1. Microsoft.IdentityModel.JsonWebTokens.6.9.0
+2. Microsoft.IdentityModel.Logging.6.9.0
+3. Microsoft.IdentityModel.Tokens.6.9.0
+</code></pre>
+<p>You can choose to install from the Nuget directly or store in the local folder and use it in your code. In my case, I stored it in the assemblies folder. Here is the project scaffolding.</p>
+<figure><img src="/img/2021/03/Scaffolding.PNG"/><figcaption>
+            <h4>Scaffolding</h4>
+        </figcaption>
+</figure>
+
+<h3 id="step-2">Step 2</h3>
+<p>The below snippet is to load the assemblies in the current execution context.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#66d9ef">[System.Reflection.Assembly]</span>::LoadFrom((Get-ChildItem .\ASSEMBLIES\Microsoft.IdentityModel.JsonWebTokens.6.9.0\lib\net45\Microsoft.IdentityModel.JsonWebTokens.dll).fullname)
+<span style="color:#66d9ef">[System.Reflection.Assembly]</span>::LoadFrom((Get-ChildItem .\ASSEMBLIES\Microsoft.IdentityModel.Logging.6.9.0\lib\net45\Microsoft.IdentityModel.Logging.dll).fullname)
+<span style="color:#66d9ef">[System.Reflection.Assembly]</span>::LoadFrom((Get-ChildItem .\ASSEMBLIES\Microsoft.IdentityModel.Tokens.6.9.0\lib\net45\Microsoft.IdentityModel.Tokens.dll).fullname)
+</code></pre></div><h3 id="step-3">Step 3</h3>
+<p>Load the PFX file from the secure file.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">$SecureFile = $SECUREFILE
+$TempDirectory = $ENV:AGENT_TEMPDIRECTORY
+$PFXFilePath = Join-Path $TempDirectory $SecureFile
+$X509Certificate2 = <span style="color:#66d9ef">[System.Security.Cryptography.X509Certificates.X509Certificate2]</span>::new($PFXFilePath, <span style="color:#e6db74">&#34;</span>$($CERTIFICATECREDENTIAL)<span style="color:#e6db74">&#34;</span>)
+</code></pre></div><h3 id="step-4">Step 4</h3>
+<p>Client Assertion – This is a bit tricky, at least for me, because I spent hours understanding. Here is the <a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/msal-net-client-assertions">documentation</a> for your reference.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">$Aud = <span style="color:#e6db74">&#34;https://login.microsoftonline.com/</span>$($TENANTID)<span style="color:#e6db74">/oauth2/token&#34;</span>
+$X509Certificate2 = <span style="color:#66d9ef">[System.Security.Cryptography.X509Certificates.X509Certificate2]</span>::new($PFXFilePath, <span style="color:#e6db74">&#34;</span>$($CERTIFICATECREDENTIAL)<span style="color:#e6db74">&#34;</span>)
+$Claims = <span style="color:#66d9ef">[System.Collections.Generic.Dictionary[string, object]]</span>::new()
+$Claims[<span style="color:#e6db74">&#39;aud&#39;</span>] = $Aud
+$Claims[<span style="color:#e6db74">&#39;iss&#39;</span>] = $CLIENTID
+$Claims[<span style="color:#e6db74">&#39;sub&#39;</span>] = $CLIENTID
+$Claims[<span style="color:#e6db74">&#39;jti&#39;</span>] = <span style="color:#66d9ef">[GUID]</span>::NewGuid().ToString(<span style="color:#e6db74">&#39;D&#39;</span>)
+$SecurityTokenDescriptor = <span style="color:#66d9ef">[Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor]</span>::new()
+$SecurityTokenDescriptor.Claims = $Claims
+$SecurityTokenDescriptor.SigningCredentials = <span style="color:#66d9ef">[Microsoft.IdentityModel.Tokens.X509SigningCredentials]</span>::new($X509Certificate2, <span style="color:#e6db74">&#39;RS256&#39;</span>)
+$Handler = <span style="color:#66d9ef">[Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler]</span>::new()
+$CreateToken = $Handler.CreateToken($SecurityTokenDescriptor)
+$Token = <span style="color:#66d9ef">[Microsoft.IdentityModel.JsonWebTokens.JsonWebToken]</span>::new($CreateToken)
+</code></pre></div><h3 id="step-5">Step 5</h3>
+<p>Retrieve bearer token</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">$Body = @{
+    <span style="color:#e6db74">&#34;resource&#34;</span>              = <span style="color:#e6db74">&#34;https://management.core.windows.net/&#34;</span>
+    <span style="color:#e6db74">&#34;client_id&#34;</span>             = $ClientID
+    <span style="color:#e6db74">&#34;tenant_id&#34;</span>             = $TenantID
+    <span style="color:#e6db74">&#34;grant_type&#34;</span>            = <span style="color:#e6db74">&#34;client_credentials&#34;</span>
+    <span style="color:#e6db74">&#34;client_assertion_type&#34;</span> = <span style="color:#e6db74">&#34;urn:ietf:params:oauth:client-assertion-type:jwt-bearer&#34;</span>
+    <span style="color:#e6db74">&#34;client_assertion&#34;</span>      = $Token.EncodedToken
+}
+$Result = Invoke-RestMethod -Uri https<span style="color:#960050;background-color:#1e0010">:</span>//login.microsoftonline.com/$($TENANTID)/oauth2/token `
+                            -Method Post `
+                            -Body $Body `
+                            -ContentType <span style="color:#e6db74">&#39;application/x-www-form-urlencoded&#39;</span>
+</code></pre></div><p>Yes, this can be used to access the resources. Now, you may ask, <em><strong>Why not Azure PowerShell Task in Az Do?</strong></em> There are some use cases where I need to authenticate to access resources.</p>
+
+  </div>
+
+  <footer>
+    <ul class="stats">
+  <li class="categories">
+    <ul>
+        
+            
+            
+                <i class="fa fa-folder"></i>
+                
+                
+                <li><a class="article-category-link" href="/categories/azure">Azure</a></li>
+                
+                
+                <li><a class="article-category-link" href="/categories/azure-devops">Azure DevOps</a></li>
+                
+                
+                <li><a class="article-category-link" href="/categories/powershell">PowerShell</a></li>
+                
+                
+                <li><a class="article-category-link" href="/categories/client-assertion">Client Assertion</a></li>
+                
+            
+        
+    </ul>
+  </li>
+  <li class="tags">
+    <ul>
+        
+    </ul>
+  </li>
+</ul>
+
+  </footer>
+
+</article>
+
+    <article class="post">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "shortname" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </article>
+
+
+<ul class="actions pagination">
+    
+        <li><a href="/blog/retrieve-azure-runbook-job-report-using-rest-api-with-powershell/"
+                class="button big previous">Retrieve Azure Runbook Job Report using REST API with PowerShell</a></li>
+    
+
+    
+        <li><a href="/blog/azure-functions-real-world-example-using-event-grid-trigger-with-powershell/"
+                class="button big next">Azure Functions – Real-world example using Event Grid Trigger with PowerShell</a></li>
+    
+</ul>
+
+
+    </div>
+    
+<section id="sidebar">
+
+  
+  <section id="intro">
+    
+    
+      
+        <a href='/'><img src="/img/main/ChenV.jpg" class="intro-circle" width="200" alt="Hugo Future Imperfect" /></a>
+      
+    
+    
+      <header>
+        <h2>Chendrayan Venkatesan</h2>
+        <p>Views are of my own</p>
+      </header>
+    
+    
+      <ul class="icons">
+        
+          
+    <li><a href="/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
+
+
+        
+        
+  <li><a href="//github.com/chendrayanv" target="_blank" title="GitHub" class="fa fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="//linkedin.com/in/chendrayanv" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
+
+
+
+
+
+
+
+  <li><a href="//xing.com/profile/Chendrayan_Venkatesan" target="_blank" title="Xing" class="fa fa-xing"></a></li>
+
+
+
+
+
+  <li><a href="//facebook.com/chendrayanv" target="_blank" title="Facebook" class="fa fa-facebook"></a></li>
+
+
+
+
+
+
+
+
+
+  <li><a href="//youtube.com/https://www.youtube.com/channel/UC22S6qPibfs1xa3MIII0JNw" target="_blank" title="YouTube" class="fa fa-youtube"></a></li>
+
+
+
+
+
+  <li><a href="//api.whatsapp.com/send?phone=%2b91%2096201%2078698" target="_blank" title="WhatsApp" class="fa fa-whatsapp"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="//twitter.com/chendrayanv" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
+
+
+
+  <li><a href="skype:chendrayan.venkatesan?userinfo" target="_blank" title="Skype" class="fa fa-skype"></a></li>
+
+
+
+
+
+
+
+  <li><a href="//telegram.me/&#43;91%2096201%2078698" target="_blank" title="telegram" class="fa fa-telegram"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="mailto:chendrayan.exchange@hotmail.com" title="Email" class="fa fa-envelope"></a></li>
+
+
+      </ul>
+    
+  </section>
+
+  
+  <section class="recent-posts">
+    <div class="mini-posts">
+      <header>
+        <h3>Recent Posts</h3>
+      </header>
+      <div class="posts-container">
+        
+
+        
+          
+        
+
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/blog/store-dynamic-data-in-an-azure-blob-storage-using-powershell-with-dapr/">Store Dynamic Data in an Azure Blob Storage using PowerShell with Dapr</a>
+              </h3>
+              
+              <time class="published" datetime='2022-02-21'>
+                February 21, 2022
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="/blog/store-dynamic-data-in-an-azure-blob-storage-using-powershell-with-dapr/" class="image featured">
+            <img src="/img/2022/022022/02/DAPR-OP-BINDING.png" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/blog/failed-snat-connections-detected-in-azure-powershell-function/">Failed SNAT Connections Detected in Azure PowerShell Function</a>
+              </h3>
+              
+              <time class="published" datetime='2021-04-23'>
+                April 23, 2021
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="/blog/failed-snat-connections-detected-in-azure-powershell-function/" class="image featured">
+            <img src="/img/2021/042021/04/HTTPClient.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/blog/azure-event-grid-trigger-output-binding-to-table-storage-using-powershell/">Azure Event Grid Trigger Output Binding to Table Storage using PowerShell</a>
+              </h3>
+              
+              <time class="published" datetime='2021-04-08'>
+                April 8, 2021
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="/blog/azure-event-grid-trigger-output-binding-to-table-storage-using-powershell/" class="image featured">
+            <img src="/img/2021/04/Table-Storage.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/blog/azure-functions-real-world-example-using-event-grid-trigger-with-powershell/">Azure Functions – Real-world example using Event Grid Trigger with PowerShell</a>
+              </h3>
+              
+              <time class="published" datetime='2021-04-03'>
+                April 3, 2021
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="/blog/azure-functions-real-world-example-using-event-grid-trigger-with-powershell/" class="image featured">
+            <img src="/img/2021/04/Blog-Az-Event-Grid.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/blog/using-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell/">Using PFX in Azure DevOps to generate an access token and authenticate - PowerShell</a>
+              </h3>
+              
+              <time class="published" datetime='2021-03-18'>
+                March 18, 2021
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="/blog/using-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell/" class="image featured">
+            <img src="/img/2021/032021/03/access_token_pfx_cert.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+      </div>
+
+      
+        <a href=
+          
+            /blog/
+          
+        class="button">View more posts</a>
+      
+    </div>
+  </section>
+
+  
+  
+  
+  
+  
+    <section id="categories">
+      <header>
+        <h3>
+          <a href="/categories/">Categories</a>
+        </h3>
+      </header>
+        
+          
+        
+
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/azure/">azure</a>
+                <span style="float:right;">10</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/azure-devops/">azure-devops</a>
+                <span style="float:right;">5</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/powershell/">powershell</a>
+                <span style="float:right;">4</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/azure-function/">azure-function</a>
+                <span style="float:right;">2</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/azure-functions/">azure-functions</a>
+                <span style="float:right;">2</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/arm/">arm</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/azure-automation-account/">azure-automation-account</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/azure-monitor/">azure-monitor</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/azure-resource-graph/">azure-resource-graph</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/azure-runbook-report/">azure-runbook-report</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/azure-workbook/">azure-workbook</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/client-assertion/">client-assertion</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/event-grid-trigger/">event-grid-trigger</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/jit/">jit</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/powershell-core/">powershell-core</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/project-bicep/">project-bicep</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/pswriteword/">pswriteword</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/snat-port-exhausted/">snat-port-exhausted</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+    </section>
+  
+  
+
+  
+  
+    <section id="mini-bio">
+      <h3>About</h3>
+      <p>Automation, Workflows, Integrations, Orchestrations, and Microsoft Technologies are his interests. His focus is to transform the organization model to achieve key business objectives such as enhanced customer focus, seamless end-to-end management, and integrated service capability</p>
+      <a href="/about/" class="button">Learn More</a>
+    </section>
+  
+
+  
+  <section id="footer">
+    
+      <ul class="icons">
+        
+          
+    <li><a href="/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
+
+
+        
+        
+  <li><a href="//github.com/chendrayanv" target="_blank" title="GitHub" class="fa fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="//linkedin.com/in/chendrayanv" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
+
+
+
+
+
+
+
+  <li><a href="//xing.com/profile/Chendrayan_Venkatesan" target="_blank" title="Xing" class="fa fa-xing"></a></li>
+
+
+
+
+
+  <li><a href="//facebook.com/chendrayanv" target="_blank" title="Facebook" class="fa fa-facebook"></a></li>
+
+
+
+
+
+
+
+
+
+  <li><a href="//youtube.com/https://www.youtube.com/channel/UC22S6qPibfs1xa3MIII0JNw" target="_blank" title="YouTube" class="fa fa-youtube"></a></li>
+
+
+
+
+
+  <li><a href="//api.whatsapp.com/send?phone=%2b91%2096201%2078698" target="_blank" title="WhatsApp" class="fa fa-whatsapp"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="//twitter.com/chendrayanv" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
+
+
+
+  <li><a href="skype:chendrayan.venkatesan?userinfo" target="_blank" title="Skype" class="fa fa-skype"></a></li>
+
+
+
+
+
+
+
+  <li><a href="//telegram.me/&#43;91%2096201%2078698" target="_blank" title="telegram" class="fa fa-telegram"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="mailto:chendrayan.exchange@hotmail.com" title="Email" class="fa fa-envelope"></a></li>
+
+
+      </ul>
+    
+    <p class="copyright">
+      
+        &copy; 2022
+        
+          iAutomate
+        
+      .
+      Powered by <a href="//gohugo.io" target="_blank">Hugo</a>
+    </p>
+  </section>
+</section>
+
+    </div>
+    <a id="back-to-top" href="#" class="fa fa-arrow-up fa-border fa-2x"></a>
+    
+
+    
+      
+    
+
+    
+      
+      
+      
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/highlight.min.js"></script>
+        
+        
+        
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/r.min.js"></script>
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/yaml.min.js"></script>
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/css.min.js"></script>
+        <script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+      
+    
+    
+    
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
+      <script src="/js/util.js"></script>
+      <script src="/js/main.js"></script>
+      <script src="/js/backToTop.js"></script>
+    
+
+    
+      
+        
+      
+    
+
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+      <script src="//yihui.name/js/math-code.js"></script>
+<script async
+src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+  </body>
+</html>
+

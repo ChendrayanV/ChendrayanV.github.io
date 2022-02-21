@@ -1,0 +1,1670 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <script type="application/ld+json">
+    {
+        "@context" : "http://schema.org",
+        "@type" : "BlogPosting",
+        "mainEntityOfPage": {
+             "@type": "WebPage",
+             "@id": "\/"
+        },
+        "articleSection" : "blog",
+        "name" : "Deploy Azure Function App using Project Bicep",
+        "headline" : "Deploy Azure Function App using Project Bicep",
+        "description" : "project bicep ... an arm dsl",
+        "inLanguage" : "en",
+        "author" : "",
+        "creator" : "",
+        "publisher": "",
+        "accountablePerson" : "",
+        "copyrightHolder" : "",
+        "copyrightYear" : "2021",
+        "datePublished": "2021-01-07 00:00:00 \u002b0000 UTC",
+        "dateModified" : "2021-01-07 00:00:00 \u002b0000 UTC",
+        "url" : "\/blog\/deploy-azure-function-app-using-project-bicep\/",
+        "wordCount" : "309",
+        "keywords" : [ "Blog" ]
+    }
+    </script>
+        
+            
+                <title>Deploy Azure Function App using Project Bicep</title>
+            
+        
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="generator" content="Hugo 0.92.2" />
+        
+
+
+        
+            <meta name="author" content="Chendrayan Venkatesan">
+        
+        
+            <meta name="description" content="project bicep ... an arm dsl">
+        
+
+        <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Deploy Azure Function App using Project Bicep"/>
+<meta name="twitter:description" content="project bicep ... an arm dsl"/>
+<meta name="twitter:site" content="@chendrayanv"/>
+
+        <meta property="og:title" content="Deploy Azure Function App using Project Bicep" />
+<meta property="og:description" content="project bicep ... an arm dsl" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/blog/deploy-azure-function-app-using-project-bicep/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2021-01-07T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-01-07T00:00:00+00:00" />
+
+
+        <meta property="og:image" content="//images/logo.png">
+        <meta property="og:image:type" content="image/png">
+        <meta property="og:image:width" content="512">
+        <meta property="og:image:height" content="512">
+        <meta itemprop="name" content="Deploy Azure Function App using Project Bicep">
+<meta itemprop="description" content="project bicep ... an arm dsl"><meta itemprop="datePublished" content="2021-01-07T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-01-07T00:00:00+00:00" />
+<meta itemprop="wordCount" content="309">
+<meta itemprop="keywords" content="" />
+        
+
+        
+            
+        
+
+        
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css">
+            <link rel="stylesheet" href="/css/main.css">
+            <link rel="stylesheet" href="/css/add-on.css">
+            <link rel="stylesheet" href="/css/academicons.min.css">
+        
+
+        
+            
+                
+            
+        
+
+
+  
+    
+    <link href='//cdn.bootcss.com/highlight.js/9.11.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+  
+
+
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-186894445-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+    </head>
+    <body>
+
+      
+      <div id="wrapper">
+
+    
+    
+<header id="header">
+    
+      <h1><a href="/">blog</a></h1>
+    
+
+    <nav class="links">
+        <ul>
+            
+                <li>
+                    <a href="/">
+                            <i class="fa fa-home">&nbsp;</i>Home
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/about/">
+                            <i class="fa fa-id-card-o">&nbsp;</i>About
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/blog/">
+                            <i class="fa fa-newspaper-o">&nbsp;</i>Blog
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/itemized/">
+                            <i class="fa fa-list">&nbsp;</i>Itemized
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/categories/">
+                            <i class="fa fa-sitemap">&nbsp;</i>Categories
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/contact/">
+                            <i class="fa fa-envelope-o">&nbsp;</i>Contact
+                    </a>
+                </li>
+            
+        </ul>
+    </nav>
+    <nav class="main">
+        <ul>
+            
+            <li id="share-nav" class="share-menu" style="display:none;">
+                <a class="fa-share-alt" href="#share-menu">Share</a>
+            </li>
+            
+            <li class="search">
+                <a class="fa-search" href="#search">Search</a>
+                <form id="search" method="get" action="//google.com/search">
+                    <input type="text" name="q" placeholder="Search" />
+                    <input type="hidden" name="as_sitesearch" value="/">
+                </form>
+            </li>
+            <li class="menu">
+                <a class="fa-bars" href="#menu">Menu</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+<section id="menu">
+
+    
+        <section>
+            <form class="search" method="get" action="//google.com/search">
+                <input type="text" name="q" placeholder="Search" />
+                <input type="hidden" name="as_sitesearch" value="/">
+            </form>
+        </section>
+
+    
+        <section>
+            <ul class="links">
+                
+                    <li>
+                        <a href="/">
+                            <h3>
+                                <i class="fa fa-home">&nbsp;</i>Home
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/about/">
+                            <h3>
+                                <i class="fa fa-id-card-o">&nbsp;</i>About
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/blog/">
+                            <h3>
+                                <i class="fa fa-newspaper-o">&nbsp;</i>Blog
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/itemized/">
+                            <h3>
+                                <i class="fa fa-list">&nbsp;</i>Itemized
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/categories/">
+                            <h3>
+                                <i class="fa fa-sitemap">&nbsp;</i>Categories
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/contact/">
+                            <h3>
+                                <i class="fa fa-envelope-o">&nbsp;</i>Contact
+                            </h3>
+                        </a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        <section class="recent-posts">
+            <div class="mini-posts">
+                <header>
+                    <h3>Recent Posts</h3>
+                </header>
+                
+
+                
+                    
+                
+
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/blog/store-dynamic-data-in-an-azure-blob-storage-using-powershell-with-dapr/">Store Dynamic Data in an Azure Blob Storage using PowerShell with Dapr</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2022-02-21'>
+                                    February 21, 2022</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="/blog/store-dynamic-data-in-an-azure-blob-storage-using-powershell-with-dapr/" class="image featured">
+            <img src="/img/2022/02/DAPR-OP-BINDING.png" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/blog/failed-snat-connections-detected-in-azure-powershell-function/">Failed SNAT Connections Detected in Azure PowerShell Function</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2021-04-23'>
+                                    April 23, 2021</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="/blog/failed-snat-connections-detected-in-azure-powershell-function/" class="image featured">
+            <img src="/img/2021/04/HTTPClient.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/blog/azure-event-grid-trigger-output-binding-to-table-storage-using-powershell/">Azure Event Grid Trigger Output Binding to Table Storage using PowerShell</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2021-04-08'>
+                                    April 8, 2021</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="/blog/azure-event-grid-trigger-output-binding-to-table-storage-using-powershell/" class="image featured">
+            <img src="/img/2021/04/Table-Storage.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/blog/azure-functions-real-world-example-using-event-grid-trigger-with-powershell/">Azure Functions – Real-world example using Event Grid Trigger with PowerShell</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2021-04-03'>
+                                    April 3, 2021</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="/blog/azure-functions-real-world-example-using-event-grid-trigger-with-powershell/" class="image featured">
+            <img src="/img/2021/04/Blog-Az-Event-Grid.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/blog/using-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell/">Using PFX in Azure DevOps to generate an access token and authenticate - PowerShell</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2021-03-18'>
+                                    March 18, 2021</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="/blog/using-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell/" class="image featured">
+            <img src="/img/2021/03/access_token_pfx_cert.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+
+                
+                    <a href=
+                        
+                            /blog/
+                        
+                        class="button">View more posts</a>
+                
+            </div>
+        </section>
+
+    
+        
+</section>
+
+    <section id="share-menu">
+    <section id="social-share-nav">
+        <ul class="links">
+            <header>
+                <h3>Share this post <i class="fa fa-smile-o"></i></h3>
+            </header>
+            
+
+
+
+<li>
+  <a href="//twitter.com/share?url=%2fblog%2fdeploy-azure-function-app-using-project-bicep%2f&amp;text=Deploy%20Azure%20Function%20App%20using%20Project%20Bicep&amp;via=chendrayanv" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//plus.google.com/share?url=%2fblog%2fdeploy-azure-function-app-using-project-bicep%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+  </a>
+</li>
+
+
+
+
+
+<li>
+  <a href="//www.facebook.com/sharer/sharer.php?u=%2fblog%2fdeploy-azure-function-app-using-project-bicep%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//reddit.com/submit?url=%2fblog%2fdeploy-azure-function-app-using-project-bicep%2f&amp;title=Deploy%20Azure%20Function%20App%20using%20Project%20Bicep" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.linkedin.com/shareArticle?url=%2fblog%2fdeploy-azure-function-app-using-project-bicep%2f&amp;title=Deploy%20Azure%20Function%20App%20using%20Project%20Bicep" target="_blank" class="share-btn linkedin">
+      <i class="fa fa-linkedin"></i>
+      <p>LinkedIn</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.stumbleupon.com/submit?url=%2fblog%2fdeploy-azure-function-app-using-project-bicep%2f&amp;title=Deploy%20Azure%20Function%20App%20using%20Project%20Bicep" target="_blank" class="share-btn stumbleupon">
+    <i class="fa fa-stumbleupon"></i>
+    <p>StumbleUpon</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.pinterest.com/pin/create/button/?url=%2fblog%2fdeploy-azure-function-app-using-project-bicep%2f&amp;description=Deploy%20Azure%20Function%20App%20using%20Project%20Bicep" target="_blank" class="share-btn pinterest">
+    <i class="fa fa-pinterest-p"></i>
+    <p>Pinterest</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="mailto:?subject=Check out this post by Chendrayan%20Venkatesan&amp;body=%2fblog%2fdeploy-azure-function-app-using-project-bicep%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+  </a>
+</li>
+
+
+        </ul>
+    </section>
+</section>
+
+    
+    <div id="main">
+        
+        
+        <article class="post">
+  <header>
+    <div class="title">
+        
+            <h1><a href="/blog/deploy-azure-function-app-using-project-bicep/">Deploy Azure Function App using Project Bicep</a></h1>
+            
+        
+        
+            <p>project bicep ... an arm dsl</p>
+        
+    </div>
+    <div class="meta">
+        
+
+        <time class="published"
+            datetime='2021-01-07'>
+            January 7, 2021</time>
+        <span class="author">Chendrayan Venkatesan</span>
+        
+            <p>2 minute read</p>
+        
+        
+    </div>
+</header>
+
+
+  
+    <section id="social-share">
+      <ul class="icons">
+        
+
+
+
+<li>
+  <a href="//twitter.com/share?url=%2fblog%2fdeploy-azure-function-app-using-project-bicep%2f&amp;text=Deploy%20Azure%20Function%20App%20using%20Project%20Bicep&amp;via=chendrayanv" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//plus.google.com/share?url=%2fblog%2fdeploy-azure-function-app-using-project-bicep%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+  </a>
+</li>
+
+
+
+
+
+<li>
+  <a href="//www.facebook.com/sharer/sharer.php?u=%2fblog%2fdeploy-azure-function-app-using-project-bicep%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//reddit.com/submit?url=%2fblog%2fdeploy-azure-function-app-using-project-bicep%2f&amp;title=Deploy%20Azure%20Function%20App%20using%20Project%20Bicep" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.linkedin.com/shareArticle?url=%2fblog%2fdeploy-azure-function-app-using-project-bicep%2f&amp;title=Deploy%20Azure%20Function%20App%20using%20Project%20Bicep" target="_blank" class="share-btn linkedin">
+      <i class="fa fa-linkedin"></i>
+      <p>LinkedIn</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.stumbleupon.com/submit?url=%2fblog%2fdeploy-azure-function-app-using-project-bicep%2f&amp;title=Deploy%20Azure%20Function%20App%20using%20Project%20Bicep" target="_blank" class="share-btn stumbleupon">
+    <i class="fa fa-stumbleupon"></i>
+    <p>StumbleUpon</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.pinterest.com/pin/create/button/?url=%2fblog%2fdeploy-azure-function-app-using-project-bicep%2f&amp;description=Deploy%20Azure%20Function%20App%20using%20Project%20Bicep" target="_blank" class="share-btn pinterest">
+    <i class="fa fa-pinterest-p"></i>
+    <p>Pinterest</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="mailto:?subject=Check out this post by Chendrayan%20Venkatesan&amp;body=%2fblog%2fdeploy-azure-function-app-using-project-bicep%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+  </a>
+</li>
+
+
+      </ul>
+    </section>
+  
+
+  
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="/blog/deploy-azure-function-app-using-project-bicep/" class="image featured">
+            <img src="/img/2021/01/az-function-app.jpg" alt="">
+        </a>
+    
+
+
+  <div id="content">
+    <h1 id="references">References</h1>
+<p>Refer to the below links to know more about the project bicep</p>
+<ol>
+<li>
+<p>GitHub</p>
+<ol>
+<li><a href="https://github.com/Azure/bicep">Repository</a></li>
+<li><a href="https://github.com/Azure/bicep/tree/main/docs">Docs</a></li>
+<li><a href="https://github.com/Azure/bicep/tree/main/docs/examples">Examples</a></li>
+<li><a href="https://github.com/Azure/bicep/tree/main/docs/tutorial">Tutorials</a></li>
+<li><a href="https://github.com/Azure/bicep/tree/main/docs/spec">Specifications</a></li>
+</ol>
+</li>
+<li>
+<p>YouTube</p>
+<ol>
+<li><a href="https://www.youtube.com/watch?v=GHLUVwDkRrQ">Intro to Azure&rsquo;s Project Bicep with Brendan Burns and team</a></li>
+<li><a href="https://www.youtube.com/watch?v=ykHA5QTYlDc">Project Bicep Demo at Ignite 2020 by Mark Russinovich</a></li>
+<li><a href="https://www.youtube.com/watch?v=9Vfw5IhwT84">Project Bicep and ARM Templates November 2020 Update</a></li>
+</ol>
+</li>
+</ol>
+<h2 id="introduction">Introduction</h2>
+<p>Project Bicep is growing well, and I am using it at my workplace to build proof of concepts environments. In my last <a href="http://about-powershell.com/blog/get-started-with-project-bicep/">blog post</a>, I showed how to use bicep in Azure DevOps. Now, let me show the steps to deploy the Azure Function app using project bicep.</p>
+<h3 id="prerequisites">Prerequisites:</h3>
+<ol>
+<li>Azure Account.</li>
+<li>Contributor Permission on Azure subscriptions.</li>
+<li>Resource Group
+<ol>
+<li>rg-azeusfunctionappdev01</li>
+</ol>
+</li>
+</ol>
+<blockquote>
+<p>Note: <em>The first time I made a mistake – I ignored kind=’Function App'. So, it created a web app. Redeploying by adding kind ended up with the below error.</em></p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Status Message<span style="color:#960050;background-color:#1e0010">:</span> Consumption pricing tier cannot be used <span style="color:#66d9ef">for</span> regular web apps. (Code<span style="color:#960050;background-color:#1e0010">:</span> Conflict)
+ - Consumption pricing tier cannot be used <span style="color:#66d9ef">for</span> regular web apps. (Code<span style="color:#960050;background-color:#1e0010">:</span>)
+ -  (Code<span style="color:#960050;background-color:#1e0010">:</span>Conflict)
+ -  (Code<span style="color:#960050;background-color:#1e0010">:</span>)
+</code></pre></div><blockquote>
+<p>Solution: <em>Clear the resource group and redeploy it!</em></p>
+</blockquote>
+<h2 id="bicep-code">Bicep Code</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">var location = resourceGroup().location
+var suffix = <span style="color:#e6db74">&#39;azeusfunctionappdev01&#39;</span>
+
+resource storage_account <span style="color:#e6db74">&#39;Microsoft.Storage/storageAccounts@2020-08-01-preview&#39;</span> = {
+  name<span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#39;stg${suffix}&#39;</span>
+  location<span style="color:#960050;background-color:#1e0010">:</span> location
+  properties<span style="color:#960050;background-color:#1e0010">:</span> {
+    supportsHttpsTrafficOnly<span style="color:#960050;background-color:#1e0010">:</span> true
+    minimumTlsVersion<span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#39;TLS1_2&#39;</span>
+  }
+  kind<span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#39;StorageV2&#39;</span>
+  sku<span style="color:#960050;background-color:#1e0010">:</span> {
+    name<span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#39;Standard_LRS&#39;</span>
+    tier<span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#39;Standard&#39;</span>
+  }
+}
+
+resource hosting_plan <span style="color:#e6db74">&#39;Microsoft.Web/serverfarms@2020-06-01&#39;</span> = {
+  name<span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#39;asp-${suffix}&#39;</span>
+  location<span style="color:#960050;background-color:#1e0010">:</span> location
+  sku<span style="color:#960050;background-color:#1e0010">:</span> {
+    name<span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#39;Y1&#39;</span>
+    tier<span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#39;Dynamic&#39;</span>
+  }
+}
+
+resource function_app <span style="color:#e6db74">&#39;Microsoft.Web/sites@2020-06-01&#39;</span> = {
+  name<span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#39;functionapp-${suffix}&#39;</span>
+  location<span style="color:#960050;background-color:#1e0010">:</span> location
+  kind<span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#39;functionapp&#39;</span>
+  properties<span style="color:#960050;background-color:#1e0010">:</span> {
+    httpsOnly<span style="color:#960050;background-color:#1e0010">:</span> true
+    serverFarmId<span style="color:#960050;background-color:#1e0010">:</span> hosting_plan.id
+    clientAffinityEnabled<span style="color:#960050;background-color:#1e0010">:</span> true
+    siteConfig<span style="color:#960050;background-color:#1e0010">:</span> {
+      appSettings<span style="color:#960050;background-color:#1e0010">:</span> [
+        {
+          <span style="color:#e6db74">&#39;name&#39;</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#39;FUNCTIONS_EXTENSION_VERSION&#39;</span>
+          <span style="color:#e6db74">&#39;value&#39;</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#39;~3&#39;</span>
+        }
+        {
+          <span style="color:#e6db74">&#39;name&#39;</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#39;FUNCTIONS_WORKER_RUNTIME&#39;</span>
+          <span style="color:#e6db74">&#39;value&#39;</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#39;powershell&#39;</span>
+        }
+        {
+          name<span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#39;WEBSITE_CONTENTAZUREFILECONNECTIONSTRING&#39;</span>
+          value<span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#39;DefaultEndpointsProtocol=https;AccountName=${storage_account.name};EndpointSuffix=${environment().suffixes.storage};AccountKey=${listKeys(storage_account.id, storage_account.apiVersion).keys[0].value}&#39;</span>
+        }
+        {
+          name<span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#39;WEBSITE_CONTENTSHARE&#39;</span>
+          value<span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#39;${substring(uniqueString(resourceGroup().id), 3)}-azeus-functionapp-dev01&#39;</span>
+        }
+        {
+          name<span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#39;AzureWebJobsStorage&#39;</span>
+          value<span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#39;DefaultEndpointsProtocol=https;AccountName=${storage_account.name};AccountKey=${listKeys(storage_account.id, storage_account.apiVersion)};EndpointSuffix=core.windows.net&#39;</span>
+        }
+      ]
+    }
+  }
+
+  dependsOn<span style="color:#960050;background-color:#1e0010">:</span> [
+    hosting_plan
+    storage_account
+  ]
+}
+</code></pre></div><h3 id="build-bicep">Build Bicep</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">PS C:\&gt; build bicep .\main.bicep
+</code></pre></div><h3 id="deploy">Deploy</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">PS C:\&gt; New-AzResourceGroupDeployment -ResourceGroupName <span style="color:#e6db74">&#34;rg-azeusfunctionappdev01&#34;</span> -TemplateFile .\Main.json -Debug
+</code></pre></div><h3 id="result">Result</h3>
+<p><img src="img/AzFuncApp.PNG" alt="AzFunctionApp"></p>
+
+  </div>
+
+  <footer>
+    <ul class="stats">
+  <li class="categories">
+    <ul>
+        
+            
+            
+                <i class="fa fa-folder"></i>
+                
+                
+                <li><a class="article-category-link" href="/categories/azure">Azure</a></li>
+                
+                
+                <li><a class="article-category-link" href="/categories/project-bicep">Project Bicep</a></li>
+                
+                
+                <li><a class="article-category-link" href="/categories/arm">ARM</a></li>
+                
+                
+                <li><a class="article-category-link" href="/categories/azure-functions">Azure Functions</a></li>
+                
+            
+        
+    </ul>
+  </li>
+  <li class="tags">
+    <ul>
+        
+    </ul>
+  </li>
+</ul>
+
+  </footer>
+
+</article>
+
+    <article class="post">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "shortname" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </article>
+
+
+<ul class="actions pagination">
+    
+        <li><a href="/blog/list-of-azure-vm-which-has-no-jit-enabled/"
+                class="button big previous">Retrieve a list of Azure VM which aren&#39;t protected with just-in-time network access control</a></li>
+    
+
+    
+        <li><a href="/blog/using-azure-monitor-workbook-at-the-workplace-part-1/"
+                class="button big next">Using Azure Monitor Workbook at the workplace - Part 1</a></li>
+    
+</ul>
+
+
+    </div>
+    
+<section id="sidebar">
+
+  
+  <section id="intro">
+    
+    
+      
+        <a href='/'><img src="/img/main/ChenV.jpg" class="intro-circle" width="200" alt="Hugo Future Imperfect" /></a>
+      
+    
+    
+      <header>
+        <h2>Chendrayan Venkatesan</h2>
+        <p>Views are of my own</p>
+      </header>
+    
+    
+      <ul class="icons">
+        
+          
+    <li><a href="/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
+
+
+        
+        
+  <li><a href="//github.com/chendrayanv" target="_blank" title="GitHub" class="fa fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="//linkedin.com/in/chendrayanv" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
+
+
+
+
+
+
+
+  <li><a href="//xing.com/profile/Chendrayan_Venkatesan" target="_blank" title="Xing" class="fa fa-xing"></a></li>
+
+
+
+
+
+  <li><a href="//facebook.com/chendrayanv" target="_blank" title="Facebook" class="fa fa-facebook"></a></li>
+
+
+
+
+
+
+
+
+
+  <li><a href="//youtube.com/https://www.youtube.com/channel/UC22S6qPibfs1xa3MIII0JNw" target="_blank" title="YouTube" class="fa fa-youtube"></a></li>
+
+
+
+
+
+  <li><a href="//api.whatsapp.com/send?phone=%2b91%2096201%2078698" target="_blank" title="WhatsApp" class="fa fa-whatsapp"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="//twitter.com/chendrayanv" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
+
+
+
+  <li><a href="skype:chendrayan.venkatesan?userinfo" target="_blank" title="Skype" class="fa fa-skype"></a></li>
+
+
+
+
+
+
+
+  <li><a href="//telegram.me/&#43;91%2096201%2078698" target="_blank" title="telegram" class="fa fa-telegram"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="mailto:chendrayan.exchange@hotmail.com" title="Email" class="fa fa-envelope"></a></li>
+
+
+      </ul>
+    
+  </section>
+
+  
+  <section class="recent-posts">
+    <div class="mini-posts">
+      <header>
+        <h3>Recent Posts</h3>
+      </header>
+      <div class="posts-container">
+        
+
+        
+          
+        
+
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/blog/store-dynamic-data-in-an-azure-blob-storage-using-powershell-with-dapr/">Store Dynamic Data in an Azure Blob Storage using PowerShell with Dapr</a>
+              </h3>
+              
+              <time class="published" datetime='2022-02-21'>
+                February 21, 2022
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="/blog/store-dynamic-data-in-an-azure-blob-storage-using-powershell-with-dapr/" class="image featured">
+            <img src="/img/2022/02/DAPR-OP-BINDING.png" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/blog/failed-snat-connections-detected-in-azure-powershell-function/">Failed SNAT Connections Detected in Azure PowerShell Function</a>
+              </h3>
+              
+              <time class="published" datetime='2021-04-23'>
+                April 23, 2021
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="/blog/failed-snat-connections-detected-in-azure-powershell-function/" class="image featured">
+            <img src="/img/2021/04/HTTPClient.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/blog/azure-event-grid-trigger-output-binding-to-table-storage-using-powershell/">Azure Event Grid Trigger Output Binding to Table Storage using PowerShell</a>
+              </h3>
+              
+              <time class="published" datetime='2021-04-08'>
+                April 8, 2021
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="/blog/azure-event-grid-trigger-output-binding-to-table-storage-using-powershell/" class="image featured">
+            <img src="/img/2021/04/Table-Storage.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/blog/azure-functions-real-world-example-using-event-grid-trigger-with-powershell/">Azure Functions – Real-world example using Event Grid Trigger with PowerShell</a>
+              </h3>
+              
+              <time class="published" datetime='2021-04-03'>
+                April 3, 2021
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="/blog/azure-functions-real-world-example-using-event-grid-trigger-with-powershell/" class="image featured">
+            <img src="/img/2021/04/Blog-Az-Event-Grid.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/blog/using-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell/">Using PFX in Azure DevOps to generate an access token and authenticate - PowerShell</a>
+              </h3>
+              
+              <time class="published" datetime='2021-03-18'>
+                March 18, 2021
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="/blog/using-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell/" class="image featured">
+            <img src="/img/2021/03/access_token_pfx_cert.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+      </div>
+
+      
+        <a href=
+          
+            /blog/
+          
+        class="button">View more posts</a>
+      
+    </div>
+  </section>
+
+  
+  
+  
+  
+  
+    <section id="categories">
+      <header>
+        <h3>
+          <a href="/categories/">Categories</a>
+        </h3>
+      </header>
+        
+          
+        
+
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/azure/">azure</a>
+                <span style="float:right;">10</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/azure-devops/">azure-devops</a>
+                <span style="float:right;">5</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/powershell/">powershell</a>
+                <span style="float:right;">4</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/azure-function/">azure-function</a>
+                <span style="float:right;">2</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/azure-functions/">azure-functions</a>
+                <span style="float:right;">2</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/arm/">arm</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/azure-automation-account/">azure-automation-account</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/azure-monitor/">azure-monitor</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/azure-resource-graph/">azure-resource-graph</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/azure-runbook-report/">azure-runbook-report</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/azure-workbook/">azure-workbook</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/client-assertion/">client-assertion</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/event-grid-trigger/">event-grid-trigger</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/jit/">jit</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/powershell-core/">powershell-core</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/project-bicep/">project-bicep</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/pswriteword/">pswriteword</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/snat-port-exhausted/">snat-port-exhausted</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+    </section>
+  
+  
+
+  
+  
+    <section id="mini-bio">
+      <h3>About</h3>
+      <p>Automation, Workflows, Integrations, Orchestrations, and Microsoft Technologies are his interests. His focus is to transform the organization model to achieve key business objectives such as enhanced customer focus, seamless end-to-end management, and integrated service capability</p>
+      <a href="/about/" class="button">Learn More</a>
+    </section>
+  
+
+  
+  <section id="footer">
+    
+      <ul class="icons">
+        
+          
+    <li><a href="/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
+
+
+        
+        
+  <li><a href="//github.com/chendrayanv" target="_blank" title="GitHub" class="fa fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="//linkedin.com/in/chendrayanv" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
+
+
+
+
+
+
+
+  <li><a href="//xing.com/profile/Chendrayan_Venkatesan" target="_blank" title="Xing" class="fa fa-xing"></a></li>
+
+
+
+
+
+  <li><a href="//facebook.com/chendrayanv" target="_blank" title="Facebook" class="fa fa-facebook"></a></li>
+
+
+
+
+
+
+
+
+
+  <li><a href="//youtube.com/https://www.youtube.com/channel/UC22S6qPibfs1xa3MIII0JNw" target="_blank" title="YouTube" class="fa fa-youtube"></a></li>
+
+
+
+
+
+  <li><a href="//api.whatsapp.com/send?phone=%2b91%2096201%2078698" target="_blank" title="WhatsApp" class="fa fa-whatsapp"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="//twitter.com/chendrayanv" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
+
+
+
+  <li><a href="skype:chendrayan.venkatesan?userinfo" target="_blank" title="Skype" class="fa fa-skype"></a></li>
+
+
+
+
+
+
+
+  <li><a href="//telegram.me/&#43;91%2096201%2078698" target="_blank" title="telegram" class="fa fa-telegram"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="mailto:chendrayan.exchange@hotmail.com" title="Email" class="fa fa-envelope"></a></li>
+
+
+      </ul>
+    
+    <p class="copyright">
+      
+        &copy; 2022
+        
+          iAutomate
+        
+      .
+      Powered by <a href="//gohugo.io" target="_blank">Hugo</a>
+    </p>
+  </section>
+</section>
+
+    </div>
+    <a id="back-to-top" href="#" class="fa fa-arrow-up fa-border fa-2x"></a>
+    
+
+    
+      
+    
+
+    
+      
+      
+      
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/highlight.min.js"></script>
+        
+        
+        
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/r.min.js"></script>
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/yaml.min.js"></script>
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/css.min.js"></script>
+        <script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+      
+    
+    
+    
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
+      <script src="/js/util.js"></script>
+      <script src="/js/main.js"></script>
+      <script src="/js/backToTop.js"></script>
+    
+
+    
+      
+        
+      
+    
+
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+      <script src="//yihui.name/js/math-code.js"></script>
+<script async
+src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+  </body>
+</html>
+

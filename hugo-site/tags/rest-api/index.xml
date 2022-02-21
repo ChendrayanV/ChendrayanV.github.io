@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>REST API on iAutomate</title>
+    <link>/tags/rest-api/</link>
+    <description>Recent content in REST API on iAutomate</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 16 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/rest-api/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Retrieve Azure Runbook Job Report using REST API with PowerShell</title>
+      <link>/blog/retrieve-azure-runbook-job-report-using-rest-api-with-powershell/</link>
+      <pubDate>Tue, 16 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/retrieve-azure-runbook-job-report-using-rest-api-with-powershell/</guid>
+      <description>Introduction The tile may hit a question WHY? Because automation accounts and runbooks are almost outdated in 2021. Most prefer to use alternative solutions like Logic Apps, Function App Power Automate, or others. Hang On! Runbooks are still in use. Of late, I got a requirement to send a report on runbooks that got invoked in the last one hour.
+ In PowerShell, it’s easy, as shown below
+ $Params = @{ RunbookName = &amp;#39;MYRUNBOOKNAME&amp;#39; ResourceGroupName = &amp;#39;MYRESOURCEGROUPNAME&amp;#39; AutomationAccountName = &amp;#39;MYAUTOMATIONACCOUNTNAME&amp;#39; StartTime = $(Get-Date).</description>
+    </item>
+    
+    <item>
+      <title>Create Azure DevOps Service Connection with Certificate using REST API</title>
+      <link>/blog/create-service-connection-with-certificate-using-rest-api/</link>
+      <pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/create-service-connection-with-certificate-using-rest-api/</guid>
+      <description>Introduction I have no access to my organization DevOps due to unfortunate technical issues, but that didn’t stop me from working. This morning I was on a call with a business owner who asked me to show the steps to create service connections with the certificate. Yes, I have to use the OPEN SSL tool to convert the PFX to PEM, and it was a bit difficult for me to walk him through the steps remotely.</description>
+    </item>
+    
+  </channel>
+</rss>
