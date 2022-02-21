@@ -6,49 +6,22 @@
     <description>Recent content in Categories on iAutomate</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 21 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Azure-Storage-Blob</title>
-      <link>/categories/azure-storage-blob/</link>
-      <pubDate>Mon, 21 Feb 2022 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/azure-storage-blob/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Dapr</title>
-      <link>/categories/dapr/</link>
-      <pubDate>Mon, 21 Feb 2022 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/dapr/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Output Binding</title>
-      <link>/categories/output-binding/</link>
-      <pubDate>Mon, 21 Feb 2022 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/output-binding/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>PowerShell</title>
-      <link>/categories/powershell/</link>
-      <pubDate>Mon, 21 Feb 2022 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/powershell/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Fri, 23 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Azure Function</title>
       <link>/categories/azure-function/</link>
       <pubDate>Fri, 23 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>/categories/azure-function/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PowerShell</title>
+      <link>/categories/powershell/</link>
+      <pubDate>Fri, 23 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/powershell/</guid>
       <description></description>
     </item>
     

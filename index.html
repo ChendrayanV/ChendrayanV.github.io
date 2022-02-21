@@ -293,7 +293,7 @@ if (!doNotTrack) {
         
 
         <a href="/blog/store-dynamic-data-in-an-azure-blob-storage-using-powershell-with-dapr/" class="image featured">
-            <img src="/img/2022/02/" alt="">
+            <img src="/img/2022/02/DAPR-OP-BINDING.png" alt="">
         </a>
     
 
@@ -481,7 +481,7 @@ if (!doNotTrack) {
             <h2><a href="/blog/store-dynamic-data-in-an-azure-blob-storage-using-powershell-with-dapr/">Store Dynamic Data in an Azure Blob Storage using PowerShell with Dapr</a></h2>
         
         
-            <p>Azure Storage Blob | Dapr | Output Binding</p>
+            <p>Dapr Binding Component (Output)</p>
         
     </div>
     <div class="meta">
@@ -613,7 +613,7 @@ if (!doNotTrack) {
         
 
         <a href="/blog/store-dynamic-data-in-an-azure-blob-storage-using-powershell-with-dapr/" class="image featured">
-            <img src="/img/2022/02/" alt="">
+            <img src="/img/2022/02/DAPR-OP-BINDING.png" alt="">
         </a>
     
 
@@ -622,27 +622,24 @@ if (!doNotTrack) {
     <h1 id="introduction">Introduction</h1>
 <p>The detailed documentation on the Azure Blob Storage binding component is super helpful. With that reference, let me walk you through the steps to store dynamic data to Azure blob storage without writing additional code (using blob API) to interact with the blob. Instead, we use the Dapr binding API.</p>
 <h2 id="binding-component-format">Binding Component Format</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-YAML" data-lang="YAML"><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">dapr.io/v1alpha1</span>
-<span style="color:#f92672">kind</span>: <span style="color:#ae81ff">Component</span>
-<span style="color:#f92672">metadata</span>:
-  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">&lt;NAME&gt;</span>
-  <span style="color:#f92672">namespace</span>: <span style="color:#ae81ff">&lt;NAMESPACE&gt;</span>
-<span style="color:#f92672">spec</span>:
-  <span style="color:#f92672">type</span>: <span style="color:#ae81ff">bindings.azure.blobstorage</span>
-  <span style="color:#f92672">version</span>: <span style="color:#ae81ff">v1</span>
-  <span style="color:#f92672">metadata</span>:
-  - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">storageAccount</span>
-    <span style="color:#f92672">value</span>: <span style="color:#ae81ff">myStorageAccountName</span>
-  - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">storageAccessKey</span>
-    <span style="color:#f92672">value</span>: <span style="color:#75715e">***********</span>
-  - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">container</span>
-    <span style="color:#f92672">value</span>: <span style="color:#ae81ff">container1</span>
-  - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">decodeBase64</span>
-    <span style="color:#f92672">value</span>: <span style="color:#ae81ff">&lt;bool&gt;</span>
-  - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">getBlobRetryCount</span>
-    <span style="color:#f92672">value</span>: <span style="color:#ae81ff">&lt;integer&gt;</span>
-  - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">publicAccessLevel</span>
-    <span style="color:#f92672">value</span>: <span style="color:#ae81ff">&lt;publicAccessLevel&gt;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PowerShell" data-lang="PowerShell">apiVersion<span style="color:#960050;background-color:#1e0010">:</span> dapr.io/v1alpha1
+kind<span style="color:#960050;background-color:#1e0010">:</span> Component
+metadata<span style="color:#960050;background-color:#1e0010">:</span>
+  name<span style="color:#960050;background-color:#1e0010">:</span> bloboutput
+spec<span style="color:#960050;background-color:#1e0010">:</span>
+  type<span style="color:#960050;background-color:#1e0010">:</span> bindings.azure.blobstorage
+  version<span style="color:#960050;background-color:#1e0010">:</span> v1
+  metadata<span style="color:#960050;background-color:#1e0010">:</span>
+  - name<span style="color:#960050;background-color:#1e0010">:</span> storageAccount
+    value<span style="color:#960050;background-color:#1e0010">:</span> icontoso 
+  - name<span style="color:#960050;background-color:#1e0010">:</span> storageAccessKey
+    value<span style="color:#960050;background-color:#1e0010">:</span> {STORAGE_ACCOUNT_KEY}
+  - name<span style="color:#960050;background-color:#1e0010">:</span> container
+    value<span style="color:#960050;background-color:#1e0010">:</span> demo
+  - name<span style="color:#960050;background-color:#1e0010">:</span> decodeBase64
+    value<span style="color:#960050;background-color:#1e0010">:</span> true
+  - name<span style="color:#960050;background-color:#1e0010">:</span> getBlobRetryCount
+    value<span style="color:#960050;background-color:#1e0010">:</span> 3
 </code></pre></div><h2 id="build-and-run-a-web-server">Build and run a web server</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PowerShell" data-lang="PowerShell">Start-PodeServer {
     Add-PodeEndpoint -Address * -Port 3000 -Protocol Http 
@@ -664,7 +661,7 @@ if (!doNotTrack) {
     }
 } -DisableTermination
 </code></pre></div><h2 id="run-the-application">Run the Application</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PowerShell" data-lang="PowerShell">dapr run --app-id bloboutput --app-port 3000 --dapr-http-port 3500 --dapr-grpc-port 60002 --components-path .\components\ -- pwsh .\app.ps1 
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PowerShell" data-lang="PowerShell">dapr run --app-id bloboutput --app-port 3000 --dapr-http-port 3500 --dapr-grpc-port 60002 --components-path .\components\ -- pwsh .\app.ps1
 </code></pre></div>
   </div>
 
@@ -678,16 +675,7 @@ if (!doNotTrack) {
                 <i class="fa fa-folder"></i>
                 
                 
-                <li><a class="article-category-link" href="/categories/azure-storage-blob">Azure-Storage-Blob</a></li>
-                
-                
-                <li><a class="article-category-link" href="/categories/dapr">Dapr</a></li>
-                
-                
-                <li><a class="article-category-link" href="/categories/output-binding">Output Binding</a></li>
-                
-                
-                <li><a class="article-category-link" href="/categories/powershell">PowerShell</a></li>
+                <li><a class="article-category-link" href="/categories/"></a></li>
                 
             
         
@@ -1009,7 +997,7 @@ if (!doNotTrack) {
         
 
         <a href="/blog/store-dynamic-data-in-an-azure-blob-storage-using-powershell-with-dapr/" class="image featured">
-            <img src="/img/2022/02/" alt="">
+            <img src="/img/2022/02/DAPR-OP-BINDING.png" alt="">
         </a>
     
 
@@ -1163,9 +1151,6 @@ if (!doNotTrack) {
 
 
   
-  
-    
-  
 
 
         
@@ -1173,7 +1158,7 @@ if (!doNotTrack) {
         
 
         <a href="/blog/using-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell/" class="image featured">
-            <img src="/img/2021/03/access_token_pfx_cert.jpg" alt="">
+            <img src="/date2021/03/access_token_pfx_cert.jpg" alt="">
         </a>
     
 
@@ -1235,7 +1220,7 @@ if (!doNotTrack) {
             <header>
               
                 <a href="/categories/powershell/">powershell</a>
-                <span style="float:right;">5</span>
+                <span style="float:right;">4</span>
               
             </header>
           </article>
@@ -1322,17 +1307,6 @@ if (!doNotTrack) {
           <article>
             <header>
               
-                <a href="/categories/azure-storage-blob/">azure-storage-blob</a>
-                <span style="float:right;">1</span>
-              
-            </header>
-          </article>
-        </p>
-        
-        <p>
-          <article>
-            <header>
-              
                 <a href="/categories/azure-workbook/">azure-workbook</a>
                 <span style="float:right;">1</span>
               
@@ -1355,17 +1329,6 @@ if (!doNotTrack) {
           <article>
             <header>
               
-                <a href="/categories/dapr/">dapr</a>
-                <span style="float:right;">1</span>
-              
-            </header>
-          </article>
-        </p>
-        
-        <p>
-          <article>
-            <header>
-              
                 <a href="/categories/event-grid-trigger/">event-grid-trigger</a>
                 <span style="float:right;">1</span>
               
@@ -1378,17 +1341,6 @@ if (!doNotTrack) {
             <header>
               
                 <a href="/categories/jit/">jit</a>
-                <span style="float:right;">1</span>
-              
-            </header>
-          </article>
-        </p>
-        
-        <p>
-          <article>
-            <header>
-              
-                <a href="/categories/output-binding/">output-binding</a>
                 <span style="float:right;">1</span>
               
             </header>

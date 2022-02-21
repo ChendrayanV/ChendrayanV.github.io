@@ -14,7 +14,7 @@
       
       <guid>/blog/store-dynamic-data-in-an-azure-blob-storage-using-powershell-with-dapr/</guid>
       <description>Introduction The detailed documentation on the Azure Blob Storage binding component is super helpful. With that reference, let me walk you through the steps to store dynamic data to Azure blob storage without writing additional code (using blob API) to interact with the blob. Instead, we use the Dapr binding API.
-Binding Component Format apiVersion: dapr.io/v1alpha1 kind: Component metadata: name: &amp;lt;NAME&amp;gt; namespace: &amp;lt;NAMESPACE&amp;gt; spec: type: bindings.azure.blobstorage version: v1 metadata: - name: storageAccount value: myStorageAccountName - name: storageAccessKey value: *********** - name: container value: container1 - name: decodeBase64 value: &amp;lt;bool&amp;gt; - name: getBlobRetryCount value: &amp;lt;integer&amp;gt; - name: publicAccessLevel value: &amp;lt;publicAccessLevel&amp;gt; Build and run a web server Start-PodeServer { Add-PodeEndpoint -Address * -Port 3000 -Protocol Http Add-PodeRoute -Method Get -Path &amp;#39;/bloboutput&amp;#39; -ScriptBlock { $Bytes = [System.</description>
+Binding Component Format apiVersion: dapr.io/v1alpha1 kind: Component metadata: name: bloboutput spec: type: bindings.azure.blobstorage version: v1 metadata: - name: storageAccount value: icontoso - name: storageAccessKey value: {STORAGE_ACCOUNT_KEY} - name: container value: demo - name: decodeBase64 value: true - name: getBlobRetryCount value: 3 Build and run a web server Start-PodeServer { Add-PodeEndpoint -Address * -Port 3000 -Protocol Http Add-PodeRoute -Method Get -Path &amp;#39;/bloboutput&amp;#39; -ScriptBlock { $Bytes = [System.</description>
     </item>
     
     <item>
