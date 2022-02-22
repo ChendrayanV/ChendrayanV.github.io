@@ -8,7 +8,7 @@
         "@type" : "BlogPosting",
         "mainEntityOfPage": {
              "@type": "WebPage",
-             "@id": "\/"
+             "@id": "https:\/\/about-powershell.com\/"
         },
         "articleSection" : "blog",
         "name" : "Azure Event Grid Trigger Output Binding to Table Storage using PowerShell",
@@ -23,7 +23,7 @@
         "copyrightYear" : "2021",
         "datePublished": "2021-04-08 00:00:00 \u002b0000 UTC",
         "dateModified" : "2021-04-08 00:00:00 \u002b0000 UTC",
-        "url" : "\/blog\/azure-event-grid-trigger-output-binding-to-table-storage-using-powershell\/",
+        "url" : "https:\/\/about-powershell.com\/blog\/azure-event-grid-trigger-output-binding-to-table-storage-using-powershell\/",
         "wordCount" : "237",
         "keywords" : [ "Blog" ]
     }
@@ -59,12 +59,12 @@ Challenge A colleague tried to implement and reached out to me with a challenge.
 <meta property="og:description" content="Introduction Is it possible to write data to the storage table when the Azure Event Grid trigger is invoked? Yes, it is possible. A colleague requested to log the output of the Azure Functions transactions to the Azure table storage, and my call is to store only the required data. Indeed, cost and readability is the primary concern. With no further ado, let me walk you through the requirement.
 Challenge A colleague tried to implement and reached out to me with a challenge." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/blog/azure-event-grid-trigger-output-binding-to-table-storage-using-powershell/" /><meta property="article:section" content="blog" />
+<meta property="og:url" content="https://about-powershell.com/blog/azure-event-grid-trigger-output-binding-to-table-storage-using-powershell/" /><meta property="article:section" content="blog" />
 <meta property="article:published_time" content="2021-04-08T00:00:00+00:00" />
 <meta property="article:modified_time" content="2021-04-08T00:00:00+00:00" />
 
 
-        <meta property="og:image" content="//images/logo.png">
+        <meta property="og:image" content="https://about-powershell.com//images/logo.png">
         <meta property="og:image:type" content="image/png">
         <meta property="og:image:width" content="512">
         <meta property="og:image:height" content="512">
@@ -86,9 +86,9 @@ Challenge A colleague tried to implement and reached out to me with a challenge.
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css">
-            <link rel="stylesheet" href="/css/main.css">
-            <link rel="stylesheet" href="/css/add-on.css">
-            <link rel="stylesheet" href="/css/academicons.min.css">
+            <link rel="stylesheet" href="https://about-powershell.com/css/main.css">
+            <link rel="stylesheet" href="https://about-powershell.com/css/add-on.css">
+            <link rel="stylesheet" href="https://about-powershell.com/css/academicons.min.css">
         
 
         
@@ -127,44 +127,44 @@ if (!doNotTrack) {
     
 <header id="header">
     
-      <h1><a href="/">blog</a></h1>
+      <h1><a href="https://about-powershell.com/">blog</a></h1>
     
 
     <nav class="links">
         <ul>
             
                 <li>
-                    <a href="/">
+                    <a href="https://about-powershell.com/">
                             <i class="fa fa-home">&nbsp;</i>Home
                     </a>
                 </li>
             
                 <li>
-                    <a href="/about/">
+                    <a href="https://about-powershell.com/about/">
                             <i class="fa fa-id-card-o">&nbsp;</i>About
                     </a>
                 </li>
             
                 <li>
-                    <a href="/blog/">
+                    <a href="https://about-powershell.com/blog/">
                             <i class="fa fa-newspaper-o">&nbsp;</i>Blog
                     </a>
                 </li>
             
                 <li>
-                    <a href="/itemized/">
+                    <a href="https://about-powershell.com/itemized/">
                             <i class="fa fa-list">&nbsp;</i>Itemized
                     </a>
                 </li>
             
                 <li>
-                    <a href="/categories/">
+                    <a href="https://about-powershell.com/categories/">
                             <i class="fa fa-sitemap">&nbsp;</i>Categories
                     </a>
                 </li>
             
                 <li>
-                    <a href="/contact/">
+                    <a href="https://about-powershell.com/contact/">
                             <i class="fa fa-envelope-o">&nbsp;</i>Contact
                     </a>
                 </li>
@@ -182,7 +182,7 @@ if (!doNotTrack) {
                 <a class="fa-search" href="#search">Search</a>
                 <form id="search" method="get" action="//google.com/search">
                     <input type="text" name="q" placeholder="Search" />
-                    <input type="hidden" name="as_sitesearch" value="/">
+                    <input type="hidden" name="as_sitesearch" value="https://about-powershell.com/">
                 </form>
             </li>
             <li class="menu">
@@ -199,7 +199,7 @@ if (!doNotTrack) {
         <section>
             <form class="search" method="get" action="//google.com/search">
                 <input type="text" name="q" placeholder="Search" />
-                <input type="hidden" name="as_sitesearch" value="/">
+                <input type="hidden" name="as_sitesearch" value="https://about-powershell.com/">
             </form>
         </section>
 
@@ -208,7 +208,7 @@ if (!doNotTrack) {
             <ul class="links">
                 
                     <li>
-                        <a href="/">
+                        <a href="https://about-powershell.com/">
                             <h3>
                                 <i class="fa fa-home">&nbsp;</i>Home
                             </h3>
@@ -216,7 +216,7 @@ if (!doNotTrack) {
                     </li>
                 
                     <li>
-                        <a href="/about/">
+                        <a href="https://about-powershell.com/about/">
                             <h3>
                                 <i class="fa fa-id-card-o">&nbsp;</i>About
                             </h3>
@@ -224,7 +224,7 @@ if (!doNotTrack) {
                     </li>
                 
                     <li>
-                        <a href="/blog/">
+                        <a href="https://about-powershell.com/blog/">
                             <h3>
                                 <i class="fa fa-newspaper-o">&nbsp;</i>Blog
                             </h3>
@@ -232,7 +232,7 @@ if (!doNotTrack) {
                     </li>
                 
                     <li>
-                        <a href="/itemized/">
+                        <a href="https://about-powershell.com/itemized/">
                             <h3>
                                 <i class="fa fa-list">&nbsp;</i>Itemized
                             </h3>
@@ -240,7 +240,7 @@ if (!doNotTrack) {
                     </li>
                 
                     <li>
-                        <a href="/categories/">
+                        <a href="https://about-powershell.com/categories/">
                             <h3>
                                 <i class="fa fa-sitemap">&nbsp;</i>Categories
                             </h3>
@@ -248,7 +248,7 @@ if (!doNotTrack) {
                     </li>
                 
                     <li>
-                        <a href="/contact/">
+                        <a href="https://about-powershell.com/contact/">
                             <h3>
                                 <i class="fa fa-envelope-o">&nbsp;</i>Contact
                             </h3>
@@ -273,7 +273,7 @@ if (!doNotTrack) {
                 
                         <article class="mini-post">
                             <header>
-                                <h3><a href="/blog/store-dynamic-data-in-an-azure-blob-storage-using-powershell-with-dapr/">Store Dynamic Data in an Azure Blob Storage using PowerShell with Dapr</a></h3>
+                                <h3><a href="https://about-powershell.com/blog/store-dynamic-data-in-an-azure-blob-storage-using-powershell-with-dapr/">Store Dynamic Data in an Azure Blob Storage using PowerShell with Dapr</a></h3>
                                 
                                 <time class="published" datetime=
                                     '2022-02-21'>
@@ -302,8 +302,8 @@ if (!doNotTrack) {
         
         
 
-        <a href="/blog/store-dynamic-data-in-an-azure-blob-storage-using-powershell-with-dapr/" class="image featured">
-            <img src="/img/2022/02/DAPR-OP-BINDING.png" alt="">
+        <a href="https://about-powershell.com/blog/store-dynamic-data-in-an-azure-blob-storage-using-powershell-with-dapr/" class="image featured">
+            <img src="https://about-powershell.com/img/2022/02/DAPR-OP-BINDING.png" alt="">
         </a>
     
 
@@ -312,7 +312,7 @@ if (!doNotTrack) {
                 
                         <article class="mini-post">
                             <header>
-                                <h3><a href="/blog/failed-snat-connections-detected-in-azure-powershell-function/">Failed SNAT Connections Detected in Azure PowerShell Function</a></h3>
+                                <h3><a href="https://about-powershell.com/blog/failed-snat-connections-detected-in-azure-powershell-function/">Failed SNAT Connections Detected in Azure PowerShell Function</a></h3>
                                 
                                 <time class="published" datetime=
                                     '2021-04-23'>
@@ -341,8 +341,8 @@ if (!doNotTrack) {
         
         
 
-        <a href="/blog/failed-snat-connections-detected-in-azure-powershell-function/" class="image featured">
-            <img src="/img/2021/04/HTTPClient.jpg" alt="">
+        <a href="https://about-powershell.com/blog/failed-snat-connections-detected-in-azure-powershell-function/" class="image featured">
+            <img src="https://about-powershell.com/img/2021/04/HTTPClient.jpg" alt="">
         </a>
     
 
@@ -351,7 +351,7 @@ if (!doNotTrack) {
                 
                         <article class="mini-post">
                             <header>
-                                <h3><a href="/blog/azure-event-grid-trigger-output-binding-to-table-storage-using-powershell/">Azure Event Grid Trigger Output Binding to Table Storage using PowerShell</a></h3>
+                                <h3><a href="https://about-powershell.com/blog/azure-event-grid-trigger-output-binding-to-table-storage-using-powershell/">Azure Event Grid Trigger Output Binding to Table Storage using PowerShell</a></h3>
                                 
                                 <time class="published" datetime=
                                     '2021-04-08'>
@@ -380,8 +380,8 @@ if (!doNotTrack) {
         
         
 
-        <a href="/blog/azure-event-grid-trigger-output-binding-to-table-storage-using-powershell/" class="image featured">
-            <img src="/img/2021/04/Table-Storage.jpg" alt="">
+        <a href="https://about-powershell.com/blog/azure-event-grid-trigger-output-binding-to-table-storage-using-powershell/" class="image featured">
+            <img src="https://about-powershell.com/img/2021/04/Table-Storage.jpg" alt="">
         </a>
     
 
@@ -390,7 +390,7 @@ if (!doNotTrack) {
                 
                         <article class="mini-post">
                             <header>
-                                <h3><a href="/blog/azure-functions-real-world-example-using-event-grid-trigger-with-powershell/">Azure Functions – Real-world example using Event Grid Trigger with PowerShell</a></h3>
+                                <h3><a href="https://about-powershell.com/blog/azure-functions-real-world-example-using-event-grid-trigger-with-powershell/">Azure Functions – Real-world example using Event Grid Trigger with PowerShell</a></h3>
                                 
                                 <time class="published" datetime=
                                     '2021-04-03'>
@@ -419,8 +419,8 @@ if (!doNotTrack) {
         
         
 
-        <a href="/blog/azure-functions-real-world-example-using-event-grid-trigger-with-powershell/" class="image featured">
-            <img src="/img/2021/04/Blog-Az-Event-Grid.jpg" alt="">
+        <a href="https://about-powershell.com/blog/azure-functions-real-world-example-using-event-grid-trigger-with-powershell/" class="image featured">
+            <img src="https://about-powershell.com/img/2021/04/Blog-Az-Event-Grid.jpg" alt="">
         </a>
     
 
@@ -429,7 +429,7 @@ if (!doNotTrack) {
                 
                         <article class="mini-post">
                             <header>
-                                <h3><a href="/blog/using-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell/">Using PFX in Azure DevOps to generate an access token and authenticate - PowerShell</a></h3>
+                                <h3><a href="https://about-powershell.com/blog/using-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell/">Using PFX in Azure DevOps to generate an access token and authenticate - PowerShell</a></h3>
                                 
                                 <time class="published" datetime=
                                     '2021-03-18'>
@@ -458,8 +458,8 @@ if (!doNotTrack) {
         
         
 
-        <a href="/blog/using-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell/" class="image featured">
-            <img src="/img/2021/03/access_token_pfx_cert.jpg" alt="">
+        <a href="https://about-powershell.com/blog/using-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell/" class="image featured">
+            <img src="https://about-powershell.com/img/2021/03/access_token_pfx_cert.jpg" alt="">
         </a>
     
 
@@ -492,7 +492,7 @@ if (!doNotTrack) {
 
 
 <li>
-  <a href="//twitter.com/share?url=%2fblog%2fazure-event-grid-trigger-output-binding-to-table-storage-using-powershell%2f&amp;text=Azure%20Event%20Grid%20Trigger%20Output%20Binding%20to%20Table%20Storage%20using%20PowerShell&amp;via=chendrayanv" target="_blank" class="share-btn twitter">
+  <a href="//twitter.com/share?url=https%3a%2f%2fabout-powershell.com%2fblog%2fazure-event-grid-trigger-output-binding-to-table-storage-using-powershell%2f&amp;text=Azure%20Event%20Grid%20Trigger%20Output%20Binding%20to%20Table%20Storage%20using%20PowerShell&amp;via=chendrayanv" target="_blank" class="share-btn twitter">
     <i class="fa fa-twitter"></i>
     <p>Twitter</p>
     </a>
@@ -502,7 +502,7 @@ if (!doNotTrack) {
 
 
 <li>
-  <a href="//plus.google.com/share?url=%2fblog%2fazure-event-grid-trigger-output-binding-to-table-storage-using-powershell%2f" target="_blank" class="share-btn google-plus">
+  <a href="//plus.google.com/share?url=https%3a%2f%2fabout-powershell.com%2fblog%2fazure-event-grid-trigger-output-binding-to-table-storage-using-powershell%2f" target="_blank" class="share-btn google-plus">
     <i class="fa fa-google-plus"></i>
     <p>Google+</p>
   </a>
@@ -513,7 +513,7 @@ if (!doNotTrack) {
 
 
 <li>
-  <a href="//www.facebook.com/sharer/sharer.php?u=%2fblog%2fazure-event-grid-trigger-output-binding-to-table-storage-using-powershell%2f" target="_blank" class="share-btn facebook">
+  <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fabout-powershell.com%2fblog%2fazure-event-grid-trigger-output-binding-to-table-storage-using-powershell%2f" target="_blank" class="share-btn facebook">
     <i class="fa fa-facebook"></i>
     <p>Facebook</p>
     </a>
@@ -523,7 +523,7 @@ if (!doNotTrack) {
 
 
 <li>
-  <a href="//reddit.com/submit?url=%2fblog%2fazure-event-grid-trigger-output-binding-to-table-storage-using-powershell%2f&amp;title=Azure%20Event%20Grid%20Trigger%20Output%20Binding%20to%20Table%20Storage%20using%20PowerShell" target="_blank" class="share-btn reddit">
+  <a href="//reddit.com/submit?url=https%3a%2f%2fabout-powershell.com%2fblog%2fazure-event-grid-trigger-output-binding-to-table-storage-using-powershell%2f&amp;title=Azure%20Event%20Grid%20Trigger%20Output%20Binding%20to%20Table%20Storage%20using%20PowerShell" target="_blank" class="share-btn reddit">
     <i class="fa fa-reddit-alien"></i>
     <p>Reddit</p>
   </a>
@@ -533,7 +533,7 @@ if (!doNotTrack) {
 
 
 <li>
-  <a href="//www.linkedin.com/shareArticle?url=%2fblog%2fazure-event-grid-trigger-output-binding-to-table-storage-using-powershell%2f&amp;title=Azure%20Event%20Grid%20Trigger%20Output%20Binding%20to%20Table%20Storage%20using%20PowerShell" target="_blank" class="share-btn linkedin">
+  <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fabout-powershell.com%2fblog%2fazure-event-grid-trigger-output-binding-to-table-storage-using-powershell%2f&amp;title=Azure%20Event%20Grid%20Trigger%20Output%20Binding%20to%20Table%20Storage%20using%20PowerShell" target="_blank" class="share-btn linkedin">
       <i class="fa fa-linkedin"></i>
       <p>LinkedIn</p>
     </a>
@@ -543,7 +543,7 @@ if (!doNotTrack) {
 
 
 <li>
-  <a href="//www.stumbleupon.com/submit?url=%2fblog%2fazure-event-grid-trigger-output-binding-to-table-storage-using-powershell%2f&amp;title=Azure%20Event%20Grid%20Trigger%20Output%20Binding%20to%20Table%20Storage%20using%20PowerShell" target="_blank" class="share-btn stumbleupon">
+  <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fabout-powershell.com%2fblog%2fazure-event-grid-trigger-output-binding-to-table-storage-using-powershell%2f&amp;title=Azure%20Event%20Grid%20Trigger%20Output%20Binding%20to%20Table%20Storage%20using%20PowerShell" target="_blank" class="share-btn stumbleupon">
     <i class="fa fa-stumbleupon"></i>
     <p>StumbleUpon</p>
   </a>
@@ -553,7 +553,7 @@ if (!doNotTrack) {
 
 
 <li>
-  <a href="//www.pinterest.com/pin/create/button/?url=%2fblog%2fazure-event-grid-trigger-output-binding-to-table-storage-using-powershell%2f&amp;description=Azure%20Event%20Grid%20Trigger%20Output%20Binding%20to%20Table%20Storage%20using%20PowerShell" target="_blank" class="share-btn pinterest">
+  <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fabout-powershell.com%2fblog%2fazure-event-grid-trigger-output-binding-to-table-storage-using-powershell%2f&amp;description=Azure%20Event%20Grid%20Trigger%20Output%20Binding%20to%20Table%20Storage%20using%20PowerShell" target="_blank" class="share-btn pinterest">
     <i class="fa fa-pinterest-p"></i>
     <p>Pinterest</p>
   </a>
@@ -563,7 +563,7 @@ if (!doNotTrack) {
 
 
 <li>
-  <a href="mailto:?subject=Check out this post by Chendrayan%20Venkatesan&amp;body=%2fblog%2fazure-event-grid-trigger-output-binding-to-table-storage-using-powershell%2f" target="_blank" class="share-btn email">
+  <a href="mailto:?subject=Check out this post by Chendrayan%20Venkatesan&amp;body=https%3a%2f%2fabout-powershell.com%2fblog%2fazure-event-grid-trigger-output-binding-to-table-storage-using-powershell%2f" target="_blank" class="share-btn email">
     <i class="fa fa-envelope"></i>
     <p>Email</p>
   </a>
@@ -582,7 +582,7 @@ if (!doNotTrack) {
   <header>
     <div class="title">
         
-            <h1><a href="/blog/azure-event-grid-trigger-output-binding-to-table-storage-using-powershell/">Azure Event Grid Trigger Output Binding to Table Storage using PowerShell</a></h1>
+            <h1><a href="https://about-powershell.com/blog/azure-event-grid-trigger-output-binding-to-table-storage-using-powershell/">Azure Event Grid Trigger Output Binding to Table Storage using PowerShell</a></h1>
             
         
         
@@ -610,7 +610,7 @@ if (!doNotTrack) {
 
 
 <li>
-  <a href="//twitter.com/share?url=%2fblog%2fazure-event-grid-trigger-output-binding-to-table-storage-using-powershell%2f&amp;text=Azure%20Event%20Grid%20Trigger%20Output%20Binding%20to%20Table%20Storage%20using%20PowerShell&amp;via=chendrayanv" target="_blank" class="share-btn twitter">
+  <a href="//twitter.com/share?url=https%3a%2f%2fabout-powershell.com%2fblog%2fazure-event-grid-trigger-output-binding-to-table-storage-using-powershell%2f&amp;text=Azure%20Event%20Grid%20Trigger%20Output%20Binding%20to%20Table%20Storage%20using%20PowerShell&amp;via=chendrayanv" target="_blank" class="share-btn twitter">
     <i class="fa fa-twitter"></i>
     <p>Twitter</p>
     </a>
@@ -620,7 +620,7 @@ if (!doNotTrack) {
 
 
 <li>
-  <a href="//plus.google.com/share?url=%2fblog%2fazure-event-grid-trigger-output-binding-to-table-storage-using-powershell%2f" target="_blank" class="share-btn google-plus">
+  <a href="//plus.google.com/share?url=https%3a%2f%2fabout-powershell.com%2fblog%2fazure-event-grid-trigger-output-binding-to-table-storage-using-powershell%2f" target="_blank" class="share-btn google-plus">
     <i class="fa fa-google-plus"></i>
     <p>Google+</p>
   </a>
@@ -631,7 +631,7 @@ if (!doNotTrack) {
 
 
 <li>
-  <a href="//www.facebook.com/sharer/sharer.php?u=%2fblog%2fazure-event-grid-trigger-output-binding-to-table-storage-using-powershell%2f" target="_blank" class="share-btn facebook">
+  <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fabout-powershell.com%2fblog%2fazure-event-grid-trigger-output-binding-to-table-storage-using-powershell%2f" target="_blank" class="share-btn facebook">
     <i class="fa fa-facebook"></i>
     <p>Facebook</p>
     </a>
@@ -641,7 +641,7 @@ if (!doNotTrack) {
 
 
 <li>
-  <a href="//reddit.com/submit?url=%2fblog%2fazure-event-grid-trigger-output-binding-to-table-storage-using-powershell%2f&amp;title=Azure%20Event%20Grid%20Trigger%20Output%20Binding%20to%20Table%20Storage%20using%20PowerShell" target="_blank" class="share-btn reddit">
+  <a href="//reddit.com/submit?url=https%3a%2f%2fabout-powershell.com%2fblog%2fazure-event-grid-trigger-output-binding-to-table-storage-using-powershell%2f&amp;title=Azure%20Event%20Grid%20Trigger%20Output%20Binding%20to%20Table%20Storage%20using%20PowerShell" target="_blank" class="share-btn reddit">
     <i class="fa fa-reddit-alien"></i>
     <p>Reddit</p>
   </a>
@@ -651,7 +651,7 @@ if (!doNotTrack) {
 
 
 <li>
-  <a href="//www.linkedin.com/shareArticle?url=%2fblog%2fazure-event-grid-trigger-output-binding-to-table-storage-using-powershell%2f&amp;title=Azure%20Event%20Grid%20Trigger%20Output%20Binding%20to%20Table%20Storage%20using%20PowerShell" target="_blank" class="share-btn linkedin">
+  <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fabout-powershell.com%2fblog%2fazure-event-grid-trigger-output-binding-to-table-storage-using-powershell%2f&amp;title=Azure%20Event%20Grid%20Trigger%20Output%20Binding%20to%20Table%20Storage%20using%20PowerShell" target="_blank" class="share-btn linkedin">
       <i class="fa fa-linkedin"></i>
       <p>LinkedIn</p>
     </a>
@@ -661,7 +661,7 @@ if (!doNotTrack) {
 
 
 <li>
-  <a href="//www.stumbleupon.com/submit?url=%2fblog%2fazure-event-grid-trigger-output-binding-to-table-storage-using-powershell%2f&amp;title=Azure%20Event%20Grid%20Trigger%20Output%20Binding%20to%20Table%20Storage%20using%20PowerShell" target="_blank" class="share-btn stumbleupon">
+  <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fabout-powershell.com%2fblog%2fazure-event-grid-trigger-output-binding-to-table-storage-using-powershell%2f&amp;title=Azure%20Event%20Grid%20Trigger%20Output%20Binding%20to%20Table%20Storage%20using%20PowerShell" target="_blank" class="share-btn stumbleupon">
     <i class="fa fa-stumbleupon"></i>
     <p>StumbleUpon</p>
   </a>
@@ -671,7 +671,7 @@ if (!doNotTrack) {
 
 
 <li>
-  <a href="//www.pinterest.com/pin/create/button/?url=%2fblog%2fazure-event-grid-trigger-output-binding-to-table-storage-using-powershell%2f&amp;description=Azure%20Event%20Grid%20Trigger%20Output%20Binding%20to%20Table%20Storage%20using%20PowerShell" target="_blank" class="share-btn pinterest">
+  <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fabout-powershell.com%2fblog%2fazure-event-grid-trigger-output-binding-to-table-storage-using-powershell%2f&amp;description=Azure%20Event%20Grid%20Trigger%20Output%20Binding%20to%20Table%20Storage%20using%20PowerShell" target="_blank" class="share-btn pinterest">
     <i class="fa fa-pinterest-p"></i>
     <p>Pinterest</p>
   </a>
@@ -681,7 +681,7 @@ if (!doNotTrack) {
 
 
 <li>
-  <a href="mailto:?subject=Check out this post by Chendrayan%20Venkatesan&amp;body=%2fblog%2fazure-event-grid-trigger-output-binding-to-table-storage-using-powershell%2f" target="_blank" class="share-btn email">
+  <a href="mailto:?subject=Check out this post by Chendrayan%20Venkatesan&amp;body=https%3a%2f%2fabout-powershell.com%2fblog%2fazure-event-grid-trigger-output-binding-to-table-storage-using-powershell%2f" target="_blank" class="share-btn email">
     <i class="fa fa-envelope"></i>
     <p>Email</p>
   </a>
@@ -715,8 +715,8 @@ if (!doNotTrack) {
         
         
 
-        <a href="/blog/azure-event-grid-trigger-output-binding-to-table-storage-using-powershell/" class="image featured">
-            <img src="/img/2021/04/Table-Storage.jpg" alt="">
+        <a href="https://about-powershell.com/blog/azure-event-grid-trigger-output-binding-to-table-storage-using-powershell/" class="image featured">
+            <img src="https://about-powershell.com/img/2021/04/Table-Storage.jpg" alt="">
         </a>
     
 
@@ -726,19 +726,19 @@ if (!doNotTrack) {
 <p>Is it possible to write data to the storage table when the Azure Event Grid trigger is invoked? Yes, it is possible. A colleague requested to log the output of the Azure Functions transactions to the Azure table storage, and my call is to store only the required data. Indeed, cost and readability is the primary concern. With no further ado, let me walk you through the requirement.</p>
 <h2 id="challenge">Challenge</h2>
 <p>A colleague tried to implement and reached out to me with a challenge. He claimed that it’s not possible to choose a different storage account to store the logs, and the evidence he shared is below</p>
-<figure><img src="/img/2021/04/Event-Grid-01.png"/><figcaption>
+<figure><img src="https://about-powershell.com/img/2021/04/Event-Grid-01.png"/><figcaption>
             <h4>Event-Grid-Image-01</h4>
         </figcaption>
 </figure>
 
 <p>Oh well, it’s not a challenge, but it’s a limitation. You have no choice to provide an alternate storage account. Is it true? Let us figure it out! Refer to this <a href="https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-storage-table-output?tabs=powershell">documentation</a>.</p>
-<figure><img src="/img/2021/04/Connection.png"/><figcaption>
+<figure><img src="https://about-powershell.com/img/2021/04/Connection.png"/><figcaption>
             <h4>Connection</h4>
         </figcaption>
 </figure>
 
 <p>First, create an entry in the application settings and name it AzureWebJobsSTG01 and check the function integration. I hope it’s clear now!</p>
-<figure><img src="/img/2021/04/Event-Grid-02.png"/><figcaption>
+<figure><img src="https://about-powershell.com/img/2021/04/Event-Grid-02.png"/><figcaption>
             <h4>Event-Grid-Image-02</h4>
         </figcaption>
 </figure>
@@ -779,7 +779,7 @@ Push-OutputBinding -Name outputTable -Value @{
 </code></pre></div><blockquote>
 <p>Output</p>
 </blockquote>
-<figure><img src="/img/2021/04/Yay.png"/><figcaption>
+<figure><img src="https://about-powershell.com/img/2021/04/Yay.png"/><figcaption>
             <h4>Yay</h4>
         </figcaption>
 </figure>
@@ -797,13 +797,13 @@ Push-OutputBinding -Name outputTable -Value @{
                 <i class="fa fa-folder"></i>
                 
                 
-                <li><a class="article-category-link" href="/categories/azure-function">Azure Function</a></li>
+                <li><a class="article-category-link" href="https://about-powershell.com/categories/azure-function">Azure Function</a></li>
                 
                 
-                <li><a class="article-category-link" href="/categories/event-grid-trigger">Event Grid Trigger</a></li>
+                <li><a class="article-category-link" href="https://about-powershell.com/categories/event-grid-trigger">Event Grid Trigger</a></li>
                 
                 
-                <li><a class="article-category-link" href="/categories/powershell">PowerShell</a></li>
+                <li><a class="article-category-link" href="https://about-powershell.com/categories/powershell">PowerShell</a></li>
                 
             
         
@@ -846,12 +846,12 @@ Push-OutputBinding -Name outputTable -Value @{
 
 <ul class="actions pagination">
     
-        <li><a href="/blog/azure-functions-real-world-example-using-event-grid-trigger-with-powershell/"
+        <li><a href="https://about-powershell.com/blog/azure-functions-real-world-example-using-event-grid-trigger-with-powershell/"
                 class="button big previous">Azure Functions – Real-world example using Event Grid Trigger with PowerShell</a></li>
     
 
     
-        <li><a href="/blog/failed-snat-connections-detected-in-azure-powershell-function/"
+        <li><a href="https://about-powershell.com/blog/failed-snat-connections-detected-in-azure-powershell-function/"
                 class="button big next">Failed SNAT Connections Detected in Azure PowerShell Function</a></li>
     
 </ul>
@@ -866,7 +866,7 @@ Push-OutputBinding -Name outputTable -Value @{
     
     
       
-        <a href='/'><img src="/img/main/ChenV.jpg" class="intro-circle" width="200" alt="Hugo Future Imperfect" /></a>
+        <a href='https://about-powershell.com/'><img src="https://about-powershell.com/img/main/ChenV.jpg" class="intro-circle" width="200" alt="Hugo Future Imperfect" /></a>
       
     
     
@@ -879,7 +879,7 @@ Push-OutputBinding -Name outputTable -Value @{
       <ul class="icons">
         
           
-    <li><a href="/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
+    <li><a href="https://about-powershell.com/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
 
 
         
@@ -1002,7 +1002,7 @@ Push-OutputBinding -Name outputTable -Value @{
           <article class="mini-post">
             <header>
               <h3>
-                <a href="/blog/store-dynamic-data-in-an-azure-blob-storage-using-powershell-with-dapr/">Store Dynamic Data in an Azure Blob Storage using PowerShell with Dapr</a>
+                <a href="https://about-powershell.com/blog/store-dynamic-data-in-an-azure-blob-storage-using-powershell-with-dapr/">Store Dynamic Data in an Azure Blob Storage using PowerShell with Dapr</a>
               </h3>
               
               <time class="published" datetime='2022-02-21'>
@@ -1032,8 +1032,8 @@ Push-OutputBinding -Name outputTable -Value @{
         
         
 
-        <a href="/blog/store-dynamic-data-in-an-azure-blob-storage-using-powershell-with-dapr/" class="image featured">
-            <img src="/img/2022/02/DAPR-OP-BINDING.png" alt="">
+        <a href="https://about-powershell.com/blog/store-dynamic-data-in-an-azure-blob-storage-using-powershell-with-dapr/" class="image featured">
+            <img src="https://about-powershell.com/img/2022/02/DAPR-OP-BINDING.png" alt="">
         </a>
     
 
@@ -1043,7 +1043,7 @@ Push-OutputBinding -Name outputTable -Value @{
           <article class="mini-post">
             <header>
               <h3>
-                <a href="/blog/failed-snat-connections-detected-in-azure-powershell-function/">Failed SNAT Connections Detected in Azure PowerShell Function</a>
+                <a href="https://about-powershell.com/blog/failed-snat-connections-detected-in-azure-powershell-function/">Failed SNAT Connections Detected in Azure PowerShell Function</a>
               </h3>
               
               <time class="published" datetime='2021-04-23'>
@@ -1073,8 +1073,8 @@ Push-OutputBinding -Name outputTable -Value @{
         
         
 
-        <a href="/blog/failed-snat-connections-detected-in-azure-powershell-function/" class="image featured">
-            <img src="/img/2021/04/HTTPClient.jpg" alt="">
+        <a href="https://about-powershell.com/blog/failed-snat-connections-detected-in-azure-powershell-function/" class="image featured">
+            <img src="https://about-powershell.com/img/2021/04/HTTPClient.jpg" alt="">
         </a>
     
 
@@ -1084,7 +1084,7 @@ Push-OutputBinding -Name outputTable -Value @{
           <article class="mini-post">
             <header>
               <h3>
-                <a href="/blog/azure-event-grid-trigger-output-binding-to-table-storage-using-powershell/">Azure Event Grid Trigger Output Binding to Table Storage using PowerShell</a>
+                <a href="https://about-powershell.com/blog/azure-event-grid-trigger-output-binding-to-table-storage-using-powershell/">Azure Event Grid Trigger Output Binding to Table Storage using PowerShell</a>
               </h3>
               
               <time class="published" datetime='2021-04-08'>
@@ -1114,8 +1114,8 @@ Push-OutputBinding -Name outputTable -Value @{
         
         
 
-        <a href="/blog/azure-event-grid-trigger-output-binding-to-table-storage-using-powershell/" class="image featured">
-            <img src="/img/2021/04/Table-Storage.jpg" alt="">
+        <a href="https://about-powershell.com/blog/azure-event-grid-trigger-output-binding-to-table-storage-using-powershell/" class="image featured">
+            <img src="https://about-powershell.com/img/2021/04/Table-Storage.jpg" alt="">
         </a>
     
 
@@ -1125,7 +1125,7 @@ Push-OutputBinding -Name outputTable -Value @{
           <article class="mini-post">
             <header>
               <h3>
-                <a href="/blog/azure-functions-real-world-example-using-event-grid-trigger-with-powershell/">Azure Functions – Real-world example using Event Grid Trigger with PowerShell</a>
+                <a href="https://about-powershell.com/blog/azure-functions-real-world-example-using-event-grid-trigger-with-powershell/">Azure Functions – Real-world example using Event Grid Trigger with PowerShell</a>
               </h3>
               
               <time class="published" datetime='2021-04-03'>
@@ -1155,8 +1155,8 @@ Push-OutputBinding -Name outputTable -Value @{
         
         
 
-        <a href="/blog/azure-functions-real-world-example-using-event-grid-trigger-with-powershell/" class="image featured">
-            <img src="/img/2021/04/Blog-Az-Event-Grid.jpg" alt="">
+        <a href="https://about-powershell.com/blog/azure-functions-real-world-example-using-event-grid-trigger-with-powershell/" class="image featured">
+            <img src="https://about-powershell.com/img/2021/04/Blog-Az-Event-Grid.jpg" alt="">
         </a>
     
 
@@ -1166,7 +1166,7 @@ Push-OutputBinding -Name outputTable -Value @{
           <article class="mini-post">
             <header>
               <h3>
-                <a href="/blog/using-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell/">Using PFX in Azure DevOps to generate an access token and authenticate - PowerShell</a>
+                <a href="https://about-powershell.com/blog/using-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell/">Using PFX in Azure DevOps to generate an access token and authenticate - PowerShell</a>
               </h3>
               
               <time class="published" datetime='2021-03-18'>
@@ -1196,8 +1196,8 @@ Push-OutputBinding -Name outputTable -Value @{
         
         
 
-        <a href="/blog/using-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell/" class="image featured">
-            <img src="/img/2021/03/access_token_pfx_cert.jpg" alt="">
+        <a href="https://about-powershell.com/blog/using-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell/" class="image featured">
+            <img src="https://about-powershell.com/img/2021/03/access_token_pfx_cert.jpg" alt="">
         </a>
     
 
@@ -1224,7 +1224,7 @@ Push-OutputBinding -Name outputTable -Value @{
     <section id="categories">
       <header>
         <h3>
-          <a href="/categories/">Categories</a>
+          <a href="https://about-powershell.com/categories/">Categories</a>
         </h3>
       </header>
         
@@ -1236,7 +1236,7 @@ Push-OutputBinding -Name outputTable -Value @{
           <article>
             <header>
               
-                <a href="/categories/azure/">azure</a>
+                <a href="https://about-powershell.com/categories/azure/">azure</a>
                 <span style="float:right;">10</span>
               
             </header>
@@ -1247,7 +1247,7 @@ Push-OutputBinding -Name outputTable -Value @{
           <article>
             <header>
               
-                <a href="/categories/azure-devops/">azure-devops</a>
+                <a href="https://about-powershell.com/categories/azure-devops/">azure-devops</a>
                 <span style="float:right;">5</span>
               
             </header>
@@ -1258,7 +1258,7 @@ Push-OutputBinding -Name outputTable -Value @{
           <article>
             <header>
               
-                <a href="/categories/powershell/">powershell</a>
+                <a href="https://about-powershell.com/categories/powershell/">powershell</a>
                 <span style="float:right;">5</span>
               
             </header>
@@ -1269,7 +1269,7 @@ Push-OutputBinding -Name outputTable -Value @{
           <article>
             <header>
               
-                <a href="/categories/azure-function/">azure-function</a>
+                <a href="https://about-powershell.com/categories/azure-function/">azure-function</a>
                 <span style="float:right;">2</span>
               
             </header>
@@ -1280,7 +1280,7 @@ Push-OutputBinding -Name outputTable -Value @{
           <article>
             <header>
               
-                <a href="/categories/azure-functions/">azure-functions</a>
+                <a href="https://about-powershell.com/categories/azure-functions/">azure-functions</a>
                 <span style="float:right;">2</span>
               
             </header>
@@ -1291,7 +1291,7 @@ Push-OutputBinding -Name outputTable -Value @{
           <article>
             <header>
               
-                <a href="/categories/arm/">arm</a>
+                <a href="https://about-powershell.com/categories/arm/">arm</a>
                 <span style="float:right;">1</span>
               
             </header>
@@ -1302,7 +1302,7 @@ Push-OutputBinding -Name outputTable -Value @{
           <article>
             <header>
               
-                <a href="/categories/azure-automation-account/">azure-automation-account</a>
+                <a href="https://about-powershell.com/categories/azure-automation-account/">azure-automation-account</a>
                 <span style="float:right;">1</span>
               
             </header>
@@ -1313,7 +1313,7 @@ Push-OutputBinding -Name outputTable -Value @{
           <article>
             <header>
               
-                <a href="/categories/azure-monitor/">azure-monitor</a>
+                <a href="https://about-powershell.com/categories/azure-monitor/">azure-monitor</a>
                 <span style="float:right;">1</span>
               
             </header>
@@ -1324,7 +1324,7 @@ Push-OutputBinding -Name outputTable -Value @{
           <article>
             <header>
               
-                <a href="/categories/azure-resource-graph/">azure-resource-graph</a>
+                <a href="https://about-powershell.com/categories/azure-resource-graph/">azure-resource-graph</a>
                 <span style="float:right;">1</span>
               
             </header>
@@ -1335,7 +1335,7 @@ Push-OutputBinding -Name outputTable -Value @{
           <article>
             <header>
               
-                <a href="/categories/azure-runbook-report/">azure-runbook-report</a>
+                <a href="https://about-powershell.com/categories/azure-runbook-report/">azure-runbook-report</a>
                 <span style="float:right;">1</span>
               
             </header>
@@ -1346,7 +1346,7 @@ Push-OutputBinding -Name outputTable -Value @{
           <article>
             <header>
               
-                <a href="/categories/azure-workbook/">azure-workbook</a>
+                <a href="https://about-powershell.com/categories/azure-workbook/">azure-workbook</a>
                 <span style="float:right;">1</span>
               
             </header>
@@ -1357,7 +1357,7 @@ Push-OutputBinding -Name outputTable -Value @{
           <article>
             <header>
               
-                <a href="/categories/client-assertion/">client-assertion</a>
+                <a href="https://about-powershell.com/categories/client-assertion/">client-assertion</a>
                 <span style="float:right;">1</span>
               
             </header>
@@ -1368,7 +1368,7 @@ Push-OutputBinding -Name outputTable -Value @{
           <article>
             <header>
               
-                <a href="/categories/dapr/">dapr</a>
+                <a href="https://about-powershell.com/categories/dapr/">dapr</a>
                 <span style="float:right;">1</span>
               
             </header>
@@ -1379,7 +1379,7 @@ Push-OutputBinding -Name outputTable -Value @{
           <article>
             <header>
               
-                <a href="/categories/event-grid-trigger/">event-grid-trigger</a>
+                <a href="https://about-powershell.com/categories/event-grid-trigger/">event-grid-trigger</a>
                 <span style="float:right;">1</span>
               
             </header>
@@ -1390,7 +1390,7 @@ Push-OutputBinding -Name outputTable -Value @{
           <article>
             <header>
               
-                <a href="/categories/jit/">jit</a>
+                <a href="https://about-powershell.com/categories/jit/">jit</a>
                 <span style="float:right;">1</span>
               
             </header>
@@ -1401,7 +1401,7 @@ Push-OutputBinding -Name outputTable -Value @{
           <article>
             <header>
               
-                <a href="/categories/powershell-core/">powershell-core</a>
+                <a href="https://about-powershell.com/categories/powershell-core/">powershell-core</a>
                 <span style="float:right;">1</span>
               
             </header>
@@ -1412,7 +1412,7 @@ Push-OutputBinding -Name outputTable -Value @{
           <article>
             <header>
               
-                <a href="/categories/project-bicep/">project-bicep</a>
+                <a href="https://about-powershell.com/categories/project-bicep/">project-bicep</a>
                 <span style="float:right;">1</span>
               
             </header>
@@ -1423,7 +1423,7 @@ Push-OutputBinding -Name outputTable -Value @{
           <article>
             <header>
               
-                <a href="/categories/pswriteword/">pswriteword</a>
+                <a href="https://about-powershell.com/categories/pswriteword/">pswriteword</a>
                 <span style="float:right;">1</span>
               
             </header>
@@ -1434,7 +1434,7 @@ Push-OutputBinding -Name outputTable -Value @{
           <article>
             <header>
               
-                <a href="/categories/snat-port-exhausted/">snat-port-exhausted</a>
+                <a href="https://about-powershell.com/categories/snat-port-exhausted/">snat-port-exhausted</a>
                 <span style="float:right;">1</span>
               
             </header>
@@ -1450,7 +1450,7 @@ Push-OutputBinding -Name outputTable -Value @{
     <section id="mini-bio">
       <h3>About</h3>
       <p>Automation, Workflows, Integrations, Orchestrations, and Microsoft Technologies are his interests. His focus is to transform the organization model to achieve key business objectives such as enhanced customer focus, seamless end-to-end management, and integrated service capability</p>
-      <a href="/about/" class="button">Learn More</a>
+      <a href="https://about-powershell.com/about/" class="button">Learn More</a>
     </section>
   
 
@@ -1460,7 +1460,7 @@ Push-OutputBinding -Name outputTable -Value @{
       <ul class="icons">
         
           
-    <li><a href="/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
+    <li><a href="https://about-powershell.com/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
 
 
         
@@ -1603,9 +1603,9 @@ Push-OutputBinding -Name outputTable -Value @{
       <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
-      <script src="/js/util.js"></script>
-      <script src="/js/main.js"></script>
-      <script src="/js/backToTop.js"></script>
+      <script src="https://about-powershell.com/js/util.js"></script>
+      <script src="https://about-powershell.com/js/main.js"></script>
+      <script src="https://about-powershell.com/js/backToTop.js"></script>
     
 
     

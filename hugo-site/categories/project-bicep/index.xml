@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Project Bicep on iAutomate</title>
-    <link>/categories/project-bicep/</link>
+    <link>https://about-powershell.com/categories/project-bicep/</link>
     <description>Recent content in Project Bicep on iAutomate</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 07 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="/categories/project-bicep/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 07 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://about-powershell.com/categories/project-bicep/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Deploy Azure Function App using Project Bicep</title>
-      <link>/blog/deploy-azure-function-app-using-project-bicep/</link>
+      <link>https://about-powershell.com/blog/deploy-azure-function-app-using-project-bicep/</link>
       <pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>/blog/deploy-azure-function-app-using-project-bicep/</guid>
+      <guid>https://about-powershell.com/blog/deploy-azure-function-app-using-project-bicep/</guid>
       <description>References Refer to the below links to know more about the project bicep
   GitHub
  Repository Docs Examples Tutorials Specifications    YouTube

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>PSWriteWord on iAutomate</title>
-    <link>/categories/pswriteword/</link>
+    <link>https://about-powershell.com/categories/pswriteword/</link>
     <description>Recent content in PSWriteWord on iAutomate</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 19 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="/categories/pswriteword/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://about-powershell.com/categories/pswriteword/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>azure devops pipeline to send files through email with no marketplace extension</title>
-      <link>/blog/azure-devops-pipeline-to-send-files-through-email-with-no-marketplace-extension/</link>
+      <link>https://about-powershell.com/blog/azure-devops-pipeline-to-send-files-through-email-with-no-marketplace-extension/</link>
       <pubDate>Sun, 19 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>/blog/azure-devops-pipeline-to-send-files-through-email-with-no-marketplace-extension/</guid>
+      <guid>https://about-powershell.com/blog/azure-devops-pipeline-to-send-files-through-email-with-no-marketplace-extension/</guid>
       <description>Introduction I was developing a PowerShell script to send Azure inventory through email, which generates a Word output with charts and tables. So, I thought of using Open XML, I used for SharePoint document library reporting (A few years ago), I searched GitHub and found a great PowerShell module PSWriteWord, and docs are super cool. Yes, this blog post is to show you the simple steps to generate a word document through Azure DevOps pipeline.</description>
     </item>
     

@@ -2,189 +2,189 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/blog/</loc>
+    <loc>https://about-powershell.com/blog/</loc>
     <lastmod>2022-02-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/</loc>
+    <loc>https://about-powershell.com/categories/</loc>
     <lastmod>2022-02-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/dapr/</loc>
+    <loc>https://about-powershell.com/categories/dapr/</loc>
     <lastmod>2022-02-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/</loc>
+    <loc>https://about-powershell.com/</loc>
     <lastmod>2022-02-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/powershell/</loc>
+    <loc>https://about-powershell.com/categories/powershell/</loc>
     <lastmod>2022-02-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/blog/store-dynamic-data-in-an-azure-blob-storage-using-powershell-with-dapr/</loc>
+    <loc>https://about-powershell.com/blog/store-dynamic-data-in-an-azure-blob-storage-using-powershell-with-dapr/</loc>
     <lastmod>2022-02-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/azure-function/</loc>
+    <loc>https://about-powershell.com/categories/azure-function/</loc>
     <lastmod>2021-04-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/blog/failed-snat-connections-detected-in-azure-powershell-function/</loc>
+    <loc>https://about-powershell.com/blog/failed-snat-connections-detected-in-azure-powershell-function/</loc>
     <lastmod>2021-04-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/powershell-core/</loc>
+    <loc>https://about-powershell.com/categories/powershell-core/</loc>
     <lastmod>2021-04-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/snat-port-exhausted/</loc>
+    <loc>https://about-powershell.com/categories/snat-port-exhausted/</loc>
     <lastmod>2021-04-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/blog/azure-event-grid-trigger-output-binding-to-table-storage-using-powershell/</loc>
+    <loc>https://about-powershell.com/blog/azure-event-grid-trigger-output-binding-to-table-storage-using-powershell/</loc>
     <lastmod>2021-04-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/event-grid-trigger/</loc>
+    <loc>https://about-powershell.com/categories/event-grid-trigger/</loc>
     <lastmod>2021-04-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/azure-functions/</loc>
+    <loc>https://about-powershell.com/tags/azure-functions/</loc>
     <lastmod>2021-04-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/azure-functions/</loc>
+    <loc>https://about-powershell.com/categories/azure-functions/</loc>
     <lastmod>2021-04-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/blog/azure-functions-real-world-example-using-event-grid-trigger-with-powershell/</loc>
+    <loc>https://about-powershell.com/blog/azure-functions-real-world-example-using-event-grid-trigger-with-powershell/</loc>
     <lastmod>2021-04-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/event-grid-trigger/</loc>
+    <loc>https://about-powershell.com/tags/event-grid-trigger/</loc>
     <lastmod>2021-04-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/</loc>
+    <loc>https://about-powershell.com/tags/</loc>
     <lastmod>2021-04-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/azure/</loc>
+    <loc>https://about-powershell.com/categories/azure/</loc>
     <lastmod>2021-03-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/azure-devops/</loc>
+    <loc>https://about-powershell.com/categories/azure-devops/</loc>
     <lastmod>2021-03-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/client-assertion/</loc>
+    <loc>https://about-powershell.com/categories/client-assertion/</loc>
     <lastmod>2021-03-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/blog/using-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell/</loc>
+    <loc>https://about-powershell.com/blog/using-pfx-in-azure-devops-to-generate-an-access-token-and-authenticate-powershell/</loc>
     <lastmod>2021-03-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/azure-automation-account/</loc>
+    <loc>https://about-powershell.com/categories/azure-automation-account/</loc>
     <lastmod>2021-02-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/azure-runbook-report/</loc>
+    <loc>https://about-powershell.com/categories/azure-runbook-report/</loc>
     <lastmod>2021-02-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/powershell/</loc>
+    <loc>https://about-powershell.com/tags/powershell/</loc>
     <lastmod>2021-02-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/resource-graph/</loc>
+    <loc>https://about-powershell.com/tags/resource-graph/</loc>
     <lastmod>2021-02-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/rest-api/</loc>
+    <loc>https://about-powershell.com/tags/rest-api/</loc>
     <lastmod>2021-02-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/blog/retrieve-azure-runbook-job-report-using-rest-api-with-powershell/</loc>
+    <loc>https://about-powershell.com/blog/retrieve-azure-runbook-job-report-using-rest-api-with-powershell/</loc>
     <lastmod>2021-02-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/azure-resource-graph/</loc>
+    <loc>https://about-powershell.com/tags/azure-resource-graph/</loc>
     <lastmod>2021-02-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/azure-resource-graph/</loc>
+    <loc>https://about-powershell.com/categories/azure-resource-graph/</loc>
     <lastmod>2021-02-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/blog/collection-of-azure-resource-graph-query/</loc>
+    <loc>https://about-powershell.com/blog/collection-of-azure-resource-graph-query/</loc>
     <lastmod>2021-02-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/azure-monitor/</loc>
+    <loc>https://about-powershell.com/categories/azure-monitor/</loc>
     <lastmod>2021-01-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/azure-workbook/</loc>
+    <loc>https://about-powershell.com/categories/azure-workbook/</loc>
     <lastmod>2021-01-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/blog/using-azure-monitor-workbook-at-the-workplace-part-1/</loc>
+    <loc>https://about-powershell.com/blog/using-azure-monitor-workbook-at-the-workplace-part-1/</loc>
     <lastmod>2021-01-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/itemized/</loc>
+    <loc>https://about-powershell.com/itemized/</loc>
     <lastmod>2021-01-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/itemized/item1/</loc>
+    <loc>https://about-powershell.com/itemized/item1/</loc>
     <lastmod>2021-01-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/arm/</loc>
+    <loc>https://about-powershell.com/categories/arm/</loc>
     <lastmod>2021-01-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/blog/deploy-azure-function-app-using-project-bicep/</loc>
+    <loc>https://about-powershell.com/blog/deploy-azure-function-app-using-project-bicep/</loc>
     <lastmod>2021-01-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/project-bicep/</loc>
+    <loc>https://about-powershell.com/categories/project-bicep/</loc>
     <lastmod>2021-01-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/jit/</loc>
+    <loc>https://about-powershell.com/categories/jit/</loc>
     <lastmod>2021-01-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/blog/list-of-azure-vm-which-has-no-jit-enabled/</loc>
+    <loc>https://about-powershell.com/blog/list-of-azure-vm-which-has-no-jit-enabled/</loc>
     <lastmod>2021-01-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/blog/get-started-with-project-bicep/</loc>
+    <loc>https://about-powershell.com/blog/get-started-with-project-bicep/</loc>
     <lastmod>2021-01-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/blog/logging-service-now-requests-using-event-grid-trigger/</loc>
+    <loc>https://about-powershell.com/blog/logging-service-now-requests-using-event-grid-trigger/</loc>
     <lastmod>2020-08-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/servicenow/</loc>
+    <loc>https://about-powershell.com/tags/servicenow/</loc>
     <lastmod>2020-08-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/blog/azure-devops-pipeline-to-send-files-through-email-with-no-marketplace-extension/</loc>
+    <loc>https://about-powershell.com/blog/azure-devops-pipeline-to-send-files-through-email-with-no-marketplace-extension/</loc>
     <lastmod>2020-07-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/pswriteword/</loc>
+    <loc>https://about-powershell.com/categories/pswriteword/</loc>
     <lastmod>2020-07-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/azure-function/</loc>
+    <loc>https://about-powershell.com/tags/azure-function/</loc>
     <lastmod>2020-06-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/c#/</loc>
+    <loc>https://about-powershell.com/tags/c#/</loc>
     <lastmod>2020-06-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/durable/</loc>
+    <loc>https://about-powershell.com/tags/durable/</loc>
     <lastmod>2020-06-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/blog/my-first-experience-with-the-azure-durable-functions/</loc>
+    <loc>https://about-powershell.com/blog/my-first-experience-with-the-azure-durable-functions/</loc>
     <lastmod>2020-06-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/kql/</loc>
+    <loc>https://about-powershell.com/tags/kql/</loc>
     <lastmod>2020-05-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/blog/retrieve-unattached-azure-vm-disks-using-powershell-azure-resource-graph/</loc>
+    <loc>https://about-powershell.com/blog/retrieve-unattached-azure-vm-disks-using-powershell-azure-resource-graph/</loc>
     <lastmod>2020-05-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/azure-devops/</loc>
+    <loc>https://about-powershell.com/tags/azure-devops/</loc>
     <lastmod>2020-04-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/blog/create-service-connection-with-certificate-using-rest-api/</loc>
+    <loc>https://about-powershell.com/blog/create-service-connection-with-certificate-using-rest-api/</loc>
     <lastmod>2020-04-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/service-connection/</loc>
+    <loc>https://about-powershell.com/tags/service-connection/</loc>
     <lastmod>2020-04-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/blog/how-azure-devops-rest-api-helped-me-during-outage-of-the-vpn/</loc>
+    <loc>https://about-powershell.com/blog/how-azure-devops-rest-api-helped-me-during-outage-of-the-vpn/</loc>
     <lastmod>2020-04-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/wiql/</loc>
+    <loc>https://about-powershell.com/tags/wiql/</loc>
     <lastmod>2020-04-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/blog/deploying-azure-function-app-external-git/</loc>
+    <loc>https://about-powershell.com/blog/deploying-azure-function-app-external-git/</loc>
     <lastmod>2020-04-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/deployment/</loc>
+    <loc>https://about-powershell.com/tags/deployment/</loc>
     <lastmod>2020-04-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/external-git/</loc>
+    <loc>https://about-powershell.com/tags/external-git/</loc>
     <lastmod>2020-04-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/itemized/item2/</loc>
+    <loc>https://about-powershell.com/itemized/item2/</loc>
     <lastmod>2017-06-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/about/</loc>
+    <loc>https://about-powershell.com/about/</loc>
     <lastmod>2014-04-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/contact/</loc>
+    <loc>https://about-powershell.com/contact/</loc>
   </url>
 </urlset>

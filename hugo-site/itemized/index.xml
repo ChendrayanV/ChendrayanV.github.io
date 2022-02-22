@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Itemized on iAutomate</title>
-    <link>/itemized/</link>
+    <link>https://about-powershell.com/itemized/</link>
     <description>Recent content in Itemized on iAutomate</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 09 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="/itemized/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 09 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://about-powershell.com/itemized/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Power Automate</title>
-      <link>/itemized/item1/</link>
+      <link>https://about-powershell.com/itemized/item1/</link>
       <pubDate>Sat, 09 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>/itemized/item1/</guid>
+      <guid>https://about-powershell.com/itemized/item1/</guid>
       <description>App 1 </description>
     </item>
     
     <item>
       <title>Azure Functions</title>
-      <link>/itemized/item2/</link>
+      <link>https://about-powershell.com/itemized/item2/</link>
       <pubDate>Thu, 22 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>/itemized/item2/</guid>
+      <guid>https://about-powershell.com/itemized/item2/</guid>
       <description>App 2 </description>
     </item>
     

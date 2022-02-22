@@ -2,27 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Event Grid Trigger on iAutomate</title>
-    <link>/tags/event-grid-trigger/</link>
+    <link>https://about-powershell.com/tags/event-grid-trigger/</link>
     <description>Recent content in Event Grid Trigger on iAutomate</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 03 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/event-grid-trigger/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 03 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://about-powershell.com/tags/event-grid-trigger/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Azure Functions – Real-world example using Event Grid Trigger with PowerShell</title>
-      <link>/blog/azure-functions-real-world-example-using-event-grid-trigger-with-powershell/</link>
+      <link>https://about-powershell.com/blog/azure-functions-real-world-example-using-event-grid-trigger-with-powershell/</link>
       <pubDate>Sat, 03 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>/blog/azure-functions-real-world-example-using-event-grid-trigger-with-powershell/</guid>
+      <guid>https://about-powershell.com/blog/azure-functions-real-world-example-using-event-grid-trigger-with-powershell/</guid>
       <description>Introduction Of late, I got an exciting task. Yes, it’s not challenging but requires a pinch of concentration. The requirement is to copy files from the source storage account to multiple destinations (storage accounts). Why? Infrastructure is designed and developed to sync few JSON files from master (management) subscriptions to all other subscriptions. Yes, it is not easy to follow the theory. The picture below depicts the functionality
  Functional flow   I hope it&amp;rsquo;s not confusing!</description>
     </item>
     
     <item>
       <title>Logging Service Now Requests using Event Grid Trigger</title>
-      <link>/blog/logging-service-now-requests-using-event-grid-trigger/</link>
+      <link>https://about-powershell.com/blog/logging-service-now-requests-using-event-grid-trigger/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>/blog/logging-service-now-requests-using-event-grid-trigger/</guid>
+      <guid>https://about-powershell.com/blog/logging-service-now-requests-using-event-grid-trigger/</guid>
       <description>Introduction A colleague of mine asked a solution for raising a service request in SNOW (Service Now) for each NSG rule creation and deletion. I requested to develop a service now catalog and allow the system to work with NSG. That means, from SNOW to Azure connectivity through REST API. However, the ask is the other way around. If a user creates/deletes the NSG rule in the portal, log a REQ with the minimum information</description>
     </item>
     

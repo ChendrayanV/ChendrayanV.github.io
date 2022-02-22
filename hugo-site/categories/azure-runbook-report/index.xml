@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Azure RunBook Report on iAutomate</title>
-    <link>/categories/azure-runbook-report/</link>
+    <link>https://about-powershell.com/categories/azure-runbook-report/</link>
     <description>Recent content in Azure RunBook Report on iAutomate</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 16 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="/categories/azure-runbook-report/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 16 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://about-powershell.com/categories/azure-runbook-report/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Retrieve Azure Runbook Job Report using REST API with PowerShell</title>
-      <link>/blog/retrieve-azure-runbook-job-report-using-rest-api-with-powershell/</link>
+      <link>https://about-powershell.com/blog/retrieve-azure-runbook-job-report-using-rest-api-with-powershell/</link>
       <pubDate>Tue, 16 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>/blog/retrieve-azure-runbook-job-report-using-rest-api-with-powershell/</guid>
+      <guid>https://about-powershell.com/blog/retrieve-azure-runbook-job-report-using-rest-api-with-powershell/</guid>
       <description>Introduction The tile may hit a question WHY? Because automation accounts and runbooks are almost outdated in 2021. Most prefer to use alternative solutions like Logic Apps, Function App Power Automate, or others. Hang On! Runbooks are still in use. Of late, I got a requirement to send a report on runbooks that got invoked in the last one hour.
  In PowerShell, it’s easy, as shown below
  $Params = @{ RunbookName = &amp;#39;MYRUNBOOKNAME&amp;#39; ResourceGroupName = &amp;#39;MYRESOURCEGROUPNAME&amp;#39; AutomationAccountName = &amp;#39;MYAUTOMATIONACCOUNTNAME&amp;#39; StartTime = $(Get-Date).</description>
